@@ -1,0 +1,134 @@
+
+nav[role="navigation"] {
+    font-family: $nav-font;
+}
+
+// Toggle nav, courtesy Brad Frost
+// http://codepen.io/bradfrost/pen/sHvaz
+// I simplified some though
+
+
+.js .menu-main {
+    overflow: hidden;
+    max-height: 0;
+}
+
+.menu-main {
+    @include rotate($text-dark, $accent-med);
+    a {
+        color: $text-light;
+    }
+    transition: all 0.3s ease-out;
+
+    &.active {
+        max-height: 25em;
+    }
+}
+
+.menu-sub {
+    @extend %show-until-sm;
+    @include rotate($text-dark, $accent-vlight);
+
+    li {
+    }
+}
+
+    .menu-sub-title {
+        @include make-sm-column(2);
+        text-align: right;
+    }
+
+    .menu-sub-items {
+        @include make-sm-column(10);
+        
+        li {
+            @include make-sm-column(3);
+        }
+    }
+
+.menu-items {
+    margin: 0;
+    padding: 0;
+
+    li {
+        @extend %unstyle-list;
+    }
+
+    a {
+        display: block;
+        padding: $sml;
+        font-weight: 700;
+        @extend %h5;
+        margin-top: 0;
+    }
+
+}
+
+
+
+@media screen and (min-width: $screen-lg) {
+    .menu-link {
+       display: none;
+    }
+
+    .js .menu-main {
+        max-height: none;
+    }
+
+    .menu-items {
+        // margin: 0 0 0 -0.25em;
+        border: 0;
+
+        li {    
+            text-align: center;
+            display: inline-block;
+        }
+
+        a {
+            border: 0;
+        }
+    }
+}
+
+
+// ----
+// Hamburger Menu Icon
+// http://codepen.io/lexstefan/pen/mwtcn
+// ----
+
+.menu-link {
+    padding: 0 $h4;
+}
+
+    .menu-link a {
+        float: right;
+    }
+
+    .menu-link span {
+        transition: all 0.25s ease-in-out;
+        width: 35px;
+        border-radius: 3px;
+        height: 4px;
+        display: block;
+        background: $body-text;
+        margin: 0 0 8px 0;
+    }
+    
+    // .menu-link span:last-child {
+    //     margin:0;
+    // }
+    
+    // .menu-link.active span:nth-of-type(1) {
+    //     transform: rotate(45deg);
+    //     margin: 14px 0 0 0;
+    // }
+
+    // .menu-link.active span:nth-of-type(2) {
+    //   opacity:0;
+    // }
+
+    // .menu-link.active span:nth-of-type(3) {
+    //   transform: rotate(-45deg);
+    //   margin: -16px 0 0 0;
+    // }
+

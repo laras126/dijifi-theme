@@ -1,0 +1,110 @@
+html {
+	font-size: $contain;
+	line-height: $line-height-base;
+
+	@include bp(small) {
+		font-size: $contain-sm;
+		line-height: $line-height-sm;
+	}
+
+	@include bp(small) {
+		font-size: $contain-md;
+	}
+
+	@include bp(small) {
+		font-size: $contain-lg;
+	}
+}
+
+body {
+	font-family: $body-font;
+	font-size: $base; 
+}
+
+a, a:visited {
+	color: $link-color;
+	text-decoration: none;
+
+	&:hover, &:focus {
+		color: $link-hover;
+	}
+
+	&:active {
+		
+	}
+
+	// mobile tap color 
+	&:link {
+		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $heading-font;
+	margin-bottom: 0;
+}
+
+//
+// %h1-%h6 placeholders for font-size utility use.
+//
+
+%h1 { font-size: $h1; }
+%h2 { font-size: $h2; }
+%h3 { font-size: $h3; }
+%h4 { font-size: $h4; }
+%h5 { font-size: $h5; }
+%h6 { font-size: $sml; }
+
+h1 {
+	@extend %h1;
+	margin-top: $h3;
+}
+
+h2 {
+	@extend %h2;
+	margin-top: $h4;
+}
+
+h3 {
+	@extend %h3;
+	margin-top: $h4;
+}
+
+h4 { 
+	@extend %h4;
+	margin-top: $base;
+}
+
+h5 {
+	@extend %h5;
+	margin-top: $base;
+}
+
+h6 {	
+	@extend %h6;
+	margin-top: $base;
+}
+
+p {
+	margin-top: $base;
+	font-size: $base;
+}
+
+small {
+	font-size: $sml;
+}
+
+
+strong {
+	font-weight: normal;
+	font-weight: 700;
+}
+
+blockquote {
+	font-size: $h4;
+	font-style: italic;
+	padding-left: $h2;
+	margin-left: 0;
+	background-image: url(../img/svgs/quotes-left.svg);
+	background-repeat: no-repeat;
+}

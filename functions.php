@@ -15,17 +15,17 @@
 			add_theme_support('menus');
 			add_filter('timber_context', array($this, 'add_to_context'));
 			add_filter('get_twig', array($this, 'add_to_twig'));
-			add_action('init', array($this, 'register_post_types'));
-			add_action('init', array($this, 'register_taxonomies'));
+			add_action('init', array($this, 'dfi_register_post_types'));
+			add_action('init', array($this, 'dfi_register_taxonomies'));
 			parent::__construct();
 		}
 
-		function register_post_types(){
-			//this is where you can register custom post types
+		function dfi_register_post_types(){
+			require('lib/dfi-types.php');
 		}
 
-		function register_taxonomies(){
-			//this is where you can register custom taxonomies
+		function dfi_register_taxonomies(){
+			require('lib/dfi-taxonomies.php');
 		}
 
 		function add_to_context($context){
@@ -48,7 +48,45 @@
 
 	new StarterSite();
 
-	function myfoo($text){
-    	$text .= ' bar!';
-    	return $text;
+
+
+
+	/**
+	 **************************
+	 * DiJiFi Theme Functions *
+	 **************************
+	 */
+
+
+	// Remove unused items from the Dashboard menu
+	function dfi_remove_menu_items(){
+    	remove_menu_page( 'edit.php' ); // Posts
+    	remove_menu_page( 'edit-comments.php' ); // Posts
+    	remove_menu_page( 'users.php' ); // Users
 	}
+	add_action( 'admin_menu', 'dfi_remove_menu_items' );
+
+
+	// Customize the editor style, from Roots.io 
+	// https://github.com/roots/roots-sass/blob/master/assets/css/editor-style.css
+	function dfi_editor_styles() {
+		add_editor_style( 'assets/css/editor-style.css' );
+	}
+	add_action( 'after_setup_theme', 'dfi_editor_styles' );
+
+	// Change Title field placeholders
+	function dfi_title_placeholder_text ( $title ) {
+		if ( get_post_type() == 'dfi_service' ) {
+			$title = __( 'Service Name' );
+		} else if ( get_post_type() == 'dfi_case_study' ) {
+	        $title = __( 'Case Study Name' );
+		} else if ( get_post_type() == 'dfi_testimonial' ) {
+	        $title = __( 'Testimonial Nickname' );
+		}
+		return $title;
+	} 
+	add_filter( 'enter_title_here', 'dfi_title_placeholder_text' );
+
+
+
+?>

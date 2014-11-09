@@ -1,0 +1,66 @@
+
+.block-quoter {
+	@include rotate($text-light, $accent-dark);
+}
+
+.param-options-list {
+	@extend %unstyle-list;
+	font-family: $form-font;
+	margin-bottom: $sml;
+	@extend %clearfix;
+}
+
+.active {
+	// border: 10px solid $accent-light;
+}
+
+.param-option {
+	@include make-xs-column(6, $sml);
+	&.selected .int {
+		border-color: darken($accent-med, 25%);
+		background: darken($accent-med, 20%);
+	}
+}
+
+.int {
+	border: 3px solid transparent; 
+	padding: $h4;
+	text-align: center;
+	background-color: darken($accent-med, 10%);
+
+	&:hover {
+		cursor: pointer;
+		border-color: darken($accent-med, 15%);
+		background: darken($accent-med, 5%);
+	}
+}
+
+.quote-param {
+	display: block;
+	// @include rotate($text-light, $accent-med);
+	padding: 0 $h4;
+	margin-bottom: $h3;
+	&.closed {
+		display: none;	
+	}
+
+	&.completed {	
+		display: block;
+	}
+	
+	&.active {
+		background-color: lighten($accent-dark,7%);	
+	}
+}
+
+.param-desc-holder {
+	display: none;
+}
+
+@for $num from 1 through 4 {
+	
+	.int-#{$num} { 
+		// background-color: scale-lightness($alert-info, 20%*$num);
+	}
+	
+}

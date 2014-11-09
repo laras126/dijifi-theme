@@ -1,0 +1,46 @@
+
+
+// Just for prototyping
+
+.padded-sides {
+	padding: 0 $h3;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+
+
+.logo {
+	svg {
+		display: block;
+		margin-left: 25%;
+	}
+}
+
+
+
+.button-block {
+	@extend %btn-block;
+}
+
+// Nav
+
+.menu-sub-items {
+	li {
+		text-align: left;
+	}
+}

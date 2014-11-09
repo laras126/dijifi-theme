@@ -1,0 +1,92 @@
+
+// Extends
+
+%container {
+    @include container-fixed;
+}
+
+%clearfix {
+    &:before,
+    &:after {
+        content: " "; // 1
+        display: table; // 2
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+
+%block {
+	padding: $h4 $h3;
+}
+
+%center-block {
+    margin: 0 auto;
+    display: block;
+}
+
+.show-until-sm, 
+%show-until-sm {
+   	display: none;
+    @media (min-width: $screen-sm) {
+        display: block; 
+    }   
+}
+
+.hide-until-sm, 
+%hide-until-sm {
+	@media (min-width: $screen-sm) {    
+        display: none;
+    }
+}
+
+%rotate {
+	color: $rotate-text;
+	background-color: $rotate-bkgd;
+}
+
+%upperspace {
+    text-transform: uppercase;
+}
+
+.meta,
+%meta {
+    font-size: $sml;
+    font-family: $form-font;
+    margin: 0;
+}
+
+    %meta-light {
+        @extend %meta;
+        color: lighten($text-med, 30%);
+    }
+
+    %meta-dark {
+        @extend %meta;
+        color: $text-med;
+    }
+
+
+// Forms
+
+%btn {
+    border: none;
+    padding: $sml/2 $sml;
+    font-family: $form-font;
+}
+
+%btn-block {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+// Lists
+
+%unstyle-list {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
