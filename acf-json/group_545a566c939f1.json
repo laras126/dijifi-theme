@@ -131,7 +131,8 @@
                                             "choices": {
                                                 "icon": "Icon",
                                                 "descriptive": "Descriptive",
-                                                "prominent": "Prominent"
+                                                "prominent": "Prominent",
+                                                "related": "Related Items"
                                             },
                                             "default_value": {
                                                 "icon": "icon"
@@ -305,6 +306,35 @@
                                                     "disabled": 0
                                                 }
                                             ]
+                                        },
+                                        {
+                                            "key": "field_545fae2b2e782",
+                                            "label": "Related Items",
+                                            "name": "related_items",
+                                            "prefix": "",
+                                            "type": "relationship",
+                                            "instructions": "This is mainly for formats.",
+                                            "required": 0,
+                                            "conditional_logic": [
+                                                [
+                                                    {
+                                                        "field": "field_545a7b2c8b364",
+                                                        "operator": "==",
+                                                        "value": "related"
+                                                    }
+                                                ]
+                                            ],
+                                            "column_width": "",
+                                            "post_type": "",
+                                            "taxonomy": "",
+                                            "filters": [
+                                                "search",
+                                                "post_type",
+                                                "taxonomy"
+                                            ],
+                                            "elements": "",
+                                            "max": "",
+                                            "return_format": "object"
                                         }
                                     ],
                                     "min": "",
@@ -365,67 +395,6 @@
                                             "other_choice": 0,
                                             "save_other_choice": 0,
                                             "default_value": "",
-                                            "layout": "vertical"
-                                        }
-                                    ],
-                                    "min": "",
-                                    "max": ""
-                                },
-                                {
-                                    "key": "545a779cb024e",
-                                    "name": "block_testimonial",
-                                    "label": "Testimonial",
-                                    "display": "row",
-                                    "sub_fields": [
-                                        {
-                                            "key": "field_545fa2cb5a6e3",
-                                            "label": "Testimonial",
-                                            "name": "testimonial",
-                                            "prefix": "",
-                                            "type": "relationship",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "column_width": "",
-                                            "post_type": [
-                                                "dfi_testimonial"
-                                            ],
-                                            "taxonomy": "",
-                                            "filters": [
-                                                "search"
-                                            ],
-                                            "elements": "",
-                                            "max": "",
-                                            "return_format": "object"
-                                        }
-                                    ],
-                                    "min": "",
-                                    "max": ""
-                                },
-                                {
-                                    "key": "545a80d9b8ad6",
-                                    "name": "call_to_action",
-                                    "label": "Call to Action",
-                                    "display": "row",
-                                    "sub_fields": [
-                                        {
-                                            "key": "field_545a824be765e",
-                                            "label": "Display",
-                                            "name": "display",
-                                            "prefix": "",
-                                            "type": "radio",
-                                            "instructions": "Should it be more subtle, or highly emphasized with an image overlay? Though they are the same as the testimonial options, these displays look different.",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "column_width": "",
-                                            "choices": {
-                                                "image_overlay": "Image Overlay",
-                                                "subtle": "Subtle",
-                                                "highlighted": "Highlighted"
-                                            },
-                                            "other_choice": 0,
-                                            "save_other_choice": 0,
-                                            "default_value": "subtle",
                                             "layout": "vertical"
                                         }
                                     ],
