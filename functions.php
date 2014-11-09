@@ -57,12 +57,20 @@
 	 **************************
 	 */
 
-	// Enqueue scripts and styles
-	function dfi_scripts() {
-		wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/css/main.css' );
-		wp_enqueue_script( 'script-name', get_template_directory_uri() . '/assets/js/scripts.js', array(), '1.0.0', true );
-	}
 
+	// Enqueue scripts
+	function dfi_scripts() {
+
+		// Use jQuery from CDN
+		if (!is_admin()) {
+			wp_deregister_script('jquery');
+			wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js', array(), null, true);
+			wp_enqueue_script('jquery');
+		}
+
+		// Add our JS
+		wp_enqueue_script( 'js', get_template_directory_uri() . '/assets/js/build/scripts.js', array('jquery'), '1.0.0', true );
+	}
 	add_action( 'wp_enqueue_scripts', 'dfi_scripts' );
 
 
