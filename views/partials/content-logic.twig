@@ -1,23 +1,32 @@
 {% for content in post.get_field('content') %}
 
-
     {% if content.acf_fc_layout == 'section' %}
-        <h1>Section</h1>
-        {% for block in content.get_field('blocks') %}
-            <h2>Block</h2>
-            {# {% if content.acf_fc_layout == 'text_image_block' %}
-                {% include 'partials/block-text-image.twig' %}
-            {% elseif content.acf_fc_layout == 'blank' %}
-                {{content.wysiwyg}}
-            {% elseif content.acf_fc_layout == 'call_to_action' %} 
-                {% include 'partials/block-cta.twig' %}
+        
+        {% include 'partials/section-header.twig' %}
+
+        {# Note: Block was probably a poor choice of word here because it conflicts with the 'blocks' in Twig. So I've changed it to 'blck' instead. #}
+        {% for blck in content.blocks %} 
+            {% if blck.acf_fc_layout == 'block_text' %}
+                {% include 'blocks/block-text.twig' %}
+            {% elseif blck.acf_fc_layout == 'block_list' %}
+                {% include 'blocks/block-list.twig' %}
+            {% elseif blck.acf_fc_layout == 'block_textimage' %}
+                {% include 'blocks/block-textimage.twig' %}
             {% endif %}
- #}
         {% endfor %}
         
 	{% elseif content.acf_fc_layout == 'divider' %}
-        <h1>Divider</h1>
-        {# {% include 'partials/block-text.twig' %} #}
+
+        <hr>
+        <h2>DIVIDER</h2>
+
+        {% for div in content.divider_content %}
+            {% if div.acf_fc_layout == 'div_testimonial' %}
+                {% include 'dividers/div-testimonial.twig' %}
+            {% elseif block.acf_fc_layout == 'div_cta' %}
+                {% include 'dividers/div-cta.twig' %}
+            {% endif %}
+        {% endfor %}
 
     {% endif %}
 

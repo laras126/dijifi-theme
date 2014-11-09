@@ -114,7 +114,7 @@
                                 },
                                 {
                                     "key": "545a7b248b363",
-                                    "name": "list",
+                                    "name": "block_list",
                                     "label": "List",
                                     "display": "row",
                                     "sub_fields": [
@@ -493,7 +493,7 @@
                             "layouts": [
                                 {
                                     "key": "545a7df639b3f",
-                                    "name": "related_pages",
+                                    "name": "div_related_pages",
                                     "label": "Related Pages",
                                     "display": "row",
                                     "sub_fields": [
@@ -526,7 +526,7 @@
                                 },
                                 {
                                     "key": "545a779cb024e",
-                                    "name": "block_testimonial",
+                                    "name": "div_testimonial",
                                     "label": "Testimonial",
                                     "display": "row",
                                     "sub_fields": [
@@ -557,7 +557,7 @@
                                 },
                                 {
                                     "key": "545a80d9b8ad6",
-                                    "name": "call_to_action",
+                                    "name": "div_cta",
                                     "label": "Call to Action",
                                     "display": "row",
                                     "sub_fields": [
