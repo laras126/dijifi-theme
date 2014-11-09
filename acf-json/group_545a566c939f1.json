@@ -1,0 +1,699 @@
+{
+    "key": "group_545a566c939f1",
+    "title": "Complex Content",
+    "fields": [
+        {
+            "key": "field_545cfe0d94264",
+            "label": "Content",
+            "name": "content",
+            "prefix": "",
+            "type": "flexible_content",
+            "instructions": "Sections are the main containers for page content. They can be separated by \"Dividers\" to provide marketing content.",
+            "required": 0,
+            "conditional_logic": 0,
+            "button_label": "New Content",
+            "min": "",
+            "max": "",
+            "layouts": [
+                {
+                    "key": "545d078102399",
+                    "name": "section",
+                    "label": "Section",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_545cfe6294265",
+                            "label": "Menu Item Title",
+                            "name": "menu_item_title",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "The text to appear in the submenu linking to this section. An example is \"Process\" or \"Quick Quote\".",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": 20,
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_545cfed494266",
+                            "label": "Section Title",
+                            "name": "section_title",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "The title for the section. Does not have to be the same as the \"Menu Item Title\", but should be limited to 4 words.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": 116,
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_545d07a4eb5cc",
+                            "label": "Lead",
+                            "name": "lead",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "A sentence or two introducing the section.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "column_width": "",
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": 150,
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_545a67647f0e1",
+                            "label": "Blocks",
+                            "name": "blocks",
+                            "prefix": "",
+                            "type": "flexible_content",
+                            "instructions": "Blocks provide a structure for your content.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "column_width": "",
+                            "button_label": "Select Block",
+                            "min": 3,
+                            "max": "",
+                            "layouts": [
+                                {
+                                    "key": "545a677427e71",
+                                    "name": "block_text",
+                                    "label": "Text",
+                                    "display": "row",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_545a72a73eed7",
+                                            "label": "Text ",
+                                            "name": "text",
+                                            "prefix": "",
+                                            "type": "wysiwyg",
+                                            "instructions": "Add text content here. It will display in a column at the center of the page. Take care to use the headings appropriately, and use minimal formatting.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "column_width": "",
+                                            "default_value": "",
+                                            "tabs": "all",
+                                            "toolbar": "full",
+                                            "media_upload": 1
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": 4
+                                },
+                                {
+                                    "key": "545a7b248b363",
+                                    "name": "list",
+                                    "label": "List",
+                                    "display": "row",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_545a7b2c8b364",
+                                            "label": "What type of list?",
+                                            "name": "list_type",
+                                            "prefix": "",
+                                            "type": "select",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "column_width": "",
+                                            "choices": {
+                                                "icon": "Icon",
+                                                "descriptive": "Descriptive",
+                                                "prominent": "Prominent"
+                                            },
+                                            "default_value": {
+                                                "icon": "icon"
+                                            },
+                                            "allow_null": 0,
+                                            "multiple": 0,
+                                            "ui": 0,
+                                            "ajax": 0,
+                                            "placeholder": "",
+                                            "disabled": 0,
+                                            "readonly": 0
+                                        },
+                                        {
+                                            "key": "field_545a7bc28b365",
+                                            "label": "Icon List Items",
+                                            "name": "icon_items",
+                                            "prefix": "",
+                                            "type": "repeater",
+                                            "instructions": "Add items to the list.",
+                                            "required": 0,
+                                            "conditional_logic": [
+                                                [
+                                                    {
+                                                        "field": "field_545a7b2c8b364",
+                                                        "operator": "==",
+                                                        "value": "icon"
+                                                    }
+                                                ]
+                                            ],
+                                            "column_width": "",
+                                            "min": "",
+                                            "max": 4,
+                                            "layout": "table",
+                                            "button_label": "Add Row",
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_545a7c2a8b366",
+                                                    "label": "Item Title",
+                                                    "name": "item_title",
+                                                    "prefix": "",
+                                                    "type": "text",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "column_width": "",
+                                                    "default_value": "",
+                                                    "placeholder": "",
+                                                    "prepend": "",
+                                                    "append": "",
+                                                    "maxlength": 35,
+                                                    "readonly": 0,
+                                                    "disabled": 0
+                                                },
+                                                {
+                                                    "key": "field_545a7c5c8b367",
+                                                    "label": "Icon",
+                                                    "name": "item_icon",
+                                                    "prefix": "",
+                                                    "type": "select",
+                                                    "instructions": "Select from the following icons:",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "column_width": "",
+                                                    "choices": {
+                                                        "camera": "Camera",
+                                                        "video": "Video",
+                                                        "cassette": "Cassette"
+                                                    },
+                                                    "default_value": {
+                                                        "camera": "camera"
+                                                    },
+                                                    "allow_null": 0,
+                                                    "multiple": 0,
+                                                    "ui": 0,
+                                                    "ajax": 0,
+                                                    "placeholder": "",
+                                                    "disabled": 0,
+                                                    "readonly": 0
+                                                },
+                                                {
+                                                    "key": "field_545a7cc88b368",
+                                                    "label": "Description",
+                                                    "name": "item_desc",
+                                                    "prefix": "",
+                                                    "type": "textarea",
+                                                    "instructions": "A brief description of the list item. Limited to 200 characters.",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "column_width": "",
+                                                    "default_value": "",
+                                                    "placeholder": "",
+                                                    "maxlength": 216,
+                                                    "rows": "",
+                                                    "new_lines": "wpautop",
+                                                    "readonly": 0,
+                                                    "disabled": 0
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "key": "field_545a7d8239b3d",
+                                            "label": "Descriptive List Items",
+                                            "name": "descriptive_list_items",
+                                            "prefix": "",
+                                            "type": "repeater",
+                                            "instructions": "These are more fleshed out list items than the icons. They will display in a row with the image on the left.",
+                                            "required": 0,
+                                            "conditional_logic": [
+                                                [
+                                                    {
+                                                        "field": "field_545a7b2c8b364",
+                                                        "operator": "==",
+                                                        "value": "descriptive"
+                                                    }
+                                                ]
+                                            ],
+                                            "column_width": "",
+                                            "min": "",
+                                            "max": "",
+                                            "layout": "table",
+                                            "button_label": "Add Row",
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_545a7dc339b3e",
+                                                    "label": "Image",
+                                                    "name": "image",
+                                                    "prefix": "",
+                                                    "type": "image",
+                                                    "instructions": "300x300",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "column_width": "",
+                                                    "return_format": "array",
+                                                    "preview_size": "thumbnail",
+                                                    "library": "all"
+                                                },
+                                                {
+                                                    "key": "field_545a7f76a0bc4",
+                                                    "label": "Item Title",
+                                                    "name": "item_title",
+                                                    "prefix": "",
+                                                    "type": "text",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "column_width": "",
+                                                    "default_value": "",
+                                                    "placeholder": "",
+                                                    "prepend": "",
+                                                    "append": "",
+                                                    "maxlength": "",
+                                                    "readonly": 0,
+                                                    "disabled": 0
+                                                },
+                                                {
+                                                    "key": "field_545a7f60a0bc3",
+                                                    "label": "Description",
+                                                    "name": "description",
+                                                    "prefix": "",
+                                                    "type": "textarea",
+                                                    "instructions": "A 2-3 sentence description of the item.",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "column_width": "",
+                                                    "default_value": "",
+                                                    "placeholder": "",
+                                                    "maxlength": "",
+                                                    "rows": "",
+                                                    "new_lines": "wpautop",
+                                                    "readonly": 0,
+                                                    "disabled": 0
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                },
+                                {
+                                    "key": "545a739c3eed9",
+                                    "name": "block_textimage",
+                                    "label": "Text and Image",
+                                    "display": "row",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_545a73ad3eeda",
+                                            "label": "Text",
+                                            "name": "text",
+                                            "prefix": "",
+                                            "type": "textarea",
+                                            "instructions": "Text should supporting the image next to it. It's kind of like an expanded caption, and can be no more than 350 characters.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "column_width": "",
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "maxlength": 350,
+                                            "rows": "",
+                                            "new_lines": "wpautop",
+                                            "readonly": 0,
+                                            "disabled": 0
+                                        },
+                                        {
+                                            "key": "field_545a74233eedb",
+                                            "label": "Image",
+                                            "name": "image",
+                                            "prefix": "",
+                                            "type": "image",
+                                            "instructions": "Upload an image. It's dimensions should be approximately 800x600.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "column_width": "",
+                                            "return_format": "array",
+                                            "preview_size": "thumbnail",
+                                            "library": "all"
+                                        },
+                                        {
+                                            "key": "field_545a74693eedc",
+                                            "label": "Text Location",
+                                            "name": "text_location",
+                                            "prefix": "",
+                                            "type": "radio",
+                                            "instructions": "Should the text display on the left or right?",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "column_width": "",
+                                            "choices": {
+                                                "left": "Left",
+                                                "right": "Right"
+                                            },
+                                            "other_choice": 0,
+                                            "save_other_choice": 0,
+                                            "default_value": "",
+                                            "layout": "vertical"
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                },
+                                {
+                                    "key": "545a779cb024e",
+                                    "name": "block_testimonial",
+                                    "label": "Testimonial",
+                                    "display": "row",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_545fa2cb5a6e3",
+                                            "label": "Testimonial",
+                                            "name": "testimonial",
+                                            "prefix": "",
+                                            "type": "relationship",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "column_width": "",
+                                            "post_type": [
+                                                "dfi_testimonial"
+                                            ],
+                                            "taxonomy": "",
+                                            "filters": [
+                                                "search"
+                                            ],
+                                            "elements": "",
+                                            "max": "",
+                                            "return_format": "object"
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                },
+                                {
+                                    "key": "545a80d9b8ad6",
+                                    "name": "call_to_action",
+                                    "label": "Call to Action",
+                                    "display": "row",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_545a824be765e",
+                                            "label": "Display",
+                                            "name": "display",
+                                            "prefix": "",
+                                            "type": "radio",
+                                            "instructions": "Should it be more subtle, or highly emphasized with an image overlay? Though they are the same as the testimonial options, these displays look different.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "column_width": "",
+                                            "choices": {
+                                                "image_overlay": "Image Overlay",
+                                                "subtle": "Subtle",
+                                                "highlighted": "Highlighted"
+                                            },
+                                            "other_choice": 0,
+                                            "save_other_choice": 0,
+                                            "default_value": "subtle",
+                                            "layout": "vertical"
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "545d08e4eb5d3",
+                    "name": "divider",
+                    "label": "Divider",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_545a789ab0253",
+                            "label": "Display",
+                            "name": "display",
+                            "prefix": "",
+                            "type": "radio",
+                            "instructions": "Select the display of the divider.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "column_width": "",
+                            "choices": {
+                                "image_overlay": "Image Overlay",
+                                "inline": "Inline",
+                                "highlighted": "Highlighted"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "",
+                            "layout": "horizontal"
+                        },
+                        {
+                            "key": "field_545a8183e765c",
+                            "label": "Image Overlay (1200x800)",
+                            "name": "image_overlay_1200",
+                            "prefix": "",
+                            "type": "image",
+                            "instructions": "Overlay image for large devices.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_545a789ab0253",
+                                        "operator": "==",
+                                        "value": "image_overlay"
+                                    }
+                                ]
+                            ],
+                            "column_width": "",
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all"
+                        },
+                        {
+                            "key": "field_545d2b0edd542",
+                            "label": "Image Overlay (600x400)",
+                            "name": "image_overlay_600",
+                            "prefix": "",
+                            "type": "image",
+                            "instructions": "Overlay image for small devices.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_545a789ab0253",
+                                        "operator": "==",
+                                        "value": "image_overlay"
+                                    }
+                                ]
+                            ],
+                            "column_width": "",
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all"
+                        },
+                        {
+                            "key": "field_545d08e4eb5d7",
+                            "label": "Divider Content",
+                            "name": "divider_content",
+                            "prefix": "",
+                            "type": "flexible_content",
+                            "instructions": "Dividers break up the page content with marketing copy and imagery. Select one here.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "column_width": "",
+                            "button_label": "Select Divider",
+                            "min": 0,
+                            "max": 1,
+                            "layouts": [
+                                {
+                                    "key": "545a7df639b3f",
+                                    "name": "related_pages",
+                                    "label": "Related Pages",
+                                    "display": "row",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_545a7e6239b40",
+                                            "label": "Pages to Connect",
+                                            "name": "pages",
+                                            "prefix": "",
+                                            "type": "relationship",
+                                            "instructions": "If you'd like to highlight a certain page, connect it here. The title of the page, it's excerpt, and associated icon will display.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "column_width": "",
+                                            "post_type": [
+                                                "page"
+                                            ],
+                                            "taxonomy": "",
+                                            "filters": [
+                                                "search",
+                                                "post_type",
+                                                "taxonomy"
+                                            ],
+                                            "elements": "",
+                                            "max": "",
+                                            "return_format": "object"
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                },
+                                {
+                                    "key": "545a779cb024e",
+                                    "name": "block_testimonial",
+                                    "label": "Testimonial",
+                                    "display": "row",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_545a8cf25f655",
+                                            "label": "Testimonial",
+                                            "name": "testimonial",
+                                            "prefix": "",
+                                            "type": "relationship",
+                                            "instructions": "Select the testimonial to display.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "column_width": "",
+                                            "post_type": [
+                                                "dfi_testimonial"
+                                            ],
+                                            "taxonomy": "",
+                                            "filters": [
+                                                "search"
+                                            ],
+                                            "elements": "",
+                                            "max": 1,
+                                            "return_format": "object"
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                },
+                                {
+                                    "key": "545a80d9b8ad6",
+                                    "name": "call_to_action",
+                                    "label": "Call to Action",
+                                    "display": "row",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_545a80e3b8ad7",
+                                            "label": "Text",
+                                            "name": "text",
+                                            "prefix": "",
+                                            "type": "text",
+                                            "instructions": "Something like \"Use our estimator tool to get a detailed cost estimate of your transfer.\"",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "column_width": "",
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": 140,
+                                            "readonly": 0,
+                                            "disabled": 0
+                                        },
+                                        {
+                                            "key": "field_545a811cb8ad8",
+                                            "label": "Button Text",
+                                            "name": "button_text",
+                                            "prefix": "",
+                                            "type": "text",
+                                            "instructions": "No more than three words.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": "",
+                                            "readonly": 0,
+                                            "disabled": 0
+                                        },
+                                        {
+                                            "key": "field_545a812fb8ad9",
+                                            "label": "Link to Page",
+                                            "name": "link_to_page",
+                                            "prefix": "",
+                                            "type": "relationship",
+                                            "instructions": "Select a page for the button to link to.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "column_width": "",
+                                            "post_type": [
+                                                "page"
+                                            ],
+                                            "taxonomy": "",
+                                            "filters": [
+                                                "search"
+                                            ],
+                                            "elements": "",
+                                            "max": "",
+                                            "return_format": "object"
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "dfi_service"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "dfi_case_study"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "custom_fields",
+        "discussion",
+        "comments",
+        "author",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ]
+}
