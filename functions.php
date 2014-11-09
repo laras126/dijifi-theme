@@ -21,11 +21,11 @@
 		}
 
 		function dfi_register_post_types(){
-			require('lib/dfi-types.php');
+			require('lib/custom-types.php');
 		}
 
 		function dfi_register_taxonomies(){
-			require('lib/dfi-taxonomies.php');
+			require('lib/taxonomies.php');
 		}
 
 		function add_to_context($context){
@@ -57,6 +57,15 @@
 	 **************************
 	 */
 
+	// Enqueue scripts and styles
+	function dfi_scripts() {
+		wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/css/main.css' );
+		wp_enqueue_script( 'script-name', get_template_directory_uri() . '/assets/js/scripts.js', array(), '1.0.0', true );
+	}
+
+	add_action( 'wp_enqueue_scripts', 'dfi_scripts' );
+
+
 
 	// Remove unused items from the Dashboard menu
 	function dfi_remove_menu_items(){
@@ -67,12 +76,15 @@
 	add_action( 'admin_menu', 'dfi_remove_menu_items' );
 
 
+
 	// Customize the editor style, from Roots.io 
 	// https://github.com/roots/roots-sass/blob/master/assets/css/editor-style.css
 	function dfi_editor_styles() {
 		add_editor_style( 'assets/css/editor-style.css' );
 	}
 	add_action( 'after_setup_theme', 'dfi_editor_styles' );
+
+
 
 	// Change Title field placeholders
 	function dfi_title_placeholder_text ( $title ) {

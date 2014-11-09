@@ -58,10 +58,10 @@ $(document).ready(function() {
 			   .toggleClass('closed active');
 
 		// If there is only one closed panel, prompt to view results
-		if( $('.closed').length == 1 ) {
+		if( $('.closed').length === 1 ) {
 			$(this).text('Show me results!');
 		} 
-		if ( $('.closed').length == 0 ) {
+		if ( $('.closed').length === 0 ) {
 			$(this).remove();
 			$(this).removeClass('next');
 		}
@@ -77,4 +77,3 @@ function markActiveParam() {
 	clearActiveParam();
 	$(this).addClass('active');
 }
-

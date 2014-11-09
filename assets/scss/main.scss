@@ -1,9 +1,11 @@
 
-@import 'config/all';
-@import 'elements/all';
-@import 'partials/all';
+@import 'config/normalize';
+
+// @import 'config/all';
+// @import 'elements/all';
+// @import 'partials/all';
 
 
 // Styles that need to be removed and handled differently
 // the _shame.scss, but let's call it something less self-depracating
-@import 'holding';
+// @import 'holding';

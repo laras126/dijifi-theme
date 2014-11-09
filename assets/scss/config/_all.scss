@@ -1,9 +1,12 @@
 
 
 // Variables
-@import 'config/settings';
+@import 'settings';
 
 // Dynamic
-@import 'config/mixins';
+@import 'mixins';
 @import 'bs-mixins';
-@import 'config/extends';
+@import 'extends';
+
+// Reset
+@import 'normalize';
