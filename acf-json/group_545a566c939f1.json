@@ -27,9 +27,10 @@
                             "name": "menu_item_title",
                             "prefix": "",
                             "type": "text",
-                            "instructions": "The text to appear in the submenu linking to this section. An example is \"Process\" or \"Quick Quote\".",
+                            "instructions": "The text to appear in the submenu linking to this section. An example is \"Process\" or \"Formats\".",
                             "required": 0,
                             "conditional_logic": 0,
+                            "column_width": "",
                             "default_value": "",
                             "placeholder": "",
                             "prepend": "",
@@ -37,6 +38,40 @@
                             "maxlength": 20,
                             "readonly": 0,
                             "disabled": 0
+                        },
+                        {
+                            "key": "field_5462583a023a8",
+                            "label": "Fixed Image",
+                            "name": "fixed_image_tf",
+                            "prefix": "",
+                            "type": "true_false",
+                            "instructions": "Should a background image display as you scroll?",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "message": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_54625842023a9",
+                            "label": "Image (1200x800)",
+                            "name": "fixed_image_1200",
+                            "prefix": "",
+                            "type": "image",
+                            "instructions": "This image will be revealed behind the section as you scroll.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5462583a023a8",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "column_width": "",
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all"
                         },
                         {
                             "key": "field_545cfed494266",
@@ -60,16 +95,16 @@
                             "label": "Lead",
                             "name": "lead",
                             "prefix": "",
-                            "type": "text",
+                            "type": "textarea",
                             "instructions": "A sentence or two introducing the section.",
                             "required": 0,
                             "conditional_logic": 0,
                             "column_width": "",
                             "default_value": "",
                             "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": 150,
+                            "maxlength": "",
+                            "rows": 4,
+                            "new_lines": "wpautop",
                             "readonly": 0,
                             "disabled": 0
                         },
@@ -84,7 +119,7 @@
                             "conditional_logic": 0,
                             "column_width": "",
                             "button_label": "Select Block",
-                            "min": 3,
+                            "min": "",
                             "max": "",
                             "layouts": [
                                 {
@@ -95,7 +130,7 @@
                                     "sub_fields": [
                                         {
                                             "key": "field_545a72a73eed7",
-                                            "label": "Text ",
+                                            "label": "Text",
                                             "name": "text",
                                             "prefix": "",
                                             "type": "wysiwyg",
@@ -104,8 +139,8 @@
                                             "conditional_logic": 0,
                                             "column_width": "",
                                             "default_value": "",
-                                            "tabs": "all",
-                                            "toolbar": "full",
+                                            "tabs": "visual",
+                                            "toolbar": "text_based",
                                             "media_upload": 1
                                         }
                                     ],
@@ -400,6 +435,36 @@
                                     ],
                                     "min": "",
                                     "max": ""
+                                },
+                                {
+                                    "key": "5462511b84c38",
+                                    "name": "block_related_page",
+                                    "label": "Related Page",
+                                    "display": "row",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_5462573ef68e2",
+                                            "label": "Connect a Page",
+                                            "name": "page",
+                                            "prefix": "",
+                                            "type": "relationship",
+                                            "instructions": "Select a page to link to.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "column_width": "",
+                                            "post_type": "",
+                                            "taxonomy": "",
+                                            "filters": [
+                                                "search",
+                                                "post_type"
+                                            ],
+                                            "elements": "",
+                                            "max": "",
+                                            "return_format": "object"
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
                                 }
                             ]
                         }
@@ -493,28 +558,25 @@
                             "layouts": [
                                 {
                                     "key": "545a7df639b3f",
-                                    "name": "div_related_pages",
-                                    "label": "Related Pages",
+                                    "name": "div_related_page",
+                                    "label": "Related Page",
                                     "display": "row",
                                     "sub_fields": [
                                         {
                                             "key": "field_545a7e6239b40",
-                                            "label": "Pages to Connect",
-                                            "name": "pages",
+                                            "label": "Page to Connect",
+                                            "name": "page",
                                             "prefix": "",
                                             "type": "relationship",
                                             "instructions": "If you'd like to highlight a certain page, connect it here. The title of the page, it's excerpt, and associated icon will display.",
                                             "required": 0,
                                             "conditional_logic": 0,
                                             "column_width": "",
-                                            "post_type": [
-                                                "page"
-                                            ],
+                                            "post_type": "",
                                             "taxonomy": "",
                                             "filters": [
                                                 "search",
-                                                "post_type",
-                                                "taxonomy"
+                                                "post_type"
                                             ],
                                             "elements": "",
                                             "max": "",

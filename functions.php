@@ -17,6 +17,7 @@
 			add_filter('get_twig', array($this, 'add_to_twig'));
 			add_action('init', array($this, 'dfi_register_post_types'));
 			add_action('init', array($this, 'dfi_register_taxonomies'));
+			add_action('init', array($this, 'dfi_register_menus'));
 			parent::__construct();
 		}
 
@@ -28,11 +29,16 @@
 			require('lib/taxonomies.php');
 		}
 
+		function dfi_register_menus() {
+			require('lib/menus.php');
+		}
+
 		function add_to_context($context){
-			$context['foo'] = 'bar';
-			$context['stuff'] = 'I am a value set in your functions.php file';
-			$context['notes'] = 'These values are available everytime you call Timber::get_context();';
-			$context['menu'] = new TimberMenu();
+			// $context['foo'] = 'bar';
+			// $context['stuff'] = 'I am a value set in your functions.php file';
+			// $context['notes'] = 'These values are available everytime you call Timber::get_context();';
+			$context['main_nav'] = new TimberMenu();
+			$context['footer_nav'] = new TimberMenu();
 			$context['site'] = $this;
 			return $context;
 		}
@@ -52,11 +58,10 @@
 
 
 	/**
-	 **************************
-	 * DiJiFi Theme Functions *
-	 **************************
+	 ****************************
+	 * DiJiFi Utility Functions *
+	 ****************************
 	 */
-
 
 
 	// Enqueue scripts
@@ -93,6 +98,8 @@
 	}
 	add_action( 'after_setup_theme', 'dfi_editor_styles' );
 
+	
+	
 
 
 	// Change Title field placeholders
@@ -108,6 +115,28 @@
 	} 
 	add_filter( 'enter_title_here', 'dfi_title_placeholder_text' );
 
+
+	
+	// Customize the 'formatselect' dropdown in TinyMCE
+	// http://support.advancedcustomfields.com/forums/topic/wysiwyg-formatselect/
+	add_filter( 'tiny_mce_before_init', function( $settings ){
+		$settings['block_formats'] = 'Paragraph=p;Heading=h3;Subheading=h4';
+		return $settings;
+	} );
+
+
+	// Add a 'Very Simple' toolbar style for the WYSIWYG editor in ACF
+	// http://www.advancedcustomfields.com/resources/customize-the-wysiwyg-toolbars/
+	function dfi_acf_wysiwyg_toolbar( $toolbars ) {
+
+		$toolbars['Text Based'] = array();
+		
+		// Only one row of buttons
+		$toolbars['Text Based'][1] = array('formatselect' , 'bold' , 'link' , 'italic' , 'unlink' );
+
+		return $toolbars;
+	}
+	add_filter( 'acf/fields/wysiwyg/toolbars' , 'dfi_acf_wysiwyg_toolbar'  );
 
 
 ?>

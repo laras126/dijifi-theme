@@ -1,5 +1,6 @@
 {% for content in post.get_field('content') %}
-
+    {% set mini_menu = content.menu_item_title %}
+    {{mini_menu}}
     {% if content.acf_fc_layout == 'section' %}
         
         {% include 'partials/section-header.twig' %}
@@ -11,6 +12,8 @@
             {% elseif blck.acf_fc_layout == 'block_list' %}
                 {% include 'blocks/block-list.twig' %}
             {% elseif blck.acf_fc_layout == 'block_textimage' %}
+                {% include 'blocks/block-textimage.twig' %}
+            {% elseif blck.acf_fc_layout == 'block_related_page' %}
                 {% include 'blocks/block-textimage.twig' %}
             {% endif %}
         {% endfor %}
@@ -25,6 +28,8 @@
                 {% include 'dividers/div-testimonial.twig' %}
             {% elseif block.acf_fc_layout == 'div_cta' %}
                 {% include 'dividers/div-cta.twig' %}
+            {% elseif block.acf_fc_layout == 'div_related_page' %}
+                {% include 'dividers/div-related.twig' %}
             {% endif %}
         {% endfor %}
 

@@ -40,7 +40,7 @@
 		'has_archive'         => true,
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
-		'rewrite'             => false,
+		'rewrite'             => 'service',
 		'capability_type'     => 'page',
 	);
 	register_post_type( 'dfi_service', $serv_args );
@@ -144,5 +144,54 @@
 		'capability_type'     => 'post',
 	);
 	register_post_type( 'dfi_testimonial', $test_args );
+
+
+
+/**
+ *
+ * Artifacts Post Type (equipment, formats, file types)
+ *
+ */
+
+	// Case Study Args
+
+	$labels = array(
+		'name'                => _x( 'Artifacts', 'Post Type General Name', 'dfi_theme' ),
+		'singular_name'       => _x( 'Artifact', 'Post Type Singular Name', 'dfi_theme' ),
+		'menu_name'           => __( 'Artifacts', 'dfi_theme' ),
+		'parent_item_colon'   => __( 'Parent Artifact:', 'dfi_theme' ),
+		'all_items'           => __( 'All Artifacts', 'dfi_theme' ),
+		'view_item'           => __( 'View Artifact', 'dfi_theme' ),
+		'add_new_item'        => __( 'Add New Artifact', 'dfi_theme' ),
+		'add_new'             => __( 'Add Artifact', 'dfi_theme' ),
+		'edit_item'           => __( 'Edit Artifact', 'dfi_theme' ),
+		'update_item'         => __( 'Update Artifact', 'dfi_theme' ),
+		'search_items'        => __( 'Search Artifact', 'dfi_theme' ),
+		'not_found'           => __( 'Not found', 'dfi_theme' ),
+		'not_found_in_trash'  => __( 'Not found in Trash', 'dfi_theme' ),
+	);
+	$args = array(
+		'label'               => __( 'dfi_artifact', 'dfi_theme' ),
+		'description'         => __( 'Equipment, formats, and files.', 'dfi_theme' ),
+		'labels'              => $labels,
+		'supports'            => array( ),
+		'taxonomies'          => array( 'dfi_artifact_type' ),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 5,
+		'menu_icon'           => 'dashicons-video-alt',
+		'can_export'          => true,
+		'has_archive'         => true,
+		'exclude_from_search' => true,
+		'publicly_queryable'  => true,
+		'rewrite'             => false,
+		'capability_type'     => 'page',
+	);
+	register_post_type( 'dfi_artifact', $args );
+
 
  ?>
