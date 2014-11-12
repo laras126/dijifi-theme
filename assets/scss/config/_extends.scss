@@ -1,10 +1,6 @@
 
 // Extends
 
-%container {
-    @include container-fixed;
-}
-
 %clearfix {
     &:before,
     &:after {

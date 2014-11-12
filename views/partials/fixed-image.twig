@@ -1,0 +1,3 @@
+{% if content.fixed_image_tf == 'true' %}
+	<img src="{{TimberImage(content.fixed_image).src('medium')}}" alt="{{content.section_title}}">
+{% endif %}

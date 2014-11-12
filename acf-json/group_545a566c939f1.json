@@ -54,7 +54,7 @@
                         {
                             "key": "field_54625842023a9",
                             "label": "Image (1200x800)",
-                            "name": "fixed_image_1200",
+                            "name": "fixed_image",
                             "prefix": "",
                             "type": "image",
                             "instructions": "This image will be revealed behind the section as you scroll.",
@@ -104,7 +104,7 @@
                             "placeholder": "",
                             "maxlength": "",
                             "rows": 4,
-                            "new_lines": "wpautop",
+                            "new_lines": "",
                             "readonly": 0,
                             "disabled": 0
                         },
@@ -571,34 +571,12 @@
                             "layout": "horizontal"
                         },
                         {
-                            "key": "field_545a8183e765c",
-                            "label": "Image Overlay (1200x800)",
-                            "name": "image_overlay_1200",
+                            "key": "field_54639238daaea",
+                            "label": "Image (1200x800)",
+                            "name": "image_overlay",
                             "prefix": "",
                             "type": "image",
-                            "instructions": "Overlay image for large devices.",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_545a789ab0253",
-                                        "operator": "==",
-                                        "value": "image_overlay"
-                                    }
-                                ]
-                            ],
-                            "column_width": "",
-                            "return_format": "array",
-                            "preview_size": "thumbnail",
-                            "library": "all"
-                        },
-                        {
-                            "key": "field_545d2b0edd542",
-                            "label": "Image Overlay (600x400)",
-                            "name": "image_overlay_600",
-                            "prefix": "",
-                            "type": "image",
-                            "instructions": "Overlay image for small devices.",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": [
                                 [
@@ -683,7 +661,7 @@
                                             ],
                                             "elements": "",
                                             "max": 1,
-                                            "return_format": "id"
+                                            "return_format": "object"
                                         }
                                     ],
                                     "min": "",

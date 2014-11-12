@@ -11,6 +11,7 @@ $(document).ready(function() {
 	$menulink.click(function() {
 		$menulink.toggleClass('active');
 		$menu.toggleClass('active');
+
 		return false;
 	});
 

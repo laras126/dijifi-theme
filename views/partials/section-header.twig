@@ -1,7 +1,11 @@
 <h2 class="note-parent">Section</h2>
 
 {% set mini_menu = content.menu_item_title %}
-<p class="note-submenu">{{mini_menu}}</p>
+<p>
+	<span class="note-submenu">{{mini_menu}}</span>
+</p>
 
-<h3>{{content.section_title}}</h3>
-<p>{{content.lead}}</p>
+{% include 'partials/fixed-image.twig' %}
+
+<h3 class="section-title">{{content.section_title}}</h3>
+<p class="lead">{{content.lead}}</p>

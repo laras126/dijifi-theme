@@ -6,19 +6,20 @@
 	font-style: italic;
 
 	&-header {
-		background-color: lighten(#3C7AAA, 20%);
+		background-color: lighten($accent-med, 20%);
 	}
 
 	&-parent {
-		background-color: lighten(#AF687E, 20%);
+		background-color: lighten($accent-med, 30%);
 	}
 
 	&-child {
-		background-color: lighten(#F8992F, 20%);
+		background-color: lighten($accent-med, 40%);
+		@extend %h5;
 	}
 
 	&-submenu {
-		background-color: lighten(#71857B, 20%);
+		background-color: lighten($accent-light, 20%);
 		display: inline-block;
 		margin: 0;
 	}

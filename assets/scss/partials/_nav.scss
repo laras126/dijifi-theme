@@ -8,7 +8,7 @@ nav[role="navigation"] {
 // I simplified some though
 
 
-.js .menu-main {
+.menu-main {
     overflow: hidden;
     max-height: 0;
 }
@@ -26,7 +26,7 @@ nav[role="navigation"] {
 }
 
 .menu-sub {
-    @extend %show-until-sm;
+    // @extend %show-until-sm;
     @include rotate($text-dark, $accent-vlight);
 
     li {
@@ -34,15 +34,15 @@ nav[role="navigation"] {
 }
 
     .menu-sub-title {
-        @include make-sm-column(2);
+        // @include make-sm-column(2);
         text-align: right;
     }
 
     .menu-sub-items {
-        @include make-sm-column(10);
+        // @include make-sm-column(10);
         
         li {
-            @include make-sm-column(3);
+            // @include make-sm-column(3);
         }
     }
 

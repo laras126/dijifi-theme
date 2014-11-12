@@ -50,10 +50,14 @@ img {
 // Typography 
 // ---
 
-// .lead {
-// 	@extend %h4;
-// 	text-align: center;
-// }
+.lead {
+	font-size: $h4;
+	text-align: center;
+}
+
+.section-title {
+	text-align: center;
+}
 
 // .block-title {
 // 	// @extend %upperspace;		

@@ -1,11 +1,13 @@
 
-@import 'config/normalize';
-@import 'utility';
 @import 'config/all';
+
+@import 'elements/all';
 @import 'blocks/all';
 
-// @import 'elements/all';
-// @import 'partials/all';
+@import 'utility';
+
+@import 'elements/all';
+@import 'partials/nav';
 @import 'partials/base';
 
 // Styles that need to be removed and handled differently
