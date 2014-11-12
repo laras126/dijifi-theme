@@ -5,7 +5,7 @@
 
 	{% if div.display == image_overlay %}
 		{# Why is this 'content' and not 'div'? #}
-		<img src="{{TimberImage(content.image_overlay).src('medium')}}" alt="Testimonial">
+		{% include 'partials/fixed-image.twig' %}
 	{% endif %}
 
 

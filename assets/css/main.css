@@ -436,18 +436,18 @@ th {
 }
 
 html {
-  font-size: 95%;
+  font-size: 90%;
   line-height: 1.3;
 }
 @media (min-width: 40em) {
   html {
-    font-size: 100%;
+    font-size: 98%;
     line-height: 1.5;
   }
 }
 @media (min-width: 40em) {
   html {
-    font-size: 105%;
+    font-size: 102%;
   }
 }
 @media (min-width: 40em) {
@@ -457,7 +457,7 @@ html {
 }
 
 body {
-  font-family: "livory", Georgia, serif;
+  font-family: "Chaparral Pro", Georgia, serif;
   font-size: 1.3rem;
 }
 
@@ -691,18 +691,18 @@ fieldset {
 }
 
 html {
-  font-size: 95%;
+  font-size: 90%;
   line-height: 1.3;
 }
 @media (min-width: 40em) {
   html {
-    font-size: 100%;
+    font-size: 98%;
     line-height: 1.5;
   }
 }
 @media (min-width: 40em) {
   html {
-    font-size: 105%;
+    font-size: 102%;
   }
 }
 @media (min-width: 40em) {
@@ -712,7 +712,7 @@ html {
 }
 
 body {
-  font-family: "livory", Georgia, serif;
+  font-family: "Chaparral Pro", Georgia, serif;
   font-size: 1.3rem;
 }
 

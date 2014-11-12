@@ -1,11 +1,19 @@
-<h2 class="note-parent">Section</h2>
+{% if content.fixed_image_tf == 'true' %}
+	{% include 'partials/fixed-image.twig' %}
+{% endif %}
 
-{% set mini_menu = content.menu_item_title %}
-<p>
-	<span class="note-submenu">{{mini_menu}}</span>
-</p>
+<header class="b-all">	
+	<div class="b2-b4">
+		
+		<h2 class="note-parent">Section</h2>
 
-{% include 'partials/fixed-image.twig' %}
+		{% set mini_menu = content.menu_item_title %}
+		<p>
+			<span class="note-submenu">{{mini_menu}}</span>
+		</p>
 
-<h3 class="section-title">{{content.section_title}}</h3>
-<p class="lead">{{content.lead}}</p>
+		<h3 class="section-title">{{content.section_title}}</h3>
+		<p class="lead">{{content.lead}}</p>	
+
+	</div>	
+</header>

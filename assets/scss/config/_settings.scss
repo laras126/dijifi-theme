@@ -74,9 +74,9 @@ $rotate-link: 		$text-light;
 // http://gregrickaby.com/using-the-golden-ratio-and-rems/
 
 $contain-lg: 			110%;
-$contain-md: 			105%;
-$contain-sm: 			100%;
-$contain: 				95%;
+$contain-md: 			102%;
+$contain-sm: 			98%;
+$contain: 				90%;
 
 $base:  			1.3rem;
 // $base:  			1rem;
@@ -99,8 +99,8 @@ $h6:  				$sml;
 
 $sans-serif: 		'freight-sans-pro', Helvetica, sans-serif;
 $sans-serif-bold: 	'Proxima Nova';
-// $serif:             'Chaparral Pro', Georgia, serif;
-$serif:             'livory', Georgia, serif;
+$serif:             'Chaparral Pro', Georgia, serif;
+// $serif:             'c', Georgia, serif;
 
 $heading-font: 		$sans-serif;
 $body-font: 		$serif;
