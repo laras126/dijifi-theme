@@ -1,0 +1,107 @@
+{
+    "key": "group_545d1089db132",
+    "title": "Quick Quote",
+    "fields": [
+        {
+            "key": "field_545d277c7726e",
+            "label": "Prompt",
+            "name": "prompt",
+            "prefix": "",
+            "type": "text",
+            "instructions": "Prompt to fill out the quote form.",
+            "required": 0,
+            "conditional_logic": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_545d279c02f59",
+            "label": "Form Content",
+            "name": "form_content",
+            "prefix": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "min": "",
+            "max": "",
+            "layout": "table",
+            "button_label": "New Question",
+            "sub_fields": [
+                {
+                    "key": "field_545d27a902f5a",
+                    "label": "Question",
+                    "name": "question",
+                    "prefix": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "column_width": "",
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 136,
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_545d27b702f5b",
+                    "label": "Answers",
+                    "name": "answers",
+                    "prefix": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "column_width": "",
+                    "min": "",
+                    "max": "",
+                    "layout": "table",
+                    "button_label": "Add Answer",
+                    "sub_fields": [
+                        {
+                            "key": "field_545d27d402f5c",
+                            "label": "Answer Text",
+                            "name": "answer_text",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "column_width": "",
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": 140,
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "dfi_service"
+            }
+        ]
+    ],
+    "menu_order": 4,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": ""
+}

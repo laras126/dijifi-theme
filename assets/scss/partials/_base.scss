@@ -9,7 +9,7 @@
 }
 
 body {
-	background-color: $body-bkgd;
+	// background-color: $body-bkgd;
 }
 
 img {
@@ -22,27 +22,27 @@ img {
 // Layout
 // ---
 
-.block-inner {
-	max-width: $screen-lg;
-	@extend %container;
-}
+// .block-inner {
+// 	max-width: $screen-lg;
+// 	@extend %container;
+// }
 
-.block-squish {
-	max-width: $screen-md;	
-	@extend %container;
-}
+// .block-squish {
+// 	max-width: $screen-md;	
+// 	@extend %container;
+// }
 
-.block-half {
-	@include make-sm-column(6);
-}
+// .block-half {
+// 	@include make-sm-column(6);
+// }
 
-.block-em-left {
-	@include make-sm-column-pull(2)
-}
+// .block-em-left {
+// 	@include make-sm-column-pull(2)
+// }
 
-.block-em-right {
-	@include make-sm-column-push(1)
-}
+// .block-em-right {
+// 	@include make-sm-column-push(1)
+// }
 
 
 
@@ -50,45 +50,45 @@ img {
 // Typography 
 // ---
 
-.lead {
-	@extend %h4;
-	text-align: center;
-}
+// .lead {
+// 	@extend %h4;
+// 	text-align: center;
+// }
 
-.block-title {
-	// @extend %upperspace;		
-	// text-shadow: 1px 1px 0 $text-dark;
-	// text-shadow: 2px 2px 0 rgba($text-dark, 0.4);
-	border-bottom: $accent-border; 
-	position:relative; 
-	margin-bottom: $h1;
+// .block-title {
+// 	// @extend %upperspace;		
+// 	// text-shadow: 1px 1px 0 $text-dark;
+// 	// text-shadow: 2px 2px 0 rgba($text-dark, 0.4);
+// 	border-bottom: $accent-border; 
+// 	position:relative; 
+// 	margin-bottom: $h1;
 	
 
-	@include bp(med) {
-		font-size: $h1;
-	}
+// 	@include bp(med) {
+// 		font-size: $h1;
+// 	}
 
-	span { 
-		position: relative; 
-		top: $h5;
-		@include bp(med) {
-			top: $h3; 
-		}
+// 	span { 
+// 		position: relative; 
+// 		top: $h5;
+// 		@include bp(med) {
+// 			top: $h3; 
+// 		}
 		
-		padding: 0 $h4 0;
-		background-color: $body-bkgd;
-	}
-}
+// 		padding: 0 $h4 0;
+// 		background-color: $body-bkgd;
+// 	}
+// }
 
-.block-title-wrap {
-	display:block; 
-    margin: 0;
-}
+// .block-title-wrap {
+// 	display:block; 
+//     margin: 0;
+// }
 
 
-// Utility
+// // Utility
 
-.special {
-	color: $accent-med;
-}
+// .special {
+// 	color: $accent-med;
+// }
 

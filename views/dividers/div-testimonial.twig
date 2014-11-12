@@ -1,13 +1,13 @@
 {% extends "dividers/div.twig" %}
 
 {% block content %}
-	<h3>testimonial</h3>
+	<p>Testimonial</p>
 	{# {% if testi %}		 #}
     {% set test = TimberPost(div.testimonial) %}
 	
 	{# {% if test %} #}
 		{# hello #}
-		{{TimberPost(content.div.testimonial).text}}
+		{{test.text}}
 	{# {% endif %} #}
 	{# {% endif %} #}
 {% endblock %}

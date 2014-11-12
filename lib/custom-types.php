@@ -24,7 +24,7 @@
 		'not_found_in_trash'  => __( 'Not found in Trash', 'dfi_theme' ),
 	);
 	$serv_args = array(
-		'label'               => __( 'dfi_service', 'dfi_theme' ),
+		'label'               => __( 'service', 'dfi_theme' ),
 		'description'         => __( 'The main pages for DiJiFi\'s transfer services.', 'dfi_theme' ),
 		'labels'              => $serv_labels,
 		'supports'            => array( ),
@@ -81,7 +81,7 @@
 		'description'         => __( 'Case Studies for individual and archival clients.', 'dfi_theme' ),
 		'labels'              => $study_labels,
 		'supports'            => array( 'title', ),
-		'taxonomies'          => array( 'study_type' ),
+		'taxonomies'          => array( 'dfi_study_type' ),
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,

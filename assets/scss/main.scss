@@ -1,10 +1,12 @@
 
 @import 'config/normalize';
 @import 'utility';
-// @import 'config/all';
+@import 'config/all';
+@import 'blocks/all';
+
 // @import 'elements/all';
 // @import 'partials/all';
-
+@import 'partials/base';
 
 // Styles that need to be removed and handled differently
 // the _shame.scss, but let's call it something less self-depracating

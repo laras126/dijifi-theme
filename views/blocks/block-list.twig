@@ -1,5 +1,36 @@
 {% extends "blocks/block.twig" %}
 
+{# List Block #}
+
 {% block content %}
 	<p>List block</p>
+
+
+	{% set type = blck.list_type %}
+
+	{{blck.text}}
+	
+	{% if type == 'artifacts' %}
+		<p><em>Artifacts List</em></p>
+
+		<ul class="list list-artifacts b-clear">
+		{% for arti in blck.connected_artifacts %}
+		
+			<li class="b-all">
+				<div class="b1-b2">
+					<img src="{{TimberImage(arti.image).src('medium')}}" alt="{{arti.post_title}}">	
+				</div>
+				<div class="b3-b4">
+					<h4>{{arti.post_title}}</h4>
+					<p>{{arti.short_description}}</p>	
+				</div>
+			</li>
+
+		{% endfor %}
+		</ul>
+	{% elseif type == 'text_icon' %}
+		<em>Text and icon List</em>
+	{% endif %}
+
+
 {% endblock %}

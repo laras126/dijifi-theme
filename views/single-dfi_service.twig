@@ -2,22 +2,18 @@
 
 {% block content %}
 
-	<div class="content-wrapper">
-		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-			<section class="article-content">
-				
+	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+		<section class="article-content">
+			
+			<header>
 				{% include 'partials/header-logic.twig' %}
-				
-				<header>
-				
-				</header>
+			</header>
 
-				<div class="article-body">
-					{% include 'partials/content-logic.twig' %}
-				</div>
+			<div class="article-body">
+				{% include 'partials/content-logic.twig' %}
+			</div>
 
-			</section>
-		</article>
-	</div> <!-- /content-wrapper -->
+		</section>
+	</article>
 
 {% endblock %}

@@ -1,0 +1,46 @@
+{
+    "key": "group_546369d88c0cd",
+    "title": "Content Guide - Service",
+    "fields": [
+        {
+            "key": "field_546369e51c157",
+            "label": "Service Page Content Guide",
+            "name": "",
+            "prefix": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "message": "To add content, click \"New Content\" and select \"Section\" or \"Block\". They should be in the following order, and relate to the content here:\r\n\r\n<strong>1. Section<\/strong>\r\nMenu title: Formats\r\nContaining the following blocks:\r\nFixed Image > Yes > Picture of messy photos\r\nList > Related Items (select related formats)\r\nText > Fun description of differing types of formats and the history they might have. Then a sentence about how DiJiFi can handle all of them!\r\n\r\n<strong>2. Divider<\/strong>\r\nTestimonial > Highlighted\r\n\r\n<strong>3. Section<\/strong>\r\nMenu title: Results\r\nFixed Image > Yes > Picture of folder of photos on a computer or other device\r\nText > Description of organized photos and options for results of transfer\r\nList > Icon list of file types\r\n\r\n<strong>4. Divider<\/strong>\r\nInline > Prompt to call\r\n\r\n<strong>5. Section<\/strong>\r\nMenu title > Process\r\nText > Empathetic description about the care taken in handling media, and mention the rare-ity and quality of equipment and process.\r\nRelated Page > Link to process page, have a sentence appealing to people interested in the tech, and that you guys are nerds yourselves! (no offense)"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "dfi_service"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "custom_fields",
+        "discussion",
+        "comments",
+        "revisions",
+        "author",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ]
+}

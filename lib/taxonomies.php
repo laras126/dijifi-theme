@@ -41,4 +41,41 @@
 	);
 	register_taxonomy( 'dfi_study_type', array( 'dfi_case_study' ), $stype_args );
 
+
+
+/**
+ *
+ * Artifact Type Taxonomy (format, equipment, file)
+ *
+ */
+
+	$labels = array(
+		'name'                       => _x( 'Artifact Types', 'Taxonomy General Name', 'dfi_theme' ),
+		'singular_name'              => _x( 'Artifact Type', 'Taxonomy Singular Name', 'dfi_theme' ),
+		'menu_name'                  => __( 'Artifact Types', 'dfi_theme' ),
+		'all_items'                  => __( 'All Types', 'dfi_theme' ),
+		'parent_item'                => __( 'Parent Type', 'dfi_theme' ),
+		'parent_item_colon'          => __( 'Parent Type:', 'dfi_theme' ),
+		'new_item_name'              => __( 'New Artifact Type', 'dfi_theme' ),
+		'add_new_item'               => __( 'Add New Type', 'dfi_theme' ),
+		'edit_item'                  => __( 'Edit Type', 'dfi_theme' ),
+		'update_item'                => __( 'Update Type', 'dfi_theme' ),
+		'separate_items_with_commas' => __( 'Separate items with commas', 'dfi_theme' ),
+		'search_items'               => __( 'Search Types', 'dfi_theme' ),
+		'add_or_remove_items'        => __( 'Add or remove types', 'dfi_theme' ),
+		'choose_from_most_used'      => __( 'Choose from the most used types', 'dfi_theme' ),
+		'not_found'                  => __( 'Not Found', 'dfi_theme' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => false,
+		'show_tagcloud'              => true,
+	);
+	register_taxonomy( 'dfi_artifact_type', array( 'dfi_artifact' ), $args );
+
+
 ?>

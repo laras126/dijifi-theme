@@ -164,10 +164,8 @@
                                             "conditional_logic": 0,
                                             "column_width": "",
                                             "choices": {
-                                                "icon": "Icon",
-                                                "descriptive": "Descriptive",
-                                                "prominent": "Prominent",
-                                                "related": "Related Items"
+                                                "text_icon": "Text with Icon",
+                                                "artifacts": "Artifact List"
                                             },
                                             "default_value": {
                                                 "icon": "icon"
@@ -193,14 +191,14 @@
                                                     {
                                                         "field": "field_545a7b2c8b364",
                                                         "operator": "==",
-                                                        "value": "icon"
+                                                        "value": "text_icon"
                                                     }
                                                 ]
                                             ],
                                             "column_width": "",
                                             "min": "",
                                             "max": 4,
-                                            "layout": "table",
+                                            "layout": "row",
                                             "button_label": "Add Row",
                                             "sub_fields": [
                                                 {
@@ -264,6 +262,52 @@
                                                     "new_lines": "wpautop",
                                                     "readonly": 0,
                                                     "disabled": 0
+                                                },
+                                                {
+                                                    "key": "field_5463866055786",
+                                                    "label": "Connect content?",
+                                                    "name": "connected_conditional",
+                                                    "prefix": "",
+                                                    "type": "true_false",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "column_width": "",
+                                                    "message": "Connect additional content to this list item.",
+                                                    "default_value": 0
+                                                },
+                                                {
+                                                    "key": "field_54637529e2160",
+                                                    "label": "Related Conent",
+                                                    "name": "related_content",
+                                                    "prefix": "",
+                                                    "type": "relationship",
+                                                    "instructions": "Select content to link to.",
+                                                    "required": 0,
+                                                    "conditional_logic": [
+                                                        [
+                                                            {
+                                                                "field": "field_5463866055786",
+                                                                "operator": "==",
+                                                                "value": "1"
+                                                            }
+                                                        ]
+                                                    ],
+                                                    "column_width": "",
+                                                    "post_type": [
+                                                        "dfi_service",
+                                                        "dfi_case_study",
+                                                        "page"
+                                                    ],
+                                                    "taxonomy": "",
+                                                    "filters": [
+                                                        "search",
+                                                        "post_type",
+                                                        "taxonomy"
+                                                    ],
+                                                    "elements": "",
+                                                    "max": 1,
+                                                    "return_format": "object"
                                                 }
                                             ]
                                         },
@@ -344,32 +388,60 @@
                                         },
                                         {
                                             "key": "field_545fae2b2e782",
-                                            "label": "Related Items",
-                                            "name": "related_items",
+                                            "label": "Connected Artifacts",
+                                            "name": "connected_artifacts",
                                             "prefix": "",
                                             "type": "relationship",
-                                            "instructions": "This is mainly for formats.",
+                                            "instructions": "Show a list of connected Formats, Equipment, etc.",
                                             "required": 0,
                                             "conditional_logic": [
                                                 [
                                                     {
                                                         "field": "field_545a7b2c8b364",
                                                         "operator": "==",
-                                                        "value": "related"
+                                                        "value": "artifacts"
                                                     }
                                                 ]
                                             ],
                                             "column_width": "",
-                                            "post_type": "",
+                                            "post_type": [
+                                                "dfi_artifact"
+                                            ],
                                             "taxonomy": "",
                                             "filters": [
                                                 "search",
-                                                "post_type",
                                                 "taxonomy"
                                             ],
                                             "elements": "",
                                             "max": "",
                                             "return_format": "object"
+                                        },
+                                        {
+                                            "key": "field_5463741df6d2a",
+                                            "label": "Item Format",
+                                            "name": "item_format",
+                                            "prefix": "",
+                                            "type": "radio",
+                                            "instructions": "\"Short\" will show only the short description fields, \"Long\" will show the long description.",
+                                            "required": 0,
+                                            "conditional_logic": [
+                                                [
+                                                    {
+                                                        "field": "field_545a7b2c8b364",
+                                                        "operator": "==",
+                                                        "value": "artifacts"
+                                                    }
+                                                ]
+                                            ],
+                                            "column_width": "",
+                                            "choices": {
+                                                "short": "Short",
+                                                "long": "Long"
+                                            },
+                                            "other_choice": 0,
+                                            "save_other_choice": 0,
+                                            "default_value": "",
+                                            "layout": "horizontal"
                                         }
                                     ],
                                     "min": "",
@@ -708,7 +780,7 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 2,
     "position": "normal",
     "style": "seamless",
     "label_placement": "top",
