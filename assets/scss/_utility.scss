@@ -1,0 +1,26 @@
+.text-justify {
+	text-align: justify;
+}
+
+.note {
+	font-style: italic;
+
+	&-header {
+		background-color: lighten(#3C7AAA, 20%);
+	}
+
+	&-parent {
+		background-color: lighten(#AF687E, 20%);
+	}
+
+	&-child {
+		background-color: lighten(#F8992F, 20%);
+	}
+
+	&-submenu {
+		background-color: lighten(#71857B, 20%);
+		display: inline-block;
+		margin: 0;
+	}
+}
+

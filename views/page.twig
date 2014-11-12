@@ -4,6 +4,12 @@
 
 	<div class="content-wrapper">
 		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+			<h1>page header</h1>
+			{# <picture> #}
+				{# <source srcset="{{TimberImage(header_image_desktop).src}}" media="(min-width: 56em)"> #}
+				<img class="page-header-image" srcset="{{header_image_desktop}}">
+			{# </picture> #}
+
 			<section class="article-content">
 				<h1 class="article-h1">{{post.title}}</h1>
 

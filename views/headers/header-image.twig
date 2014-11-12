@@ -1,0 +1,8 @@
+
+<h2 class="note-header">Image Header</h2>
+
+<picture>
+	<source srcset="{{TimberImage(post.image_1200).src}}" media="(min-width: 56em)">
+	<source srcset="{{TimberImage(post.image_1200).src('large')}}" media="(min-width: 40em)">
+	<img class="page-header-image" srcset="{{TimberImage(post.image_1200).src('medium')}}" alt="{{post.title}}">
+</picture>

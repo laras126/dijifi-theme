@@ -1,4 +1,4 @@
-{% extends "base.twig" %}
+{% extends "single.twig" %}
 
 {% block content %}
 
@@ -6,10 +6,10 @@
 		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
 			<section class="article-content">
 				
+				{% include 'partials/header-logic.twig' %}
+				
 				<header>
-					<h1 class="article-h1">{{post.title}}</h1>
-					<h2>{{post.tagline}}</h2>
-					<p>{{post.summary}}</p>	
+				
 				</header>
 
 				<div class="article-body">

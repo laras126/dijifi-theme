@@ -1,6 +1,5 @@
 {% for content in post.get_field('content') %}
-    {% set mini_menu = content.menu_item_title %}
-    {{mini_menu}}
+    
     {% if content.acf_fc_layout == 'section' %}
         
         {% include 'partials/section-header.twig' %}
@@ -8,27 +7,24 @@
         {# Note: Block was probably a poor choice of word here because it conflicts with the 'blocks' in Twig. So I've changed it to 'blck' instead. #}
         {% for blck in content.blocks %} 
             {% if blck.acf_fc_layout == 'block_text' %}
-                {% include 'blocks/block-text.twig' %}
+                {% include 'blocks/block-text.twig' %}   
             {% elseif blck.acf_fc_layout == 'block_list' %}
                 {% include 'blocks/block-list.twig' %}
             {% elseif blck.acf_fc_layout == 'block_textimage' %}
                 {% include 'blocks/block-textimage.twig' %}
             {% elseif blck.acf_fc_layout == 'block_related_page' %}
-                {% include 'blocks/block-textimage.twig' %}
+                {# {% include 'blocks/block-related.twig' %} #}
             {% endif %}
         {% endfor %}
         
 	{% elseif content.acf_fc_layout == 'divider' %}
 
-        <hr>
-        <h2>DIVIDER</h2>
-
         {% for div in content.divider_content %}
             {% if div.acf_fc_layout == 'div_testimonial' %}
                 {% include 'dividers/div-testimonial.twig' %}
-            {% elseif block.acf_fc_layout == 'div_cta' %}
+            {% elseif div.acf_fc_layout == 'div_cta' %}
                 {% include 'dividers/div-cta.twig' %}
-            {% elseif block.acf_fc_layout == 'div_related_page' %}
+            {% elseif div.acf_fc_layout == 'div_related_page' %}
                 {% include 'dividers/div-related.twig' %}
             {% endif %}
         {% endfor %}

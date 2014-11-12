@@ -394,4 +394,26 @@ th {
   padding: 0;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
+.note {
+  font-style: italic;
+}
+.note-header {
+  background-color: #7babd1;
+}
+.note-parent {
+  background-color: #d2abb7;
+}
+.note-child {
+  background-color: #fbc992;
+}
+.note-submenu {
+  background-color: #a7b5ae;
+  display: inline-block;
+  margin: 0;
+}
+
 /*# sourceMappingURL=main.css.map */

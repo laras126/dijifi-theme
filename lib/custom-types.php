@@ -37,7 +37,7 @@
 		'menu_position'       => 5,
 		'menu_icon'           => 'dashicons-images-alt2',
 		'can_export'          => true,
-		'has_archive'         => true,
+		'has_archive'         => false,
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
 		'rewrite'             => 'service',

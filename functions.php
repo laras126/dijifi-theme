@@ -99,7 +99,6 @@
 	add_action( 'after_setup_theme', 'dfi_editor_styles' );
 
 	
-	
 
 
 	// Change Title field placeholders
@@ -117,7 +116,8 @@
 
 
 	
-	// Customize the 'formatselect' dropdown in TinyMCE
+
+	// Customize the elements dropdown in TinyMCE
 	// http://support.advancedcustomfields.com/forums/topic/wysiwyg-formatselect/
 	add_filter( 'tiny_mce_before_init', function( $settings ){
 		$settings['block_formats'] = 'Paragraph=p;Heading=h3;Subheading=h4';
@@ -125,12 +125,13 @@
 	} );
 
 
+
 	// Add a 'Very Simple' toolbar style for the WYSIWYG editor in ACF
 	// http://www.advancedcustomfields.com/resources/customize-the-wysiwyg-toolbars/
 	function dfi_acf_wysiwyg_toolbar( $toolbars ) {
 
 		$toolbars['Text Based'] = array();
-		
+
 		// Only one row of buttons
 		$toolbars['Text Based'][1] = array('formatselect' , 'bold' , 'link' , 'italic' , 'unlink' );
 

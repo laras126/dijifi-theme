@@ -611,7 +611,7 @@
                                             ],
                                             "elements": "",
                                             "max": 1,
-                                            "return_format": "object"
+                                            "return_format": "id"
                                         }
                                     ],
                                     "min": "",
