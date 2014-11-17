@@ -1,5 +1,7 @@
 module.exports = function(grunt) {
 
+    require('load-grunt-tasks')(grunt);
+    
     // 1. All configuration goes here 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -48,16 +50,16 @@ module.exports = function(grunt) {
           }
         },
 
-        // svgstore: {
-        //   options: {
-        //     prefix : 'shape-', // This will prefix each <g> ID
-        //   },
-        //   default : {
-        //       files: {
-        //         'assets/img/processed/svg-defs.svg': ['assets/img/svgs/*.svg'],
-        //       }
-        //     }
-        // },
+        svgstore: {
+            options: {
+                prefix : 'shape-', // This will prefix each <g> ID
+            },
+            default: {
+                files: {
+                    'views/partials/svg-defs.svg': ['assets/img/svgs/*.svg'],
+                }
+            }
+        },
 
         watch: {
             scripts: {
