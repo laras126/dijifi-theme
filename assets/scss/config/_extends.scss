@@ -1,5 +1,17 @@
 
-// Extends
+
+// ----
+// Layout
+// ----
+
+%container {
+    margin: 0 auto;
+    @include container();
+}
+
+%row {
+    @include make-row();
+}
 
 %clearfix {
     &:before,
@@ -12,15 +24,50 @@
     }
 }
 
+%center-block {
+    margin: 0 auto;
+    display: block;
+}
+
+%img-full {
+    width: 100%;
+}
+
+
+
+
+// ----
+// Typography
+// ----
+
+
+
+
+
+
+
+// ----
+// Lists
+// ----
+
+%unstyle-list {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+
+
+
+
+
+// Hold
+
 
 %block {
 	padding: $h4 $h3;
 }
 
-%center-block {
-    margin: 0 auto;
-    display: block;
-}
 
 .show-until-sm, 
 %show-until-sm {
@@ -79,10 +126,3 @@
     text-align: center;
 }
 
-// Lists
-
-%unstyle-list {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-}

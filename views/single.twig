@@ -1,11 +1,5 @@
 {% extends "base.twig" %}
 
-{% block content_header %}
-	<header>
-		{% include 'partials/header-logic.twig' %}
-	</header>
-{% endblock %}
-
 {% block content %}
 	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
 		{% include 'partials/content-logic.twig' %}

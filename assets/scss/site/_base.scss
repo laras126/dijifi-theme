@@ -22,6 +22,14 @@ img {
 // Layout
 // ---
 
+.content-contain {
+	@extend %container;
+}
+
+.content-inner {
+	@extend %row;	
+}
+
 // .block-inner {
 // 	max-width: $screen-lg;
 // 	@extend %container;
@@ -58,6 +66,35 @@ img {
 .section-title {
 	text-align: center;
 }
+
+
+
+
+// ---
+// Components 
+// ---
+
+// .fixed-image {
+// 	@extend %img-full;
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+
+// }
+
+.fixed-image {
+	background-attachement: fixed; 
+	background-size: cover;
+	height: 800px;
+	position: relative;	
+	z-index: $zback;
+}
+
+.content {
+	position: relative;
+	z-index: $zmid;
+}
+
 
 // .block-title {
 // 	// @extend %upperspace;		

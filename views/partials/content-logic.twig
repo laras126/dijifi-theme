@@ -2,8 +2,8 @@
     
     {% if content.acf_fc_layout == 'section' %}
 
-        <section class="content">
-
+        <section class="content" id="{{content.menu_item_title}}">
+            
             {% include 'partials/section-header.twig' %}
 
             {# Note: Block was probably a poor choice of word here because it conflicts with the 'blocks' in Twig. So I've changed it to 'blck' instead. #}
@@ -23,7 +23,7 @@
 	
     {% elseif content.acf_fc_layout == 'divider' %}
         
-        <section class="divider b-all">
+        <section class="divider">
         
             {% for div in content.divider_content %}
                 {% if div.acf_fc_layout == 'div_testimonial' %}

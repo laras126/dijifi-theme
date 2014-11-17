@@ -3,9 +3,9 @@
 // ---- Screen sizes
 // ----
 
-$screen-sm: 40em;
-$screen-md: 50em;
-$screen-lg: 60em;
+$screen-sm: 35em;
+$screen-md: 45em;
+$screen-lg: 50em;
 
 
 
@@ -125,4 +125,10 @@ $link-hover: 		darken($link-color, 20%);
 // ----
 
 $accent-border: 	1px solid $accent-med;
+
+// Z-Index Scale
+$zbase: 1;
+$zback: $zbase;
+$zmid: $zbase*2;
+$ztop: $zbase*3;
 

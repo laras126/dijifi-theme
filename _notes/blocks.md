@@ -30,6 +30,7 @@
 - Paragraphs - textarea
 - Columns - number
 
+
 #### Text-Image block
 	
 - Headline - text

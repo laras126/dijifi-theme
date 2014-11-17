@@ -12,6 +12,11 @@
 		function __construct(){
 			add_theme_support('post-formats');
 			add_theme_support('post-thumbnails');
+
+			// update_option('thumbnail_size_w', 150);
+			// update_option('thumbnail_size_h', 150);
+			// update_option('large_size_w', 500);
+			
 			add_theme_support('menus');
 			add_filter('timber_context', array($this, 'add_to_context'));
 			add_filter('get_twig', array($this, 'add_to_twig'));
@@ -63,6 +68,10 @@
 	 ****************************
 	 */
 
+	// add_image_size( 'fixed-small', 400, 300 );
+	// add_image_size( 'fixed-med', 600, 400 );
+	// add_image_size( 'fixed-large', 1200, 800 );
+	
 
 	// Enqueue scripts
 	function dfi_scripts() {

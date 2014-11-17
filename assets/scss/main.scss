@@ -1,15 +1,10 @@
 
-@import 'config/all';
+@import 'config/all'; // Mixins, variables, and tools that do not output code
+@import 'elements/all'; // Roots elements
 
-@import 'elements/all';
-@import 'blocks/all';
+@import 'site/all'; // Main site components
+@import 'blocks/all'; // "Block" content type
+@import 'dividers/all'; // "Divider" content type
 
-@import 'utility';
-
-@import 'elements/all';
-@import 'partials/nav';
-@import 'partials/base';
-
-// Styles that need to be removed and handled differently
-// the _shame.scss, but let's call it something less self-depracating
-// @import 'holding';
+@import 'utility'; // For prototyping and should not be used in production
+@import 'holding'; // Styles that need to be removed and handled differently

@@ -1,7 +1,0 @@
-.block-cta .block-squish {
-	@include rotate($text-light, $alert-info);
-	font-family: $nav-font;
-	text-align: center;
-	border: $accent-border;
-	// @extend %block;
-}
