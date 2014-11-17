@@ -264,35 +264,14 @@
                                                     "disabled": 0
                                                 },
                                                 {
-                                                    "key": "field_5463866055786",
-                                                    "label": "Connect content?",
-                                                    "name": "connected_conditional",
-                                                    "prefix": "",
-                                                    "type": "true_false",
-                                                    "instructions": "",
-                                                    "required": 0,
-                                                    "conditional_logic": 0,
-                                                    "column_width": "",
-                                                    "message": "Connect additional content to this list item.",
-                                                    "default_value": 0
-                                                },
-                                                {
                                                     "key": "field_54637529e2160",
                                                     "label": "Related Conent",
                                                     "name": "related_content",
                                                     "prefix": "",
                                                     "type": "relationship",
-                                                    "instructions": "Select content to link to.",
+                                                    "instructions": "Link to related content? Leave blank if no.",
                                                     "required": 0,
-                                                    "conditional_logic": [
-                                                        [
-                                                            {
-                                                                "field": "field_5463866055786",
-                                                                "operator": "==",
-                                                                "value": "1"
-                                                            }
-                                                        ]
-                                                    ],
+                                                    "conditional_logic": 0,
                                                     "column_width": "",
                                                     "post_type": [
                                                         "dfi_service",

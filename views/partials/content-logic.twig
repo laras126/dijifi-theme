@@ -8,6 +8,7 @@
 
             {# Note: Block was probably a poor choice of word here because it conflicts with the 'blocks' in Twig. So I've changed it to 'blck' instead. #}
             {% for blck in content.blocks %} 
+                {% set block_class = blck.acf_fc_layout %}
                 {% if blck.acf_fc_layout == 'block_text' %}
                     {% include 'blocks/block-text.twig' %}   
                 {% elseif blck.acf_fc_layout == 'block_list' %}
@@ -15,7 +16,7 @@
                 {% elseif blck.acf_fc_layout == 'block_textimage' %}
                     {% include 'blocks/block-textimage.twig' %}
                 {% elseif blck.acf_fc_layout == 'block_related_page' %}
-                    {# {% include 'blocks/block-related.twig' %} #}
+                    {% include 'blocks/block-related.twig' %}
                 {% endif %}
             {% endfor %}
 

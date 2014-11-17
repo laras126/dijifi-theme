@@ -1,19 +1,13 @@
 {% extends "dividers/div.twig" %}
 
-{% block content %}
-	<p>Testimonial</p>
-
-	{% if div.display == image_overlay %}
-		{# Why is this 'content' and not 'div'? #}
-		{% include 'partials/fixed-image.twig' %}
-	{% endif %}
-
-
+{% block content %}	
+	<p class="note-child">Testimonial</p>
+	
 	{% for test in div.testimonial %}
 		<blockquote>
 			{{test.text}}	
 		</blockquote>
 		<p>{{test.person_name}} - <a href="{{test.source_link}}" target="blank">{{test.source}}</a></p>
 	{% endfor %}
-
+	
 {% endblock %}

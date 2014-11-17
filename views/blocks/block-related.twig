@@ -1,0 +1,10 @@
+{% extends "blocks/block.twig" %}
+
+{% block content %}
+	{% for related in blck.page %}
+		<h3>{{related.post_title}}</h3>
+		{# TODO: related.link not working... #}
+		
+		<a href="{{related.link}}" class="link-more">Read more &rarr;</a>
+	{% endfor %}
+{% endblock %}

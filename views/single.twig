@@ -1,7 +1,5 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-		{% include 'partials/content-logic.twig' %}
-	</article>
+	{% include 'partials/content-logic.twig' %}
 {% endblock %}

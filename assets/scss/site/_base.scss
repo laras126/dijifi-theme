@@ -9,7 +9,7 @@
 }
 
 body {
-	// background-color: $body-bkgd;
+	background-color: $body-bkgd;
 }
 
 img {
@@ -30,27 +30,6 @@ img {
 	@extend %row;	
 }
 
-// .block-inner {
-// 	max-width: $screen-lg;
-// 	@extend %container;
-// }
-
-// .block-squish {
-// 	max-width: $screen-md;	
-// 	@extend %container;
-// }
-
-// .block-half {
-// 	@include make-sm-column(6);
-// }
-
-// .block-em-left {
-// 	@include make-sm-column-pull(2)
-// }
-
-// .block-em-right {
-// 	@include make-sm-column-push(1)
-// }
 
 
 
@@ -74,20 +53,32 @@ img {
 // Components 
 // ---
 
-// .fixed-image {
-// 	@extend %img-full;
-// 	position: absolute;
-// 	top: 0;
-// 	left: 0;
-
-// }
-
 .fixed-image {
-	background-attachement: fixed; 
-	background-size: cover;
-	height: 800px;
+
+	// TODO:
+	// Won't need this once the $context and MQs are in <head>
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+
+	min-height: 300px;
+
+	@include bp(small) {
+		min-height: 600px;
+	}
+
+	@include bp(med) {
+		min-height: 600px;		
+	}
+
+	@include bp(large) {
+		background-attachment: fixed; 
+		background-position: center center;
+		
+		min-height: 800px;
+	}
+
 	position: relative;	
-	z-index: $zback;
+	z-index: 999;
 }
 
 .content {

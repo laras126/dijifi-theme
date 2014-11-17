@@ -3,8 +3,7 @@
 {# List Block #}
 
 {% block content %}
-	<p>List block</p>
-
+	<p class="note-child">List block</p>
 
 	{% set type = blck.list_type %}
 
@@ -13,14 +12,14 @@
 	{% if type == 'artifacts' %}
 		<p><em>Artifacts List</em></p>
 
-		<ul class="list list-artifacts b-clear">
+		<ul class="list list-artifacts">
 		{% for arti in blck.connected_artifacts %}
 		
-			<li class="b-all">
-				<div class="b1-b2">
+			<li class="row">
+				<div class="col-sm-4">
 					<img src="{{TimberImage(arti.image).src('medium')}}" alt="{{arti.post_title}}">	
 				</div>
-				<div class="b3-b4">
+				<div class="col-sm-8">
 					<h4>{{arti.post_title}}</h4>
 					<p>{{arti.short_description}}</p>	
 				</div>
@@ -28,8 +27,23 @@
 
 		{% endfor %}
 		</ul>
+
 	{% elseif type == 'text_icon' %}
-		<em>Text and icon List</em>
+		<ul class="list list-icons row">
+
+			{% for item in blck.icon_items %}
+				<li class="col-md-4">
+					<img src="http://placehold.it/200x200" alt="" class="icon">
+					<h5>{{item.item_title}}</h5>
+					<p class="icon-desc">{{item.item_desc}}</p>
+					{% for related in item.related_content %}
+						{{related.link}}
+						<p><a href="{{related.link}}" title="{{related.post_title}}">Read more on our {{related.post_title}} page.</a></p>
+					{% endfor %}
+				</li>
+			{% endfor %}
+
+		</ul>
 	{% endif %}
 
 

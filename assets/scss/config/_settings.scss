@@ -128,7 +128,7 @@ $accent-border: 	1px solid $accent-med;
 
 // Z-Index Scale
 $zbase: 1;
-$zback: $zbase;
-$zmid: $zbase*2;
-$ztop: $zbase*3;
+$zback: $zbase+1;
+$zmid: $zbase+2;
+$ztop: $zbase+3;
 

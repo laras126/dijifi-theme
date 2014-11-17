@@ -1,11 +1,26 @@
-<section class="divider">
+{% set disp = div.display %}
+
+{% if disp == image_overlay %}
+	<div class="fixed-image" style="background-image:url({{TimberImage(content.fixed_image).src}});"></div>
+{% endif %}
+
 	<div class="content-contain">
-	
-		<h2 class="note-parent">Divider</h2>
+
+		{% if disp == image_overlay %}		
+			<div class="divider-overlay">
+		{% elseif disp == inline %}
+			<div class="divider-inline">
+		{% elseif disp == highlighted %}
+			<div class="divider-highlight">
+		{% endif %}
+
+		{# <h2 class="note-parent">Divider</h2> #}
 		{% block content %}
 			<p>Nothing in this divider</p>
 		{% endblock %}
-	
-	</div>
-</section> <!-- /.divider -->
 
+	</div>
+
+{% if disp == image_overlay %}
+	</div> <!-- /.divider-class -->
+{% endif %}

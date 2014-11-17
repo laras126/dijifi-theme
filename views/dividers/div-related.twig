@@ -1,6 +1,7 @@
 {% extends "dividers/div.twig" %}
 
 {% block content %}
-	<h3>Related Page</h3>
-	{% post.page.url %}
+	<p class="note-child">Related page block</p>
+	<h3>{{post.page.post_title}}</h3>
+	<a href="{{post.page.url}}" class="link-more">Read more &rarr;</a>
 {% endblock %}

@@ -1,4 +1,4 @@
-.content-contain {
+.content-contain, .block {
   margin: 0 auto;
   margin-right: auto;
   margin-left: auto;
@@ -694,6 +694,10 @@ fieldset {
   box-sizing: border-box;
 }
 
+body {
+  background-color: #fefefe;
+}
+
 img {
   max-width: 100%;
 }
@@ -708,16 +712,33 @@ img {
 }
 
 .fixed-image {
-  background-attachement: fixed;
-  background-size: cover;
-  height: 800px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  min-height: 300px;
   position: relative;
-  z-index: 1;
+  z-index: 999;
+}
+@media (min-width: 35em) {
+  .fixed-image {
+    min-height: 600px;
+  }
+}
+@media (min-width: 45em) {
+  .fixed-image {
+    min-height: 600px;
+  }
+}
+@media (min-width: 50em) {
+  .fixed-image {
+    background-attachment: fixed;
+    background-position: center center;
+    min-height: 800px;
+  }
 }
 
 .content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 nav[role="navigation"] {
@@ -813,6 +834,22 @@ nav[role="navigation"] {
   background-size: cover;
 }
 
+@media (min-width: 45em) {
+  .block_text .content-contain {
+    position: relative;
+    min-height: 1px;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    float: left;
+    width: 66.66667%;
+  }
+}
+@media (min-width: 45em) {
+  .block_text .content-contain {
+    left: 16.66667%;
+  }
+}
+
 .block-quoter {
   background-color: #222334;
   color: #fefefe;
@@ -865,6 +902,27 @@ nav[role="navigation"] {
 
 .param-desc-holder {
   display: none;
+}
+
+.divider-overlay {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+  background-color: rgba(254, 254, 254, 0.8);
+  margin-top: 10%;
+}
+@media (min-width: 45em) {
+  .divider-overlay {
+    position: relative;
+    min-height: 1px;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    float: left;
+    width: 66.66667%;
+  }
 }
 
 .container {
@@ -1741,9 +1799,10 @@ nav[role="navigation"] {
     margin-left: 0%;
   }
 }
-.clearfix:before, .content-contain:before, .content-inner:before,
+.clearfix:before, .content-contain:before, .block:before, .content-inner:before,
 .clearfix:after,
 .content-contain:after,
+.block:after,
 .content-inner:after,
 .container:before,
 .container:after,
@@ -1755,7 +1814,7 @@ nav[role="navigation"] {
   display: table;
 }
 
-.clearfix:after, .content-contain:after, .content-inner:after,
+.clearfix:after, .content-contain:after, .block:after, .content-inner:after,
 .container:after,
 .container-fluid:after,
 .row:after {

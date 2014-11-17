@@ -42,6 +42,10 @@
 			// $context['foo'] = 'bar';
 			// $context['stuff'] = 'I am a value set in your functions.php file';
 			// $context['notes'] = 'These values are available everytime you call Timber::get_context();';
+
+			// TODO: figure this out. It's being printed inline at the moment, and needs to have min-widths, too.
+			// $context['fixed_image_css'] = '<style>.fixed-image{background-image:url(' . new TimberImage(content.fixed_image).src . ');}</style>';
+			
 			$context['main_nav'] = new TimberMenu();
 			$context['footer_nav'] = new TimberMenu();
 			$context['site'] = $this;
