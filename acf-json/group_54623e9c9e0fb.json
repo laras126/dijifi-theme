@@ -102,7 +102,7 @@
                             "conditional_logic": 0,
                             "column_width": "",
                             "button_label": "Select Block",
-                            "min": 3,
+                            "min": "",
                             "max": "",
                             "layouts": [
                                 {
@@ -113,7 +113,7 @@
                                     "sub_fields": [
                                         {
                                             "key": "field_54623e9ca566c",
-                                            "label": "Text ",
+                                            "label": "Text",
                                             "name": "text",
                                             "prefix": "",
                                             "type": "wysiwyg",
@@ -123,7 +123,7 @@
                                             "column_width": "",
                                             "default_value": "",
                                             "tabs": "all",
-                                            "toolbar": "full",
+                                            "toolbar": "text_based",
                                             "media_upload": 1
                                         }
                                     ],
@@ -169,26 +169,6 @@
                                             "library": "all"
                                         },
                                         {
-                                            "key": "field_54623eeb1c2b7",
-                                            "label": "Image Dimensions",
-                                            "name": "image_dimensions",
-                                            "prefix": "",
-                                            "type": "number",
-                                            "instructions": "How many columns? Out of 6.",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "column_width": "",
-                                            "default_value": 3,
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
-                                            "min": "",
-                                            "max": 6,
-                                            "step": "",
-                                            "readonly": 0,
-                                            "disabled": 0
-                                        },
-                                        {
                                             "key": "field_54623e9ca56a6",
                                             "label": "Text Location",
                                             "name": "text_location",
@@ -219,21 +199,18 @@
                                     "sub_fields": [
                                         {
                                             "key": "field_54623f85b5036",
-                                            "label": "Functionality",
-                                            "name": "functionality",
+                                            "label": "Blank",
+                                            "name": "blank",
                                             "prefix": "",
-                                            "type": "text",
+                                            "type": "wysiwyg",
                                             "instructions": "This code should be used for a shortcode or embed code, and not for text or image content.",
                                             "required": 0,
                                             "conditional_logic": 0,
                                             "column_width": "",
                                             "default_value": "",
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
-                                            "maxlength": "",
-                                            "readonly": 0,
-                                            "disabled": 0
+                                            "tabs": "text",
+                                            "toolbar": "text_based",
+                                            "media_upload": 1
                                         }
                                     ],
                                     "min": "",

@@ -1,7 +1,7 @@
 
 // Base block styles
 .block {
-	@extend %container;	
+	@extend %clearfix;
 }
 
 

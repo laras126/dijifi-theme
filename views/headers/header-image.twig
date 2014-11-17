@@ -1,8 +1,17 @@
 
 {# <h2 class="note-header">Image Header</h2> #}
 
-<picture>
-	<source srcset="{{TimberImage(post.image).src}}" media="(min-width: 56em)">
-	<source srcset="{{TimberImage(post.image).src('large')}}" media="(min-width: 40em)">
-	<img class="page-header-image" srcset="{{TimberImage(post.image).src('large')}}" alt="{{post.title}}">
-</picture>
+
+<div class="fixed-image" style="background-image:url({{TimberImage(post.image).src}});"></div>
+
+<div class="content-contain">
+	
+	<h1>{{post.title}}</h1>
+	<p class="lead">{{post.tagline}}</p>
+	<div class="content-inner">
+		<div class="col-sm-6">
+			<p>{{post.summary}}</p>			
+		</div>
+	</div>
+	
+</div>

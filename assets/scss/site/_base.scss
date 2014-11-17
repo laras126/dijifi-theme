@@ -39,11 +39,15 @@ img {
 
 .lead {
 	font-size: $h4;
-	text-align: center;
+	// text-align: center;
 }
 
 .section-title {
-	text-align: center;
+	// text-align: center;
+}
+
+.page-tagline {
+	@extend .lead;
 }
 
 

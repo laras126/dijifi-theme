@@ -231,8 +231,12 @@
                                                     "column_width": "",
                                                     "choices": {
                                                         "camera": "Camera",
-                                                        "video": "Video",
-                                                        "cassette": "Cassette"
+                                                        "camera2": "Video Camera",
+                                                        "tv": "TV",
+                                                        "storage": "Hard Drive",
+                                                        "disk": "Floppy Disk",
+                                                        "rocket": "Rocket",
+                                                        "radio-checked": "Circle"
                                                     },
                                                     "default_value": {
                                                         "camera": "camera"
@@ -503,11 +507,14 @@
                                             "required": 0,
                                             "conditional_logic": 0,
                                             "column_width": "",
-                                            "post_type": "",
+                                            "post_type": [
+                                                "page",
+                                                "dfi_case_study",
+                                                "dfi_service"
+                                            ],
                                             "taxonomy": "",
                                             "filters": [
-                                                "search",
-                                                "post_type"
+                                                "search"
                                             ],
                                             "elements": "",
                                             "max": "",
@@ -596,20 +603,21 @@
                                             "label": "Page to Connect",
                                             "name": "page",
                                             "prefix": "",
-                                            "type": "relationship",
+                                            "type": "post_object",
                                             "instructions": "If you'd like to highlight a certain page, connect it here. The title of the page, it's excerpt, and associated icon will display.",
                                             "required": 0,
                                             "conditional_logic": 0,
                                             "column_width": "",
-                                            "post_type": "",
-                                            "taxonomy": "",
-                                            "filters": [
-                                                "search",
-                                                "post_type"
+                                            "post_type": [
+                                                "page",
+                                                "dfi_service",
+                                                "dfi_case_study"
                                             ],
-                                            "elements": "",
-                                            "max": "",
-                                            "return_format": "object"
+                                            "taxonomy": "",
+                                            "allow_null": 0,
+                                            "multiple": 0,
+                                            "return_format": "object",
+                                            "ui": 1
                                         }
                                     ],
                                     "min": "",

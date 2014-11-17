@@ -33,7 +33,11 @@
 
 			{% for item in blck.icon_items %}
 				<li class="col-md-4">
-					<img src="http://placehold.it/200x200" alt="" class="icon">
+					{% if item.item_icon %}
+						<svg class="shape shape-{{item.item_icon}}"><use xlink:href="#shape-{{item.item_icon}}" /></svg>
+					{% else %}
+						<svg class="shape shape-default"><use xlink:href="#shape-default" /></svg>
+					{% endif %}
 					<h5>{{item.item_title}}</h5>
 					<p class="icon-desc">{{item.item_desc}}</p>
 					{% for related in item.related_content %}

@@ -1,4 +1,4 @@
-.content-contain, .block {
+.content-contain {
   margin: 0 auto;
   margin-right: auto;
   margin-left: auto;
@@ -12,11 +12,11 @@
   margin-right: -1.3rem;
 }
 
-.param-options-list:before, .param-options-list:after {
+.block:before, .param-options-list:before, .block:after, .param-options-list:after {
   content: " ";
   display: table;
 }
-.param-options-list:after {
+.block:after, .param-options-list:after {
   clear: both;
 }
 
@@ -690,6 +690,15 @@ fieldset {
   background: #0f2725;
 }
 
+.shape {
+  max-width: 100%;
+}
+
+.shape-logo {
+  padding-top: 1.04rem;
+  height: 3.64rem;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -702,13 +711,8 @@ img {
   max-width: 100%;
 }
 
-.lead {
+.lead, .page-tagline {
   font-size: 1.56rem;
-  text-align: center;
-}
-
-.section-title {
-  text-align: center;
 }
 
 .fixed-image {
@@ -820,18 +824,20 @@ nav[role="navigation"] {
   margin: 0 0 8px 0;
 }
 
-.header-title {
-  margin-top: 0;
-}
-
-.header-meta {
-  font-size: 1.04rem;
+.content {
+  margin-bottom: 2.6rem;
+  margin-top: 2.6rem;
+  border-top: 3px solid #49b9ae;
 }
 
 .block-intro {
   background-color: #222;
   color: #fefefe;
   background-size: cover;
+}
+
+.list-icons {
+  text-align: center;
 }
 
 @media (min-width: 45em) {
@@ -1799,10 +1805,9 @@ nav[role="navigation"] {
     margin-left: 0%;
   }
 }
-.clearfix:before, .content-contain:before, .block:before, .content-inner:before,
+.clearfix:before, .content-contain:before, .content-inner:before,
 .clearfix:after,
 .content-contain:after,
-.block:after,
 .content-inner:after,
 .container:before,
 .container:after,
@@ -1814,7 +1819,7 @@ nav[role="navigation"] {
   display: table;
 }
 
-.clearfix:after, .content-contain:after, .block:after, .content-inner:after,
+.clearfix:after, .content-contain:after, .content-inner:after,
 .container:after,
 .container-fluid:after,
 .row:after {
@@ -1827,6 +1832,10 @@ nav[role="navigation"] {
 
 .pull-left {
   float: left;
+}
+
+.svgsprites {
+  display: none;
 }
 
 .text-justify {
@@ -1849,6 +1858,11 @@ nav[role="navigation"] {
   background-color: #ffeab9;
   display: inline-block;
   margin: 0;
+}
+
+.rotate {
+  background-color: transparent;
+  color: #fefefe;
 }
 
 .padded-sides {
@@ -1878,6 +1892,10 @@ nav[role="navigation"] {
 
 .menu-sub-items li {
   text-align: left;
+}
+
+.page-header .fixed-image {
+  top: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,5 +1,10 @@
 @import 'config/bs-grid';
 
+
+.svgsprites {
+	display: none;
+}
+
 .text-justify {
 	text-align: justify;
 }
@@ -27,3 +32,6 @@
 	}
 }
 
+.rotate {
+	@include rotate($text-light, transparent);
+}
