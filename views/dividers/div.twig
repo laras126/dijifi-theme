@@ -1,26 +1,13 @@
-{% set disp = div.display %}
 
-{% if disp == image_overlay %}
+{% if div.display == 'image_overlay' %}
 	<div class="fixed-image" style="background-image:url({{TimberImage(content.fixed_image).src}});"></div>
 {% endif %}
 
-	<div class="content-contain">
+<div class="content-contain {{divider_class}}">
 
-		{% if disp == image_overlay %}		
-			<div class="divider-overlay">
-		{% elseif disp == inline %}
-			<div class="divider-inline">
-		{% elseif disp == highlighted %}
-			<div class="divider-highlight">
-		{% endif %}
+	{# <h2 class="note-parent">Divider</h2> #}
+	{% block content %}
+		<p>Nothing in this divider</p>
+	{% endblock %}
 
-		{# <h2 class="note-parent">Divider</h2> #}
-		{% block content %}
-			<p>Nothing in this divider</p>
-		{% endblock %}
-
-	</div>
-
-{% if disp == image_overlay %}
-	</div> <!-- /.divider-class -->
-{% endif %}
+</div>

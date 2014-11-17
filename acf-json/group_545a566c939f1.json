@@ -257,9 +257,9 @@
                                                     "column_width": "",
                                                     "default_value": "",
                                                     "placeholder": "",
-                                                    "maxlength": 216,
-                                                    "rows": "",
-                                                    "new_lines": "wpautop",
+                                                    "maxlength": 203,
+                                                    "rows": 4,
+                                                    "new_lines": "",
                                                     "readonly": 0,
                                                     "disabled": 0
                                                 },

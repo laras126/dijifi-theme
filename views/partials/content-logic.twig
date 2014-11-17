@@ -23,10 +23,11 @@
         </section> <!-- /.content -->
 	
     {% elseif content.acf_fc_layout == 'divider' %}
-        
-        <section class="divider">
+        {% set display_class = content.display %}
+        <div class="divider display-{{display_class}}">
         
             {% for div in content.divider_content %}
+                {% set divider_class = div.acf_fc_layout %}
                 {% if div.acf_fc_layout == 'div_testimonial' %}
                     {% include 'dividers/div-testimonial.twig' %}
                 {% elseif div.acf_fc_layout == 'div_cta' %}
@@ -36,7 +37,7 @@
                 {% endif %}
             {% endfor %}
             
-        </section> <!-- /.divider -->
+        </div> <!-- /.divider-{{display_class}} -->
     
     {% endif %}
 
