@@ -1,5 +1,11 @@
 
 
+// A few coding conventions to note about @extends:
+// - Placeholders used in layouts are separated with underscores
+// - Used wherever possible for any redundant layout functionality
+
+
+
 // ----
 // Layout
 // ----
@@ -13,26 +19,27 @@
     @include make-row();
 }
 
-%clearfix {
-    &:before,
-    &:after {
-        content: " "; // 1
-        display: table; // 2
-    }
-    &:after {
-        clear: both;
-    }
+%clearfix,
+.clearfix {
+    @include clearfix;
 }
 
-%center-block {
+%center_block {
     margin: 0 auto;
     display: block;
 }
 
-%img-full {
+%img_full {
     width: 100%;
 }
 
+%full_at_base {
+    @include make-xs-column(12);
+}
+
+%pad_base {
+    @include pad($base);
+}
 
 
 
@@ -56,7 +63,20 @@
     padding-left: 0;
 }
 
+%horizontal-list {
+    ul {
+        @extend %unstyle-list;
+    }
+    
+    li {
+        display: inline-block;    
+    }
+}
 
+%horizontal-list-center {
+    text-align: center;
+    @extend %horizontal-list;
+}
 
 
 

@@ -398,33 +398,6 @@
                                             "elements": "",
                                             "max": "",
                                             "return_format": "object"
-                                        },
-                                        {
-                                            "key": "field_5463741df6d2a",
-                                            "label": "Item Format",
-                                            "name": "item_format",
-                                            "prefix": "",
-                                            "type": "radio",
-                                            "instructions": "\"Short\" will show only the short description fields, \"Long\" will show the long description.",
-                                            "required": 0,
-                                            "conditional_logic": [
-                                                [
-                                                    {
-                                                        "field": "field_545a7b2c8b364",
-                                                        "operator": "==",
-                                                        "value": "artifacts"
-                                                    }
-                                                ]
-                                            ],
-                                            "column_width": "",
-                                            "choices": {
-                                                "short": "Short",
-                                                "long": "Long"
-                                            },
-                                            "other_choice": 0,
-                                            "save_other_choice": 0,
-                                            "default_value": "",
-                                            "layout": "horizontal"
                                         }
                                     ],
                                     "min": "",

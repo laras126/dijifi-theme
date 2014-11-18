@@ -1,10 +1,49 @@
 
+// ----
+// General
+// ----
+
 .list {
 	@extend %unstyle-list;
 }
 
+
+// ----
+// Artifacts (equipment, formats, files)
+// ----
+
 .list-artifacts {}
+
+	.artifact {}
+	
+	.artifact-img {
+		@extend %full_at_base;
+		@include make-md-column(4, false);
+
+		img {
+			@extend %center_block;
+			border-top: 3px solid $accent-light;
+			border-bottom: 3px solid $accent-light;
+		}
+	}
+
+	.artifact-desc {
+		@extend %full_at_base;
+		@include change-text-align(center, med, left);
+		@include make-md-column(8, false);
+	}
+
+	.artifact-title {
+		// margin-top: 0;
+	}
+
+
+
+// ----
+// Icons/Text (usually connected pages, service options)
+// ----
 
 .list-icons {
 	text-align: center;
 }
+

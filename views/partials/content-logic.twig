@@ -1,3 +1,5 @@
+{% include 'partials/content-nav.twig' %}
+
 {% for content in post.get_field('content') %}
     
     {% if content.acf_fc_layout == 'section' %}
@@ -5,7 +7,7 @@
         <section class="content" id="{{content.menu_item_title}}">
             
             {% include 'partials/section-header.twig' %}
-
+            
             {# Note: Block was probably a poor choice of word here because it conflicts with the 'blocks' in Twig. So I've changed it to 'blck' instead. #}
             {% for blck in content.blocks %} 
                 {% set block_class = blck.acf_fc_layout %}

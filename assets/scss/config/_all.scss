@@ -1,4 +1,6 @@
 
+// Reset
+@import 'normalize';
 
 // Variables
 @import 'settings';
@@ -7,6 +9,3 @@
 @import 'mixins';
 @import 'bs-mixins';
 @import 'extends';
-
-// Reset
-@import 'normalize';

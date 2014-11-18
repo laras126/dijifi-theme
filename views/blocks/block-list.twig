@@ -13,12 +13,12 @@
 		<ul class="list list-artifacts">
 		{% for arti in blck.connected_artifacts %}
 		
-			<li class="row">
-				<div class="col-sm-4">
+			<li class="inner">
+				<div class="artifact-img">
 					<img src="{{TimberImage(arti.image).src('medium')}}" alt="{{arti.post_title}}">	
 				</div>
-				<div class="col-sm-8">
-					<h4>{{arti.post_title}}</h4>
+				<div class="artifact-desc">
+					<h4 class="artifact-title">{{arti.post_title}}</h4>
 					<p>{{arti.short_description}}</p>	
 				</div>
 			</li>
@@ -28,7 +28,7 @@
 
 	{% elseif type == 'text_icon' %}
 
-		<ul class="list list-icons row">
+		<ul class="list list-icons inner">
 
 			{% for item in blck.icon_items %}
 				<li class="col-md-4">

@@ -51,3 +51,44 @@ $MQs: true;
     color: $text;
 }
 
+
+
+// ----
+// Layout
+// ----
+
+@mixin pad($size) {
+	padding: $size;
+}
+
+// Ideally used as an extend, but making it a mixin to allow for within media queries
+@mixin clearfix() {
+	&:before,
+    &:after {
+        content: " "; // 1
+        display: table; // 2
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+
+
+// ----
+// Typography
+// ----
+
+@mixin change-text-align($base, $bp, $align) {
+	@if $base == default {
+		// TODO:
+		// Should be $base != default, but that wasn't working
+	} @else {
+		text-align: $base;
+	}
+	
+	@include bp($bp) {
+		text-align: $align;
+	}
+}
+

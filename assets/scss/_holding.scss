@@ -1,5 +1,15 @@
 
+// Need a good place for these, maybe _page.scss in site/ ?
 
+.page-header {
+	@include change-text-align(default, small, center);
+}
+
+.page-summary {
+	@extend %full_at_base;
+	@include make-lg-column(8);
+	@include make-lg-column-push(2);
+}
 
 
 // Just for prototyping

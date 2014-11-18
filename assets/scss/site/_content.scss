@@ -1,8 +1,43 @@
+
+
 .content {
 	margin-bottom: $h3;
 	margin-top: $h3;
 }
 
+	.content-active {
+		background-color: $accent-med;
+	}
+
 .focus-text {
-	@include make-md-column(6);
+	@extend %full_at_base;
+	@include make-md-column(8);
+	@include make-lg-column(6, false);
+}
+
+
+// ----
+// Components
+// ----
+
+.content-nav {
+	@extend %horizontal-list-center;
+	@include rotate();
+	
+	li {
+		@include pad($sml);	
+	}
+
+}
+
+	.content-nav-active {
+		background-color: $accent-med;
+	}
+
+
+.stuck {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: $ztop;
 }

@@ -10,7 +10,7 @@
 		<header role="banner">
 			{% block header %}
 				<div class="content-contain">
-					<div class="content-inner">
+					<div class="inner">
 					
 						<div class="col-xs-4 col-md-2">
 							<a class="header-logo" href="/" title="{{site.name}}" rel="home">
@@ -37,7 +37,7 @@
 						</ul>
 					</nav><!-- /#menu -->
 
-				</div> <!-- /.content-inner -->	
+				</div> <!-- /.inner -->	
 			</div> <!-- /.content-contain -->
 			{% endblock %}
 		</header>
@@ -62,7 +62,9 @@
 			{% endif %}
 
 			<footer class="page-footer">
-				<h3>Page Footer</h3>    
+				<div class="content-contain">
+					<h4>Page Footer</h4>
+				</div>
 			</footer>
 
 		</main>
