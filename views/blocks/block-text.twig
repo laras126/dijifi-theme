@@ -1,6 +1,11 @@
 {% extends "blocks/block.twig" %}
 
 {% block content %}
+	<div class="content-inner">
+		<div class="focus-text">
+			{{blck.text}}		
+		</div>
+	</div>
 	{# <p>Text block</p> #}
-	{{blck.text}}
+	
 {% endblock %}

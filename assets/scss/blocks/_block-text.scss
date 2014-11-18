@@ -1,8 +1,7 @@
 .block_text {
 
-	.content-contain {
-		@include make-md-column(8);
-		@include make-md-column-push(2);
+	.block-content {
+		
 	}
 
 }

@@ -14,9 +14,9 @@ nav[role="navigation"] {
 }
 
 .menu-main {
-    @include rotate($text-dark, $accent-med);
+    // @include rotate($text-dark, $accent-med);
     a {
-        color: $text-light;
+        // color: $text-light;
     }
     transition: all 0.3s ease-out;
 

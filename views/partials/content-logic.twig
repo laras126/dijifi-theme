@@ -23,7 +23,9 @@
         </section> <!-- /.content -->
 	
     {% elseif content.acf_fc_layout == 'divider' %}
+
         {% set display_class = content.display %}
+    
         <div class="divider display-{{display_class}}">
         
             {% for div in content.divider_content %}

@@ -3,9 +3,9 @@
 // ---- Screen sizes
 // ----
 
-$screen-sm: 35em;
-$screen-md: 45em;
-$screen-lg: 50em;
+$screen-sm: 28em;
+$screen-md: 33em;
+$screen-lg: 45em;
 
 
 
@@ -33,7 +33,7 @@ $light-tan: 	#fdfaf1;
 
 $accent-vlight:	$tan;
 $accent-light:	$yellow;
-$accent-med:	darken($oldgreen, 10%);
+$accent-med:	darken($yellow, 10%);
 $accent-dark:	$navy;
 
 $alert-danger: 	$dred;
