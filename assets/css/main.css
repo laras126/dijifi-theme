@@ -758,29 +758,14 @@ img {
   font-size: 1.56rem;
 }
 
+nav a {
+  font-family: "freight-sans-pro", Helvetica, sans-serif;
+  font-weight: 700;
+}
+
 .fixed-image {
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  min-height: 300px;
-  position: relative;
-  z-index: 999;
-}
-@media (min-width: 28em) {
-  .fixed-image {
-    min-height: 600px;
-  }
-}
-@media (min-width: 33em) {
-  .fixed-image {
-    min-height: 600px;
-  }
-}
-@media (min-width: 45em) {
-  .fixed-image {
-    background-attachment: fixed;
-    background-position: center center;
-    min-height: 800px;
-  }
+  width: 100%;
+  height: auto;
 }
 
 .content {
@@ -895,7 +880,11 @@ nav[role="navigation"] {
   color: #fefefe;
 }
 .content-nav li {
-  padding: 1.04rem;
+  padding: 0.52rem;
+  transition: all 0.3s ease-in-out;
+}
+.content-nav ul {
+  margin: 0;
 }
 
 .content-nav-active {

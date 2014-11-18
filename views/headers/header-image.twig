@@ -1,8 +1,9 @@
 
 {# <h2 class="note-header">Image Header</h2> #}
 
+{% set content = post %}
 
-<div class="fixed-image" style="background-image:url({{TimberImage(post.image).src}});"></div>
+{% include 'partials/fixed-image.twig' %}
 
 <div class="content-contain">
 	

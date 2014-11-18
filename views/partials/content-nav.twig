@@ -1,11 +1,9 @@
 <nav class="content-nav">
-	<div class="content-contain">
-		<ul>
-	        {% for item in post.get_field('content') %}
-	            {% if item.acf_fc_layout == 'section' %}
-	                <li><a href="#{{item.menu_item_title}}">{{item.menu_item_title}}</a></li>
-	            {% endif %}
-	        {% endfor %}
-	    </ul>
-	</div>
+	<ul>
+        {% for item in post.get_field('content') %}
+            {% if item.acf_fc_layout == 'section' %}
+                <li><a href="#{{item.menu_item_title}}">{{item.menu_item_title}}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
 </nav>

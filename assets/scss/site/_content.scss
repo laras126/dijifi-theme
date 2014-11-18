@@ -25,7 +25,12 @@
 	@include rotate();
 	
 	li {
-		@include pad($sml);	
+		@include pad($sml/2);	
+		transition: all 0.3s ease-in-out;
+	}
+
+	ul {
+		margin: 0;
 	}
 
 }
@@ -34,10 +39,9 @@
 		background-color: $accent-med;
 	}
 
-
-.stuck {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: $ztop;
-}
+	.stuck {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: $ztop;
+	}

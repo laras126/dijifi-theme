@@ -40,7 +40,7 @@
 		'has_archive'         => false,
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
-		'rewrite'             => 'service',
+		'rewrite'             => array('slug' => 'service'),
 		'capability_type'     => 'page',
 	);
 	register_post_type( 'dfi_service', $serv_args );

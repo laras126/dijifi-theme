@@ -31,8 +31,12 @@ $(document).ready(function() {
 		header_ht = $('.page-header').outerHeight(),
 		$nav = $('.content-nav'),
 		nav_ht = $nav.outerHeight(),
-		total_ht = header_ht + nav_ht;
+		// TODO/ALERT! Magic number (1.5) to be removed
+		total_ht = header_ht + nav_ht*1.5;
 	  
+
+
+	$('.fixed-image ').css('padding-top', nav_ht + 'px');
 
 	// Copy Pasta from SO link below
 	var topMenu = $(".content-nav"),

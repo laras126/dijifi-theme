@@ -6,15 +6,16 @@
 	- Actually, move the inline to the <head> with a $context and MQs
 #}
 
-<div class="fixed-image" style="background-image:url({{TimberImage(content.fixed_image).src}});">
-	
-	{# <picture>
+{# <div class="fixed-image" style="background-image:url({{TimberImage(content.fixed_image).src}});"> #}
+
+	<picture>
 		<source srcset="{{TimberImage(content.fixed_image).src|resize(1200)}}" media="(min-width: 48em)">
 		<source srcset="{{TimberImage(content.fixed_image).src|resize(800)}}" media="(min-width: 38em)">
 		<source srcset="{{TimberImage(content.fixed_image).src|resize(600)}}" media="(min-width: 28em)">
 		<img class="fixed-image" srcset="{{TimberImage(content.fixed_image).src|resize(400)}}" alt="{{content.section_title}}">
-	</picture> #}
-</div>
+	</picture>
+
+{# </div> #}
 
 
 {# Might want to figure this out: #}

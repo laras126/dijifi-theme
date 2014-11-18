@@ -24,7 +24,7 @@
         {
             "key": "field_545a8498b0f4c",
             "label": "Image (1200x800)",
-            "name": "image",
+            "name": "fixed_image",
             "prefix": "",
             "type": "image",
             "instructions": "The header image for large devices.",

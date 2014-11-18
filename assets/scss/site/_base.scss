@@ -50,6 +50,12 @@ img {
 	@extend .lead;
 }
 
+nav a {
+	font-family: $nav-font;
+	font-weight: 700;
+}
+
+
 
 
 
@@ -61,29 +67,31 @@ img {
 
 	// TODO:
 	// Won't need this once the $context and MQs are in <head>
-	background-size: 100% auto;
-	background-repeat: no-repeat;
+	// background-size: 100% auto;
+	// background-repeat: no-repeat;
 
-	min-height: 300px;
+	// min-height: 300px;
 
 
-	@include bp(small) {
-		min-height: 600px;
-	}
+	// @include bp(small) {
+	// 	min-height: 600px;
+	// }
 
-	@include bp(med) {
-		min-height: 600px;		
-	}
+	// @include bp(med) {
+	// 	min-height: 600px;		
+	// }
 
-	@include bp(large) {
-		background-attachment: fixed; 
-		background-position: center center;
+	// @include bp(large) {
+	// 	background-attachment: fixed; 
+	// 	background-position: center center;
 		
-		min-height: 800px;
-	}
+	// 	min-height: 800px;
+	// }
 
-	position: relative;	
-	z-index: 999;
+	// position: relative;	
+	// z-index: 999;
+	width: 100%;
+	height: auto;
 }
 
 .content {
