@@ -28,28 +28,47 @@ $(document).ready(function() {
 
 	// This jumps...will need to fix
 	 var scroll_class = 'stuck',
-		header_ht = $('.page-header').outerHeight(),
+		header_ht = $('.page-header').outerHeight() + $('.site-header').outerHeight(),
 		$nav = $('.content-nav'),
 		nav_ht = $nav.outerHeight(),
-		// TODO/ALERT! Magic number (1.5) to be removed
-		total_ht = header_ht + nav_ht*1.5;
+		total_ht = header_ht;
 	  
-
 
 	$('.fixed-image ').css('padding-top', nav_ht + 'px');
 
-	// Copy Pasta from SO link below
+	// Copy Pasta from S.O. link below
 	var topMenu = $(".content-nav"),
-	    topMenuHeight = topMenu.outerHeight()+15,
+	    topMenuHeight = topMenu.outerHeight(),
 	  
 	    // All list items
 	    menuItems = topMenu.find("a"),
+
 	    // Anchors corresponding to menu items
-	  
 	    scrollItems = menuItems.map(function(){
 			var item = $($(this).attr("href"));
 			if (item.length) { return item; }
 		});
+	
+
+	$('.content-nav a').click( function() {
+		var hash = $(this).attr('href');
+
+		// Add and remove active class from nav item and section
+		// $('.content-nav a').removeClass('content-nav-active');
+		// $(this).addClass('content-nav-active');
+		// $('.content').removeClass('content-active');
+
+		var $target = $('.content' + hash);
+		$target.addClass('content-active');
+
+		// Slide to section corresponding to link
+		$('html,body').animate({
+			scrollTop: $target.offset().top
+        }, 500);
+
+		return false;
+
+	});
 
 
 	$(window).scroll( function() {
@@ -83,25 +102,6 @@ $(document).ready(function() {
 			.end().filter("[href=#"+id+"]").parent().addClass("content-nav-active");
 	});
 
-	$('.content-nav a').click( function() {
-		var hash = $(this).attr('href');
-
-		// Add and remove active class from nav item and section
-		// $('.content-nav a').removeClass('content-nav-active');
-		// $(this).addClass('content-nav-active');
-		// $('.content').removeClass('content-active');
-
-		var $target = $('.content' + hash);
-		$target.addClass('content-active');
-
-		// Slide to section corresponding to link
-		$('html,body').animate({
-			scrollTop: $target.offset().top
-        }, 500);
-
-		return false;
-
-	});
 
 
 

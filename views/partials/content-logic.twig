@@ -1,10 +1,13 @@
+{% set space = ' '%}
+{% set replace_space = '_' %}
+
 {% include 'partials/content-nav.twig' %}
 
 {% for content in post.get_field('content') %}
     
     {% if content.acf_fc_layout == 'section' %}
 
-        <section class="content" id="{{content.menu_item_title}}">
+        <section class="content" id="{{content.menu_item_title|replace({ (space): replace_space })}}">
             
             {% include 'partials/section-header.twig' %}
             
