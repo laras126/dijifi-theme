@@ -23,7 +23,7 @@ $(document).ready(function() {
 
 
 	// ----
-	// Sticky Submenu
+	// Submenu
 	// ----
 
 	// This jumps...will need to fix
@@ -33,21 +33,59 @@ $(document).ready(function() {
 		nav_ht = $nav.outerHeight(),
 		total_ht = header_ht + nav_ht;
 	  
+
+	// Copy Pasta from SO link below
+	var topMenu = $(".content-nav"),
+	    topMenuHeight = topMenu.outerHeight()+15,
+	  
+	    // All list items
+	    menuItems = topMenu.find("a"),
+	    // Anchors corresponding to menu items
+	  
+	    scrollItems = menuItems.map(function(){
+			var item = $($(this).attr("href"));
+			if (item.length) { return item; }
+		});
+
+
 	$(window).scroll( function() {
+
+		// Add the class to make the nav stick
 		if( $(this).scrollTop() > total_ht ) {
 			$nav.addClass(scroll_class);
 		} else if( $(this).scrollTop() < total_ht ) {
 			$nav.removeClass(scroll_class);
 		}
+
+		// Highlight the current item according to position on the screen
+		// (Copy Pasta)
+		// http://stackoverflow.com/questions/9979827/change-active-menu-item-on-page-scroll
+		
+		// Get container scroll position
+		var fromTop = $(this).scrollTop()+topMenuHeight;
+
+		// Get id of current scroll item
+		var cur = scrollItems.map(function(){
+		if ($(this).offset().top < fromTop)
+			return this;
+		});
+	   	
+	   	// Get the id of the current element
+		cur = cur[cur.length-1];
+		var id = cur && cur.length ? cur[0].id : "";
+		// Set/remove active class
+		menuItems
+			.parent().removeClass("content-nav-active")
+			.end().filter("[href=#"+id+"]").parent().addClass("content-nav-active");
 	});
 
 	$('.content-nav a').click( function() {
 		var hash = $(this).attr('href');
 
 		// Add and remove active class from nav item and section
-		$('.content-nav a').removeClass('content-nav-active');
-		$(this).addClass('content-nav-active');
-		$('.content').removeClass('content-active');
+		// $('.content-nav a').removeClass('content-nav-active');
+		// $(this).addClass('content-nav-active');
+		// $('.content').removeClass('content-active');
 
 		var $target = $('.content' + hash);
 		$target.addClass('content-active');
@@ -55,25 +93,11 @@ $(document).ready(function() {
 		// Slide to section corresponding to link
 		$('html,body').animate({
 			scrollTop: $target.offset().top
-        }, 1000);
+        }, 500);
 
 		return false;
 
 	});
-
-	// $('a[href*=#]:not([href=#])').click(function() {
-	// 	if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-	// 		var target = $(this.hash);
-	// 		target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-	// 		if (target.length) {
-	// 			$('html,body').animate({
-	// 				scrollTop: target.offset().top
-	//         	}, 1000);
-	        
-	//         	return false;
-	//       	}
-	// 	}
-	// });
 
 
 
