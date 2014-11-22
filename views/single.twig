@@ -1,5 +1,87 @@
 {% extends "base.twig" %}
 
 {% block content %}
+
 	{% include 'partials/content-logic.twig' %}
+	
+	<div class="content-contain">
+		{# <div class="row"> #}
+
+		<div class="stretch">
+			<div class="inner" style="background:papayawhip;">
+				<h1>Stretch</h1>
+				<div class="clearfix">
+					<div class="col-sm-4">Hi</div>
+					<div class="col-sm-8">Hi</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="normal">
+			<div class="inner note-parent">
+
+				<div class="content-contain">
+					Hello		
+				</div>
+			
+			</div>
+		</div>
+		
+		<div class="stretch-left">
+			<div class="inner" style="background:DodgerBlue;">
+
+				<div class="col-sm-2">
+					<h3>Stretch Left</h3>		
+				</div>
+			
+			</div>	
+		</div>
+
+		<div class="stretch-right">
+			<div class="inner" style="background:DarkOrchid;">
+				<h1>Stretch Right</h1>
+			</div>
+		</div>
+
+	</div>
+	
+	<div class="content-contain" style="background:peachpuff;">
+		<h1>Nothin</h1>
+	</div>
+	
+	<div class="content-contain">
+	
+		<div class="squish">
+			<div class="inner" style="background:DarkOrchid;">
+				<h1>Squish</h1>
+			</div>
+		</div>
+
+		<div class="squish-left">
+			<div class="inner" style="background:darkgoldenrod;">
+				<h1>Squish Left</h1>	
+			</div>
+		</div>
+
+		<div class="squish-right">
+			<div class="inner"  style="background:goldenrod;">
+				<div class="col-sm-2">
+					Squish Right	
+				</div>
+				<div class="col-sm-3">
+					ho	
+				</div>
+				<div class="col-sm-7">
+					whassup
+				</div>
+			</div>			
+		</div>
+			
+		{# </div> #}
+	</div>
+
+	<div class="content-contain" style="background:peachpuff;">
+		<h1>Nothin</h1>
+	</div>
+	
 {% endblock %}

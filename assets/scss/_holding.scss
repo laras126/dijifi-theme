@@ -1,13 +1,46 @@
 
+
+// testing out for overhang mixin
+.stretch {
+	@include make-row-stretch(1);
+
+	&-left {
+		@include make-row-stretch(1, left);
+	}
+
+	&-right {
+		@include make-row-stretch(1, right);
+	}
+}
+
+.squish {
+	@include make-row-squish();
+	
+
+	&-left {
+		@include make-row-squish(1, left);
+	}
+
+	&-right {
+		@include make-row-squish($dir: right);
+	}
+}
+
+
+	
+
+
+
 // Need a good place for these, maybe _page.scss in site/ ?
 
 .page-header {
-	@include change-text-align(default, small, center);
+	// @include change-text-align(default, small, center);
+	
 }
 
 .page-summary {
 	@extend %full_at_base;
-	@include make-lg-column(8);
+	@include make-lg-column(6);
 	@include make-lg-column-push(2);
 }
 

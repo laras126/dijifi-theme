@@ -471,6 +471,28 @@
                                     "display": "row",
                                     "sub_fields": [
                                         {
+                                            "key": "field_546bb5b2a6324",
+                                            "label": "Icon",
+                                            "name": "icon",
+                                            "prefix": "",
+                                            "type": "select",
+                                            "instructions": "Select an icon to display next to the Page's summary.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "column_width": "",
+                                            "choices": {
+                                                "scanner": "Scanner"
+                                            },
+                                            "default_value": [],
+                                            "allow_null": 0,
+                                            "multiple": 0,
+                                            "ui": 0,
+                                            "ajax": 0,
+                                            "placeholder": "",
+                                            "disabled": 0,
+                                            "readonly": 0
+                                        },
+                                        {
                                             "key": "field_5462573ef68e2",
                                             "label": "Connect a Page",
                                             "name": "page",

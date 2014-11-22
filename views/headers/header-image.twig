@@ -6,13 +6,15 @@
 {% include 'partials/fixed-image.twig' %}
 
 <div class="content-contain">
-	
-	<h1>{{post.title}}</h1>
-	<p class="lead">{{post.tagline}}</p>
 	<div class="inner">
-		<div class="page-summary">
-			<p>{{post.summary}}</p>			
-		</div>
-	</div>
 	
+		<div class="page-summary">
+			<h1>{{post.title}}</h1>
+			<p class="lead">{{post.tagline}}</p>
+			{# <div class="inner"> #}
+			<p>{{post.summary}}</p>	
+			{# </div> #}
+		</div>	
+	
+	</div>	
 </div>

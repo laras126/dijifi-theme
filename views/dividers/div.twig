@@ -1,10 +1,9 @@
 
-{% if div.display == 'image_overlay' %}
-	<div class="fixed-image" style="background-image:url({{TimberImage(content.fixed_image).src}});"></div>
+{% if div.display == image_overlay %}
+	{% include 'partials/fixed-image.twig' %}
 {% endif %}
 
 <div class="content-contain {{divider_class}}">
-
 	{# <h2 class="note-parent">Divider</h2> #}
 	{% block content %}
 		<p>Nothing in this divider</p>

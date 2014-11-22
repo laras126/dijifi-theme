@@ -27,22 +27,13 @@ module.exports = function(grunt) {
             }
         },
 
-        uglify: {
-            build: {
-                src: 'assets/js/build/scripts.js',
-                dest: 'assets/js/build/scripts.min.js'
-            }
-        },
-
         sass: {
           dist: {
             options: {
               style: 'expanded',
-              compass: true,
               // Source maps are available, but require Sass 3.3.0 to be installed
               // https://github.com/gruntassets/js/grunt-contrib-sass#sourcemap
-              sourcemap: false,
-              require: 'breakpoint-slicer'
+              sourcemap: false
             },
             files: {
                 'assets/css/main.css': 'assets/scss/main.scss'
@@ -103,7 +94,6 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-uglify' );
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
     

@@ -1,0 +1,140 @@
+// ------
+// Mixin for fun blocks/figure things
+// ------
+
+// get the value of 
+// stretch = 14cols
+// squish = 10 cols
+
+
+
+@mixin nl-block($prefix, $size: sm, $offset: none) {
+
+	/*/ ---
+	
+	Some terminoology here:
+	- "Hang" refers to the blocks' distance outside the main text cols (d2-d6)
+	- "Width" is the width of the block itself
+	- "off" refers to blocks that are offset left or right (as opposed to centered)
+
+	The variables are pretty much named like this:
+			
+			<type of value> - <offset or not> - <hang size>
+	
+	So, $width-off-sm = the width of the block that is offset and hangs to d2
+
+	--- /*/
+
+
+	// ---
+	// Constants
+	// ---
+	
+	$gutter: 			$grid-gutter-width;
+	
+	$full-hang: 		0; 
+	$sm-hang: 			0;
+	
+	$full-width: 		0;
+	$sm-width:			0;
+	
+	
+	// Bad, bad magic numbers, and not using the Gridset functions correctly. 
+	// Will fix that, don't worry!
+	@if $prefix == d {
+		$full-hang: 		gs-width(d, 1, 3, false, false) - $gutter*5; 
+		$sm-hang: 			gs-width(d, 2, 2, (2,6), false) + $gutter*2;
+		
+		$full-width: 		gs-width(d, 1, 7, false, false) + $full-hang;
+		$sm-width:			gs-width(d, 1, 7, false, false) + $sm-hang;	
+	}
+	@if $prefix == t {
+		$sm-hang: 			gs-width(t, 1, 1, false, false) + $gutter*2;
+		$full-hang: 		$sm-hang;
+		
+		$sm-width:			gs-width(t, 1, 5, false, false) + $sm-hang;
+		$full-width: 		$sm-width;
+	}
+	@if $prefix == m {
+		$sm-hang: 			gs-width(m, 1, 1, false, false) + $gutter*5;
+		$full-hang: 		$sm-hang; 
+		
+		$sm-width:			gs-width(m, 1, 3, false, false) + $sm-hang;
+		$full-width: 		$sm-width;	
+	}
+
+	
+
+
+	// ---
+	// Values
+	// ---
+
+	// Hangs out a bit
+	$width-off-sm: 		#{$sm-width + '%'};
+	$hang-off-sm: 		#{$sm-hang + '%'};
+
+	// Hangs out to edge
+	$width-off-full: 	#{$full-width + '%'};
+	$hang-off-full: 	#{$full-hang + '%'};
+
+	// Centered hang to d2/d6
+	$width-sm: 			#{$sm-width + $sm-hang +'%'};
+	$hang-sm: 			#{$sm-hang + '%'};
+
+	// Centered hang to edges
+	$width-full: 		#{$full-width + $full-hang + '%'};;
+	$hang-full: 		#{$full-hang + '%'};
+
+
+
+	// ---
+	// --- Centered block
+	// ---
+	@if $offset == none {
+
+		// Full width of the grid
+		@if $size == full {
+			width: $width-full;
+			margin-left: #{ '-' + $hang-full};
+		} 
+		// Only 1 column bigger
+		@else if $size == sm {
+			width: $width-sm;
+			margin-left: #{ '-' + $hang-sm};
+		}
+	}
+
+
+	// ---
+	// Offset blocks
+	// ---
+	@if $offset == left or $offset == right {
+
+		@if $size == sm {
+			width: $width-off-sm;
+		}
+
+		@if $size == full {
+			width: $width-off-full;
+		}
+	}
+
+	// TODO: this could probably be in its own mixin that swaps left/right
+	@if $offset == left {
+		@if $size == sm {
+			margin-left: #{ '-' + $hang-off-sm};
+		}
+		@else if $size == full {
+			margin-left: #{ '-' + $hang-off-full};
+		}
+	} 
+	@else if $offset == right {
+		@if $size == sm {
+			margin-right: #{ '-' + $hang-off-sm};
+		}
+		@else if $size == full {
+			margin-right: #{ '-' + $hang-off-full};
+		}
+	}
+}
