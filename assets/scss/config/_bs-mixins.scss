@@ -10,8 +10,21 @@
 // - Added "@if $gutter != 0" conditional to prevent overriding gutter padding
 // - Changed pixel values to values defined in _settings.scss
 // - Moved all styles into MQ
-//
+// - Created an @extend for static styles
 // ---
+
+
+// ----
+// ---- Screen sizes
+// ----
+
+$screen-sm:    28em;
+$screen-md:    30em;
+$screen-lg:    65em;
+
+$screen-contain: 35em;
+
+
 
 
 //== Media queries breakpoints
@@ -38,53 +51,196 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 //## Define your custom responsive grid.
 
 //** Number of columns in the grid.
-$grid-columns:              12 !default;
+$grid-columns:              9 !default;
 //** Padding between columns. Gets divided in half for the left and right.
 $grid-gutter-width:         $h3 !default;
-// Navbar collapse
-//** Point at which the navbar becomes uncollapsed.
-$grid-float-breakpoint:     $screen-sm-min !default;
-//** Point at which the navbar begins collapsing.
-$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 
 
+// Placeholder for $gutter to be used in extend
+$gutter:                    $grid-gutter-width;
 
-//
-// Grid system
-//
+
+@mixin bs-gutter($gutter) {
+    @if $gutter != false {
+      padding-left:  ($gutter / 2);
+      padding-right: ($gutter / 2);
+    }
+}
+
+
+// Add static grid styles into an extend
+%bs-base {
+    float: left;
+    position: relative;
+    min-height: 1px;
+    @include bs-gutter($gutter);
+}
+
+
+// ----
+// Containers
+// ---
 
 // Centered container element
+// To be used as an initial wrap
 @mixin container($gutter: $grid-gutter-width) {
   margin-right: auto;
   margin-left: auto;
-    
-  max-width: $screen-lg;
 
-  @if $gutter != false {
-    padding-left:  ($gutter / 2);
-    padding-right: ($gutter / 2);
+  @include bp(sm) {
+    max-width: $screen-sm;  
+  }
+
+  @include bp(med) {
+    max-width: $screen-md;  
+  }
+
+  @include bp(large) {
+    max-width: $screen-contain;  
   }
   
+
+  @include bs-gutter($gutter);
   @include clearfix;
 }
 
-// Creates a wrapper for a series of columns
+// Wrapper to contain internal columns.
+// The negative margin accounts for the extra padding when nested in a .container
 @mixin make-row($gutter: $grid-gutter-width) {
   margin-left:  ($gutter / -2);
   margin-right: ($gutter / -2);
   @include clearfix;
 }
 
-// Generate the extra small columns
+
+
+
+// ----
+// Rows
+// ---
+// Basic row for nested grid as well as for stretch and squish.
+
+@mixin make-row-stretch($columns: 1, $dir: both, $bp: large, $gutter: $grid-gutter-width) {
+  $width: ($columns / $grid-columns);
+  
+  // @include bs-gutter($gutter);
+
+  @include bp($bp) {
+    @if $dir == both {
+      margin-left: percentage( $width / -1 );
+      margin-right: percentage( $width / -1);  
+    } @else {
+      margin-#{$dir}: percentage( $width / -1);
+    }
+  }
+
+  @include clearfix;
+}
+
+@mixin make-row-squish($columns: 1, $dir: both, $bp: small) {
+  $width: ($columns / $grid-columns);
+  
+  // @include bs-gutter($gutter);
+  
+  @include bp($bp) {
+    @if $dir == both {
+      margin-left: percentage( $width );
+      margin-right: percentage( $width );  
+    } @else {
+      margin-#{$dir}: percentage( $width );
+    }
+    
+  }
+
+  @include clearfix;
+}
+
+
+
+
+// ----
+// Rows
+// ---
+// Basic row for nested grid as well as for stretch and squish.
+
+// @mixin make-row-stretch($columns: 1, $direction: both, $bp: med) {
+//   $width: ($columns / $grid-columns);
+//   $col_multiplier: $width / -1;
+//   $gut_multiplier: $gutter / -2;
+//   $val: calc(percentage( $col_multiplier ) + $gut_multiplier);
+  
+//   @include bp($bp) {
+//     @if $direction == both {
+//       margin-left: $val;
+//       margin-right: $val;  
+//     } @else {
+//       margin-#{$direction}: $val;
+//     }
+//   }
+
+//   @include clearfix;
+// }
+
+// Trying to add rems and percentages with calc() to be the margin values. 
+// It seems that calc() doesn't work with values that are functions?
+
+// @function colMultiplier($w) {
+//   @return percentage($w / -1);
+// }
+
+// @function gutMultiplier($g) {
+//   @return ($g / -2);
+// }
+
+// @function squishMultiplier($w, $g) {
+//   @return calc($w + $g);
+// }
+
+// @mixin make-row-squish($columns: 1, $direction: both) {
+
+//   @include bp(med) {
+//     $width: colMultiplier($columns);
+//     $gutter: gutMultiplier($grid-gutter-width);
+
+//     @if $direction == both {
+//       margin-left: squishMultiplier($width, $gutter);
+//       margin-right: squishMultiplier($width, $gutter);
+//     } @else {
+//       margin-#{$direction}: squishMultiplier($width, $gutter);
+//     }
+    
+//   }
+
+//   @include clearfix;
+// }
+
+// @mixin make-row-squish($columns: 1, $direction: both) {
+
+//   @include bp(med) {
+//     $width: colMultiplier($columns);
+//     $gutter: gutMultiplier($grid-gutter-width);
+
+//     @if $direction == both {
+//       margin-left: squishMultiplier($width, $gutter);
+//       margin-right: squishMultiplier($width, $gutter);
+//     } @else {
+//       margin-#{$direction}: squishMultiplier($width, $gutter);
+//     }
+    
+//   }
+
+
+// ----
+// Grid Mixins
+// ---
+
+
+// Extra Small
+
 @mixin make-xs-column($columns, $gutter: $grid-gutter-width) {
-  position: relative;
-  float: left;
+  @extend %bs-base;
   width: percentage(($columns / $grid-columns));
   min-height: 1px;
-  @if $gutter != false {
-    padding-left:  ($gutter / 2);
-    padding-right: ($gutter / 2);
-  }
 }
 @mixin make-xs-column-offset($columns) {
   margin-left: percentage(($columns / $grid-columns));
@@ -96,16 +252,13 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
   right: percentage(($columns / $grid-columns));
 }
 
-// Generate the small columns
+
+
+// Small
+
 @mixin make-sm-column($columns, $gutter: $grid-gutter-width) {
+  @extend %bs-base;
   @media (min-width: $screen-sm-min) {
-    position: relative;
-    min-height: 1px;
-    @if $gutter != false {
-      padding-left:  ($gutter / 2);
-      padding-right: ($gutter / 2);  
-    }
-    float: left;
     width: percentage(($columns / $grid-columns));
   }
 }
@@ -125,16 +278,13 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
   }
 }
 
-// Generate the medium columns
+
+
+// Medium
+
 @mixin make-md-column($columns, $gutter: $grid-gutter-width) {
+  @extend %bs-base;
   @media (min-width: $screen-md-min) {
-    position: relative;
-    min-height: 1px;
-    @if $gutter != false {
-      padding-left:  ($gutter / 2);
-      padding-right: ($gutter / 2);
-    }
-    float: left;
     width: percentage(($columns / $grid-columns));
   }
 }
@@ -154,16 +304,12 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
   }
 }
 
-// Generate the large columns
+
+
+// Large
 @mixin make-lg-column($columns, $gutter: $grid-gutter-width) {
+  @extend %bs-base;
   @media (min-width: $screen-lg-min) {
-    position: relative;
-    min-height: 1px;
-    @if $gutter != false {
-      padding-left:  ($gutter / 2);
-      padding-right: ($gutter / 2);
-    }
-    float: left;
     width: percentage(($columns / $grid-columns));
   }
 }
@@ -181,4 +327,50 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
   @media (min-width: $screen-lg-min) {
     right: percentage(($columns / $grid-columns));
   }
+}
+
+
+// Generate Utility Classes
+// Gah!
+// http://stackoverflow.com/questions/15748937/how-to-define-a-dynamic-mixin-name-in-sass
+//
+
+// $grid-columns:  12; 
+$sizes: ( xs, sm, md, lg);
+$actions: ( push, pull, offset);
+
+@for $i from 1 to $grid-columns {
+//   @each $size in $sizes {
+    
+//     .col-#{$size}-#{$i} { @include make-#{$size}-column($i); }
+
+//     @each $action in $actions {
+//       .col-#{$size}-#{$i}-#{$action} { 
+//         @include make-#{$size}-column-#{$action}($i); 
+//       }
+//     }
+
+//   }
+// }
+
+
+    .col-xs-#{$i} { @include make-xs-column($i); }
+    .col-xs-#{$i}-push { @include make-xs-column-push($i); }
+    .col-xs-#{$i}-pull { @include make-xs-column-pull($i); }
+    .col-xs-#{$i}-offset { @include make-xs-column-offset($i); }
+
+    .col-sm-#{$i} { @include make-sm-column($i); }
+    .col-sm-#{$i}-push { @include make-sm-column-push($i); }
+    .col-sm-#{$i}-pull { @include make-sm-column-pull($i); }
+    .col-sm-#{$i}-offset { @include make-sm-column-offset($i); }
+
+    .col-md-#{$i} { @include make-md-column($i); }
+    .col-md-#{$i}-push { @include make-md-column-push($i); }
+    .col-md-#{$i}-pull { @include make-md-column-pull($i); }
+    .col-md-#{$i}-offset { @include make-md-column-offset($i); }
+
+    .col-lg-#{$i} { @include make-lg-column($i); }
+    .col-lg-#{$i}-push { @include make-lg-column-push($i); }
+    .col-lg-#{$i}-pull { @include make-lg-column-pull($i); }
+    .col-lg-#{$i}-offset { @include make-lg-column-offset($i); }
 }
