@@ -1,0 +1,31 @@
+
+.prompt-wrap {
+	display: block; 
+    margin: 0;
+}
+
+	.prompt {
+		border-bottom: $accent-border; 
+		position:relative; 
+		
+		span { 
+			position: relative; 
+			top: $sml; 
+			left: $sml;
+			padding: 0 $sml;
+			background-color: $accent-vlight;
+		}
+	}
+
+.block_related_page {
+	
+	// padding: 0 $base $base;
+	.block-stretch {
+		
+	}
+	.aside {
+		@include rotate($text-dark, $accent-vlight);
+		@include make-sm-column(6);
+		@include make-sm-column-pull(1);
+	}
+}
