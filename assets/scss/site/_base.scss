@@ -39,6 +39,7 @@ img {
 
 .lead {
 	font-size: $h4;
+	font-family: $lead-font;
 	// text-align: center;
 }
 
@@ -98,6 +99,11 @@ nav a {
 	position: relative;
 	z-index: $zmid;
 }
+
+
+// Links
+
+
 
 
 // .block-title {

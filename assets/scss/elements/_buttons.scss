@@ -1,14 +1,13 @@
 
 
 .button-cta {
-	@extend %btn;
 	@include button($accent-dark);
 }
 
 .button-success {
-	@extend %btn;
 	@include button($alert-success);
 }
-.next {
-	@extend %btn-block;
+
+.link-more {
+	@include button($accent-light);
 }
