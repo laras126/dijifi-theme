@@ -1,5 +1,10 @@
 {% extends "blocks/block.twig" %}
 
 {% block content %}
-	<p>Text/image block</p>
+	<div class="item-desc">
+		{{blck.text}}	
+	</div>
+	<div class="item-img">
+		<svg class="shape shape-{{blck.icon}}"><use xlink:href="#shape-{{blck.icon}}" /></svg>
+	</div>
 {% endblock %}

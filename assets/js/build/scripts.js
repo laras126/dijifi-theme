@@ -35,7 +35,7 @@ $(document).ready(function() {
 		total_ht = header_ht;
 	  
 
-	$('.fixed-image ').css('padding-top', nav_ht + 'px');
+	// $('.fixed-image ').css('padding-top', nav_ht + 'px');
 
 	// Copy Pasta from S.O. link below
 	var topMenu = $(".content-nav"),
@@ -60,7 +60,8 @@ $(document).ready(function() {
 		// $('.content').removeClass('content-active');
 
 		var $target = $('.content' + hash);
-		$target.addClass('content-active');
+		// $('.content').removeClass('content-active');
+		// $target.addClass('content-active');
 
 		// Slide to section corresponding to link
 		$('html,body').animate({
@@ -97,6 +98,7 @@ $(document).ready(function() {
 	   	// Get the id of the current element
 		cur = cur[cur.length-1];
 		var id = cur && cur.length ? cur[0].id : "";
+		
 		// Set/remove active class
 		menuItems
 			.parent().removeClass("content-nav-active")

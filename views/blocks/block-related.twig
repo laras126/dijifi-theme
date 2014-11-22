@@ -1,11 +1,25 @@
 {% extends "blocks/block.twig" %}
 
 {% block content %}
-	<p class="note-child">Related Page Block</p>
+	<div class="aside">
+	<span class="prompt-wrap">
+		<div class="prompt"><span class="meta">Explore</span></div>
+	</span>
+	
 	{% for related in blck.page %}
-		<h3>{{related.post_title}}</h3>
-		{{related.summary}}
+		
+			<h4>{{related.post_title}}</h4>
+			<p>{{related.summary}}</p>	
+			<a href="{{related.guid}}" class="link-more">Read more &rarr;</a>
+		{# 
+		<div class="item-img">
+			<br>
+			<svg class="shape shape-{{blck.icon}}"><use xlink:href="#shape-{{blck.icon}}" /></svg>
+		</div> #}
 		{# TODO: related.link not working...using guid now I guess? #}
-		<a href="{{related.guid}}" class="link-more">Read more &rarr;</a>
-	{% endfor %}
+
+	{% endfor %}		
+	</div>	
+	
+
 {% endblock %}
