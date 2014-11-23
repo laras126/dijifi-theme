@@ -1,33 +1,8 @@
 
 
-// testing out for overhang mixin
-.stretch {
-	@include make-row-stretch(1);
-
-	&-left {
-		@include make-row-stretch(1, left);
-	}
-
-	&-right {
-		@include make-row-stretch(1, right);
-	}
+.box {
+	border: 1px solid lavender;
 }
-
-.squish {
-	@include make-row-squish();
-	
-
-	&-left {
-		@include make-row-squish(1, left);
-	}
-
-	&-right {
-		@include make-row-squish($dir: right);
-	}
-}
-
-
-	
 
 
 

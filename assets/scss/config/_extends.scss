@@ -10,11 +10,6 @@
 // Layout
 // ----
 
-%container {
-    margin: 0 auto;
-    @include container();
-}
-
 %row {
     @include make-row();
 }

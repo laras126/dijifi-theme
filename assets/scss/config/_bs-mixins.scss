@@ -22,8 +22,9 @@ $screen-sm:    28em;
 $screen-md:    30em;
 $screen-lg:    65em;
 
-$screen-contain: 35em;
-
+$contain-squish: 35em;
+$contain-default: 45em;
+$contain-full: 55em;
 
 
 
@@ -46,26 +47,14 @@ $screen-sm-max:              ($screen-md-min - 1) !default;
 $screen-md-max:              ($screen-lg-min - 1) !default;
 
 
-//== Grid system
-//
-//## Define your custom responsive grid.
 
-//** Number of columns in the grid.
+// ----
+// Grid Settings
+// ----
+
 $grid-columns:              9 !default;
 //** Padding between columns. Gets divided in half for the left and right.
-$grid-gutter-width:         $h3 !default;
-
-
-// Placeholder for $gutter to be used in extend
-$gutter:                    $grid-gutter-width;
-
-
-@mixin bs-gutter($gutter) {
-    @if $gutter != false {
-      padding-left:  ($gutter / 2);
-      padding-right: ($gutter / 2);
-    }
-}
+$gutter:                    $h3 !default;
 
 
 // Add static grid styles into an extend
@@ -73,161 +62,103 @@ $gutter:                    $grid-gutter-width;
     float: left;
     position: relative;
     min-height: 1px;
-    @include bs-gutter($gutter);
+    width: 100%;
 }
+
+%bs-pad {
+    padding-left:  ($gutter / 2);
+    padding-right: ($gutter / 2);
+}
+
 
 
 // ----
 // Containers
 // ---
 
-// Centered container element
-// To be used as an initial wrap
-@mixin container($gutter: $grid-gutter-width) {
+// Wrapper to contain internal columns.
+// The negative margin accounts for the extra padding from nested columns
+
+
+%container {
   margin-right: auto;
   margin-left: auto;
-
-  @include bp(sm) {
-    max-width: $screen-sm;  
-  }
-
-  @include bp(med) {
-    max-width: $screen-md;  
-  }
-
-  @include bp(large) {
-    max-width: $screen-contain;  
-  }
-  
-
-  @include bs-gutter($gutter);
-  @include clearfix;
+  padding-left: $gutter / 2;
+  padding-right: $gutter / 2;
+  max-width: $contain-full;
 }
 
-// Wrapper to contain internal columns.
-// The negative margin accounts for the extra padding when nested in a .container
-@mixin make-row($gutter: $grid-gutter-width) {
-  margin-left:  ($gutter / -2);
-  margin-right: ($gutter / -2);
-  @include clearfix;
+// To contain a primary section of content. 
+// Max width of the widest inner wrap (below).
+.contain {
+  @extend %container;
 }
 
 
 
 
 // ----
-// Rows
+// Inner Wraps
 // ---
-// Basic row for nested grid as well as for stretch and squish.
+// Mixin to have "squish" and "full" wraps to allow for overhanging elements
 
-@mixin make-row-stretch($columns: 1, $dir: both, $bp: large, $gutter: $grid-gutter-width) {
-  $width: ($columns / $grid-columns);
-  
-  // @include bs-gutter($gutter);
 
-  @include bp($bp) {
-    @if $dir == both {
-      margin-left: percentage( $width / -1 );
-      margin-right: percentage( $width / -1);  
-    } @else {
-      margin-#{$dir}: percentage( $width / -1);
+@mixin inner($width: base, $bp: med, $gutter: true) {
+    @extend %bs-pad;
+    @if $width == base {
+        margin-left: percentage((1 / $grid-columns));   
+        margin-right: percentage((1 / $grid-columns));
     }
-  }
-
-  @include clearfix;
+    @else if $width == squish {
+        @include bp($bp) {
+            margin-right: percentage((2 / $grid-columns));   
+            margin-left: percentage((2 / $grid-columns));       
+        }
+    }
+    @else if $width == full {}
+  
 }
 
-@mixin make-row-squish($columns: 1, $dir: both, $bp: small) {
-  $width: ($columns / $grid-columns);
-  
-  // @include bs-gutter($gutter);
-  
-  @include bp($bp) {
-    @if $dir == both {
-      margin-left: percentage( $width );
-      margin-right: percentage( $width );  
-    } @else {
-      margin-#{$dir}: percentage( $width );
-    }
-    
-  }
-
-  @include clearfix;
+.inner {
+    @include inner(); 
 }
+
+.inner-full {
+    @include inner(full); 
+}
+
+.inner-squish {
+    @include inner(squish);
+}
+
+.inner-np {
+    padding: 0;
+}
+
 
 
 
 
 // ----
 // Rows
-// ---
-// Basic row for nested grid as well as for stretch and squish.
+// ----
+// For wrapping nested columns
 
-// @mixin make-row-stretch($columns: 1, $direction: both, $bp: med) {
-//   $width: ($columns / $grid-columns);
-//   $col_multiplier: $width / -1;
-//   $gut_multiplier: $gutter / -2;
-//   $val: calc(percentage( $col_multiplier ) + $gut_multiplier);
+@mixin make-row($gutter: $gutter, $margin: true) {
+    @if $margin == true {
+        margin-left:  ($gutter / -2);
+        margin-right: ($gutter / -2);      
+    }
   
-//   @include bp($bp) {
-//     @if $direction == both {
-//       margin-left: $val;
-//       margin-right: $val;  
-//     } @else {
-//       margin-#{$direction}: $val;
-//     }
-//   }
+    @extend %clearfix;
+}
 
-//   @include clearfix;
-// }
+.row {
+    @include make-row();
+}
 
-// Trying to add rems and percentages with calc() to be the margin values. 
-// It seems that calc() doesn't work with values that are functions?
 
-// @function colMultiplier($w) {
-//   @return percentage($w / -1);
-// }
 
-// @function gutMultiplier($g) {
-//   @return ($g / -2);
-// }
-
-// @function squishMultiplier($w, $g) {
-//   @return calc($w + $g);
-// }
-
-// @mixin make-row-squish($columns: 1, $direction: both) {
-
-//   @include bp(med) {
-//     $width: colMultiplier($columns);
-//     $gutter: gutMultiplier($grid-gutter-width);
-
-//     @if $direction == both {
-//       margin-left: squishMultiplier($width, $gutter);
-//       margin-right: squishMultiplier($width, $gutter);
-//     } @else {
-//       margin-#{$direction}: squishMultiplier($width, $gutter);
-//     }
-    
-//   }
-
-//   @include clearfix;
-// }
-
-// @mixin make-row-squish($columns: 1, $direction: both) {
-
-//   @include bp(med) {
-//     $width: colMultiplier($columns);
-//     $gutter: gutMultiplier($grid-gutter-width);
-
-//     @if $direction == both {
-//       margin-left: squishMultiplier($width, $gutter);
-//       margin-right: squishMultiplier($width, $gutter);
-//     } @else {
-//       margin-#{$direction}: squishMultiplier($width, $gutter);
-//     }
-    
-//   }
 
 
 // ----
@@ -235,10 +166,22 @@ $gutter:                    $grid-gutter-width;
 // ---
 
 
+// Conditionally print the gutter
+
+@mixin bs-gutter($gutter) {
+    @if $gutter != false {
+      @extend %bs-pad;
+    }
+}
+
+
+
 // Extra Small
 
-@mixin make-xs-column($columns, $gutter: $grid-gutter-width) {
+@mixin make-xs-column($columns, $gutter: $gutter) {
   @extend %bs-base;
+  @include bs-gutter($gutter);
+  
   width: percentage(($columns / $grid-columns));
   min-height: 1px;
 }
@@ -256,8 +199,10 @@ $gutter:                    $grid-gutter-width;
 
 // Small
 
-@mixin make-sm-column($columns, $gutter: $grid-gutter-width) {
+@mixin make-sm-column($columns, $gutter: $gutter) {
   @extend %bs-base;
+  @include bs-gutter($gutter);
+
   @media (min-width: $screen-sm-min) {
     width: percentage(($columns / $grid-columns));
   }
@@ -282,13 +227,16 @@ $gutter:                    $grid-gutter-width;
 
 // Medium
 
-@mixin make-md-column($columns, $gutter: $grid-gutter-width) {
+@mixin make-md-column($columns, $gutter: $gutter) {
   @extend %bs-base;
+  @include bs-gutter($gutter);
+
   @media (min-width: $screen-md-min) {
     width: percentage(($columns / $grid-columns));
   }
 }
 @mixin make-md-column-offset($columns) {
+    @include bs-gutter($gutter);
   @media (min-width: $screen-md-min) {
     margin-left: percentage(($columns / $grid-columns));
   }
@@ -305,9 +253,9 @@ $gutter:                    $grid-gutter-width;
 }
 
 
-
 // Large
-@mixin make-lg-column($columns, $gutter: $grid-gutter-width) {
+
+@mixin make-lg-column($columns, $gutter: $gutter) {
   @extend %bs-base;
   @media (min-width: $screen-lg-min) {
     width: percentage(($columns / $grid-columns));
@@ -330,47 +278,37 @@ $gutter:                    $grid-gutter-width;
 }
 
 
-// Generate Utility Classes
-// Gah!
-// http://stackoverflow.com/questions/15748937/how-to-define-a-dynamic-mixin-name-in-sass
-//
 
-// $grid-columns:  12; 
-$sizes: ( xs, sm, md, lg);
-$actions: ( push, pull, offset);
+// ----
+// Generate Utility Classes
+// ----
 
 @for $i from 1 to $grid-columns {
-//   @each $size in $sizes {
-    
-//     .col-#{$size}-#{$i} { @include make-#{$size}-column($i); }
-
-//     @each $action in $actions {
-//       .col-#{$size}-#{$i}-#{$action} { 
-//         @include make-#{$size}-column-#{$action}($i); 
-//       }
-//     }
-
-//   }
-// }
-
-
     .col-xs-#{$i} { @include make-xs-column($i); }
-    .col-xs-#{$i}-push { @include make-xs-column-push($i); }
-    .col-xs-#{$i}-pull { @include make-xs-column-pull($i); }
-    .col-xs-#{$i}-offset { @include make-xs-column-offset($i); }
+    .col-xs-#{$i}-np { @include make-xs-column($i, false); }
+
+    // .col-xs-#{$i}-push { @include make-xs-column-push($i); }
+    // .col-xs-#{$i}-pull { @include make-xs-column-pull($i); }
+    // .col-xs-#{$i}-offset { @include make-xs-column-offset($i); }
 
     .col-sm-#{$i} { @include make-sm-column($i); }
-    .col-sm-#{$i}-push { @include make-sm-column-push($i); }
-    .col-sm-#{$i}-pull { @include make-sm-column-pull($i); }
-    .col-sm-#{$i}-offset { @include make-sm-column-offset($i); }
+    .col-sm-#{$i}-np { @include make-sm-column($i, false); }
+
+    // .col-sm-#{$i}-push { @include make-sm-column-push($i); }
+    // .col-sm-#{$i}-pull { @include make-sm-column-pull($i); }
+    // .col-sm-#{$i}-offset { @include make-sm-column-offset($i); }
 
     .col-md-#{$i} { @include make-md-column($i); }
-    .col-md-#{$i}-push { @include make-md-column-push($i); }
-    .col-md-#{$i}-pull { @include make-md-column-pull($i); }
-    .col-md-#{$i}-offset { @include make-md-column-offset($i); }
+    .col-md-#{$i}-np { @include make-md-column($i, false); }
+
+    // .col-md-#{$i}-push { @include make-md-column-push($i); }
+    // .col-md-#{$i}-pull { @include make-md-column-pull($i); }
+    // .col-md-#{$i}-offset { @include make-md-column-offset($i); }
 
     .col-lg-#{$i} { @include make-lg-column($i); }
-    .col-lg-#{$i}-push { @include make-lg-column-push($i); }
-    .col-lg-#{$i}-pull { @include make-lg-column-pull($i); }
-    .col-lg-#{$i}-offset { @include make-lg-column-offset($i); }
+    .col-lg-#{$i}-np { @include make-lg-column($i, false); }
+
+    // .col-lg-#{$i}-push { @include make-lg-column-push($i); }
+    // .col-lg-#{$i}-pull { @include make-lg-column-pull($i); }
+    // .col-lg-#{$i}-offset { @include make-lg-column-offset($i); }
 }
