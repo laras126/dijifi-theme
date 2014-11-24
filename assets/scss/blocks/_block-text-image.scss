@@ -1,1 +1,5 @@
-
+.block_textimage {
+	img {
+		@extend %img_highlight;
+	}
+}

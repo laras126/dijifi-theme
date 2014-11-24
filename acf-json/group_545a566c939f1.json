@@ -141,7 +141,7 @@
                                             "default_value": "",
                                             "tabs": "visual",
                                             "toolbar": "text_based",
-                                            "media_upload": 1
+                                            "media_upload": 0
                                         }
                                     ],
                                     "min": "",
@@ -574,148 +574,164 @@
                             "library": "all"
                         },
                         {
-                            "key": "field_545d08e4eb5d7",
-                            "label": "Divider Content",
-                            "name": "divider_content",
+                            "key": "field_54734f14cf408",
+                            "label": "Divider Type",
+                            "name": "divider_type",
                             "prefix": "",
-                            "type": "flexible_content",
-                            "instructions": "Dividers break up the page content with marketing copy and imagery. Select one here.",
+                            "type": "select",
+                            "instructions": "Select the type of divider to display.",
                             "required": 0,
                             "conditional_logic": 0,
                             "column_width": "",
-                            "button_label": "Select Divider",
-                            "min": 0,
+                            "choices": {
+                                "testimonial": "Testimonial",
+                                "cta": "Call to Action",
+                                "related": "Related Page"
+                            },
+                            "default_value": [],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "disabled": 0,
+                            "readonly": 0
+                        },
+                        {
+                            "key": "field_545a7e6239b40",
+                            "label": "Related Content",
+                            "name": "related_content",
+                            "prefix": "",
+                            "type": "relationship",
+                            "instructions": "If you'd like to highlight a certain page, connect it here. The title of the page, it's excerpt, and associated icon will display.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_54734f14cf408",
+                                        "operator": "==",
+                                        "value": "related"
+                                    }
+                                ]
+                            ],
+                            "column_width": "",
+                            "post_type": "",
+                            "taxonomy": "",
+                            "filters": [
+                                "search",
+                                "post_type",
+                                "taxonomy"
+                            ],
+                            "elements": "",
+                            "max": "",
+                            "return_format": "object"
+                        },
+                        {
+                            "key": "field_545a8cf25f655",
+                            "label": "Testimonial",
+                            "name": "testimonial",
+                            "prefix": "",
+                            "type": "relationship",
+                            "instructions": "Select the testimonial to display.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_54734f14cf408",
+                                        "operator": "==",
+                                        "value": "testimonial"
+                                    }
+                                ]
+                            ],
+                            "column_width": "",
+                            "post_type": [
+                                "dfi_testimonial"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "search"
+                            ],
+                            "elements": "",
                             "max": 1,
-                            "layouts": [
-                                {
-                                    "key": "545a7df639b3f",
-                                    "name": "div_related_page",
-                                    "label": "Related Page",
-                                    "display": "row",
-                                    "sub_fields": [
-                                        {
-                                            "key": "field_545a7e6239b40",
-                                            "label": "Page to Connect",
-                                            "name": "page",
-                                            "prefix": "",
-                                            "type": "post_object",
-                                            "instructions": "If you'd like to highlight a certain page, connect it here. The title of the page, it's excerpt, and associated icon will display.",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "column_width": "",
-                                            "post_type": [
-                                                "page",
-                                                "dfi_service",
-                                                "dfi_case_study"
-                                            ],
-                                            "taxonomy": "",
-                                            "allow_null": 0,
-                                            "multiple": 0,
-                                            "return_format": "object",
-                                            "ui": 1
-                                        }
-                                    ],
-                                    "min": "",
-                                    "max": ""
-                                },
-                                {
-                                    "key": "545a779cb024e",
-                                    "name": "div_testimonial",
-                                    "label": "Testimonial",
-                                    "display": "row",
-                                    "sub_fields": [
-                                        {
-                                            "key": "field_545a8cf25f655",
-                                            "label": "Testimonial",
-                                            "name": "testimonial",
-                                            "prefix": "",
-                                            "type": "relationship",
-                                            "instructions": "Select the testimonial to display.",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "column_width": "",
-                                            "post_type": [
-                                                "dfi_testimonial"
-                                            ],
-                                            "taxonomy": "",
-                                            "filters": [
-                                                "search"
-                                            ],
-                                            "elements": "",
-                                            "max": 1,
-                                            "return_format": "object"
-                                        }
-                                    ],
-                                    "min": "",
-                                    "max": ""
-                                },
-                                {
-                                    "key": "545a80d9b8ad6",
-                                    "name": "div_cta",
-                                    "label": "Call to Action",
-                                    "display": "row",
-                                    "sub_fields": [
-                                        {
-                                            "key": "field_545a80e3b8ad7",
-                                            "label": "Text",
-                                            "name": "text",
-                                            "prefix": "",
-                                            "type": "text",
-                                            "instructions": "Something like \"Use our estimator tool to get a detailed cost estimate of your transfer.\"",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "column_width": "",
-                                            "default_value": "",
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
-                                            "maxlength": 140,
-                                            "readonly": 0,
-                                            "disabled": 0
-                                        },
-                                        {
-                                            "key": "field_545a811cb8ad8",
-                                            "label": "Button Text",
-                                            "name": "button_text",
-                                            "prefix": "",
-                                            "type": "text",
-                                            "instructions": "No more than three words.",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "default_value": "",
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
-                                            "maxlength": "",
-                                            "readonly": 0,
-                                            "disabled": 0
-                                        },
-                                        {
-                                            "key": "field_545a812fb8ad9",
-                                            "label": "Link to Page",
-                                            "name": "link_to_page",
-                                            "prefix": "",
-                                            "type": "relationship",
-                                            "instructions": "Select a page for the button to link to.",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "column_width": "",
-                                            "post_type": [
-                                                "page"
-                                            ],
-                                            "taxonomy": "",
-                                            "filters": [
-                                                "search"
-                                            ],
-                                            "elements": "",
-                                            "max": "",
-                                            "return_format": "object"
-                                        }
-                                    ],
-                                    "min": "",
-                                    "max": ""
-                                }
-                            ]
+                            "return_format": "object"
+                        },
+                        {
+                            "key": "field_545a80e3b8ad7",
+                            "label": "Text",
+                            "name": "cta_text",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Something like \"Use our estimator tool to get a detailed cost estimate of your transfer.\"",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_54734f14cf408",
+                                        "operator": "==",
+                                        "value": "cta"
+                                    }
+                                ]
+                            ],
+                            "column_width": "",
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": 140,
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_545a811cb8ad8",
+                            "label": "Button Text",
+                            "name": "cta_btn_txt",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "No more than three words.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_54734f14cf408",
+                                        "operator": "==",
+                                        "value": "cta"
+                                    }
+                                ]
+                            ],
+                            "column_width": "",
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_545a812fb8ad9",
+                            "label": "Link to Page",
+                            "name": "cta_link_to_page",
+                            "prefix": "",
+                            "type": "page_link",
+                            "instructions": "Select a page for the button to link to.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_54734f14cf408",
+                                        "operator": "==",
+                                        "value": "cta"
+                                    }
+                                ]
+                            ],
+                            "column_width": "",
+                            "post_type": [
+                                "page",
+                                "dfi_service"
+                            ],
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "multiple": 0
                         }
                     ],
                     "min": "",

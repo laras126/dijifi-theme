@@ -42,9 +42,6 @@
 // Layout
 // ----
 
-@mixin pad($size) {
-	padding: $size;
-}
 
 // Ideally used as an extend, but making it a mixin to allow for within media queries
 @mixin clearfix() {
@@ -57,10 +54,6 @@
         clear: both;
     }
 }
-
-// This one is long, so keeping it in a separate partial
-@import 'block-mixin';
-
 
 
 

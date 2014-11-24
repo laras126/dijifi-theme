@@ -33,7 +33,23 @@
 }
 
 %pad_base {
-    @include pad($base);
+    padding: $base;
+}
+
+%pad_tb {
+    padding: $base 0;
+}
+
+
+
+
+// ----
+// Content
+// ----
+
+
+%img_highlight {
+    border: $accent-border;
 }
 
 
@@ -75,12 +91,12 @@
 
 .item-img,
 %item-img {
-    @include make-md-column(4, false);    
+    @extend .col-sm-4-np;
 }
 
 .item-desc,
 %item-desc {
-    @include make-md-column(8, false);
+    @extend .col-sm-8-np;
 }
 
 
@@ -102,8 +118,9 @@
 
 .hide-until-sm, 
 %hide-until-sm {
+    display: none;
 	@media (min-width: $screen-sm) {    
-        display: none;
+        display: block;
     }
 }
 

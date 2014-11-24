@@ -1,10 +1,26 @@
 {% extends "blocks/block.twig" %}
 
 {% block content %}
-	<div class="item-desc">
-		{{blck.text}}	
+	<div class="inner-full">
+		{# <div class="row"> #}
+
+			{% if blck.text_location == 'right'%}
+				<div class="col-lg-9">
+					<img src="{{TimberImage(blck.image).src|resize(600)}}" alt="">
+				</div>
+				<div class="col-lg-3">
+					{{blck.text}}	
+				</div>
+			{% else %}
+				<div class="col-lg-3">
+					{{blck.text}}	
+				</div>
+				<div class="col-lg-9">
+					<img src="{{TimberImage(blck.image).src|resize(600)}}" alt="">
+				</div>
+			{% endif %}	
+
+		{# </div> #}
 	</div>
-	<div class="item-img">
-		<svg class="shape shape-{{blck.icon}}"><use xlink:href="#shape-{{blck.icon}}" /></svg>
-	</div>
+	
 {% endblock %}

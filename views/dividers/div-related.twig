@@ -2,7 +2,11 @@
 
 {% block content %}
 	<p class="note-child">Related Page Divider</p>
-	<h3>{{post.page.post_title}}</h3>
-	{{post.page.url}}
-	<a href="{{post.page.url}}" class="link-more">Read more &rarr;</a>
+	{% for page in div.related_content %}
+		
+		<h3>{{page.post_title}}</h3>
+		<p>{{page.summary}}</p>
+		<a href="{{page.guid}}" class="link-more">Read more &rarr;</a>
+	{% endfor %}
+	
 {% endblock %}

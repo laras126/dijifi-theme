@@ -19,13 +19,8 @@
 
 .block_related_page {
 	
-	// padding: 0 $base $base;
-	.block-stretch {
-		
-	}
 	.aside {
-		@include rotate($text-dark, $accent-vlight);
-		@include make-sm-column(6);
-		@include make-sm-column-pull(1);
+		@include inner($bp: large, $width: squish);
+		background-color: $accent-vlight;
 	}
 }

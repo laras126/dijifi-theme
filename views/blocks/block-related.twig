@@ -1,25 +1,28 @@
 {% extends "blocks/block.twig" %}
 
 {% block content %}
-	<div class="aside">
+<div class="aside">
+
 	<span class="prompt-wrap">
 		<div class="prompt"><span class="meta">Explore</span></div>
 	</span>
 	
 	{% for related in blck.page %}
-		
+		<div class="col-sm-8">
 			<h4>{{related.post_title}}</h4>
 			<p>{{related.summary}}</p>	
-			<a href="{{related.guid}}" class="link-more">Read more &rarr;</a>
-		{# 
-		<div class="item-img">
+			<p>
+				<a href="{{related.guid}}" class="link-more">Read more &rarr;</a>
+			</p>
+		</div>
+			
+		<div class="col-sm-4 hide-until-sm">
 			<br>
 			<svg class="shape shape-{{blck.icon}}"><use xlink:href="#shape-{{blck.icon}}" /></svg>
-		</div> #}
+		</div>
 		{# TODO: related.link not working...using guid now I guess? #}
 
 	{% endfor %}		
-	</div>	
+</div>
 	
-
 {% endblock %}

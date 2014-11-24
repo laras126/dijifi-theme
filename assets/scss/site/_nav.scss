@@ -57,10 +57,14 @@ nav[role="navigation"] {
 
     a {
         display: block;
-        padding: $sml;
         font-weight: 700;
+
+        @extend %pad_tb;
         @extend %h5;
-        margin-top: 0;
+        
+        @include bp(med) {
+            padding-right: $base;
+        }
     }
 
 }
@@ -132,4 +136,50 @@ nav[role="navigation"] {
     //   transform: rotate(-45deg);
     //   margin: -16px 0 0 0;
     // }
+
+
+
+// ----
+// Content Nav 
+//----
+
+
+.content-nav {
+    @extend %horizontal-list-center;
+    @include rotate();
+    
+    li {
+        transition: all 0.3s ease-in-out;
+    }
+
+    a {
+        padding: $base;
+        display: inline-block;
+        color: $text-light;
+    }
+
+    ul {
+        margin: 0;
+    }
+
+}
+
+    .content-nav-active {
+        background-color: $accent-med;
+    }
+
+    .stuck {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: $ztop;
+    }
+
+
+
+
+// ----
+// Footer Nav 
+//----
+
 

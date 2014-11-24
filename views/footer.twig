@@ -1,1 +1,19 @@
 Copyright {{"now"|date('Y')}}
+
+<div class="row">
+	<div class="widget col-md-4">
+		<h5>Yelp and Business Creds</h5>
+	</div>
+	<nav class="menu-footer col-xs-12 col-md-4" role="navigation">	
+		<ul class="menu-items">
+			{% for item in footer_nav.items %}
+				<li class="{{item.classes | join(' ')}}">
+					<a href="{{item.link}}">{{item.title}}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</nav><!-- /.menu-footer -->	
+	<div class="widget col-md-4">
+		<h5>Social and address</h5>
+	</div>
+</div>

@@ -8,17 +8,19 @@
 }
 
 
+
 // ----
 // Artifacts (equipment, formats, files)
 // ----
 
 .list-artifacts {}
 
-	.artifact {}
+	.artifact {
+		@extend .inner-full;
+	}
 	
 	.artifact-img {
-		@extend %full_at_base;
-		@extend %item-img;
+		@extend .col-sm-4;
 
 		img {
 			@extend %center_block;
@@ -28,8 +30,7 @@
 	}
 
 	.artifact-desc {
-		@extend %full_at_base;
-		@extend %item-desc;
+		@extend .col-sm-8;
 		@include change-text-align(center, med, left);
 	}
 
@@ -44,6 +45,12 @@
 // ----
 
 .list-icons {
-	text-align: center;
+	text-align: center;	
 }
+
+	.icon-desc {
+		// @extend %meta;
+		font-size: $sml;
+		font-family: $sans-serif;
+	}
 

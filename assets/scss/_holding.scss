@@ -1,4 +1,14 @@
 
+// Blocks
+
+.block_textimage {
+	img {
+		width: 100%;
+	}
+}
+
+
+
 
 .box {
 	border: 1px solid lavender;
@@ -8,15 +18,9 @@
 
 // Need a good place for these, maybe _page.scss in site/ ?
 
-.page-header {
-	// @include change-text-align(default, small, center);
-	
-}
-
 .page-summary {
-	@extend %full_at_base;
-	@include make-lg-column(6);
-	@include make-lg-column-push(2);
+	@extend .col-lg-6;
+	@extend .col-lg-push-3;
 }
 
 

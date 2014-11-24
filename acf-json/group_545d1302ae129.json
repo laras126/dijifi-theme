@@ -12,8 +12,8 @@
             "required": 0,
             "conditional_logic": 0,
             "choices": {
-                "image": "Header Image",
                 "text": "Text Only",
+                "image": "Header Image",
                 "video": "Video"
             },
             "other_choice": 0,

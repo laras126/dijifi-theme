@@ -10,34 +10,12 @@
 		<header role="banner" class="site-header">
 			{% block header %}
 				<div class="contain">
-					<div class="inner">
+					{# <div class="inner"> #}
 					
-						<div class="col-xs-4 col-md-2">
-							<a class="header-logo" href="/" title="{{site.name}}" rel="home">
-								<svg class="shape shape-logo"><use xlink:href="#shape-logo" /></svg>
-							</a>
-						</div>
-				
-						<div class="menu-link col-xs-8" style="margin-top: 1rem">
-							<a href="#menu">
-								<span></span>
-								<span></span>
-								<span></span>
-							</a>    
-						</div> <!-- /.menu-link -->
+						{% include 'headers/site-header.twig' %}
 
-						<nav id="menu" class="menu-main col-xs-12 col-md-10" role="navigation">	
-							<ul class="menu-items">
-								{% for item in main_nav.items %}
-									<li class="{{item.classes | join(' ')}}">
-										<a href="{{item.link}}">{{item.title}}</a>
-									</li>
-								{% endfor %}
-							</ul>
-						</nav><!-- /#menu -->
-
-				</div> <!-- /.inner -->	
-			</div> <!-- /.content-contain -->
+					
+				</div> <!-- /.contain -->
 			{% endblock %}
 		</header>
 
