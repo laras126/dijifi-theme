@@ -131,13 +131,13 @@
 
 %upperspace {
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .meta,
 %meta {
     font-size: $sml;
     font-family: $form-font;
-    @extend %upperspace;
     margin: 0;
 }
 

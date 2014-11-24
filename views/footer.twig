@@ -1,19 +1,30 @@
-Copyright {{"now"|date('Y')}}
 
-<div class="row">
-	<div class="widget col-md-4">
+	<div class="widget rotate-light">
 		<h5>Yelp and Business Creds</h5>
+		<img src="http://www.dijifi.com/images/pic_bbb_rating.jpg" alt="">
+		<img src="http://www.angieslist.com/webbadge/86f894b9de6aa2a2fe8fcb6d67f74590.png" alt="">
+		<img src="http://dyn.yelpcdn.com/extimg/rc1/CwBYC8nVLbG7KjVU6nwR4A.png" alt="">
 	</div>
-	<nav class="menu-footer col-xs-12 col-md-4" role="navigation">	
-		<ul class="menu-items">
-			{% for item in footer_nav.items %}
-				<li class="{{item.classes | join(' ')}}">
-					<a href="{{item.link}}">{{item.title}}</a>
-				</li>
-			{% endfor %}
+	<div class="widget">
+		<h5>Read More</h5>
+		<nav class="menu-footer" role="navigation">	
+			<ul>
+				{% for item in footer_nav.items %}
+					<li>
+						<a href="{{item.link}}">{{item.title}}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</nav><!-- /.menu-footer -->		
+	</div>
+	<div class="widget rotate-misc">
+		<h5>Get in touch</h5>
+		<ul>
+			<li>1166 Manhattan Ave #100<br>
+				Brooklyn NY 11222</li>
+			<li>10-6 Mon-Fri</li>
+			<li>(646) 519-2447</li>
 		</ul>
-	</nav><!-- /.menu-footer -->	
-	<div class="widget col-md-4">
-		<h5>Social and address</h5>
 	</div>
-</div>
+
+	<p class="meta">Copyright {{"now"|date('Y')}}</p>

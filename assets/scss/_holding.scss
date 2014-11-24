@@ -55,6 +55,17 @@
 	}
 }
 
+.rotate-med {
+	@include rotate($bkgd: $accent-med);
+}
+
+.rotate-light {
+	@include rotate($bkgd: $accent-light);
+}
+
+.rotate-misc {
+	@include rotate($bkgd: $alert-danger);
+}
 
 
 .button-block {

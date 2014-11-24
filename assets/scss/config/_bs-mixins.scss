@@ -11,6 +11,9 @@
 // - Changed pixel values to values defined in _settings.scss
 // - Moved all styles into MQ
 // - Created an @extend for static styles
+// - Generate classes with a mixin
+// - Not using those $screen-sm-min breakpoints
+//
 // ---
 
 
@@ -25,19 +28,6 @@ $screen-lg:    65em;
 $contain-full: 55em;
 
 
-
-//== Media queries breakpoints
-//
-//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
-
-// Small screen / tablet
-$screen-sm-min:              $screen-sm !default;
-
-// Medium screen
-$screen-md-min:              $screen-md !default;
-
-// Large screen / wide desktop
-$screen-lg-min:              $screen-lg !default;
 
 
 
@@ -62,6 +52,8 @@ $gutter:                    $h3 !default;
     padding-left:  ($gutter / 2);
     padding-right: ($gutter / 2);
 }
+
+
 
 
 
@@ -253,6 +245,7 @@ $gutter:                    $h3 !default;
 
 @mixin make-lg-column($columns, $gutter: $gutter) {
   @extend %bs-base;
+  @include bs-gutter($gutter);
   @media (min-width: $screen-lg) {
     width: percentage(($columns / $grid-columns));
   }
@@ -272,6 +265,7 @@ $gutter:                    $h3 !default;
     right: percentage(($columns / $grid-columns));
   }
 }
+
 
 
 

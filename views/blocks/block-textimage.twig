@@ -2,25 +2,22 @@
 
 {% block content %}
 	<div class="inner-full">
-		{# <div class="row"> #}
 
-			{% if blck.text_location == 'right'%}
-				<div class="col-lg-9">
-					<img src="{{TimberImage(blck.image).src|resize(600)}}" alt="">
-				</div>
-				<div class="col-lg-3">
-					{{blck.text}}	
-				</div>
-			{% else %}
-				<div class="col-lg-3">
-					{{blck.text}}	
-				</div>
-				<div class="col-lg-9">
-					<img src="{{TimberImage(blck.image).src|resize(600)}}" alt="">
-				</div>
-			{% endif %}	
+		{% if blck.text_location == 'right'%}
+			<div class="col-lg-9-np">
+				<img src="{{TimberImage(blck.image).src|resize(600)}}" alt="">
+			</div>
+			<div class="col-lg-3 block_textimage-caption">
+				<p class="meta">{{blck.text}}</p>
+			</div>
+		{% else %}
+			<div class="col-lg-3 block_textimage-caption">
+				<p class="meta">{{blck.text}}</p>
+			</div>
+			<div class="col-lg-9-np">
+				<img src="{{TimberImage(blck.image).src|resize(600)}}" alt="">
+			</div>
+		{% endif %}	
 
-		{# </div> #}
 	</div>
-	
 {% endblock %}

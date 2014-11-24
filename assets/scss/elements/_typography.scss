@@ -72,12 +72,13 @@ h3 {
 
 h4 { 
 	@extend %h4;
-	// @extend %upperspace;
+	// 
 	margin-top: $base;
 }
 
 h5 {
 	@extend %h5;
+	@extend %upperspace;
 	margin-top: $base;
 }
 

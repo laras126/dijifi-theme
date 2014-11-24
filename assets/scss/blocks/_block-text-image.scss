@@ -2,4 +2,8 @@
 	img {
 		@extend %img_highlight;
 	}
+	&-caption {
+		border-top: $accent-border;
+		padding-top: $base;
+	}
 }

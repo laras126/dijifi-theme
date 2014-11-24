@@ -145,7 +145,7 @@ nav[role="navigation"] {
 
 
 .content-nav {
-    @extend %horizontal-list-center;
+    @extend %horizontal-list;
     @include rotate();
     
     li {
@@ -159,7 +159,10 @@ nav[role="navigation"] {
     }
 
     ul {
-        margin: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        // Technicall this should be able to be an extend, but the margin is being overwritten somewhere
+        @include make-row();
     }
 
 }

@@ -398,7 +398,7 @@
                                             "placeholder": "",
                                             "maxlength": 350,
                                             "rows": "",
-                                            "new_lines": "wpautop",
+                                            "new_lines": "br",
                                             "readonly": 0,
                                             "disabled": 0
                                         },

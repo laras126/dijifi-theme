@@ -1,4 +1,20 @@
 
+.site-footer {
+	@include rotate($bkgd: $accent-med);
+	font-family: $sans-serif;
+
+	ul {
+		@extend %unstyle-list;
+	}
+}
+
 .menu-footer {
 	
+	a {
+		@extend %meta;
+	}
+}
+
+.widget {
+	@extend .col-sm-4;
 }
