@@ -1,0 +1,19 @@
+
+
+.button-cta {
+	@include button($accent-dark);
+}
+
+.button-success {
+	@include button($alert-success);
+}
+
+.link-more {
+	@include button($accent-light);
+}
+
+.link-edit {
+	@extend %meta;
+	font-weight: 700;
+	color: $alert-danger;
+}
