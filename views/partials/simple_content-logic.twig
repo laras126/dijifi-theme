@@ -1,49 +1,21 @@
-
-{# {% for content in post.get_field('content') %} #}
-    
-    {# {% if content.acf_fc_layout == 'section' %} #}
-
-        {# Note: Block was probably a poor choice of word here because it conflicts with the 'blocks' in Twig. So I've changed it to 'blck' instead. #}
-        {% for blck in post.get_field('blocks') %} 
-            {% set block_class = blck.acf_fc_layout %}
-            {% if blck.acf_fc_layout == 'block_text' %}
-                {% include 'blocks/block-text.twig' %}   
-            {% elseif blck.acf_fc_layout == 'block_textimage' %}
-                {% include 'blocks/block-textimage.twig' %}
-            {% elseif blck.acf_fc_layout == 'block_related_page' %}
-                {% include 'blocks/block-related.twig' %}
-            {% elseif blck.acf_fc_layout == 'divider' %}
-                {% set div = blck %} {# b/c using a different var in the template #}
-                {% if div.divider_type == 'testimonial' %}
-                    {% include 'dividers/div-testimonial.twig' %}
-                {% elseif div.divider_type == 'cta' %}
-                    {% include 'dividers/div-cta.twig' %}
-                {% elseif div.divider_type == 'related' %}
-                    {% include 'dividers/div-related.twig' %}
-                {% endif %}
-
-            {% endif %}
-        {% endfor %}
-	
-    {# {% elseif content.acf_fc_layout == 'divider' %} #}
-
-        {# {% set display_class = content.display %} #}
-    
-       {#  <aside class="divider display-{{display_class}}">
-        
-            {% for div in content.divider_content %}
-                {% set divider_class = div.acf_fc_layout %}
-                {% if div.acf_fc_layout == 'div_testimonial' %}
-                    {% include 'dividers/div-testimonial.twig' %}
-                {% elseif div.acf_fc_layout == 'div_cta' %}
-                    {% include 'dividers/div-cta.twig' %}
-                {% elseif div.acf_fc_layout == 'div_related_page' %}
-                    {% include 'dividers/div-related.twig' %}
-                {% endif %}
-            {% endfor %}
-            
-        </aside> <!-- /.divider-{{display_class}} --> #}
-    
-    {# {% endif %} #}
-
-{# {% endfor %} #}
+{% for blck in post.get_field('blocks') %} 
+    {% set block_class = blck.acf_fc_layout %}
+    {% if blck.acf_fc_layout == 'block_text' %}
+        {% include 'blocks/block-text.twig' %}   
+    {% elseif blck.acf_fc_layout == 'block_textimage' %}
+        {% include 'blocks/block-textimage.twig' %}
+    {% elseif blck.acf_fc_layout == 'block_related_page' %}
+        {% include 'blocks/block-related.twig' %}
+    {% elseif blck.acf_fc_layout == 'block_blank' %}
+        {% include 'blocks/block-blank.twig' %}
+    {% elseif blck.acf_fc_layout == 'divider' %}
+        {% set div = blck %} {# b/c using a different var in the template #}
+        {% if div.divider_type == 'testimonial' %}
+            {% include 'dividers/div-testimonial.twig' %}
+        {% elseif div.divider_type == 'cta' %}
+            {% include 'dividers/div-cta.twig' %}
+        {% elseif div.divider_type == 'related' %}
+            {% include 'dividers/div-related.twig' %}
+        {% endif %}
+    {% endif %}
+{% endfor %}

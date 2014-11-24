@@ -107,7 +107,7 @@ $gutter:                    $h3 !default;
       }
       @else if $width == squish {
         margin-right: percentage((2 / $grid-columns));   
-        margin-left: percentage((2 / $grid-columns));       
+        margin-left: percentage((3 / $grid-columns));       
       }
     }
 
@@ -210,7 +210,7 @@ $gutter:                    $h3 !default;
 }
 @mixin make-sm-column-push($columns) {
   @media (min-width: $screen-sm) {
-    margin-left: (-percentage(($columns / $grid-columns)));
+    margin-left: percentage(($columns / $grid-columns));
   }
 }
 @mixin make-sm-column-pull($columns) {
@@ -292,8 +292,8 @@ $gutter:                    $h3 !default;
     .col-sm-#{$i}-np { @include make-sm-column($i, false); }
 
     .col-sm-push-#{$i} { @include make-sm-column-push($i); }
-    // .col-sm-#{$i}-pull { @include make-sm-column-pull($i); }
-    // .col-sm-#{$i}-offset { @include make-sm-column-offset($i); }
+    .col-sm-pull-#{$i} { @include make-sm-column-pull($i); }
+    .col-sm-offset-#{$i} { @include make-sm-column-offset($i); }
 }
 @for $i from 1 to $grid-columns {
     .col-md-#{$i} { @include make-md-column($i); }

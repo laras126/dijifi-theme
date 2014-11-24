@@ -7,14 +7,11 @@
 
 	<body class="{{body_class}}" data-template="base.twig">
 		<div class="svgsprites">{% include 'partials/svg-defs.svg' %}</div>
+
 		<header role="banner" class="site-header">
 			{% block header %}
-				<div class="contain">
-					{# <div class="inner"> #}
-					
-						{% include 'headers/site-header.twig' %}
-
-					
+				<div class="contain">					
+					{% include 'headers/site_header.twig' %}
 				</div> <!-- /.contain -->
 			{% endblock %}
 		</header>
@@ -22,9 +19,7 @@
 
 		<main id="content" role="main">
 
-			<header class="page-header">
-				{% include 'partials/header-logic.twig' %}
-			</header>
+			{% include 'partials/main_header-logic.twig' %}
 			
 			<div class="page-body {{sidebar_class}}">
 				{% block content %}
