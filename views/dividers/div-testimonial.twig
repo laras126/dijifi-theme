@@ -5,11 +5,11 @@
 	<div class="inner">
 	{% for test in div.testimonial %}
 		
-			<blockquote>
-				{{test.text}}	
-			</blockquote>
-			<p class="text-right">{{test.person_name}} - <a href="{{test.source_link}}" target="blank">{{test.source}}</a></p>	
-		
+		<blockquote>
+			{{test.text}}	
+		</blockquote>
+		<p class="text-right">{{test.person_name}} - <a href="{{test.source_link}}" target="blank">{{test.source}}</a></p>
+
 	{% endfor %}
 	</div>
 	

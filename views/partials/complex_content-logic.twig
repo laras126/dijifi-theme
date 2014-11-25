@@ -33,6 +33,7 @@
 
         {% set display_class = content.display %}
         {% set div = content %} {# b/c using a different var in the template #}
+            
         <aside class="divider display-{{display_class}}">
             {% if div.divider_type == 'testimonial' %}
                 {% include 'dividers/div-testimonial.twig' %}
@@ -42,6 +43,7 @@
                 {% include 'dividers/div-related.twig' %}
             {% endif %}
         </aside> <!-- /.divider-{{display_class}} -->
+
     {% endif %}
 
 {% endfor %}

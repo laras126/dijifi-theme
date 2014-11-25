@@ -22,7 +22,7 @@
 // ----
 
 $screen-sm:    28em;
-$screen-md:    49em;
+$screen-md:    44em;
 $screen-lg:    65em;
 
 $contain-full: 55em;
@@ -90,16 +90,38 @@ $gutter:                    $h3 !default;
 // Mixin to have "squish" and "full" wraps to allow for overhanging elements
 
 
-@mixin inner($width: base, $bp: med, $gutter: true, $pad: false) {
+@mixin inner($width: base, $side: both) {
     @extend %clearfix;
-    @include bp($bp) {
+
+    @include bp(med) {
       @if $width == base {
         margin-left: percentage((1 / $grid-columns));   
         margin-right: percentage((1 / $grid-columns));
       }
       @else if $width == squish {
-        margin-right: percentage((2 / $grid-columns));   
-        margin-left: percentage((3 / $grid-columns));       
+        @if $side == both {
+          margin-right: percentage((1 / $grid-columns));   
+          margin-left: percentage((1 / $grid-columns));         
+        } 
+        @else {
+          margin-#{$side}: percentage((1 / $grid-columns));   
+        }
+      }
+    }
+
+    @include bp(large) {
+      @if $width == base {
+        margin-left: percentage((1 / $grid-columns));   
+        margin-right: percentage((1 / $grid-columns));
+      }
+      @else if $width == squish {
+        @if $side == both {
+          margin-right: percentage((2 / $grid-columns));   
+          margin-left: percentage((3 / $grid-columns));       
+        } 
+        @else {
+          margin-#{$side}: percentage((3 / $grid-columns));   
+        }
       }
     }
 
@@ -117,12 +139,19 @@ $gutter:                    $h3 !default;
 
 .inner-squish {
     @include inner(squish);
+
+    &-r {
+      @include inner(squish, right);      
+    }
+
+    &-l {
+      @include inner(squish, left);      
+    }
 }
 
 .inner-pad {
     @extend %bs-pad;
 }
-
 
 
 
@@ -266,7 +295,9 @@ $gutter:                    $h3 !default;
   }
 }
 
-
+.np {
+  padding: 0;
+}
 
 
 // ----
@@ -275,33 +306,31 @@ $gutter:                    $h3 !default;
 
 @for $i from 1 to $grid-columns {
     .col-xs-#{$i} { @include make-xs-column($i); }
+    .col-xs-push-#{$i} { @include make-xs-column-push($i); }
+    .col-xs-pull-#{$i} { @include make-xs-column-pull($i); }
+    // .col-xs-#{$i}-offset { @include make-xs-column-offset($i); }
     .col-xs-#{$i}-np { @include make-xs-column($i, false); }
 
-    .col-xs-push-#{$i} { @include make-xs-column-push($i); }
-    // .col-xs-#{$i}-pull { @include make-xs-column-pull($i); }
-    // .col-xs-#{$i}-offset { @include make-xs-column-offset($i); }
 }
 @for $i from 1 to $grid-columns {
     .col-sm-#{$i} { @include make-sm-column($i); }
-    .col-sm-#{$i}-np { @include make-sm-column($i, false); }
-
     .col-sm-push-#{$i} { @include make-sm-column-push($i); }
     .col-sm-pull-#{$i} { @include make-sm-column-pull($i); }
     .col-sm-offset-#{$i} { @include make-sm-column-offset($i); }
+    .col-sm-#{$i}-np { @include make-sm-column($i, false); }
 }
 @for $i from 1 to $grid-columns {
     .col-md-#{$i} { @include make-md-column($i); }
-    .col-md-#{$i}-np { @include make-md-column($i, false); }
-
     .col-md-push-#{$i} { @include make-md-column-push($i); }
-    // .col-md-#{$i}-pull { @include make-md-column-pull($i); }
+    .col-md-#{$i}-pull { @include make-md-column-pull($i); }
+    .col-md-#{$i}-np { @include make-md-column($i, false); }
     // .col-md-#{$i}-offset { @include make-md-column-offset($i); }
 }
 @for $i from 1 to $grid-columns {
     .col-lg-#{$i} { @include make-lg-column($i); }
+    .col-lg-push-#{$i} { @include make-lg-column-push($i); }
+    .col-lg-#{$i}-pull { @include make-lg-column-pull($i); }
     .col-lg-#{$i}-np { @include make-lg-column($i, false); }
 
-    .col-lg-push-#{$i} { @include make-lg-column-push($i); }
-    // .col-lg-#{$i}-pull { @include make-lg-column-pull($i); }
     // .col-lg-#{$i}-offset { @include make-lg-column-offset($i); }
 }

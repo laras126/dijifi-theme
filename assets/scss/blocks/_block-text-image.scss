@@ -4,6 +4,16 @@
 	}
 	&-caption {
 		border-top: $accent-border;
+		border-left: $accent-border;
+		border-right: $accent-border;
 		padding-top: $base;
+		padding-bottom: $base;
+		background-color: #f9f9f9;
+
+		@include bp(med) {
+			border-left: none;
+			border-right: none;
+			background: none;
+		}
 	}
 }

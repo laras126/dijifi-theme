@@ -1,4 +1,8 @@
 
+.block_list {
+	margin-bottom: $h2;
+}
+
 // ----
 // General
 // ----
@@ -13,25 +17,37 @@
 // Artifacts (equipment, formats, files)
 // ----
 
-.list-artifacts {}
+.list-artifacts {
+}
 
 	.artifact {
-		@extend .inner-full;
+		@extend .row;
+		// border-bottom: $accent-border;
+
+		&:last-child {
+			border-bottom: none;
+		}
 	}
 	
 	.artifact-img {
-		@extend .col-sm-4;
-
-		img {
+		@extend .col-sm-5-np;
+		@extend .col-lg-4-np;
+		margin-bottom: $base;
+		margin-top: $base;
+		
+		img {	
 			@extend %center_block;
-			border-top: 3px solid $accent-light;
-			border-bottom: 3px solid $accent-light;
+			// max-width: 80%;
 		}
 	}
 
 	.artifact-desc {
 		@extend .col-sm-8;
-		@include change-text-align(center, med, left);
+		@extend .col-lg-8;
+		@include change-text-align(center, small, left);
+		p {
+			// @extend %meta;
+		}
 	}
 
 	.artifact-title {

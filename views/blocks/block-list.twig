@@ -10,7 +10,7 @@
 	
 	{% if type == 'artifacts' %}
 
-		<ul class="list list-artifacts inner-full">
+		<ul class="list list-artifacts inner">
 		{% for arti in blck.connected_artifacts %}
 		
 			<li class="artifact">
@@ -18,7 +18,7 @@
 					<img src="{{TimberImage(arti.image).src('medium')}}" alt="{{arti.post_title}}">	
 				</div>
 				<div class="artifact-desc">
-					<h4 class="artifact-title">{{arti.post_title}}</h4>
+					<h5 class="artifact-title">{{arti.post_title}}</h5>
 					<p>{{arti.short_description}}</p>	
 					{% include 'partials/edit-link.twig' %}
 				</div>

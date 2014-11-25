@@ -70,8 +70,6 @@
 
 %unstyle-list {
     list-style: none;
-    margin-left: 0;
-    padding-left: 0;
 }
 
 %horizontal-list {
@@ -131,7 +129,7 @@
 
 %upperspace {
     text-transform: uppercase;
-    letter-spacing: 1px;
+    // letter-spacing: 1px;
 }
 
 .meta,

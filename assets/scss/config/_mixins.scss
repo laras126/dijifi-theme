@@ -63,16 +63,11 @@
 // Typography
 // ----
 
-@mixin change-text-align($base, $bp, $align) {
-	@if $base == default {
-		// TODO:
-		// Should be $base != default, but that wasn't working
-	} @else {
-		text-align: $base;
-	}
+@mixin change-text-align($base, $bp, $new) {
+	text-align: $base;
 	
 	@include bp($bp) {
-		text-align: $align;
+		text-align: $new;
 	}
 }
 

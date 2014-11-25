@@ -41,7 +41,7 @@ $(document).ready(function() {
 	    topMenuHeight = topMenu.outerHeight(),
 	  
 	    // All list items
-	    menuItems = topMenu.find("a"),
+	    menuItems = topMenu.find(".menuitem a"),
 
 	    // Anchors corresponding to menu items
 	    scrollItems = menuItems.map(function(){
@@ -58,7 +58,7 @@ $(document).ready(function() {
 		// $(this).addClass('content-nav-active');
 		// $('.content').removeClass('content-active');
 
-		var $target = $('.content' + hash);
+		var $target = $(hash);
 		// $('.content').removeClass('content-active');
 		// $target.addClass('content-active');
 
@@ -77,8 +77,12 @@ $(document).ready(function() {
 		// Add the class to make the nav stick
 		if( $(this).scrollTop() > total_ht ) {
 			$nav.addClass(scroll_class);
+			$('.top-link').css('opacity', '1');
+			$('.top-link').css('width', '50px');
 		} else if( $(this).scrollTop() < total_ht ) {
 			$nav.removeClass(scroll_class);
+			$('.top-link').css('opacity', '0');
+			$('.top-link').css('width', '0');
 		}
 
 		// Highlight the current item according to position on the screen
@@ -107,6 +111,7 @@ $(document).ready(function() {
 
 
 
+
 	// ----
 	// Quick Quote form
 	// ----
@@ -130,6 +135,9 @@ $(document).ready(function() {
 		
 		desc_default = desc;
 	});
+
+
+
 
 
 	// ----

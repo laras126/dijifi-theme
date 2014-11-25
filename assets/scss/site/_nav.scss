@@ -153,7 +153,7 @@ nav[role="navigation"] {
     }
 
     a {
-        padding: $base;
+        padding: $sml/2 $base;
         display: inline-block;
         color: $text-light;
     }
@@ -161,7 +161,7 @@ nav[role="navigation"] {
     ul {
         margin-top: 0;
         margin-bottom: 0;
-        // Technicall this should be able to be an extend, but the margin is being overwritten somewhere
+        // This should be able to be an extend, but the margin is being overwritten somewhere
         @include make-row();
     }
 
@@ -178,6 +178,21 @@ nav[role="navigation"] {
         z-index: $ztop;
     }
 
+    .top-link {
+        width: 0;
+        position: relative;
+
+        a {
+            padding: 0;
+        }
+    }
+
+        .shape-arrow-up {
+            fill: $text-light;
+            z-index: $ztop*2;
+            height: $base;
+            width: $base;
+        }
 
 
 
