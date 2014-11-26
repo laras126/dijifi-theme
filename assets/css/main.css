@@ -394,14 +394,14 @@ th {
   padding: 0;
 }
 
-.col-xs-1, .col-xs-1-np, .col-xs-2, .col-xs-2-np, .col-xs-3, .col-xs-3-np, .col-xs-4, .col-xs-4-np, .col-xs-5, .col-xs-5-np, .col-xs-6, .col-xs-6-np, .col-xs-7, .col-xs-7-np, .col-xs-8, .col-xs-8-np, .col-xs-9, .col-xs-9-np, .col-xs-10, .col-xs-10-np, .col-xs-11, .col-xs-11-np, .col-sm-1, .col-sm-1-np, .col-sm-2, .col-sm-2-np, .col-sm-3, .col-sm-3-np, .col-sm-4, .widget, .col-sm-4-np, .item-img, .col-sm-5, .col-sm-5-np, .artifact-img, .col-sm-6, .col-sm-6-np, .col-sm-7, .col-sm-7-np, .col-sm-8, .artifact-desc, .col-sm-8-np, .item-desc, .col-sm-9, .col-sm-9-np, .col-sm-10, .col-sm-10-np, .col-sm-11, .col-sm-11-np, .col-md-1, .col-md-1-np, .col-md-2, .col-md-2-np, .col-md-3, .col-md-3-np, .col-md-4, .col-md-4-np, .col-md-5, .col-md-5-np, .col-md-6, .col-md-6-np, .col-md-7, .col-md-7-np, .col-md-8, .col-md-8-np, .col-md-9, .col-md-9-np, .col-md-10, .col-md-10-np, .col-md-11, .col-md-11-np, .col-lg-1, .col-lg-1-np, .col-lg-2, .col-lg-2-np, .col-lg-3, .col-lg-3-np, .col-lg-4, .col-lg-4-np, .col-lg-5, .col-lg-5-np, .col-lg-6, .col-lg-6-np, .col-lg-7, .col-lg-7-np, .col-lg-8, .col-lg-8-np, .col-lg-9, .col-lg-9-np, .col-lg-10, .col-lg-10-np, .col-lg-11, .col-lg-11-np, .focus-text, .param-option, .divider-overlay {
+.col-xs-1, .col-xs-1-np, .col-xs-2, .col-xs-2-np, .col-xs-3, .col-xs-3-np, .col-xs-4, .col-xs-4-np, .col-xs-5, .col-xs-5-np, .col-xs-6, .col-xs-6-np, .col-xs-7, .col-xs-7-np, .col-xs-8, .col-xs-8-np, .col-xs-9, .col-xs-9-np, .col-xs-10, .col-xs-10-np, .col-xs-11, .col-xs-11-np, .col-sm-1, .col-sm-1-np, .col-sm-2, .col-sm-2-np, .col-sm-3, .col-sm-3-np, .col-sm-4, .widget, .col-sm-4-np, .item-img, .col-sm-5, .col-sm-5-np, .artifact-img, .col-sm-6, .col-sm-6-np, .col-sm-7, .col-sm-7-np, .col-sm-8, .artifact-desc, .col-sm-8-np, .item-desc, .col-sm-9, .col-sm-9-np, .col-sm-10, .col-sm-10-np, .col-sm-11, .col-sm-11-np, .col-md-1, .col-md-1-np, .col-md-2, .col-md-2-np, .col-md-3, .block_textimage .caption, .col-md-3-np, .col-md-4, .col-md-4-np, .col-md-5, .col-md-5-np, .col-md-6, .col-md-6-np, .col-md-7, .col-md-7-np, .col-md-8, .col-md-8-np, .col-md-9, .col-md-9-np, .block_textimage .image, .col-md-10, .col-md-10-np, .col-md-11, .col-md-11-np, .col-lg-1, .col-lg-1-np, .col-lg-2, .col-lg-2-np, .col-lg-3, .col-lg-3-np, .col-lg-4, .col-lg-4-np, .col-lg-5, .col-lg-5-np, .col-lg-6, .col-lg-6-np, .col-lg-7, .col-lg-7-np, .col-lg-8, .col-lg-8-np, .col-lg-9, .col-lg-9-np, .col-lg-10, .col-lg-10-np, .col-lg-11, .col-lg-11-np, .focus-text, .param-option, .divider-overlay {
   float: left;
   position: relative;
   min-height: 1px;
   width: 100%;
 }
 
-.inner-pad, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .widget, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .artifact-desc, .col-sm-9, .col-sm-10, .col-sm-11, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .focus-text, .param-option, .divider-overlay {
+.inner-pad, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .widget, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .artifact-desc, .col-sm-9, .col-sm-10, .col-sm-11, .col-md-1, .col-md-2, .col-md-3, .block_textimage .caption, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .focus-text, .param-option, .divider-overlay {
   padding-left: 1.3rem;
   padding-right: 1.3rem;
 }
@@ -446,7 +446,7 @@ th {
 }
 @media (min-width: 65em) {
   .inner-squish-r {
-    margin-right: 25%;
+    margin-right: 16.66667%;
   }
 }
 @media (min-width: 44em) {
@@ -1046,7 +1046,7 @@ th {
 }
 
 @media (min-width: 44em) {
-  .col-md-3 {
+  .col-md-3, .block_textimage .caption {
     width: 25%;
   }
 }
@@ -1208,7 +1208,7 @@ th {
 }
 
 @media (min-width: 44em) {
-  .col-md-9-np {
+  .col-md-9-np, .block_textimage .image {
     width: 75%;
   }
 }
@@ -1545,7 +1545,7 @@ th {
   padding: 1.3rem 0;
 }
 
-.block_textimage img {
+.block_textimage .image img {
   border: 1px solid #80C25D;
 }
 
@@ -2099,7 +2099,7 @@ nav[role="navigation"] {
   font-family: "freight-sans-pro", Helvetica, sans-serif;
 }
 
-.block_textimage-caption {
+.block_textimage .caption {
   border-top: 1px solid #80C25D;
   border-left: 1px solid #80C25D;
   border-right: 1px solid #80C25D;
@@ -2108,7 +2108,7 @@ nav[role="navigation"] {
   background-color: #f9f9f9;
 }
 @media (min-width: 44em) {
-  .block_textimage-caption {
+  .block_textimage .caption {
     border-left: none;
     border-right: none;
     background: none;

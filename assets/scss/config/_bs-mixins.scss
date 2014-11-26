@@ -117,10 +117,11 @@ $gutter:                    $h3 !default;
       @else if $width == squish {
         @if $side == both {
           margin-right: percentage((2 / $grid-columns));   
-          margin-left: percentage((3 / $grid-columns));       
-        } 
-        @else {
-          margin-#{$side}: percentage((3 / $grid-columns));   
+          margin-left: percentage((3 / $grid-columns));
+        } @else if $side == right {
+          margin-right: percentage((2 / $grid-columns));   
+        } @else if $side == left {
+          margin-left: percentage((3 / $grid-columns));   
         }
       }
     }

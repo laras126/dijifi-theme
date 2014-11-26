@@ -308,6 +308,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
+            },
+            {
+                "param": "page",
+                "operator": "!=",
+                "value": "313"
             }
         ]
     ],
@@ -323,7 +328,6 @@
         "comments",
         "author",
         "format",
-        "page_attributes",
         "featured_image",
         "categories",
         "tags",

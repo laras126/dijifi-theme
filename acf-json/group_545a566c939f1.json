@@ -729,6 +729,13 @@
                 "operator": "==",
                 "value": "dfi_case_study"
             }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "313"
+            }
         ]
     ],
     "menu_order": 2,
@@ -744,7 +751,6 @@
         "comments",
         "author",
         "format",
-        "page_attributes",
         "featured_image",
         "categories",
         "tags",
