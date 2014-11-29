@@ -94,29 +94,30 @@ $gutter:                    $h3 !default;
     @extend %clearfix;
 
     @include bp(med) {
-      @if $width == base {
-        margin-left: percentage((1 / $grid-columns));   
-        margin-right: percentage((1 / $grid-columns));
-      }
-      @else if $width == squish {
-        @if $side == both {
-          margin-right: percentage((1 / $grid-columns));   
-          margin-left: percentage((1 / $grid-columns));         
-        } 
-        @else {
-          margin-#{$side}: percentage((1 / $grid-columns));   
-        }
-      }
+      // @if $width == base {
+      //   margin-left: percentage((1 / $grid-columns));   
+      //   margin-right: percentage((1 / $grid-columns));
+      // }
+
+      // @else if $width == squish {
+      //   @if $side == both {
+      //     margin-right: percentage((1 / $grid-columns));   
+      //     margin-left: percentage((1 / $grid-columns));
+      //   } 
+      //   @else {
+          margin-#{$side}: percentage((1 / $grid-columns));  
+      //   }
+      // }
     }
 
     @include bp(large) {
       @if $width == base {
-        margin-left: percentage((1 / $grid-columns));   
+        margin-left: percentage((2 / $grid-columns));   
         margin-right: percentage((1 / $grid-columns));
       }
       @else if $width == squish {
         @if $side == both {
-          margin-right: percentage((2 / $grid-columns));   
+          margin-right: percentage((2 / $grid-columns));
           margin-left: percentage((3 / $grid-columns));
         } @else if $side == right {
           margin-right: percentage((2 / $grid-columns));   
@@ -135,7 +136,7 @@ $gutter:                    $h3 !default;
 }
 
 .inner-full {
-    @include inner(full); 
+    @include inner(full);
 }
 
 .inner-squish {

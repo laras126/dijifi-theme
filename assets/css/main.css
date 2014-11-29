@@ -416,21 +416,25 @@ th {
 
 @media (min-width: 44em) {
   .inner {
-    margin-left: 8.33333%;
-    margin-right: 8.33333%;
+    margin-both: 8.33333%;
   }
 }
 @media (min-width: 65em) {
   .inner {
-    margin-left: 8.33333%;
+    margin-left: 16.66667%;
     margin-right: 8.33333%;
   }
 }
 
 @media (min-width: 44em) {
+  .inner-full {
+    margin-both: 8.33333%;
+  }
+}
+
+@media (min-width: 44em) {
   .inner-squish {
-    margin-right: 8.33333%;
-    margin-left: 8.33333%;
+    margin-both: 8.33333%;
   }
 }
 @media (min-width: 65em) {
@@ -2234,7 +2238,7 @@ nav[role="navigation"] {
 }
 
 .section-title {
-  margin-top: 7.28rem;
+  margin-top: 3.64rem;
 }
 
 .padded-sides {

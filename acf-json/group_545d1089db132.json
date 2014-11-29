@@ -5,7 +5,7 @@
         {
             "key": "field_545d277c7726e",
             "label": "Prompt",
-            "name": "prompt",
+            "name": "qq_prompt",
             "prefix": "",
             "type": "text",
             "instructions": "Prompt to fill out the quote form.",
@@ -22,7 +22,7 @@
         {
             "key": "field_545d279c02f59",
             "label": "Form Content",
-            "name": "form_content",
+            "name": "qq_form_content",
             "prefix": "",
             "type": "repeater",
             "instructions": "",
@@ -30,7 +30,7 @@
             "conditional_logic": 0,
             "min": "",
             "max": "",
-            "layout": "table",
+            "layout": "row",
             "button_label": "New Question",
             "sub_fields": [
                 {
@@ -48,6 +48,24 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": 136,
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_5479f0b2bc9a8",
+                    "label": "Question ID",
+                    "name": "question_id",
+                    "prefix": "",
+                    "type": "text",
+                    "instructions": "A two word, lowercase indicator for the question.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "column_width": "",
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
                     "readonly": 0,
                     "disabled": 0
                 },
@@ -81,6 +99,24 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": 140,
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_5479eddf99472",
+                            "label": "Answer ID",
+                            "name": "answer_id",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "This should be the lowervase name of the service indicated. So, direct_service or raw or standard.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "column_width": "",
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
                             "readonly": 0,
                             "disabled": 0
                         }

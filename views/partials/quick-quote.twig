@@ -1,0 +1,30 @@
+{% extends 'blocks/block.twig' %}
+
+{% block content %}
+<div class="inner-squish">
+	<h3>Quick Quote</h3>
+	<p class="lead">{{post.qq_prompt}}</p>
+	<form action="" class="quick-quote-form">
+	{% for field in post.get_field('qq_form_content') %}
+		<hr>
+		<fieldset>
+			<legend>{{field.question}}</legend>
+			<ul>
+				{% for a in field.answers %}
+					<li class="meta">
+						{{a.answer_id}}
+						{{field.question_id}}
+					</li>
+					
+					<li>
+						<input type="radio" name="{{field.question_id}}" id="{{a.answer_id}}">
+						<label for="{{a.answer_id}}">{{a.answer_text}}</label>
+					</li>
+				{% endfor %}
+			</ul>
+		</fieldset>
+	{% endfor %}
+	</form>
+</div>
+
+{% endblock %}

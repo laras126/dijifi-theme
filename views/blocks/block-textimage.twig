@@ -1,11 +1,11 @@
 {% extends "blocks/block.twig" %}
 
 {% block content %}
-	<div class="inner-squish-r">
+	<div class="inner-full">
 
 		{% if blck.text_location == 'right'%}
 			<div class="image">
-				<img src="{{TimberImage(blck.image).src|resize(600)}}" alt="">
+				<img src="{{TimberImage(blck.image).src|resize(800)}}" alt="">
 			</div>
 			<div class="caption">
 				<p class="meta">{{blck.text}}</p>

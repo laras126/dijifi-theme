@@ -24,6 +24,8 @@
                     {% include 'blocks/block-related.twig' %}
                 {% elseif blck.acf_fc_layout == 'block_blank' %}
                     {% include 'blocks/block-blank.twig' %}
+                {% elseif blck.acf_fc_layout == 'block_testimonial' %}
+                    {% include 'blocks/block-testimonial.twig' %} {# Note: this should be a global testimonial template, and not part of dividers any more! #}
                 {% endif %}
             {% endfor %}
 
@@ -45,5 +47,9 @@
         </aside> <!-- /.divider-{{display_class}} -->
 
     {% endif %}
+
+    <section class="content" id="Quick_Quote">
+        {% include 'partials/quick-quote.twig' %}
+    </section>
 
 {% endfor %}

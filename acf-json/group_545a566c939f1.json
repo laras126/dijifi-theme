@@ -139,7 +139,7 @@
                                             "conditional_logic": 0,
                                             "column_width": "",
                                             "default_value": "",
-                                            "tabs": "visual",
+                                            "tabs": "all",
                                             "toolbar": "text_based",
                                             "media_upload": 0
                                         }
@@ -493,6 +493,37 @@
                                     ],
                                     "min": "",
                                     "max": ""
+                                },
+                                {
+                                    "key": "54766e7f5f012",
+                                    "name": "block_testimonial",
+                                    "label": "Testimonial",
+                                    "display": "row",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_54766e5c5f011",
+                                            "label": "Testimonial",
+                                            "name": "testimonial",
+                                            "prefix": "",
+                                            "type": "relationship",
+                                            "instructions": "Select the testimonial to display.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "column_width": "",
+                                            "post_type": [
+                                                "dfi_testimonial"
+                                            ],
+                                            "taxonomy": "",
+                                            "filters": [
+                                                "search"
+                                            ],
+                                            "elements": "",
+                                            "max": 1,
+                                            "return_format": "object"
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
                                 }
                             ]
                         }
@@ -707,6 +738,24 @@
                             "taxonomy": "",
                             "allow_null": 0,
                             "multiple": 0
+                        },
+                        {
+                            "key": "field_5479e50aacbd8",
+                            "label": "Raw Link",
+                            "name": "cta_raw_link",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Leave this blank if you are selecting a page above. You can also link to another section of this page, by adding a # in front of the \"Menu Item Title\" e.g. #Formats or #Quick_Quote.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "column_width": "",
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
                         }
                     ],
                     "min": "",
