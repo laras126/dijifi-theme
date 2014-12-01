@@ -53,6 +53,15 @@
 }
 
 
+// Alerts
+
+%alert,
+.alert {
+    @include rotate($text-dark, $accent-vlight);
+    padding: $base;
+}
+
+
 
 // ----
 // Typography

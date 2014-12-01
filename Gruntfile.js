@@ -36,9 +36,17 @@ module.exports = function(grunt) {
               sourcemap: false
             },
             files: {
-                'assets/css/main.css': 'assets/scss/main.scss'
+                'assets/css/main.css': 'assets/scss/main.scss',
+                'assets/css/order.css': 'assets/scss/order.scss'
             }
           }
+        },
+
+        cssmin: {
+            css: {
+                src: 'assets/css/order.css',
+                dest: 'assets/css/order.min.css'
+            }
         },
 
         svgstore: {
@@ -55,7 +63,7 @@ module.exports = function(grunt) {
         watch: {
             scripts: {
                 files: ['assets/js/*.js', 'assets/**/*.scss'],
-                tasks: ['concat', 'sass'],
+                tasks: ['concat', 'sass', 'cssmin'],
                 options: {
                     spawn: false,
                 },
@@ -94,6 +102,7 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
     
@@ -101,7 +110,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
         'sass',
         'concat',
-        'uglify',
+        'cssmin',
         'jshint'
       ]);
 

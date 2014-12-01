@@ -26,6 +26,7 @@
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-sass": "~0.8.1",
     "grunt-svgstore": "~0.4.1",
-    "load-grunt-tasks": "~1.0.0"
+    "load-grunt-tasks": "~1.0.0",
+    "grunt-contrib-cssmin": "~0.10.0"
   }
 }

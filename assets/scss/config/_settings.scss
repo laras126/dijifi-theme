@@ -31,6 +31,7 @@ $alert-info: 	$blue;
 $alert-success: $accent-med;
 
 $text-dark: 		$navy;
+$text-med: 			$grey;
 $text-light: 		$white;
 
 $link-color:		$accent-dark;
@@ -78,10 +79,10 @@ $h6:  				$sml;
 
 // Fonts
 
-$sans-serif: 		'freight-sans-pro', Helvetica, sans-serif;
+// $sans-serif: 		'freight-sans-pro', Helvetica, sans-serif;
 $serif:             'Chaparral Pro', Georgia, serif;
 // $serif: 			'livory';
-// $sans-serif:        'proxima-nova-soft', Georgia, serif;
+$sans-serif:        'proxima-nova-soft', Georgia, serif;
 
 $heading-font: 		$sans-serif;
 $body-font: 		$serif;
@@ -91,10 +92,6 @@ $lead-font: 		$sans-serif;
 
 
 // Semantic variable names
-
-$text-dark: 		$black;
-$text-med: 			$grey;
-$text-light: 		$white;
 
 $link-color:		$blue;
 $link-hover: 		darken($link-color, 20%);

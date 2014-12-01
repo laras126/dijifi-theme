@@ -44,7 +44,7 @@ $(document).ready(function() {
 	    menuItems = topMenu.find(".menuitem a"),
 
 	    // Anchors corresponding to menu items
-	    scrollItems = menuItems.map(function(){
+	    scrollItems = menuItems.map( function() {
 			var item = $($(this).attr("href"));
 			if (item.length) { return item; }
 		});
@@ -93,10 +93,10 @@ $(document).ready(function() {
 		var fromTop = $(this).scrollTop()+topMenuHeight;
 
 		// Get id of current scroll item
-		var cur = scrollItems.map(function(){
-		if ($(this).offset().top < fromTop)
+		var cur = scrollItems.map( function() {
+		if ($(this).offset().top < fromTop) {
 			return this;
-		});
+		}
 	   	
 	   	// Get the id of the current element
 		cur = cur[cur.length-1];
@@ -106,6 +106,7 @@ $(document).ready(function() {
 		menuItems
 			.parent().removeClass("content-nav-active")
 			.end().filter("[href=#"+id+"]").parent().addClass("content-nav-active");
+		});
 	});
 
 
@@ -144,6 +145,16 @@ $(document).ready(function() {
 	// Toggle Panels
 	// ----
 	
+
+	function clearActiveParam() {
+		$('.quote-param').removeClass('active');
+	}
+
+	function markActiveParam() {
+		clearActiveParam();
+		$(this).addClass('active');
+	}
+
 	$('.quote-param').on('click', {}, markActiveParam);
 
 	// Find the next closed form panel and slide it down
@@ -166,11 +177,3 @@ $(document).ready(function() {
 });
 
 
-function clearActiveParam() {
-	$('.quote-param').removeClass('active');
-}
-
-function markActiveParam() {
-	clearActiveParam();
-	$(this).addClass('active');
-}

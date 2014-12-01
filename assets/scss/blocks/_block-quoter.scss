@@ -1,5 +1,5 @@
 
-.block-quoter {
+.quick-quote-form {
 	@include rotate($text-light, $accent-dark);
 }
 
@@ -11,7 +11,8 @@
 }
 
 .active {
-	// border: 10px solid $accent-light;
+	@include rotate($text-light, $accent-med);
+
 }
 
 .param-option {

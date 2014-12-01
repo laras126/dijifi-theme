@@ -4,19 +4,15 @@
 <div class="inner-squish">
 	<h3>Quick Quote</h3>
 	<p class="lead">{{post.qq_prompt}}</p>
+</div>
+<div class="inner">
 	<form action="" class="quick-quote-form">
 	{% for field in post.get_field('qq_form_content') %}
-		<hr>
-		<fieldset>
-			<legend>{{field.question}}</legend>
-			<ul>
+		<fieldset class="quote-param {{not post.qq_form_content[0] ? 'active' : 'closed'}}">
+			<h4 class="form-panel-title">{{field.question}}</h4>
+			<ul class="param-options-list">
 				{% for a in field.answers %}
-					<li class="meta">
-						{{a.answer_id}}
-						{{field.question_id}}
-					</li>
-					
-					<li>
+					<li class="param-option">
 						<input type="radio" name="{{field.question_id}}" id="{{a.answer_id}}">
 						<label for="{{a.answer_id}}">{{a.answer_text}}</label>
 					</li>
@@ -24,6 +20,7 @@
 			</ul>
 		</fieldset>
 	{% endfor %}
+	<input type="submit" value="Calculate">
 	</form>
 </div>
 
