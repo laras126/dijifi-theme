@@ -395,10 +395,11 @@ th {
 }
 
 .col-xs-1, .col-xs-1-np, .col-xs-2, .col-xs-2-np, .col-xs-3, .col-xs-3-np, .col-xs-4, .col-xs-4-np, .col-xs-5, .col-xs-5-np, .col-xs-6, .col-xs-6-np, .col-xs-7, .col-xs-7-np, .col-xs-8, .col-xs-8-np, .col-xs-9, .col-xs-9-np, .col-xs-10, .col-xs-10-np, .col-xs-11, .col-xs-11-np, .col-sm-1, .col-sm-1-np, .col-sm-2, .col-sm-2-np, .col-sm-3, .col-sm-3-np, .col-sm-4, .widget, .col-sm-4-np, .item-img, .col-sm-5, .col-sm-5-np, .col-sm-6, .col-sm-6-np, .col-sm-7, .col-sm-7-np, .col-sm-8, .col-sm-8-np, .item-desc, .col-sm-9, .col-sm-9-np, .col-sm-10, .col-sm-10-np, .col-sm-11, .col-sm-11-np, .col-md-1, .col-md-1-np, .col-md-2, .col-md-2-np, .col-md-3, .col-md-3-np, .col-md-4, .col-md-4-np, .col-md-5, .col-md-5-np, .col-md-6, .col-md-6-np, .col-md-7, .col-md-7-np, .col-md-8, .col-md-8-np, .col-md-9, .col-md-9-np, .col-md-10, .col-md-10-np, .col-md-11, .col-md-11-np, .col-lg-1, .col-lg-1-np, .col-lg-2, .col-lg-2-np, .col-lg-3, .col-lg-3-np, .col-lg-4, .col-lg-4-np, .col-lg-5, .col-lg-5-np, .col-lg-6, .col-lg-6-np, .col-lg-7, .col-lg-7-np, .col-lg-8, .col-lg-8-np, .col-lg-9, .col-lg-9-np, .col-lg-10, .col-lg-10-np, .col-lg-11, .col-lg-11-np, .focus-text, .product-nodivs,
-.sub-products, .choices,
+.sub-products, .provided, .provided-drive-choices, .choices,
 .nochoice, .product-description,
-.product-description-nores, .qualities, .price, .product-total, .section-title,
-.service {
+.product-description-nores, .qualities, .price, .product-total, .drives, .product-description-drives, .purchase, .section-title,
+.service, .order-table tr td:first-child, .order-table td[align="left"], .order-table td[align="left"] input[type="text"],
+.order-table td[align="left"] textarea, .order-table tr:last-child td, tr.pickup-notice, tr.pickup-notice td:first-child {
   float: left;
   position: relative;
   min-height: 1px;
@@ -406,9 +407,8 @@ th {
 }
 
 .inner-pad, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .widget, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .focus-text, .product-nodivs,
-.sub-products, .choices,
-.nochoice, .qualities, .price, .product-total, .section-title,
-.service {
+.sub-products, .provided, .provided-drive-choices, .choices,
+.nochoice, .qualities, .drives, .product-description-drives, .purchase, .order-table tr:last-child td, tr.pickup-notice, tr.pickup-notice td:first-child {
   padding-left: 1.3rem;
   padding-right: 1.3rem;
 }
@@ -422,12 +422,12 @@ th {
 }
 
 @media (min-width: 44em) {
-  .inner, .wrapper {
+  .inner {
     margin-both: 8.33333%;
   }
 }
 @media (min-width: 65em) {
-  .inner, .wrapper {
+  .inner {
     margin-left: 16.66667%;
     margin-right: 8.33333%;
   }
@@ -440,12 +440,12 @@ th {
 }
 
 @media (min-width: 44em) {
-  .inner-squish {
+  .inner-squish, .wrapper {
     margin-both: 8.33333%;
   }
 }
 @media (min-width: 65em) {
-  .inner-squish {
+  .inner-squish, .wrapper {
     margin-right: 16.66667%;
     margin-left: 25%;
   }
@@ -1536,23 +1536,35 @@ th {
   }
 }
 
-.contain:before, .inner:before, .wrapper:before, .inner-full:before, .inner-squish:before, .inner-squish-r:before, .inner-squish-l:before, .row:before, .content-nav ul:before, .product:before,
+.contain:before, .inner:before, .inner-full:before, .inner-squish:before, .wrapper:before, .inner-squish-r:before, .inner-squish-l:before, .row:before, .content-nav ul:before, .section:before, .header:before, .product:before,
 .sub-section:before,
-.header:before, .product-nodivs:before,
-.sub-products:before, .contain:after, .inner:after, .wrapper:after, .inner-full:after, .inner-squish:after, .inner-squish-r:after, .inner-squish-l:after, .row:after, .content-nav ul:after, .product:after,
+.product-drive:before, .product-nodivs:before,
+.sub-products:before, .contain:after, .inner:after, .inner-full:after, .inner-squish:after, .wrapper:after, .inner-squish-r:after, .inner-squish-l:after, .row:after, .content-nav ul:after, .section:after, .header:after, .product:after,
 .sub-section:after,
-.header:after, .product-nodivs:after,
+.product-drive:after, .product-nodivs:after,
 .sub-products:after,
 .clearfix:before,
-.clearfix:after {
+.order-full-txt-alert:before,
+.order-full-txt-alert2:before,
+.pickup-notice:before,
+.provided:before,
+.clearfix:after,
+.order-full-txt-alert:after,
+.order-full-txt-alert2:after,
+.pickup-notice:after,
+.provided:after {
   content: " ";
   display: table;
 }
-.contain:after, .inner:after, .wrapper:after, .inner-full:after, .inner-squish:after, .inner-squish-r:after, .inner-squish-l:after, .row:after, .content-nav ul:after, .product:after,
+.contain:after, .inner:after, .inner-full:after, .inner-squish:after, .wrapper:after, .inner-squish-r:after, .inner-squish-l:after, .row:after, .content-nav ul:after, .section:after, .header:after, .product:after,
 .sub-section:after,
-.header:after, .product-nodivs:after,
+.product-drive:after, .product-nodivs:after,
 .sub-products:after,
-.clearfix:after {
+.clearfix:after,
+.order-full-txt-alert:after,
+.order-full-txt-alert2:after,
+.pickup-notice:after,
+.provided:after {
   clear: both;
 }
 
@@ -1562,6 +1574,7 @@ th {
 
 .order-full-txt-alert,
 .order-full-txt-alert2,
+.pickup-notice,
 .alert {
   background-color: #faf3db;
   color: #222334;
@@ -1594,8 +1607,7 @@ th {
   }
 }
 
-h5, .sub-section-title,
-.section-title-long, table caption {
+h5, table caption {
   text-transform: uppercase;
 }
 
@@ -1604,7 +1616,9 @@ h5, .sub-section-title,
 .menu-footer a,
 .order-full-txt-alert,
 .order-full-txt-alert2,
-.section {
+.pickup-notice,
+.section,
+.order-table {
   font-size: 0.975rem;
   font-family: "proxima-nova-soft", Georgia, serif;
   margin: 0;
@@ -1676,8 +1690,7 @@ a:link {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
 }
 
-h1, h2, h3, h4, h5, .sub-section-title,
-.section-title-long, h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "proxima-nova-soft", Georgia, serif;
   margin-bottom: 0;
 }
@@ -1694,12 +1707,14 @@ h3 {
   font-size: 2.6rem;
 }
 
-h4, .section-title {
+h4, .section-title,
+#output .section-title-long,
+#questions .section-title-long {
   font-size: 1.56rem;
 }
 
-h5, .sub-section-title,
-.section-title-long, .menu-items a {
+h5, .menu-items a, .sub-section-title,
+.section-title-long {
   font-size: 1.3rem;
 }
 
@@ -1723,8 +1738,7 @@ h4 {
   margin-top: 1.3rem;
 }
 
-h5, .sub-section-title,
-.section-title-long {
+h5 {
   margin-top: 1.3rem;
 }
 
@@ -2109,27 +2123,53 @@ nav[role="navigation"] {
 }
 
 .order-full-txt-alert,
-.order-full-txt-alert2 {
+.order-full-txt-alert2,
+.pickup-notice {
   margin-top: 1.3rem;
   margin-bottom: 1.3rem;
+}
+
+.section {
+  margin-left: -4.68rem;
+  margin-right: -4.68rem;
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+  margin-bottom: 1.3rem;
+  border: 2px solid #d9d9d9;
 }
 
 .header {
   margin-bottom: 1.3rem;
-  margin-top: 1.3rem;
-  background-color: #faf3db;
+  margin-left: -1.3rem;
+  margin-right: -1.3rem;
+  padding: 1.3rem 2.6rem;
+  border-bottom: 2px solid #80C25D;
+  background-color: #222334;
+  color: #fefefe;
 }
 
+.service {
+  text-align: center;
+}
 .service font {
   display: block;
   font-size: 0.78rem;
 }
 
+input[type="radio"] {
+  display: inline-block;
+  margin-left: 0.24375rem;
+  margin-right: 1.3rem;
+}
+
 .product,
 .sub-section,
-.header {
-  border-bottom: 1px solid #faf3db;
+.product-drive {
   margin-bottom: 0.975rem;
+}
+
+.product {
+  border-bottom: 1px solid #faf3db;
 }
 
 .product-nodivs,
@@ -2143,10 +2183,39 @@ nav[role="navigation"] {
   display: inline-block;
 }
 
+.provided {
+  width: 100%;
+  min-height: 1px;
+  margin-bottom: 1.3rem;
+}
+
+input.included {
+  width: 7.5%;
+  margin-right: 1.3rem;
+}
+
+.provided-drive-choices {
+  display: inline-block;
+  float: right;
+}
+@media (min-width: 28em) {
+  .provided-drive-choices {
+    width: 66.66667%;
+  }
+}
+
+.will-bring {
+  display: none;
+}
+
 @media (min-width: 28em) {
   .product-nodivs {
     width: 75%;
   }
+}
+
+.product-input {
+  text-align: center;
 }
 
 @media (min-width: 28em) {
@@ -2157,7 +2226,15 @@ nav[role="navigation"] {
 }
 .choices input,
 .nochoice input {
+  text-align: center;
+  margin: auto;
+  display: block;
   margin-bottom: 0.4875rem;
+}
+
+.tiff .choices {
+  width: 0;
+  padding: 0;
 }
 
 .product-description,
@@ -2166,10 +2243,16 @@ nav[role="navigation"] {
   min-height: 1px;
   font-weight: 700;
 }
+
 @media (min-width: 28em) {
-  .product-description,
-  .product-description-nores {
+  .product-description {
     width: 29.16667%;
+  }
+}
+
+@media (min-width: 28em) {
+  .product-description-nores {
+    width: 62.5%;
   }
 }
 
@@ -2206,6 +2289,32 @@ nav[role="navigation"] {
   }
 }
 
+.product-drive .product-input,
+.drive-description {
+  float: left;
+  display: inline-block;
+}
+
+.drive-description {
+  font-weight: 700;
+}
+
+.product-drive .product-input {
+  width: 7.5%;
+  margin-right: 1.3rem;
+}
+
+.drives {
+  width: 58.33333%;
+  min-height: 1px;
+}
+
+.product-description-drives {
+  width: 16.66667%;
+  min-height: 1px;
+  font-weight: 700;
+}
+
 .qualities {
   font-size: 0.78rem;
 }
@@ -2217,20 +2326,95 @@ nav[role="navigation"] {
   margin-top: 0.325rem;
 }
 
-input {
+input,
+textarea {
   padding: 0.325rem 0.4875rem;
-  text-align: center;
 }
 
-.section-title, .sub-section-title,
+.purchase {
+  width: 100%;
+  min-height: 1px;
+}
+
+.sub-section-title,
 .section-title-long {
-  padding: 0.4875rem 0.975rem;
+  margin-bottom: 1.3rem;
+  margin-top: 1.56rem;
+  padding-left: 1.3rem;
+  padding-bottom: 0.4875rem;
+  border-bottom: 1px solid #80C25D;
+}
+
+.section-title,
+#output .section-title-long,
+#questions .section-title-long {
+  font-weight: 700;
+}
+
+#output .section-title-long,
+#questions .section-title-long {
+  padding-left: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+  margin: 0;
 }
 
 @media (min-width: 28em) {
   .section-title,
   .service {
     width: 50%;
+  }
+}
+
+input[type="text"] {
+  border-radius: 3px;
+}
+input[type="text"]:focus {
+  border: 1px solid #222334;
+}
+
+.order-table tr td:first-child {
+  text-align: right;
+}
+@media (min-width: 28em) {
+  .order-table tr td:first-child {
+    width: 33.33333%;
+  }
+}
+@media (min-width: 28em) {
+  .order-table td[align="left"] {
+    width: 66.66667%;
+  }
+}
+@media (min-width: 28em) {
+  .order-table td[align="left"] input[type="text"],
+  .order-table td[align="left"] textarea {
+    width: 66.66667%;
+  }
+}
+.order-table tr:last-child td {
+  width: 83.33333%;
+  min-height: 1px;
+  left: 16.66667%;
+  text-align: center;
+}
+
+@media (min-width: 28em) {
+  tr.pickup-notice {
+    width: 83.33333%;
+  }
+}
+@media (min-width: 28em) {
+  tr.pickup-notice {
+    margin-left: 8.33333%;
+  }
+}
+tr.pickup-notice td:first-child {
+  text-align: left;
+}
+@media (min-width: 28em) {
+  tr.pickup-notice td:first-child {
+    width: 100%;
   }
 }
 
