@@ -48,6 +48,7 @@
 			
 			$context['main_nav'] = new TimberMenu('main_nav');
 			$context['footer_nav'] = new TimberMenu('footer_nav');
+			$context['header_nav'] = new TimberMenu('header_nav');
 			$context['site'] = $this;
 			return $context;
 		}

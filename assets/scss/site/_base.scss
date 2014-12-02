@@ -69,15 +69,16 @@ nav a {
 // ---
 
 .fixed-image {
-
+	// position: relative;
+	margin-top: -25px;
 	// TODO:
 	// Won't need this once the $context and MQs are in <head>
 	// background-size: 100% auto;
 	// background-repeat: no-repeat;
 
-	min-height: 800px;
-
-
+	// min-height: 800px;
+	padding-top: 35%;
+	
 	// @include bp(small) {
 	// 	min-height: 600px;
 	// }
@@ -87,8 +88,8 @@ nav a {
 	// }
 
 	// @include bp(large) {
-		background-attachment: fixed; 
-		background-position: center center;
+		// background-attachment: fixed; 
+		background-position: center top;
 		background-size: cover;
 		
 	// 	min-height: 800px;
@@ -98,6 +99,12 @@ nav a {
 	// z-index: 999;
 	width: 100%;
 	height: auto;
+
+}
+
+.film-inner {
+	background-color: rgba($text-dark, 1);
+	color: $text-light;
 }
 
 .content {
@@ -105,3 +112,9 @@ nav a {
 	z-index: $zmid;
 }
 
+.film-strip {
+	width: 100%;
+	border-image: url(../img/svgs/film-top.svg) 50% 25% 50% 25% round;  
+	// border-image-slice: 25;
+	border-width: 0 0 25px 0;
+}

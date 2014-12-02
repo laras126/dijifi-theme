@@ -35,3 +35,7 @@
 .rotate {
 	@include rotate($text-light, transparent);
 }
+
+.special {
+	color: $accent-light;
+}

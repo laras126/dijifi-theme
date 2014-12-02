@@ -53,22 +53,36 @@ nav[role="navigation"] {
 
     li {
         @extend %unstyle-list;
-    }
-
-    a {
-        display: block;
-        font-weight: 700;
-
-        @extend %pad_tb;
-        @extend %h5;
-        
         @include bp(med) {
             padding-right: $base;
         }
     }
+}
+
+.menu-items-main {
+    padding-top: $sml;
+    padding-bottom: $sml;
+    a {
+        display: block;
+        font-weight: 700;
+        // @extend %pad_tb;
+        @extend %h5;
+        color: $text-light;
+    }
 
 }
 
+.menu-items-secondary {
+    padding-top: $sml;
+    padding-bottom: $sml;
+    @extend %clearfix;
+    li,
+    li a {
+        @extend %meta;
+        color: $text-light;
+    }
+    @include border(lighten($text-dark, 20%), top);
+}
 
 
 @media screen and (min-width: $screen-lg) {
@@ -82,11 +96,11 @@ nav[role="navigation"] {
 
     .menu-items {
         // margin: 0 0 0 -0.25em;
-        border: 0;
 
         li {    
-            text-align: center;
+            // text-align: center;
             display: inline-block;
+            border: 0;
         }
 
         a {

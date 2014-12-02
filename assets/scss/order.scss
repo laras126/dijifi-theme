@@ -11,7 +11,8 @@
 // @import 'main-new'; // Main site components
 
 .wrapper {
-	@extend .inner-squish;
+	@extend .contain;
+	@extend .inner;
 }
 
 .order-full-txt {
@@ -39,7 +40,9 @@
 
 .section {
 	@extend %clearfix;
-	@include make-row($h2*3);
+	@include bp(large) {
+		@include make-row($h2);
+	}
 
 	// background-color: $accent-vlight;
 	padding-left: $base;
@@ -55,7 +58,7 @@
 .header {
 	margin-bottom: $base;
 	@include make-row();
-	padding: $base $base*2;
+	padding: $base;
 	// background-color: $accent-vlight;
 	// border-bottom: 2px solid $accent-med;
 	border-bottom: 2px solid $accent-med;
@@ -75,6 +78,7 @@
 		display: inline-block;
 		margin-left: $sml/4;
 		margin-right: $base;
+
 	}
 
 
@@ -97,7 +101,11 @@
 		@extend %clearfix;
 		@include make-xs-column(12);
 		input {
-			width: 12.5%;
+			width: 25%;
+			@include bp(small) {
+				width: 12.5%;	
+			}
+			
 			display: inline-block;
 		}
 	}
@@ -108,14 +116,18 @@
 		margin-bottom: $base;
 	}
 
-		input.included {
-			width: 7.5%;
+		input.included,
+		.product-drive .product-input {
+			width: 25%;
+			@include bp(small) {
+				width: 7.5%;
+			}
 			margin-right: $base;
 
 		}
 
 	.provided-drive-choices {
-		@include make-sm-column(8);
+		@include make-xs-column(8);
 		display: inline-block;
 		float: right;
 	}
@@ -125,7 +137,7 @@
 	}
 	
 	.product-nodivs {
-		@include make-sm-column(9);
+		@include make-xs-column(9);
 	}
 
 .product-input {
@@ -134,6 +146,7 @@
 
 .choices,
 .nochoice {
+	@include make-xs-column(3, false);
 	@include make-sm-column(1.5);
 	input {
 		text-align: center;
@@ -151,33 +164,36 @@
 
 .product-description,
 .product-description-nores {
-	@include make-xs-column(12, false);
+	@include make-xs-column(7, false);
 	font-weight: 700;
 }
 
 	.product-description {
+		@include make-xs-column(12, false);
 		@include make-sm-column(3.5, false);
 	}
 
 	.product-description-nores {
+		@include make-xs-column(12, false);
 		@include make-sm-column(7.5, false);
 	}
 
 .qualities {
-	@include make-xs-column(12, false);
+	// @include make-xs-column(12, false);
+	@include make-xs-column(12);	
 	@include make-sm-column(4);	
 }
 
 .price {
-	@include make-xs-column(4, false);
-	@include make-sm-column(1.5, false);	
+	@include make-xs-column(6, false);
+	@include make-sm-column(1.5, false);
 	// float: right;
 	color: $text-med;
 	text-align: center;
 }
 
 .product-total {
-	@include make-xs-column(4, false);
+	@include make-xs-column(6, false);
 	// @include make-xs-column-pull(4, false);
 	@include make-sm-column(1.5, false);
 	text-align: center;
@@ -193,10 +209,10 @@
 		font-weight: 700;
 	}
 
-	.product-drive .product-input {
-		width: 7.5%;
-		margin-right: $base;
-	}
+	// .product-drive .product-input {
+	// 	width: 7.5%;
+	// 	margin-right: $base;
+	// }
 
 .drives {
 	@include make-xs-column(7);
@@ -255,6 +271,7 @@ textarea {
 #questions .section-title-long {
 	@extend %h4;
 	font-weight: 700;
+	bottom: -$sml/2;
 	// @extend %title-base;
 }
 
@@ -268,7 +285,7 @@ textarea {
 
 	.section-title,
 	.service {
-		@include make-sm-column(6, false);
+		@include make-xs-column(6, false);
 	}
 
 
@@ -286,13 +303,13 @@ input[type="text"] {
 .order-table {
 	tr td:first-child {
 		text-align: right;
-		@include make-sm-column(4, false);
+		@include make-xs-column(4, false);
 	}
 	td[align="left"] {
-		@include make-sm-column(8, false);
+		@include make-xs-column(8, false);
 		input[type="text"],
 		textarea {
-			@include make-sm-column(8, false);
+			@include make-xs-column(8, false);
 		}
 	}
 
@@ -305,12 +322,12 @@ input[type="text"] {
 }
 
 	tr.pickup-notice {
-		@include make-sm-column(10);
-		@include make-sm-column-push(1);
+		@include make-xs-column(10);
+		@include make-xs-column-push(1);
 
 		td:first-child {
 			text-align: left;
-			@include make-sm-column(12);
+			@include make-xs-column(12);
 		}
 
 	}

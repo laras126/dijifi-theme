@@ -21,7 +21,7 @@
 // ---- Screen sizes
 // ----
 
-$screen-sm:    28em;
+$screen-sm:    34em;
 $screen-md:    44em;
 $screen-lg:    65em;
 
@@ -169,7 +169,7 @@ $gutter:                    $h3 !default;
         margin-right: ($gutter / -2);      
     }
   
-    @extend %clearfix;
+    @include clearfix();
 }
 
 .row {

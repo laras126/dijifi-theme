@@ -1,25 +1,20 @@
-
-{# 	
-	NOTES: 
-	- Remember to change these values when they are changed in _settings.scss 
-	- Also it would be a good idea to move these to WP image sizes with add_image_size()
-	- Actually, move the inline to the <head> with a $context and MQs
-#}
-
 <div class="fixed-image" style="background-image:url({{TimberImage(content.fixed_image).src}});">
 
-{# 	<picture>
-		<source srcset="{{TimberImage(content.fixed_image).src|resize(1200)}}" media="(min-width: 48em)">
-		<source srcset="{{TimberImage(content.fixed_image).src|resize(800)}}" media="(min-width: 38em)">
-		<source srcset="{{TimberImage(content.fixed_image).src|resize(600)}}" media="(min-width: 28em)">
-		<img class="fixed-image" srcset="{{TimberImage(content.fixed_image).src|resize(400)}}" alt="{{content.section_title}}">
-	</picture>
- #}
+	<div class="border">
+		<div class="border-inner">
+			<div class="contain inner-squish">
+	
+			{% if header == true %}	
+				<h1>{{post.title}}</h1>
+				<p class="lead">{{post.tagline}}</p>
+				<p>{{post.summary}}</p>
+			{% else %}
+				<h3 class="section-title">{{content.section_title}}</h3>
+				<p class="lead">{{content.lead}}</p>
+			{% endif %}
+
+			</div>
+		</div>	
+	</div>
+
 </div>
-
-
-{# Might want to figure this out: #}
-{# <img src="{{ TimberImage(content.fixed_image).src }}" srcset="{{ TimberImage(content.fixed_image).src | retina(1) }} 1x, 
-    {{ TimberImage(content.fixed_image).src | retina(2) }}  2x, 
-    {{ TimberImage(content.fixed_image).src | retina(3) }}  3x, 
-    {{ TimberImage(content.fixed_image).src | retina(4) }}  4x"> #}

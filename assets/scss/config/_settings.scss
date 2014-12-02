@@ -102,6 +102,14 @@ $link-hover: 		darken($link-color, 20%);
 // ---- Utilities 
 // ----
 
+@mixin border($color: $accent-med, $side: false) {
+	@if $side != '' {
+		border-#{$side}: 1px solid $color;
+	} @else {
+		border: 1px solid $color;
+	}
+}
+
 $accent-border: 	1px solid $accent-med;
 
 

@@ -3,17 +3,8 @@
 {% block content %}
 
 	{% set content = post %}
-
-	{% include 'partials/fixed-image.twig' %}
-
-	<div class="contain">
+	{% set header = true %}
 		
-		<div class="inner-squish">
-			<h1>{{post.title}}</h1>
-			<p class="lead">{{post.tagline}}</p>
-			<p>{{post.summary}}</p>
-		</div>	
-
-	</div>
+	{% include 'partials/fixed-image.twig' %}
 
 {% endblock %}

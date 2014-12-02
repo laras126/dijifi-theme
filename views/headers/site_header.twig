@@ -2,6 +2,7 @@
 	<a class="header-logo" href="/" title="{{site.name}}" rel="home">
 		<svg class="shape shape-logo"><use xlink:href="#shape-logo" /></svg>
 	</a>
+	<p class="meta">New York's trusted digitization studio.<br><span class="special">(646) 519-2447</span></p>
 </div>
 
 <div class="menu-link col-xs-8-np" style="margin-top: 1rem">
@@ -12,12 +13,21 @@
 	</a>    
 </div> <!-- /.menu-link -->
 
-<nav id="menu" class="menu-main col-xs-12-np col-md-9-np" role="navigation">	
-	<ul class="menu-items">
+<nav id="menu" class="col-xs-12-np col-md-9-np text-right" role="navigation">	
+	<ul class="menu-items menu-items-main clearfix">
 		{% for item in main_nav.items %}
 			<li class="{{item.classes | join(' ')}}">
 				<a href="{{item.link}}">{{item.title}}</a>
 			</li>
 		{% endfor %}
+		<li><a href="#" class="">Order</a></li>
+	</ul>
+	<ul class="menu-items menu-items-secondary">
+		{% for item in header_nav.items %}
+			<li class="{{item.classes | join(' ')}}">
+				<a href="{{item.link}}">{{item.title}}</a>
+			</li>
+		{% endfor %}
+		<li>(646) 519-2447 &bull; Brooklyn, NY</li>
 	</ul>
 </nav><!-- /#menu -->
