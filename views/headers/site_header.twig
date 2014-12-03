@@ -1,33 +1,53 @@
-<div class="col-xs-4-np col-md-3-np">
+<div class="header-brand">	
 	<a class="header-logo" href="/" title="{{site.name}}" rel="home">
 		<svg class="shape shape-logo"><use xlink:href="#shape-logo" /></svg>
-	</a>
-	<p class="meta">New York's trusted digitization studio.<br><span class="special">(646) 519-2447</span></p>
+	</a>	
+	<p class="header-tag">New York's trusted digitization studio.<span class="hide-until-md"> <a href="{{site.url}}/location">Brooklyn, NY</a> &bull; (646) 519-2447</span></p>	
+
 </div>
 
-<div class="menu-link col-xs-8-np" style="margin-top: 1rem">
-	<a href="#menu">
-		<span></span>
-		<span></span>
-		<span></span>
-	</a>    
-</div> <!-- /.menu-link -->
+<div class="header-nav-link">	
+	<div class="menu-link">
+		<a href="#menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</a>    
+	</div> <!-- /.menu-link -->
+</div>
 
-<nav id="menu" class="col-xs-12-np col-md-9-np text-right" role="navigation">	
-	<ul class="menu-items menu-items-main clearfix">
+<nav id="menu" class="header-nav" role="navigation">	
+	<ul class="menu-items menu-main clearfix">
+		<li class="menu-item menu-item-complex">
+			<a class="item-split" href="{{site.url}}/location">Brooklyn, NY</a> <a href="tel:6465192447" class="item-split">(646) 519-2447</a>
+		</li>
 		{% for item in main_nav.items %}
 			<li class="{{item.classes | join(' ')}}">
 				<a href="{{item.link}}">{{item.title}}</a>
 			</li>
 		{% endfor %}
-		<li><a href="#" class="">Order</a></li>
+		<li class="has-subnav menu-item">
+			<a href="#">Information</a>
+			<ul class="subnav">
+				{% for item in header_nav.items %}
+					<li class="{{item.classes | join(' ')}}">
+						<a href="{{item.link}}">{{item.title}}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</li>
+		<li class="menu-item menu-item-cta hide-after-md"><a href="{{site.url}}/order">Estimate an Order</a></li>
+		
 	</ul>
-	<ul class="menu-items menu-items-secondary">
+{# 	<ul class="menu-items menu-items-secondary">
+		<li class="has-subnav">
+			
+		</li>
 		{% for item in header_nav.items %}
 			<li class="{{item.classes | join(' ')}}">
 				<a href="{{item.link}}">{{item.title}}</a>
 			</li>
 		{% endfor %}
-		<li>(646) 519-2447 &bull; Brooklyn, NY</li>
-	</ul>
+		
+	</ul> #}
 </nav><!-- /#menu -->

@@ -1,5 +1,35 @@
 .site-header {
-	position: relative;
-	z-index: $ztop;
-	top: 0;
+	// position: fixed;
+	// z-index: $ztop;
+	// top: 0;
+	width: 100%;
+	display: table;
+	@include rotate();
+}
+
+.header-brand {
+	@include make-xs-column(6);
+	@include make-md-column(3);
+	display: table-row;
+}
+
+.header-tag, 
+.header-logo {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.header-tag {
+	@extend %meta;
+	@extend %hide-until-md;
+	padding-left: $base;
+}
+
+.header-nav-link {
+	@include make-xs-column(1);
+}
+
+.header-nav {
+    @include make-xs-column(7, false); 
+    @include make-md-column(4, false);
 }

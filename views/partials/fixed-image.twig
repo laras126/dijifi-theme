@@ -1,20 +1,28 @@
 <div class="fixed-image" style="background-image:url({{TimberImage(content.fixed_image).src}});">
 
-	<div class="border">
-		<div class="border-inner">
-			<div class="contain inner-squish">
-	
-			{% if header == true %}	
+{% if header == true %}		
+	<div class="film-strip">
+	<div class="fixed-wrap">
+{# {% endif %} #}
+		<div class="contain">
+			{# <div class="inner-squish"> #}
+
+			{# {% if header == true %}	 #}
 				<h1>{{post.title}}</h1>
 				<p class="lead">{{post.tagline}}</p>
-				<p>{{post.summary}}</p>
-			{% else %}
+				<div class="inner-squish">
+					<p>{{post.summary}}</p>				
+				</div>
+			{# {% else %}
 				<h3 class="section-title">{{content.section_title}}</h3>
-				<p class="lead">{{content.lead}}</p>
-			{% endif %}
+				<p class="lead">{{content.lead}}</p> #}
+			{# {% endif %} #}
 
-			</div>
+			{# </div> #}
 		</div>	
+ {# {% if header == true %}	 #}
 	</div>
+	</div>
+{% endif %}
 
-</div>
+</div> <!-- /.fixed-image -->

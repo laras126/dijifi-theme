@@ -1,6 +1,6 @@
 
 .site-footer {
-	@include rotate($bkgd: $accent-med);
+	@include rotate($bkgd: $alert-info);
 	font-family: $sans-serif;
 
 	ul {
@@ -16,5 +16,5 @@
 }
 
 .widget {
-	@extend .col-sm-4;
+	@include make-md-column((7/3));
 }

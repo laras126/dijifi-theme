@@ -1,8 +1,17 @@
 
 
+.section-header {
+	// text-align: center;
+}
+
+	.section-title {
+		margin-top: $h1;
+	}
+
+
 .content {
-	margin-bottom: $h3;
-	margin-top: $h3;
+	// padding-top: $base;
+	padding-bottom: $base;
 }
 
 	.content-active {
@@ -13,6 +22,8 @@
 	@include make-md-column(8);
 	@include make-lg-column(6, false);
 }
+
+
 
 
 // ----

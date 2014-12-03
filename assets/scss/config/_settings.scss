@@ -5,7 +5,7 @@
 
 
 $white: 		#fefefe;
-$black: 		#222;
+$black: 		#111;
 $grey: 			#999;
 
 $red: 			#e14939;
@@ -30,7 +30,7 @@ $alert-danger: 	$dred;
 $alert-info: 	$blue;
 $alert-success: $accent-med;
 
-$text-dark: 		$navy;
+$text-dark: 		$black;
 $text-med: 			$grey;
 $text-light: 		$white;
 
@@ -68,7 +68,7 @@ $line-height-sm: 	1.5;
 
 $sml:  				$base*0.75;
 
-$h1:  				$base*2.8;
+$h1:  				$base*3;
 $h2:  				$base*2.4;
 $h3:  				$base*2;
 $h4:  				$base*1.2;
@@ -80,9 +80,10 @@ $h6:  				$sml;
 // Fonts
 
 // $sans-serif: 		'freight-sans-pro', Helvetica, sans-serif;
-$serif:             'Chaparral Pro', Georgia, serif;
+$serif:             'chaparral-pro', Georgia, serif;
 // $serif: 			'livory';
-$sans-serif:        'proxima-nova-soft', Georgia, serif;
+// $sans-serif:        'brandon-grotesque', Georgia, serif;
+$sans-serif:        'source-sans-pro', Georgia, serif;
 
 $heading-font: 		$sans-serif;
 $body-font: 		$serif;

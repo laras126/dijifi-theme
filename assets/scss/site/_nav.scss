@@ -3,153 +3,215 @@ nav[role="navigation"] {
     font-family: $nav-font;
 }
 
+
+// General menu styles
+
+.menu-items {
+    margin: 0;
+    padding: 0;
+    // text-align: center;
+}
+
+.menu-item {
+    // text-align: center;
+    @extend %unstyle-list;
+    
+    a {
+        padding: $sml;
+    }
+
+    margin: $sml/2 0;
+    position: relative;
+
+    @include bp(med) {
+        padding-right: $base;
+    }
+}
+
+
+
+// ----
+// Header Menus
+// ----
+
+
 // Toggle nav, courtesy Brad Frost
 // http://codepen.io/bradfrost/pen/sHvaz
 // I simplified some, though
 
 
-.menu-main {
+// Main menu
+
+.header-nav,
+.subnav {
     overflow: hidden;
     max-height: 0;
+    transition: all 0.3s ease-out;
+
+    &.open {
+        max-height: 55em;
+    }
+}
+
+.subnav {
+    a {
+        font-weight: 400;    
+    }
+
+    background-color: $text-med;
 }
 
 .menu-main {
-    // @include rotate($text-dark, $accent-med);
-    a {
-        // color: $text-light;
-    }
-    transition: all 0.3s ease-out;
-
-    &.active {
-        max-height: 25em;
-    }
-}
-
-.menu-sub {
-    // @extend %show-until-sm;
-    @include rotate($accent-med, $accent-vlight);
 
     li {
-
-    }
-}
-
-    .menu-sub-title {
-        // @include make-sm-column(2);
-        text-align: right;
-    }
-
-    .menu-sub-items {
-        // @include make-sm-column(10);
-        
-        li {
-            // @include make-sm-column(3);
+        @include border(lighten($text-dark, 20%), bottom);
+        &:last-child {
+            border-bottom: none;
         }
     }
 
-.menu-items {
-    margin: 0;
-    padding: 0;
-
-    li {
-        @extend %unstyle-list;
-        @include bp(med) {
-            padding-right: $base;
-        }
-    }
-}
-
-.menu-items-main {
-    padding-top: $sml;
-    padding-bottom: $sml;
     a {
         display: block;
-        font-weight: 700;
-        // @extend %pad_tb;
+        
+        @include bp(med) {
+            display: inline-block;
+        }
+        
         @extend %h5;
         color: $text-light;
     }
-
 }
 
-.menu-items-secondary {
-    padding-top: $sml;
-    padding-bottom: $sml;
-    @extend %clearfix;
-    li,
-    li a {
-        @extend %meta;
-        color: $text-light;
+.menu-item-complex {
+    @extend .clearfix;
+    background-color: $alert-info;
+    text-align: center;
+}
+
+.item-split {
+    @include make-xs-column(3.5, false);
+
+    // &:first-child {
+    //     @include border($accent-light, right);
+    // }
+}
+
+.menu-item-cta {
+    a {
+        color: $alert-success;
+        font-weight: 700;
     }
-    @include border(lighten($text-dark, 20%), top);
 }
 
+    .header-nav li.has-subnav > a:after {
+        content: '+';
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        font-size: $h4;
+        padding: $sml/1.5 $sml;
+        color: $accent-med;
+    }
 
-@media screen and (min-width: $screen-lg) {
+    .header-nav li.has-subnav > a.open:after {
+        content: "-";
+    }
+        
+        
+
+
+// Hamburger Menu Icon
+// http://codepen.io/lexstefan/pen/mwtcn
+
+.menu-link {
+    margin-top: $base;
+
+    a {
+        float: right;
+    }
+
+    span {
+        transition: all 0.25s ease-in-out;
+        width: 30px;
+        border-radius: 1px;
+        height: 3px;
+        display: block;
+        background: $text-light;
+        margin: 0 0 7px 0;
+    }
+}
+
+    .menu-link span:last-child {
+        margin:0;
+    }
+    
+    .menu-link.open span:nth-of-type(1) {
+        transform: rotate(45deg);
+        margin: 11px 0 0 0;
+    }
+
+    .menu-link.open span:nth-of-type(2) {
+        opacity:0;
+    }
+
+    .menu-link.open span:nth-of-type(3) {
+        transform: rotate(-45deg);
+        margin: -13px 0 0 0;
+    }
+
+
+// Remove the burger
+
+@include bp(med) {
     .menu-link {
        display: none;
     }
 
-    .js .menu-main {
+    .js .header-nav, 
+    .js .subnav {
         max-height: none;
     }
 
-    .menu-items {
-        // margin: 0 0 0 -0.25em;
+    .subnav {
+        background-color: $text-dark;
+        @include border($alert-info, top);
+        a {
+            padding-top: 0;
+            font-size: $sml;
+        }
+    }
 
-        li {    
-            // text-align: center;
-            display: inline-block;
-            border: 0;
+    .has-subnav > a {
+        display: none;
+    }
+
+    .menu-items {
+        text-align: right;
+
+        li {
+            &:not(.menu-item-complex) {    
+                display: inline-block;
+                border: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+            }
+
+            &.menu-item-complex,
+            &.menu-item-cta {
+                display: none;
+            }
         }
 
         a {
             border: 0;
+            padding-bottom: 0;
         }
     }
 }
 
-
-// ----
-// Hamburger Menu Icon
-// http://codepen.io/lexstefan/pen/mwtcn
-// ----
-
-.menu-link {
-    padding: 0 $h4;
-}
-
-    .menu-link a {
-        float: right;
-    }
-
-    .menu-link span {
-        transition: all 0.25s ease-in-out;
-        width: 35px;
-        border-radius: 3px;
-        height: 4px;
-        display: block;
-        background: $body-text;
-        margin: 0 0 8px 0;
-    }
-    
-    // .menu-link span:last-child {
-    //     margin:0;
-    // }
-    
-    // .menu-link.active span:nth-of-type(1) {
-    //     transform: rotate(45deg);
-    //     margin: 14px 0 0 0;
-    // }
-
-    // .menu-link.active span:nth-of-type(2) {
-    //   opacity:0;
-    // }
-
-    // .menu-link.active span:nth-of-type(3) {
-    //   transform: rotate(-45deg);
-    //   margin: -16px 0 0 0;
-    // }
 
 
 
@@ -160,8 +222,9 @@ nav[role="navigation"] {
 
 .content-nav {
     @extend %horizontal-list;
-    @include rotate();
-    
+    @include rotate($bkgd: $alert-danger);
+    text-align: center;
+
     li {
         transition: all 0.3s ease-in-out;
     }
@@ -207,6 +270,8 @@ nav[role="navigation"] {
             height: $base;
             width: $base;
         }
+
+
 
 
 

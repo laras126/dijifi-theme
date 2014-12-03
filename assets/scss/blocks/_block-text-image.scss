@@ -1,18 +1,22 @@
 .block_textimage {
 	.image {
-		@extend .col-md-9-np;
+		@include make-md-column(5.5, false);
 		
 		img {
 			@extend %img_highlight;
 		}
 	}
 	.caption {
-		@extend .col-md-3;
+		@include make-xs-column(7);
+		@include make-md-column(1.5, false);
+
 		border-top: $accent-border;
 		border-left: $accent-border;
 		border-right: $accent-border;
+		
 		padding-top: $base;
 		padding-bottom: $base;
+		
 		background-color: #f9f9f9;
 
 		@include bp(med) {

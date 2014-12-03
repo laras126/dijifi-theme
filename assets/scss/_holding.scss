@@ -10,19 +10,13 @@
 
 
 
-.box {
-	border: 1px solid lavender;
-}
-
 
 // .section-header {
 // 	text-align: center;
 // }
 
 // Where should this go
-.section-title {
-	margin-top: $h1;
-}
+
 
 
 // Need a good place for these, maybe _page.scss in site/ ?
@@ -94,7 +88,5 @@
 
 
 .page-header {
-	.fixed-image {
-		top: 0;
-	}
+	text-align: center;
 }

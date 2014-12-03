@@ -22,6 +22,7 @@ ul, ol {
 }
 
 
+
 //---
 // Layout
 // ---
@@ -69,16 +70,18 @@ nav a {
 // ---
 
 .fixed-image {
-	// position: relative;
-	margin-top: -25px;
 	// TODO:
 	// Won't need this once the $context and MQs are in <head>
 	// background-size: 100% auto;
 	// background-repeat: no-repeat;
 
 	// min-height: 800px;
-	padding-top: 35%;
-	
+	padding-top: $h1*4;
+
+	.section-header & {
+		padding-bottom: $h1*5;	
+	}
+	// padding-bottom: $h1;
 	// @include bp(small) {
 	// 	min-height: 600px;
 	// }
@@ -88,7 +91,7 @@ nav a {
 	// }
 
 	// @include bp(large) {
-		// background-attachment: fixed; 
+		background-attachment: fixed; 
 		background-position: center top;
 		background-size: cover;
 		
@@ -100,11 +103,17 @@ nav a {
 	width: 100%;
 	height: auto;
 
-}
 
-.film-inner {
-	background-color: rgba($text-dark, 1);
-	color: $text-light;
+	.fixed-wrap {
+		// background-color: $text-light;
+		color: $text-light;
+		background-image: linear-gradient(to top, $text-dark, rgba(255,0,0,0));
+		// background-color: rgba($text-dark, 0.5);
+		
+		padding-bottom: $h2;
+		// padding-top: $h1;
+		@extend .clearfix;
+	}
 }
 
 .content {
@@ -112,9 +121,17 @@ nav a {
 	z-index: $zmid;
 }
 
-.film-strip {
+%film-strip-base {
 	width: 100%;
-	border-image: url(../img/svgs/film-top.svg) 50% 25% 50% 25% round;  
-	// border-image-slice: 25;
-	border-width: 0 0 25px 0;
+	border-width: 25px 0 0 0;
+}
+
+.film-strip {
+	// @extend %film-strip-base;	
+	// border-image: url(../img/svgs/film-top.svg) 100% 25% 100% 25% round;
+}
+
+.film-strip-white {
+	@extend %film-strip-base;	
+	border-image: url(../img/svgs/film-top-white.svg) 50% 25% 50% 25% round; 
 }

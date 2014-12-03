@@ -2,25 +2,30 @@ $(document).ready(function() {
 	
 	$('body').addClass('js');
 
-
-
 	// ----
 	// Toggle Menu
 	// ----
 
-	// TODO: make a fallback for non-JS - before, added a .js class but it causes the nav to blink
+	// TODO: better fallback for non-JS - adding a .js class but it causes the nav to blink
 	// Look into Modernizr for that
-	var $menu = $('#menu'),
-	    $menulink = $('.menu-link');
 
-	$menulink.click( function() {
-		$menulink.toggleClass('active');
-		$menu.toggleClass('active');
+	var $menu = $('#menu'),
+	    $menulink = $('.menu-link'),
+	    $menuTrigger = $('.has-subnav > a');
+
+	$menulink.click( function(e) {
+		e.preventDefault();
+		$menulink.toggleClass('open');
+		$menu.toggleClass('open');
 		return false;
 	});
 
-
-
+	$menuTrigger.click(function(e) {
+		e.preventDefault();
+		var $this = $(this);
+		$this.toggleClass('open').next('ul').toggleClass('open');
+	});
+		
 
 	// ----
 	// Submenu

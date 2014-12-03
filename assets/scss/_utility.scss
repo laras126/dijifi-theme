@@ -33,9 +33,16 @@
 }
 
 .rotate {
-	@include rotate($text-light, transparent);
+	@include rotate($text-light, $text-dark);
 }
 
-.special {
+.special,
+a.special {
 	color: $accent-light;
 }
+
+.green {
+	@include rotate($text-light, $accent-med);	
+}
+
+

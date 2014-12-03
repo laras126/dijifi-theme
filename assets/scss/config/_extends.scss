@@ -96,15 +96,27 @@
     @extend %horizontal-list;
 }
 
-.item-img,
-%item-img {
-    @extend .col-sm-4-np;
+
+
+// ----
+// Typography
+// ----
+
+%upperspace {
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.item-desc,
-%item-desc {
-    @extend .col-sm-8-np;
+.meta,
+%meta {
+    font-size: $sml;
+    font-family: $form-font;
+    margin: 0;
 }
+
+
+
+
 
 
 // Hold
@@ -115,37 +127,24 @@
 }
 
 
-.show-until-sm, 
-%show-until-sm {
+.hide-until-md, 
+%hide-until-md {
    	display: none;
-    @media (min-width: $screen-sm) {
+    @include bp(med) {
         display: block; 
     }   
 }
 
-.hide-until-sm, 
-%hide-until-sm {
-    display: none;
-	@media (min-width: $screen-sm) {    
-        display: block;
+.hide-after-md, 
+%hide-after-md {
+	@include bp(med) {
+        display: none;
     }
 }
 
 %rotate {
 	color: $rotate-text;
 	background-color: $rotate-bkgd;
-}
-
-%upperspace {
-    text-transform: uppercase;
-    // letter-spacing: 1px;
-}
-
-.meta,
-%meta {
-    font-size: $sml;
-    font-family: $form-font;
-    margin: 0;
 }
 
     %meta-light {

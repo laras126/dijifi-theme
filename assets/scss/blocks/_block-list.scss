@@ -1,4 +1,31 @@
 
+%list-three {
+	@extend .clearfix;
+	@include make-lg-column((7/3));
+	// @include make-lg-column-push(0.5);
+}
+
+
+%list-item-img {
+	@include make-sm-column(3);
+	@include make-lg-column(7, false);
+
+	margin-bottom: $base;
+	margin-top: $base;	
+}
+
+%list-item-desc {
+	@include make-md-column(4);
+	@include make-lg-column(7, 0);
+
+	@include change-text-align(left, large, center);
+	p {
+		// @extend %meta;
+	}
+}
+
+
+
 .block_list {
 	margin-bottom: $h2;
 }
@@ -18,36 +45,30 @@
 // ----
 
 .list-artifacts {
+	@extend .clearfix;
 }
 
 	.artifact {
-		@extend .row;
-		// border-bottom: $accent-border;
+		@extend %list-three;
+
+		border-bottom: 1px dotted $accent-med;
 
 		&:last-child {
 			border-bottom: none;
 		}
-	}
-	
-	.artifact-img {
-		@extend .col-sm-5-np;
-		@extend .col-lg-4-np;
-		margin-bottom: $base;
-		margin-top: $base;
-		
+
 		img {	
 			@extend %center-block;
 			// max-width: 80%;
 		}
 	}
+	
+	.artifact-img {
+		@extend %list-item-img;	
+	}
 
 	.artifact-desc {
-		@extend .col-sm-8;
-		@extend .col-lg-8;
-		@include change-text-align(center, small, left);
-		p {
-			// @extend %meta;
-		}
+		@extend %list-item-desc;	
 	}
 
 	.artifact-title {
@@ -61,12 +82,18 @@
 // ----
 
 .list-icons {
-	text-align: center;	
+	@extend .clearfix;
 }
 
-	.icon-desc {
-		// @extend %meta;
-		font-size: $sml;
-		font-family: $sans-serif;
+.icon-item {
+	@extend %list-three;
+}
+
+	.icon-item-img {
+		@extend %list-item-img;
+	}
+
+	.icon-item-desc {
+		@extend %list-item-desc;
 	}
 

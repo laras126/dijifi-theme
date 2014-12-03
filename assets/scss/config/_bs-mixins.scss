@@ -22,7 +22,7 @@
 // ----
 
 $screen-sm:    34em;
-$screen-md:    44em;
+$screen-md:    50em;
 $screen-lg:    65em;
 
 $contain-full: 55em;
@@ -35,7 +35,7 @@ $contain-full: 55em;
 // Grid Settings
 // ----
 
-$grid-columns:              12 !default;
+$grid-columns:              7 !default;
 //** Padding between columns. Gets divided in half for the left and right.
 $gutter:                    $h3 !default;
 
@@ -84,79 +84,6 @@ $gutter:                    $h3 !default;
 
 
 
-// ----
-// Inner Wraps
-// ---
-// Mixin to have "squish" and "full" wraps to allow for overhanging elements
-
-
-@mixin inner($width: base, $side: both) {
-    @extend %clearfix;
-
-    @include bp(med) {
-      // @if $width == base {
-      //   margin-left: percentage((1 / $grid-columns));   
-      //   margin-right: percentage((1 / $grid-columns));
-      // }
-
-      // @else if $width == squish {
-      //   @if $side == both {
-      //     margin-right: percentage((1 / $grid-columns));   
-      //     margin-left: percentage((1 / $grid-columns));
-      //   } 
-      //   @else {
-          margin-#{$side}: percentage((1 / $grid-columns));  
-      //   }
-      // }
-    }
-
-    @include bp(large) {
-      @if $width == base {
-        margin-left: percentage((2 / $grid-columns));   
-        margin-right: percentage((1 / $grid-columns));
-      }
-      @else if $width == squish {
-        @if $side == both {
-          margin-right: percentage((2 / $grid-columns));
-          margin-left: percentage((3 / $grid-columns));
-        } @else if $side == right {
-          margin-right: percentage((2 / $grid-columns));   
-        } @else if $side == left {
-          margin-left: percentage((3 / $grid-columns));   
-        }
-      }
-    }
-
-    @if $width == full {}
-  
-}
-
-.inner {
-    @include inner(); 
-}
-
-.inner-full {
-    @include inner(full);
-}
-
-.inner-squish {
-    @include inner(squish);
-
-    &-r {
-      @include inner(squish, right);      
-    }
-
-    &-l {
-      @include inner(squish, left);      
-    }
-}
-
-.inner-pad {
-    @extend %bs-pad;
-}
-
-
-
 
 // ----
 // Rows
@@ -189,7 +116,8 @@ $gutter:                    $h3 !default;
 
 @mixin bs-gutter($gutter) {
     @if $gutter != false {
-      @extend %bs-pad;
+        padding-left:  ($gutter / 2);
+        padding-right: ($gutter / 2);
     }
 }
 
@@ -220,9 +148,9 @@ $gutter:                    $h3 !default;
 
 @mixin make-sm-column($columns, $gutter: $gutter) {
   @extend %bs-base;
-  @include bs-gutter($gutter);
 
   @media (min-width: $screen-sm) {
+    @include bs-gutter($gutter);
     width: percentage(($columns / $grid-columns));
   }
 }
@@ -248,14 +176,13 @@ $gutter:                    $h3 !default;
 
 @mixin make-md-column($columns, $gutter: $gutter) {
   @extend %bs-base;
-  @include bs-gutter($gutter);
 
   @media (min-width: $screen-md) {
+    @include bs-gutter($gutter);
     width: percentage(($columns / $grid-columns));
   }
 }
 @mixin make-md-column-offset($columns) {
-    @include bs-gutter($gutter);
   @media (min-width: $screen-md) {
     margin-left: percentage(($columns / $grid-columns));
   }
@@ -276,8 +203,9 @@ $gutter:                    $h3 !default;
 
 @mixin make-lg-column($columns, $gutter: $gutter) {
   @extend %bs-base;
-  @include bs-gutter($gutter);
+
   @media (min-width: $screen-lg) {
+    @include bs-gutter($gutter);
     width: percentage(($columns / $grid-columns));
   }
 }
@@ -311,7 +239,7 @@ $gutter:                    $h3 !default;
     .col-xs-push-#{$i} { @include make-xs-column-push($i); }
     .col-xs-pull-#{$i} { @include make-xs-column-pull($i); }
     // .col-xs-#{$i}-offset { @include make-xs-column-offset($i); }
-    .col-xs-#{$i}-np { @include make-xs-column($i, false); }
+    .col-xs-#{$i}-np { @include make-xs-column($i, 0); }
 
 }
 @for $i from 1 to $grid-columns {
@@ -319,20 +247,52 @@ $gutter:                    $h3 !default;
     .col-sm-push-#{$i} { @include make-sm-column-push($i); }
     .col-sm-pull-#{$i} { @include make-sm-column-pull($i); }
     .col-sm-offset-#{$i} { @include make-sm-column-offset($i); }
-    .col-sm-#{$i}-np { @include make-sm-column($i, false); }
+    .col-sm-#{$i}-np { @include make-sm-column($i, 0); }
 }
 @for $i from 1 to $grid-columns {
     .col-md-#{$i} { @include make-md-column($i); }
     .col-md-push-#{$i} { @include make-md-column-push($i); }
     .col-md-#{$i}-pull { @include make-md-column-pull($i); }
-    .col-md-#{$i}-np { @include make-md-column($i, false); }
+    .col-md-#{$i}-np { @include make-md-column($i, 0); }
     // .col-md-#{$i}-offset { @include make-md-column-offset($i); }
 }
 @for $i from 1 to $grid-columns {
     .col-lg-#{$i} { @include make-lg-column($i); }
     .col-lg-push-#{$i} { @include make-lg-column-push($i); }
-    .col-lg-#{$i}-pull { @include make-lg-column-pull($i); }
-    .col-lg-#{$i}-np { @include make-lg-column($i, false); }
+    .col-lg-pull-#{$i} { @include make-lg-column-pull($i); }
+    .col-lg-#{$i}-np { @include make-lg-column($i, 0); }
 
-    // .col-lg-#{$i}-offset { @include make-lg-column-offset($i); }
+    .col-lg-offset-#{$i} { @include make-lg-column-offset($i); }
 }
+
+
+
+.inner {
+    @include make-md-column(7);
+    @include make-lg-column(5, false);
+    @include make-lg-column-offset(1);
+    // @include make-md-column-push(1);
+}
+
+.inner-full {
+    // @include make-md-column(12);
+    // @include inner(full);
+}
+
+.inner-squish {
+    // @include inner(squish);
+    @include make-md-column(5);
+    @include make-md-column-offset(1);
+
+    @include make-lg-column(4, false);
+    @include make-lg-column-offset(1.5);
+}
+
+.inner-pad {
+    @extend %bs-pad;
+}
+
+// .offset-l {
+//     @include make-lg-column-offset(1.5);
+//     padding-left: $gutter/2;
+// }
