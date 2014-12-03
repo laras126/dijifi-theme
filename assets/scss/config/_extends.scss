@@ -122,6 +122,12 @@
 // Hold
 
 
+%form-base {
+    padding: $sml/3 $sml/2;
+    font-family: $form-font;
+}
+
+
 %block {
 	padding: $h4 $h3;
 }
@@ -149,7 +155,7 @@
 
     %meta-light {
         @extend %meta;
-        color: lighten($text-med, 30%);
+        color: $text-med;
     }
 
     %meta-dark {

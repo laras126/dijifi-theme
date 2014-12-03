@@ -16,9 +16,6 @@ label, select {
 label {
 	margin-top: $h4;
 	margin-bottom: $sml/2;
-}
-
-input, label {
 	font-family: $form-font;
 }
 
@@ -54,13 +51,12 @@ input[type="url"],
 input[type="search"],
 input[type="tel"] {
 	
-	// @extend %form-base;
 	width: 100%;
-	
+	@extend %form-base;
 	border: $accent-border;
 
 	&:focus {
-		border-color: $accent-med;
+		border-color: $alert-info;
 		background-color: $white;
 	}
 }
@@ -107,3 +103,68 @@ input[type="checkbox"]:focus {
 fieldset {
 	border: 0;
 }
+
+
+
+// ----
+// Gravity forms
+// ----
+
+
+.gform_fields {
+	padding: 0;
+	margin: 0;	
+}
+
+.gfield_label {
+	font-weight: 700;
+	margin-bottom: $sml/2;
+}
+
+.gfield,
+.gfield_checkbox {
+	@extend %unstyle-list;
+	margin-top: $sml;	
+}
+
+.dfi-field-name {
+	@include make-md-column((7/2));
+
+	&:first-child {
+		padding-left: 0;
+	}
+
+	.ginput_left,
+	.ginput_right {
+		@include make-sm-column((7/2), false);
+	}
+}
+
+.dfi-field-email {
+	@include make-md-column((7/2), false);
+}
+
+.gform_footer,
+.dfi-field-message,
+.dfi-field-signup {
+	@include make-xs-column(7, false);
+}
+
+.gfield_description,
+.gfield_checkbox label  {
+	@extend %meta;
+}
+
+.gform_footer {
+	margin-top: $h3;
+}
+
+.ginput_complex label{
+	@extend %meta-light;
+	@extend %upperspace;
+	
+	margin-top: $sml/2;
+	margin-bottom: $sml;
+	font-weight: 400;
+}
+

@@ -394,7 +394,10 @@ th {
   padding: 0;
 }
 
-.col-xs-1, .col-xs-1-np, .col-xs-2, .col-xs-2-np, .col-xs-3, .col-xs-3-np, .col-xs-4, .col-xs-4-np, .col-xs-5, .col-xs-5-np, .col-xs-6, .col-xs-6-np, .col-sm-1, .col-sm-1-np, .col-sm-2, .col-sm-2-np, .col-sm-3, .col-sm-3-np, .col-sm-4, .col-sm-4-np, .col-sm-5, .col-sm-5-np, .col-sm-6, .col-sm-6-np, .col-md-1, .col-md-1-np, .col-md-2, .col-md-2-np, .col-md-3, .col-md-3-np, .col-md-4, .col-md-4-np, .col-md-5, .col-md-5-np, .col-md-6, .col-md-6-np, .col-lg-1, .col-lg-1-np, .col-lg-2, .col-lg-2-np, .col-lg-3, .col-lg-3-np, .col-lg-4, .col-lg-4-np, .col-lg-5, .col-lg-5-np, .col-lg-6, .col-lg-6-np, .inner, .wrapper, .inner-squish, .item-split, .header-brand, .header-nav-link, .header-nav, .focus-text, .widget, .product-nodivs,
+.col-xs-1, .col-xs-1-np, .col-xs-2, .col-xs-2-np, .col-xs-3, .col-xs-3-np, .col-xs-4, .col-xs-4-np, .col-xs-5, .col-xs-5-np, .col-xs-6, .col-xs-6-np, .col-sm-1, .col-sm-1-np, .col-sm-2, .col-sm-2-np, .col-sm-3, .col-sm-3-np, .col-sm-4, .col-sm-4-np, .col-sm-5, .col-sm-5-np, .col-sm-6, .col-sm-6-np, .col-md-1, .col-md-1-np, .col-md-2, .col-md-2-np, .col-md-3, .col-md-3-np, .col-md-4, .col-md-4-np, .col-md-5, .col-md-5-np, .col-md-6, .col-md-6-np, .col-lg-1, .col-lg-1-np, .col-lg-2, .col-lg-2-np, .col-lg-3, .col-lg-3-np, .col-lg-4, .col-lg-4-np, .col-lg-5, .col-lg-5-np, .col-lg-6, .col-lg-6-np, .inner, .wrapper, .inner-squish, .dfi-field-name, .dfi-field-name .ginput_left,
+.dfi-field-name .ginput_right, .dfi-field-email, .gform_footer,
+.dfi-field-message,
+.dfi-field-signup, .item-split, .header-brand, .header-nav-link, .header-nav, .focus-text, .widget, .product-nodivs,
 .sub-products, .provided, .provided-drive-choices, .choices,
 .nochoice, .product-description,
 .product-description-nores, .qualities, .price, .product-total, .drives, .product-description-drives, .purchase, .section-title,
@@ -1231,7 +1234,8 @@ th {
   padding: 1.3rem;
 }
 
-.content-nav ul, .menu-item, .site-footer ul {
+.content-nav ul, .gfield,
+.gfield_checkbox, .menu-item, .site-footer ul {
   list-style: none;
 }
 
@@ -1239,12 +1243,15 @@ th {
   display: inline-block;
 }
 
-h5, table caption {
+h5, .ginput_complex label, table caption {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .meta,
+.ginput_complex label,
+.gfield_description,
+.gfield_checkbox label,
 .link-edit,
 .header-tag,
 .menu-footer a,
@@ -1256,6 +1263,24 @@ h5, table caption {
   font-size: 0.975rem;
   font-family: "source-sans-pro", Georgia, serif;
   margin: 0;
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"], input {
+  padding: 0.325rem 0.4875rem;
+  font-family: "source-sans-pro", Georgia, serif;
 }
 
 .hide-until-md,
@@ -1273,6 +1298,10 @@ h5, table caption {
   .hide-after-md {
     display: none;
   }
+}
+
+.ginput_complex label {
+  color: #999;
 }
 
 input[type="submit"],
@@ -1429,9 +1458,6 @@ blockquote {
 label {
   margin-top: 1.56rem;
   margin-bottom: 0.4875rem;
-}
-
-input, label {
   font-family: "source-sans-pro", Georgia, serif;
 }
 
@@ -1483,7 +1509,7 @@ input[type="email"]:focus,
 input[type="url"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus {
-  border-color: #80C25D;
+  border-color: #3C7AAA;
   background-color: #fefefe;
 }
 
@@ -1514,6 +1540,61 @@ input[type="checkbox"]:focus {
 
 fieldset {
   border: 0;
+}
+
+.gform_fields {
+  padding: 0;
+  margin: 0;
+}
+
+.gfield_label {
+  font-weight: 700;
+  margin-bottom: 0.4875rem;
+}
+
+.gfield,
+.gfield_checkbox {
+  margin-top: 0.975rem;
+}
+
+@media (min-width: 50em) {
+  .dfi-field-name {
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    width: 50%;
+  }
+}
+.dfi-field-name:first-child {
+  padding-left: 0;
+}
+@media (min-width: 34em) {
+  .dfi-field-name .ginput_left,
+  .dfi-field-name .ginput_right {
+    width: 50%;
+  }
+}
+
+@media (min-width: 50em) {
+  .dfi-field-email {
+    width: 50%;
+  }
+}
+
+.gform_footer,
+.dfi-field-message,
+.dfi-field-signup {
+  width: 100%;
+  min-height: 1px;
+}
+
+.gform_footer {
+  margin-top: 2.6rem;
+}
+
+.ginput_complex label {
+  margin-top: 0.4875rem;
+  margin-bottom: 0.975rem;
+  font-weight: 400;
 }
 
 .button-cta {
@@ -1614,7 +1695,7 @@ nav a {
 }
 
 .fixed-image {
-  padding-top: 15.6rem;
+  padding-top: 11.7rem;
   background-attachment: fixed;
   background-position: center top;
   background-size: cover;
@@ -2201,11 +2282,6 @@ input.included,
 .product-total,
 .product-description {
   margin-top: 0.325rem;
-}
-
-input,
-textarea {
-  padding: 0.325rem 0.4875rem;
 }
 
 .purchase {

@@ -236,7 +236,7 @@
 
 input,
 textarea {
-	padding: $sml/3 $sml/2;
+	@extend %form-base;
 }
 
 

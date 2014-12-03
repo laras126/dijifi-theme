@@ -69,6 +69,10 @@ nav a {
 // Components 
 // ---
 
+html, body, .main, .page-header, .fixed-image {
+	// height: 100%;
+}
+
 .fixed-image {
 	// TODO:
 	// Won't need this once the $context and MQs are in <head>
@@ -76,7 +80,7 @@ nav a {
 	// background-repeat: no-repeat;
 
 	// min-height: 800px;
-	padding-top: $h1*4;
+	padding-top: $h1*3;
 
 	.section-header & {
 		padding-bottom: $h1*5;	

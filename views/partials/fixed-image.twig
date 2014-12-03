@@ -8,11 +8,16 @@
 			{# <div class="inner-squish"> #}
 
 			{# {% if header == true %}	 #}
+			{# <div class="col-sm-push-2"> #}
 				<h1>{{post.title}}</h1>
-				<p class="lead">{{post.tagline}}</p>
-				<div class="inner-squish">
-					<p>{{post.summary}}</p>				
+				<div class="inner">
+				<p class="lead">{{post.summary}}</p>
+					
 				</div>
+				{# <div class="inner-squish"> #}
+					{# <p class="summary">{{post.summary}}</p>				 #}
+				{# </div> #}
+			{# </div> #}
 			{# {% else %}
 				<h3 class="section-title">{{content.section_title}}</h3>
 				<p class="lead">{{content.lead}}</p> #}
