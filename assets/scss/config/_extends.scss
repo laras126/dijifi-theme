@@ -135,16 +135,16 @@
 
 .hide-until-md, 
 %hide-until-md {
-   	display: none;
+   	display: none !important;
     @include bp(med) {
-        display: block; 
+        display: inline-block !important; 
     }   
 }
 
 .hide-after-md, 
 %hide-after-md {
 	@include bp(med) {
-        display: none;
+        display: none !important;
     }
 }
 

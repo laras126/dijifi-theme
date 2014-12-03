@@ -747,7 +747,15 @@
                             "type": "text",
                             "instructions": "Leave this blank if you are selecting a page above. You can also link to another section of this page, by adding a # in front of the \"Menu Item Title\" e.g. #Formats or #Quick_Quote.",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_54734f14cf408",
+                                        "operator": "==",
+                                        "value": "cta"
+                                    }
+                                ]
+                            ],
                             "column_width": "",
                             "default_value": "",
                             "placeholder": "",

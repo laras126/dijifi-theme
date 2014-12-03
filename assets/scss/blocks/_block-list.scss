@@ -51,8 +51,6 @@
 	.artifact {
 		@extend %list-three;
 
-		border-bottom: 1px dotted $accent-med;
-
 		&:last-child {
 			border-bottom: none;
 		}

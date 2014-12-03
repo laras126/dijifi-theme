@@ -2,10 +2,19 @@
 
 .section-header {
 	// text-align: center;
+
+	.inner-squish {
+		margin-top: $h3;
+		border-top: $accent-border;
+		// border-bottom: $accent-border;
+	}
+	
+	padding-top: $h3;
+	// padding-bottom: $h3;
 }
 
 	.section-title {
-		margin-top: $h1;
+		// margin-top: $h1;
 	}
 
 

@@ -98,7 +98,7 @@ nav[role="navigation"] {
 
 .menu-item-cta {
     a {
-        color: $alert-success;
+        color: $accent-light;
         font-weight: 700;
     }
 }
@@ -107,10 +107,10 @@ nav[role="navigation"] {
         content: '+';
         position: absolute;
         top: 0;
-        right: 0;
+        left: $h1*2;
         display: block;
         font-size: $h4;
-        padding: $sml/1.5 $sml;
+        padding: $sml/1.25 $sml;
         color: $accent-med;
     }
 
@@ -199,8 +199,7 @@ nav[role="navigation"] {
                 padding-right: 0;
             }
 
-            &.menu-item-complex,
-            &.menu-item-cta {
+            &.menu-item-complex {
                 display: none;
             }
         }

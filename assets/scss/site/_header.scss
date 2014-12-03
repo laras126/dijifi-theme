@@ -9,7 +9,7 @@
 
 .header-brand {
 	@include make-xs-column(6);
-	@include make-md-column(3);
+	@include make-md-column(1.5, false);
 	display: table-row;
 }
 
@@ -21,7 +21,7 @@
 
 .header-tag {
 	@extend %meta;
-	@extend %hide-until-md;
+	@extend %hide-after-md;
 	padding-left: $base;
 }
 
@@ -31,5 +31,5 @@
 
 .header-nav {
     @include make-xs-column(7, false); 
-    @include make-md-column(4, false);
+    @include make-md-column(5.5, false);
 }
