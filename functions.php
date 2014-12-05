@@ -153,5 +153,4 @@
 	}
 	add_filter( 'acf/fields/wysiwyg/toolbars' , 'dfi_acf_wysiwyg_toolbar'  );
 
-
 ?>

@@ -78,7 +78,7 @@ nav[role="navigation"] {
         }
         
         @extend %h5;
-        color: $text-light;
+        // color: $text-light;
     }
 }
 
@@ -137,7 +137,7 @@ nav[role="navigation"] {
         border-radius: 1px;
         height: 3px;
         display: block;
-        background: $text-light;
+        background: $text-dark;
         margin: 0 0 7px 0;
     }
 }
@@ -174,7 +174,7 @@ nav[role="navigation"] {
     }
 
     .subnav {
-        background-color: $text-dark;
+        background-color: $body-bkgd;
         @include border($alert-info, top);
         a {
             padding-top: 0;
@@ -221,7 +221,7 @@ nav[role="navigation"] {
 
 .content-nav {
     @extend %horizontal-list;
-    @include rotate($bkgd: $alert-danger);
+    @include rotate($bkgd: $alert-info);
     text-align: center;
 
     li {

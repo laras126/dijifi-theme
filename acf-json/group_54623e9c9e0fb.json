@@ -11,6 +11,11 @@
             "instructions": "Blocks provide a structure for your content.",
             "required": 0,
             "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "button_label": "Select Block",
             "min": "",
             "max": "",
@@ -30,7 +35,11 @@
                             "instructions": "Add text content here. It will display in a column at the center of the page. Take care to use the headings appropriately, and use minimal formatting.",
                             "required": 0,
                             "conditional_logic": 0,
-                            "column_width": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
                             "default_value": "",
                             "tabs": "all",
                             "toolbar": "text_based",
@@ -47,15 +56,68 @@
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_54623e9ca5697",
-                            "label": "Text",
-                            "name": "text",
+                            "key": "field_54623e9ca56a6",
+                            "label": "Text Format",
+                            "name": "text_format",
                             "prefix": "",
-                            "type": "textarea",
-                            "instructions": "Text should supporting the image next to it. It's kind of like an expanded caption, and can be no more than 350 characters.",
+                            "type": "radio",
+                            "instructions": "Should the text display on the left or right?",
                             "required": 0,
                             "conditional_logic": 0,
-                            "column_width": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "caption": "Caption",
+                                "paragraph": "Paragraph"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "",
+                            "layout": "vertical"
+                        },
+                        {
+                            "key": "field_54623e9ca569e",
+                            "label": "Image",
+                            "name": "image",
+                            "prefix": "",
+                            "type": "image",
+                            "instructions": "For a caption format, dimensions should be approximately 800x600 and 600x800 for the paragraph format, depending on how long the text is.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all"
+                        },
+                        {
+                            "key": "field_54623e9ca5697",
+                            "label": "Caption Text",
+                            "name": "caption_text",
+                            "prefix": "",
+                            "type": "textarea",
+                            "instructions": "A caption for the image. It will display on the left.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_54623e9ca56a6",
+                                        "operator": "==",
+                                        "value": "caption"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
                             "default_value": "",
                             "placeholder": "",
                             "maxlength": 350,
@@ -65,37 +127,31 @@
                             "disabled": 0
                         },
                         {
-                            "key": "field_54623e9ca569e",
-                            "label": "Image",
-                            "name": "image",
+                            "key": "field_5480a535d9487",
+                            "label": "Paragraph Text",
+                            "name": "paragraph_text",
                             "prefix": "",
-                            "type": "image",
-                            "instructions": "Upload an image. It's dimensions should be approximately 800x600.",
+                            "type": "wysiwyg",
+                            "instructions": "Paragraph text to display to the right of the image.",
                             "required": 0,
-                            "conditional_logic": 0,
-                            "column_width": "",
-                            "return_format": "array",
-                            "preview_size": "thumbnail",
-                            "library": "all"
-                        },
-                        {
-                            "key": "field_54623e9ca56a6",
-                            "label": "Text Location",
-                            "name": "text_location",
-                            "prefix": "",
-                            "type": "radio",
-                            "instructions": "Should the text display on the left or right?",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "column_width": "",
-                            "choices": {
-                                "left": "Left",
-                                "right": "Right"
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_54623e9ca56a6",
+                                        "operator": "==",
+                                        "value": "paragraph"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
                             },
-                            "other_choice": 0,
-                            "save_other_choice": 0,
                             "default_value": "",
-                            "layout": "vertical"
+                            "tabs": "visual",
+                            "toolbar": "text_based",
+                            "media_upload": 0
                         }
                     ],
                     "min": "",
@@ -116,7 +172,11 @@
                             "instructions": "This code should be used for a shortcode or embed code, and not for text or image content.",
                             "required": 0,
                             "conditional_logic": 0,
-                            "column_width": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
                             "default_value": "",
                             "tabs": "text",
                             "toolbar": "text_based",
@@ -141,7 +201,11 @@
                             "instructions": "Select the type of divider to display.",
                             "required": 0,
                             "conditional_logic": 0,
-                            "column_width": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
                             "choices": {
                                 "testimonial": "Testimonial",
                                 "cta": "Call to Action",
@@ -173,7 +237,11 @@
                                     }
                                 ]
                             ],
-                            "column_width": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
                             "post_type": [
                                 "page",
                                 "dfi_case_study",
@@ -205,7 +273,11 @@
                                     }
                                 ]
                             ],
-                            "column_width": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
                             "post_type": [
                                 "dfi_testimonial"
                             ],
@@ -234,7 +306,11 @@
                                     }
                                 ]
                             ],
-                            "column_width": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
                             "default_value": "",
                             "placeholder": "",
                             "prepend": "",
@@ -260,7 +336,11 @@
                                     }
                                 ]
                             ],
-                            "column_width": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
                             "default_value": "",
                             "placeholder": "",
                             "prepend": "",
@@ -286,7 +366,11 @@
                                     }
                                 ]
                             ],
-                            "column_width": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
                             "post_type": [
                                 "page",
                                 "dfi_service"

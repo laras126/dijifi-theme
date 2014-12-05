@@ -1248,7 +1248,7 @@ h5, .ginput_complex label, table caption, .prompt, .prompt span {
 .header-tag,
 .menu-footer a {
   font-size: 0.975rem;
-  font-family: "source-sans-pro", Georgia, serif;
+  font-family: "Source Sans Pro";
   margin: 0;
 }
 
@@ -1267,7 +1267,7 @@ input[type="url"],
 input[type="search"],
 input[type="tel"] {
   padding: 0.325rem 0.4875rem;
-  font-family: "source-sans-pro", Georgia, serif;
+  font-family: "Source Sans Pro";
 }
 
 .hide-until-md {
@@ -1294,7 +1294,7 @@ input[type="submit"],
 button, .button-cta, .button-success, .link-more {
   border: none;
   padding: 0.4875rem 0.975rem;
-  font-family: "source-sans-pro", Georgia, serif;
+  font-family: "Source Sans Pro";
   background: #80C25D;
   font-weight: 700;
   color: #fefefe !important;
@@ -1349,7 +1349,7 @@ html {
 }
 
 body {
-  font-family: "chaparral-pro", Georgia, serif;
+  font-family: "Chaparral Pro";
   font-size: 1.3rem;
 }
 
@@ -1365,7 +1365,7 @@ a:link {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "source-sans-pro", Georgia, serif;
+  font-family: "Source Sans Pro";
   margin-bottom: 0;
 }
 
@@ -1448,7 +1448,7 @@ blockquote {
 label {
   margin-top: 1.56rem;
   margin-bottom: 0.4875rem;
-  font-family: "source-sans-pro", Georgia, serif;
+  font-family: "Source Sans Pro";
 }
 
 input[type="search"] {
@@ -1633,7 +1633,7 @@ fieldset {
 
 table {
   width: 100%;
-  border: 1px solid #FFCC53;
+  font-family: "Source Sans Pro";
   margin-bottom: 1.5em;
 }
 table caption {
@@ -1677,11 +1677,11 @@ ul, ol {
 
 .lead, .page-tagline {
   font-size: 1.56rem;
-  font-family: "source-sans-pro", Georgia, serif;
+  font-family: "Source Sans Pro";
 }
 
 nav a {
-  font-family: "source-sans-pro", Georgia, serif;
+  font-family: "Source Sans Pro";
 }
 
 .fixed-image {
@@ -1716,7 +1716,7 @@ nav a {
 }
 
 nav[role="navigation"] {
-  font-family: "source-sans-pro", Georgia, serif;
+  font-family: "Source Sans Pro";
 }
 
 .menu-items {
@@ -1763,7 +1763,6 @@ nav[role="navigation"] {
 }
 .menu-main a {
   display: block;
-  color: #fefefe;
 }
 @media (min-width: 50em) {
   .menu-main a {
@@ -1813,7 +1812,7 @@ nav[role="navigation"] {
   border-radius: 1px;
   height: 3px;
   display: block;
-  background: #fefefe;
+  background: #111;
   margin: 0 0 7px 0;
 }
 
@@ -1846,7 +1845,7 @@ nav[role="navigation"] {
   }
 
   .subnav {
-    background-color: #111;
+    background-color: #fefefe;
     border-top: 1px solid #3C7AAA;
   }
   .subnav a {
@@ -1877,7 +1876,7 @@ nav[role="navigation"] {
   }
 }
 .content-nav {
-  background-color: #D14A29;
+  background-color: #3C7AAA;
   color: #fefefe;
   text-align: center;
 }
@@ -1932,8 +1931,6 @@ nav[role="navigation"] {
 .site-header {
   width: 100%;
   display: table;
-  background-color: #111;
-  color: #fefefe;
 }
 
 .header-brand {
@@ -2006,9 +2003,9 @@ nav[role="navigation"] {
 }
 
 .site-footer {
-  background-color: #3C7AAA;
+  background-color: #D14A29;
   color: #fefefe;
-  font-family: "source-sans-pro", Georgia, serif;
+  font-family: "Source Sans Pro";
 }
 
 @media (min-width: 50em) {
@@ -2017,6 +2014,16 @@ nav[role="navigation"] {
     padding-right: 1.3rem;
     width: 33.33333%;
   }
+}
+
+.block_testimonial {
+  margin-bottom: 2.6rem;
+}
+.block_testimonial .inner {
+  padding-bottom: 1.56rem;
+  padding-top: 1.56rem;
+  border-top: 1px solid #80C25D;
+  border-bottom: 1px solid #80C25D;
 }
 
 .block-intro {
@@ -2117,7 +2124,7 @@ nav[role="navigation"] {
 }
 
 .param-options-list {
-  font-family: "source-sans-pro", Georgia, serif;
+  font-family: "Source Sans Pro";
   margin-bottom: 0.975rem;
 }
 
@@ -2141,12 +2148,10 @@ nav[role="navigation"] {
   border: 3px solid transparent;
   padding: 1.56rem;
   text-align: center;
-  background-color: #66ab41;
 }
 .int:hover {
   cursor: pointer;
   border-color: #5b993a;
-  background: #71bb4a;
 }
 
 .quote-param {

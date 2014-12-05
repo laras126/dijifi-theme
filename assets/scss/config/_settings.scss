@@ -32,6 +32,7 @@ $alert-success: $accent-med;
 
 $text-dark: 		$black;
 $text-med: 			$grey;
+$text-medlight: 	lighten($text-med, 20%);
 $text-light: 		$white;
 
 $link-color:		$accent-dark;
@@ -80,10 +81,10 @@ $h6:  				$sml;
 // Fonts
 
 // $sans-serif: 		'freight-sans-pro', Helvetica, sans-serif;
-$serif:             'chaparral-pro', Georgia, serif;
-// $serif: 			'livory';
-// $sans-serif:        'brandon-grotesque', Georgia, serif;
-$sans-serif:        'source-sans-pro', Georgia, serif;
+// $serif:             'chaparral-pro', Georgia, serif;
+$serif: 			'Chaparral Pro';
+$sans-serif:        'Source Sans Pro';
+// $sans-serif:        'source-sans-pro', Georgia, serif;
 
 $heading-font: 		$sans-serif;
 $body-font: 		$serif;

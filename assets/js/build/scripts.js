@@ -1,4 +1,5 @@
 
+
 $(document).ready(function() {
 	
 	$('body').addClass('js');
@@ -123,35 +124,9 @@ $(document).ready(function() {
 	// Quick Quote form
 	// ----
 	
+	//
 	// Selected Option Logic
-	var desc_default = 'Click an option from the scale below.';
-
-	// Change the text in the "hint" area when scale items are hovered over
-	$('.param-option').hover( function() {
-		var desc = $(this).closest('.param-desc-holder').text();
-		$(this).closest('.param-desc').html('desc');
-	}, function() {
-		$(this).closest('.param-desc').html(desc_default);
-	});
-
-	// Show selected item, and replace default hint text with that
-	$('.param-option').click( function() {
-		var desc = $(this).find('.param-desc-holder').text();
-		$('.param-option').removeClass('selected');
-		$(this).addClass('selected');
-		
-		desc_default = desc;
-	});
-
-
-
-
-
-	// ----
-	// Toggle Panels
-	// ----
-	
-
+	//
 	function clearActiveParam() {
 		$('.quote-param').removeClass('active');
 	}
@@ -161,25 +136,40 @@ $(document).ready(function() {
 		$(this).addClass('active');
 	}
 
+	// Show selected item, and replace default hint text with that
+	$('.param-option').click( function() {
+		$('.param-option').removeClass('selected');
+		$(this).addClass('selected');
+	});
+
+
+	//
+	// Toggle Panels
+	//
+	
 	$('.quote-param').on('click', {}, markActiveParam);
 
 	// Find the next closed form panel and slide it down
 	$('.next').click( function() {
 		clearActiveParam();
-		$('.closed:first')
+		$('.closed:first-child')
 			   .slideDown(200)
 			   .toggleClass('closed active');
 
 		// If there is only one closed panel, prompt to view results
-		if( $('.closed').length === 1 ) {
+		if( $('.closed').length == 1 ) {
 			$(this).text('Show me results!');
 		} 
-		if ( $('.closed').length === 0 ) {
+		if ( $('.closed').length == 0 ) {
 			$(this).remove();
 			$(this).removeClass('next');
 		}
 	});
 
-});
+	// if( '.' )
+	// $('.results');
 
+
+
+});
 

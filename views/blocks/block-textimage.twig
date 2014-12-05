@@ -1,19 +1,21 @@
 {% extends "blocks/block.twig" %}
 
 {% block content %}
-	{% if blck.text_location == 'right'%}
+	{% if blck.text_format == 'caption'%}
 		<div class="image">
 			<img src="{{TimberImage(blck.image).src|resize(800)}}" alt="">
 		</div>
 		<div class="caption">
-			<p class="meta">{{blck.text}}</p>
+			<p class="meta">{{blck.caption}}</p>
 		</div>
-	{% else %}
-		<div class="caption">
-			<p class="meta">{{blck.text}}</p>
-		</div>
-		<div class="image">
+	{% elseif blck.text_format == 'paragraph'%}
+		<div class="col-lg-2">
 			<img src="{{TimberImage(blck.image).src|resize(800)}}" alt="">
 		</div>
+
+		<div class="col-lg-5">
+			<p class="meta">{{blck.text}}</p>
+		</div>
+		
 	{% endif %}
 {% endblock %}

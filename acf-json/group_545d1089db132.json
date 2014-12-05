@@ -1,6 +1,6 @@
 {
     "key": "group_545d1089db132",
-    "title": "Quick Quote",
+    "title": "Quick Quote-hold",
     "fields": [
         {
             "key": "field_545d277c7726e",
@@ -11,6 +11,11 @@
             "instructions": "Prompt to fill out the quote form.",
             "required": 0,
             "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "default_value": "",
             "placeholder": "",
             "prepend": "",
@@ -28,6 +33,11 @@
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "min": "",
             "max": "",
             "layout": "row",
@@ -42,7 +52,11 @@
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
-                    "column_width": "",
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
                     "default_value": "",
                     "placeholder": "",
                     "prepend": "",
@@ -60,7 +74,11 @@
                     "instructions": "A two word, lowercase indicator for the question.",
                     "required": 0,
                     "conditional_logic": 0,
-                    "column_width": "",
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
                     "default_value": "",
                     "placeholder": "",
                     "prepend": "",
@@ -78,7 +96,11 @@
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
-                    "column_width": "",
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
                     "min": "",
                     "max": "",
                     "layout": "table",
@@ -93,7 +115,11 @@
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
-                            "column_width": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
                             "default_value": "",
                             "placeholder": "",
                             "prepend": "",
@@ -111,7 +137,11 @@
                             "instructions": "This should be the lowervase name of the service indicated. So, direct_service or raw or standard.",
                             "required": 0,
                             "conditional_logic": 0,
-                            "column_width": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
                             "default_value": "",
                             "placeholder": "",
                             "prepend": "",
@@ -130,7 +160,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "dfi_service"
+                "value": "post"
             }
         ]
     ],

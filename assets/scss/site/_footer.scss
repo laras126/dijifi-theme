@@ -1,6 +1,6 @@
 
 .site-footer {
-	@include rotate($bkgd: $alert-info);
+	@include rotate($bkgd: $alert-danger);
 	font-family: $sans-serif;
 
 	ul {

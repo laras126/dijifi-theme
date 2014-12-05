@@ -1,9 +1,65 @@
-@import 'config/all'; // Mixins, variables, and tools that do not output code
+// Reset
+@import 'config/normalize';
+
+// Variables
+@import 'config/settings';
+
+// Dynamic
+@import 'config/mixins';
+@import 'config/bs-mixins';
+@import 'config/bs-classes';
+@import 'config/extends';
+
+@import 'site/all';
+@import 'blocks/block-quoter';
+
+
+$grid-columns: 12;
+
+@for $i from 1 to $grid-columns {
+    .col-xs-#{$i} { @include make-xs-column($i); }
+    .col-xs-push-#{$i} { @include make-xs-column-push($i); }
+    .col-xs-pull-#{$i} { @include make-xs-column-pull($i); }
+    // .col-xs-#{$i}-offset { @include make-xs-column-offset($i); }
+    .col-xs-#{$i}-np { @include make-xs-column($i, 0); }
+
+}
+@for $i from 1 to $grid-columns {
+    .col-sm-#{$i} { @include make-sm-column($i); }
+    .col-sm-push-#{$i} { @include make-sm-column-push($i); }
+    .col-sm-pull-#{$i} { @include make-sm-column-pull($i); }
+    .col-sm-offset-#{$i} { @include make-sm-column-offset($i); }
+    .col-sm-#{$i}-np { @include make-sm-column($i, 0); }
+}
+@for $i from 1 to $grid-columns {
+    .col-md-#{$i} { @include make-md-column($i); }
+    .col-md-push-#{$i} { @include make-md-column-push($i); }
+    .col-md-#{$i}-pull { @include make-md-column-pull($i); }
+    .col-md-#{$i}-np { @include make-md-column($i, 0); }
+    // .col-md-#{$i}-offset { @include make-md-column-offset($i); }
+}
+@for $i from 1 to $grid-columns {
+    .col-lg-#{$i} { @include make-lg-column($i); }
+    .col-lg-push-#{$i} { @include make-lg-column-push($i); }
+    .col-lg-pull-#{$i} { @include make-lg-column-pull($i); }
+    .col-lg-#{$i}-np { @include make-lg-column($i, 0); }
+
+    .col-lg-offset-#{$i} { @include make-lg-column-offset($i); }
+}
+
+
+
+
 @import 'elements/all'; // Roots elements
 
 @import 'site/all'; // Main site components
 
-// Order form specific styles
+
+
+// ----
+// Order Form
+// ----
+
 // Note that these styles are not ideal at all - 
 // someone else created the order form, and my role
 // was to give it a nicer skin to match 
@@ -21,6 +77,7 @@
 
 .order-full-txt-alert,
 .order-full-txt-alert2,
+.order-full-txt-alert3,
 .pickup-notice {
 	@extend %meta;
 	@extend %alert;
@@ -29,7 +86,16 @@
 	margin-bottom: $base;
 }
 
-
+#order-form {
+	h1 {
+		@extend %h3;
+		text-align: center;
+		margin-bottom: $base;
+	}
+}
+.lead {
+	text-align: center;
+}
 
 // Section
 
@@ -162,8 +228,40 @@
 	}
 	
 
+#total {
+	font-family: $form-font;
+	@extend .clearfix;
+
+}
+
+#sub-total,
+#grand-total,
+#tax-total {
+	@include make-sm-column(5);
+	text-align: right;
+}
+
+#total div {
+	// padding-top: $sml;
+	padding-bottom: $sml;
+}
+
+#grand-total,
+#grand-title {
+	@extend %h4;
+	border-top: $accent-border;
+}
+
+#grand-total,
+#grand-title {
+	padding-top: $sml;
+}
+
 .product-description,
-.product-description-nores {
+.product-description-nores,
+#sub-title,
+#grand-title,
+#tax-title {
 	@include make-xs-column(7, false);
 	font-weight: 700;
 }
@@ -188,6 +286,9 @@
 	@include make-xs-column(6, false);
 	@include make-sm-column(1.5, false);
 	// float: right;
+}
+
+.price {
 	color: $text-med;
 	text-align: center;
 }
@@ -301,15 +402,21 @@ input[type="text"] {
 // Contact Info Table
 
 .order-table {
-	tr td:first-child {
+	tr:not(.pickup-notice) td:first-child {
 		text-align: right;
-		@include make-xs-column(4, false);
+		@include make-xs-column(2, false);
+		@include make-md-column(2, false);
+		@include make-md-column-offset(1);
 	}
+
 	td[align="left"] {
-		@include make-xs-column(8, false);
+		@include make-xs-column(10, false);
+		@include make-md-column(8, false);
 		input[type="text"],
 		textarea {
-			@include make-xs-column(8, false);
+			@include make-xs-column(12, false);
+			@include make-md-column(8, false);
+			@include make-lg-column(10, false);
 		}
 	}
 
@@ -322,12 +429,62 @@ input[type="text"] {
 }
 
 	tr.pickup-notice {
-		@include make-xs-column(10);
-		@include make-xs-column-push(1);
+		@include make-xs-column(12, false);
+		// @include make-md-column(10);
+		// @include make-md-column-push(1);
 
 		td:first-child {
 			text-align: left;
-			@include make-xs-column(12);
+			@include make-xs-column(12, false);
 		}
 
 	}
+
+
+
+
+// ----
+// Status
+// ----
+
+#order-summary {
+	h1 {
+		@extend %h4;
+		margin-bottom: $base;
+		text-align: center;	
+		border-bottom: $accent-border;
+	}
+}
+
+.sum-table {
+	@extend %meta;
+
+	tr {
+		border-bottom: 1px solid $text-medlight;
+	}
+
+	&.summary {
+
+	}
+
+	td:last-child {
+		width: percentage(2/3) !important;	
+	}
+}
+
+	.sum-table-right {
+		text-align: right;
+		padding-right: $base;
+		@extend %meta-light;
+		@extend %upperspace;
+		width: percentage(1/3) !important;
+	}
+
+
+// ----
+// Main site overrides
+//----
+
+.widget {
+	@include make-md-column(4);
+}

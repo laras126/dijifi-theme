@@ -27,12 +27,12 @@
 	border: 3px solid transparent; 
 	padding: $h4;
 	text-align: center;
-	background-color: darken($accent-med, 10%);
+	// background-color: darken($accent-med, 10%);
 
 	&:hover {
 		cursor: pointer;
 		border-color: darken($accent-med, 15%);
-		background: darken($accent-med, 5%);
+		// background: darken($accent-med, 5%);
 	}
 }
 
