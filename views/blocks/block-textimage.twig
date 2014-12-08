@@ -2,20 +2,15 @@
 
 {% block content %}
 	{% if blck.text_format == 'caption'%}
-		<div class="image">
-			<img src="{{TimberImage(blck.image).src|resize(800)}}" alt="">
-		</div>
-		<div class="caption">
-			<p class="meta">{{blck.caption}}</p>
-		</div>
+		<figure>
+			
+			<figcaption class="caption meta">{{blck.caption}}</figcaption>
+			<img class="caption-image" src="{{TimberImage(blck.image).src|resize(800)}}" alt="">
+		</figure>
 	{% elseif blck.text_format == 'paragraph'%}
-		<div class="col-lg-2">
-			<img src="{{TimberImage(blck.image).src|resize(800)}}" alt="">
-		</div>
-
-		<div class="col-lg-5">
-			<p class="meta">{{blck.text}}</p>
-		</div>
-		
+	<div class="inner-squish">
+		<img class="paragraph-image" src="{{TimberImage(blck.image).src|resize(800)}}">
+		{{blck.text}}
+	</div>
 	{% endif %}
 {% endblock %}

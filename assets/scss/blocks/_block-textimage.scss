@@ -1,0 +1,75 @@
+.block_textimage {
+	p:first-of-type {
+		margin-top: 0;
+	}
+	// .image {
+	// 	@include make-md-column(5.5, false);
+		
+		
+	// }
+	
+}
+
+figure {
+	margin: 0;
+}
+
+.caption-format {
+
+}
+
+.caption {
+	@include make-xs-column(7);
+	@include make-lg-column(1.5, false);
+
+	border-top: $accent-border;
+	
+	padding-top: $sml/2;
+	padding-bottom: $sml;
+	float: right;
+	// background-color: #f9f9f9;
+
+	@include bp(large) {
+		float: left;
+		// border-top: $accent-border;
+		border-bottom: none;
+	}
+}
+
+	.caption-image {
+		@include make-lg-column(5.5, false);
+		float: right;
+		// img {
+		// 	width: 100%;
+		// }
+	}
+
+.paragraph-image {
+	@include make-sm-column(4, false);
+	// @include make-sm-column-offset(3, right);
+	
+	@include bp(med) {
+		margin-left: percentage(1/7)*-1;
+	}
+	
+	@include bp(large) {
+		margin-left: percentage(2/7)*-1;
+	}
+	float: left;
+	padding-right: $gutter;
+	padding-bottom: $gutter/2;
+	position: relative;
+
+	img {
+		// position: absolute;
+		// position: relative;
+		// top: 0;
+		// right: 10%;
+		// width: 110%;
+	}
+}
+
+.format-paragraph {
+	@include make-sm-column(4.5);
+	@include make-sm-column-offset(1);
+}

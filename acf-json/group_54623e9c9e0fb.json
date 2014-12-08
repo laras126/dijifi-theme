@@ -56,46 +56,6 @@
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_54623e9ca5697",
-                            "label": "Text",
-                            "name": "text",
-                            "prefix": "",
-                            "type": "textarea",
-                            "instructions": "Text should supporting the image next to it. It's kind of like an expanded caption, and can be no more than 350 characters.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "maxlength": 350,
-                            "rows": "",
-                            "new_lines": "br",
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
-                            "key": "field_54623e9ca569e",
-                            "label": "Image",
-                            "name": "image",
-                            "prefix": "",
-                            "type": "image",
-                            "instructions": "Upload an image. It's dimensions should be approximately 800x600.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "preview_size": "thumbnail",
-                            "library": "all"
-                        },
-                        {
                             "key": "field_54623e9ca56a6",
                             "label": "Text Format",
                             "name": "text_format",
@@ -117,6 +77,84 @@
                             "save_other_choice": 0,
                             "default_value": "",
                             "layout": "vertical"
+                        },
+                        {
+                            "key": "field_54623e9ca569e",
+                            "label": "Image",
+                            "name": "image",
+                            "prefix": "",
+                            "type": "image",
+                            "instructions": "Upload an image. It's dimensions should be approximately 800x600.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all"
+                        },
+                        {
+                            "key": "field_54623e9ca5697",
+                            "label": "Text",
+                            "name": "text",
+                            "prefix": "",
+                            "type": "textarea",
+                            "instructions": "This text will display as a paragraph next to the image. It should relate to any text above and below.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_54623e9ca56a6",
+                                        "operator": "==",
+                                        "value": "paragraph"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "br",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_54859a5125801",
+                            "label": "Caption",
+                            "name": "caption",
+                            "prefix": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_54623e9ca56a6",
+                                        "operator": "==",
+                                        "value": "caption"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 4,
+                            "new_lines": "br",
+                            "readonly": 0,
+                            "disabled": 0
                         }
                     ],
                     "min": "",

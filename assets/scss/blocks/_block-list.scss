@@ -15,7 +15,7 @@
 }
 
 %list-item-desc {
-	@include make-md-column(4);
+	@include make-sm-column(4);
 	@include make-lg-column(7, 0);
 
 	@include change-text-align(left, large, center);
