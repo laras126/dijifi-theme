@@ -165,10 +165,6 @@ $(document).ready(function() {
 		}
 	});
 
-	// if( '.' )
-	// $('.results');
-
-
 
 });
 

@@ -1365,15 +1365,20 @@ nav a {
 }
 
 .fixed-image {
-  padding-top: 11.7rem;
-  background-attachment: fixed;
+  width: 100%;
+  padding-top: 66.66667%;
   background-position: center top;
   background-size: cover;
-  width: 100%;
-  height: auto;
+  background-repeat: no-repeat;
 }
-.section-header .fixed-image {
-  padding-bottom: 19.5rem;
+.page-header .fixed-image {
+  padding-top: 33.33333%;
+}
+@media (min-width: 65em) {
+  .fixed-image {
+    background-attachment: fixed;
+    background-position: center 60px;
+  }
 }
 .fixed-image .fixed-wrap {
   color: #fefefe;
@@ -3424,15 +3429,20 @@ nav a {
 }
 
 .fixed-image {
-  padding-top: 11.7rem;
-  background-attachment: fixed;
+  width: 100%;
+  padding-top: 66.66667%;
   background-position: center top;
   background-size: cover;
-  width: 100%;
-  height: auto;
+  background-repeat: no-repeat;
 }
-.section-header .fixed-image {
-  padding-bottom: 19.5rem;
+.page-header .fixed-image {
+  padding-top: 33.33333%;
+}
+@media (min-width: 65em) {
+  .fixed-image {
+    background-attachment: fixed;
+    background-position: center 60px;
+  }
 }
 .fixed-image .fixed-wrap {
   color: #fefefe;
