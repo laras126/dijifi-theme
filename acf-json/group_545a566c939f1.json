@@ -669,15 +669,7 @@
                                             "type": "text",
                                             "instructions": "Something like \"Use our estimator tool to get a detailed cost estimate of your transfer.\"",
                                             "required": 0,
-                                            "conditional_logic": [
-                                                [
-                                                    {
-                                                        "field": "field_54734f14cf408",
-                                                        "operator": "==",
-                                                        "value": "cta"
-                                                    }
-                                                ]
-                                            ],
+                                            "conditional_logic": 0,
                                             "wrapper": {
                                                 "width": "",
                                                 "class": "",
@@ -699,15 +691,7 @@
                                             "type": "text",
                                             "instructions": "No more than three words.",
                                             "required": 0,
-                                            "conditional_logic": [
-                                                [
-                                                    {
-                                                        "field": "field_54734f14cf408",
-                                                        "operator": "==",
-                                                        "value": "cta"
-                                                    }
-                                                ]
-                                            ],
+                                            "conditional_logic": 0,
                                             "wrapper": {
                                                 "width": "",
                                                 "class": "",
@@ -729,15 +713,7 @@
                                             "type": "page_link",
                                             "instructions": "Select a page for the button to link to.",
                                             "required": 0,
-                                            "conditional_logic": [
-                                                [
-                                                    {
-                                                        "field": "field_54734f14cf408",
-                                                        "operator": "==",
-                                                        "value": "cta"
-                                                    }
-                                                ]
-                                            ],
+                                            "conditional_logic": 0,
                                             "wrapper": {
                                                 "width": "",
                                                 "class": "",
@@ -759,15 +735,7 @@
                                             "type": "text",
                                             "instructions": "Leave this blank if you are selecting a page above. You can also link to another section of this page, by adding a # in front of the \"Menu Item Title\" e.g. #Formats or #Quick_Quote.",
                                             "required": 0,
-                                            "conditional_logic": [
-                                                [
-                                                    {
-                                                        "field": "field_54734f14cf408",
-                                                        "operator": "==",
-                                                        "value": "cta"
-                                                    }
-                                                ]
-                                            ],
+                                            "conditional_logic": 0,
                                             "wrapper": {
                                                 "width": "",
                                                 "class": "",

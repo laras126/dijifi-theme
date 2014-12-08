@@ -1,0 +1,14 @@
+{% extends "blocks/block.twig" %}
+
+{% block content %}
+	<div class="inner rotate-med inner-pad text-center">
+		<div>
+			<p class="lead">{{blck.cta_text}}</p>		
+		</div>
+		<div class="clearfix">
+			<p class="text-center">
+				<a href="{{blck.cta_link_to_page ? blck.cta_link_to_page : blck.cta_raw_link}}" class="button-cta">{{blck.cta_btn_text}}</a>
+			</p>
+		</div>
+	</div>
+{% endblock %}

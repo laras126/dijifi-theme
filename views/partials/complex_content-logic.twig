@@ -26,26 +26,13 @@
                     {% include 'blocks/block-blank.twig' %}
                 {% elseif blck.acf_fc_layout == 'block_testimonial' %}
                     {% include 'blocks/block-testimonial.twig' %} {# Note: this should be a global testimonial template, and not part of dividers any more! #}
+                {% elseif blck.acf_fc_layout == 'block_cta' %}
+                    {% include 'blocks/block-cta.twig' %}
                 {% endif %}
             {% endfor %}
 
         </section> <!-- /.content -->
-	
-    {% elseif content.acf_fc_layout == 'divider' %}
-
-        {% set display_class = content.display %}
-        {% set div = content %} {# b/c using a different var in the template #}
-            
-        <aside class="divider display-{{display_class}}">
-            {% if div.divider_type == 'testimonial' %}
-                {% include 'dividers/div-testimonial.twig' %}
-            {% elseif div.divider_type == 'cta' %}
-                {% include 'dividers/div-cta.twig' %}
-            {% elseif div.divider_type == 'related' %}
-                {% include 'dividers/div-related.twig' %}
-            {% endif %}
-        </aside> <!-- /.divider-{{display_class}} -->
-
+        
     {% endif %}
 
 {% endfor %}
