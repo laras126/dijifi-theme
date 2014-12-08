@@ -1,28 +1,13 @@
 {% extends "blocks/block.twig" %}
 
 {% block content %}
-{# <div class="inner-full"> #}
-
-{# 	<span class="prompt-wrap">
 	
-	</span>
-	{# <div class="row"> #}
-		
-			
-	{% for related in blck.page %}
-		<div class="inner-squish" style="position: relative;">
-
-			{# <div class="prompt-wrap"> #}
-				<div class="prompt"><span class="meta">Explore</span></div>
-			{# </div> #}
-			{# <div class="col-lg-4"> #}
+		<div class="inner-squish">
+			<div class="prompt"><span class="meta">Explore</span></div>
+			{% for related in blck.page %}
 				<h4>{{related.post_title}}</h4>
-				<p>{{related.summary}} <a href="{{related.guid}}">Read more...</a></p>	
-				<p></p>
-				{# TODO: related.link not working...using guid now I guess? #}
-			{# </div> #}
+				<p>{{blck.description}} <a href="{{related.guid}}">Read more...</a></p>
+			{% endfor %}
 		</div>
-	{% endfor %}
-{# </div> #}
-{# </div> #}
+
 {% endblock %}
