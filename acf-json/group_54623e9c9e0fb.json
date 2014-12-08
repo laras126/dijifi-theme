@@ -56,12 +56,52 @@
                     "display": "row",
                     "sub_fields": [
                         {
+                            "key": "field_54623e9ca5697",
+                            "label": "Text",
+                            "name": "text",
+                            "prefix": "",
+                            "type": "textarea",
+                            "instructions": "Text should supporting the image next to it. It's kind of like an expanded caption, and can be no more than 350 characters.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": 350,
+                            "rows": "",
+                            "new_lines": "br",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_54623e9ca569e",
+                            "label": "Image",
+                            "name": "image",
+                            "prefix": "",
+                            "type": "image",
+                            "instructions": "Upload an image. It's dimensions should be approximately 800x600.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all"
+                        },
+                        {
                             "key": "field_54623e9ca56a6",
                             "label": "Text Format",
                             "name": "text_format",
                             "prefix": "",
                             "type": "radio",
-                            "instructions": "Should the text display on the left or right?",
+                            "instructions": "What format should the text take?",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -77,81 +117,6 @@
                             "save_other_choice": 0,
                             "default_value": "",
                             "layout": "vertical"
-                        },
-                        {
-                            "key": "field_54623e9ca569e",
-                            "label": "Image",
-                            "name": "image",
-                            "prefix": "",
-                            "type": "image",
-                            "instructions": "For a caption format, dimensions should be approximately 800x600 and 600x800 for the paragraph format, depending on how long the text is.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "preview_size": "thumbnail",
-                            "library": "all"
-                        },
-                        {
-                            "key": "field_54623e9ca5697",
-                            "label": "Caption Text",
-                            "name": "caption_text",
-                            "prefix": "",
-                            "type": "textarea",
-                            "instructions": "A caption for the image. It will display on the left.",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_54623e9ca56a6",
-                                        "operator": "==",
-                                        "value": "caption"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "maxlength": 350,
-                            "rows": "",
-                            "new_lines": "br",
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
-                            "key": "field_5480a535d9487",
-                            "label": "Paragraph Text",
-                            "name": "paragraph_text",
-                            "prefix": "",
-                            "type": "wysiwyg",
-                            "instructions": "Paragraph text to display to the right of the image.",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_54623e9ca56a6",
-                                        "operator": "==",
-                                        "value": "paragraph"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "visual",
-                            "toolbar": "text_based",
-                            "media_upload": 0
                         }
                     ],
                     "min": "",
