@@ -58,13 +58,13 @@ nav[role="navigation"] {
         font-weight: 400;    
     }
 
-    background-color: $text-med;
+    background: $accent-vlight;
 }
 
 .menu-main {
 
     li {
-        @include border(lighten($text-dark, 20%), bottom);
+        @include border($text-med, bottom);
         &:last-child {
             border-bottom: none;
         }
@@ -78,7 +78,6 @@ nav[role="navigation"] {
         }
         
         @extend %h5;
-        // color: $text-light;
     }
 }
 
@@ -86,14 +85,13 @@ nav[role="navigation"] {
     @extend .clearfix;
     background-color: $alert-info;
     text-align: center;
+    a {
+        color: $text-light;
+    }
 }
 
 .item-split {
     @include make-xs-column(3.5, false);
-
-    // &:first-child {
-    //     @include border($accent-light, right);
-    // }
 }
 
 .menu-item-cta {

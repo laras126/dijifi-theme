@@ -1244,7 +1244,7 @@ h5, .ginput_complex label, table caption, .prompt, .prompt span {
 .header-tag,
 .menu-footer a {
   font-size: 0.975rem;
-  font-family: "Source Sans Pro";
+  font-family: "source-sans-pro", Georgia, serif;
   margin: 0;
 }
 
@@ -1263,7 +1263,7 @@ input[type="url"],
 input[type="search"],
 input[type="tel"] {
   padding: 0.325rem 0.4875rem;
-  font-family: "Source Sans Pro";
+  font-family: "source-sans-pro", Georgia, serif;
 }
 
 .hide-until-md {
@@ -1290,7 +1290,7 @@ input[type="submit"],
 button, .button-cta, .button-success, .link-more {
   border: none;
   padding: 0.4875rem 0.975rem;
-  font-family: "Source Sans Pro";
+  font-family: "source-sans-pro", Georgia, serif;
   background: #80C25D;
   font-weight: 700;
   color: #fefefe !important;
@@ -1345,7 +1345,7 @@ html {
 }
 
 body {
-  font-family: "Chaparral Pro";
+  font-family: "chaparral-pro", Georgia, serif;
   font-size: 1.3rem;
 }
 
@@ -1361,7 +1361,7 @@ a:link {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Source Sans Pro";
+  font-family: "source-sans-pro", Georgia, serif;
   margin-bottom: 0;
 }
 
@@ -1444,7 +1444,7 @@ blockquote {
 label {
   margin-top: 1.56rem;
   margin-bottom: 0.4875rem;
-  font-family: "Source Sans Pro";
+  font-family: "source-sans-pro", Georgia, serif;
 }
 
 input[type="search"] {
@@ -1629,7 +1629,7 @@ fieldset {
 
 table {
   width: 100%;
-  font-family: "Source Sans Pro";
+  font-family: "source-sans-pro", Georgia, serif;
   margin-bottom: 1.5em;
 }
 table caption {
@@ -1673,11 +1673,11 @@ ul, ol {
 
 .lead, .page-tagline {
   font-size: 1.56rem;
-  font-family: "Source Sans Pro";
+  font-family: "source-sans-pro", Georgia, serif;
 }
 
 nav a {
-  font-family: "Source Sans Pro";
+  font-family: "source-sans-pro", Georgia, serif;
 }
 
 .fixed-image {
@@ -1712,7 +1712,7 @@ nav a {
 }
 
 nav[role="navigation"] {
-  font-family: "Source Sans Pro";
+  font-family: "source-sans-pro", Georgia, serif;
 }
 
 .menu-items {
@@ -1745,14 +1745,14 @@ nav[role="navigation"] {
 }
 
 .subnav {
-  background-color: #999;
+  background: #faf3db;
 }
 .subnav a {
   font-weight: 400;
 }
 
 .menu-main li {
-  border-bottom: 1px solid #444444;
+  border-bottom: 1px solid #999;
 }
 .menu-main li:last-child {
   border-bottom: none;
@@ -1769,6 +1769,9 @@ nav[role="navigation"] {
 .menu-item-complex {
   background-color: #3C7AAA;
   text-align: center;
+}
+.menu-item-complex a {
+  color: #fefefe;
 }
 
 .item-split {
@@ -2001,7 +2004,7 @@ nav[role="navigation"] {
 .site-footer {
   background-color: #D14A29;
   color: #fefefe;
-  font-family: "Source Sans Pro";
+  font-family: "source-sans-pro", Georgia, serif;
 }
 
 @media (min-width: 50em) {
@@ -2165,7 +2168,7 @@ figure {
 }
 
 .param-options-list {
-  font-family: "Source Sans Pro";
+  font-family: "source-sans-pro", Georgia, serif;
   margin-bottom: 0.975rem;
 }
 
