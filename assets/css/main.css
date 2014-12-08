@@ -2214,21 +2214,37 @@ figure {
   display: none;
 }
 
+.block_related_page {
+  background-color: #faf3db;
+  border-top: 4px solid #80C25D;
+  border-bottom: 4px solid #80C25D;
+}
+
+.prompt {
+  position: relative;
+  top: 4px;
+}
 @media (min-width: 65em) {
   .prompt {
-    text-align: right;
+    transform: rotate(-90deg);
+    transform-origin: left bottom;
+    position: absolute;
+    left: 0;
+    top: 88px;
   }
 }
 .prompt span {
   position: relative;
+  padding: 0.4875rem 0.975rem;
   background-color: #80C25D;
   color: #fefefe;
-  padding: 0.4875rem 0.975rem;
-  display: inline-block;
+  position: relative;
+  z-index: 4;
 }
-
-.block_related_page .col-lg-8 {
-  border-top: 4px solid #80C25D;
+@media (min-width: 65em) {
+  .prompt span {
+    right: -0.975rem;
+  }
 }
 
 .divider-overlay {

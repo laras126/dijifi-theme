@@ -1,47 +1,38 @@
 
+.block_related_page {
+	background-color: $accent-vlight;
+	border-top: 4px solid $accent-med;
+	border-bottom: 4px solid $accent-med;
+}
+
 .prompt-wrap {}
 
 	.prompt {
-		// border-bottom: $accent-border;
 		@extend %upperspace;
+		position: relative;
+		top: 4px;
+		// @include make-lg-column(2);
 		
 		@include bp(large) {
-			// border-bottom: 0;
-			// transform: rotate(-90deg);
-			// transform-origin: right $h1;
-			text-align: right;
-			// position: relative;
-			// right: -$sml;
-
+			transform: rotate(-90deg);
+			// IMPORTANT: Can't leave this like this
+			transform-origin: left bottom;
+			position: absolute;
+			left: 0;
+			top: 88px;
 		}
 		
 		span {
-			position: relative; 
-			// top: $sml; 
-			// left: $sml;
-			// padding: $sml/2 $sml;
-			// background-color: $body-bkgd;
-			background-color: $accent-med;
-			color: $text-light;
+			position: relative;
 			padding: $sml/2 $sml;
-			display: inline-block;	
-			// border-top: $accent-border;
-			// border-right: $accent-border;
-			// border-left: $accent-border;
-			// border-bottom: 0;
-			// position: relative;
-			// z-index: $ztop;
+			@include rotate($text-light, $accent-med);
+			position: relative;
+			z-index: $ztop;
 
 			@include bp(large) {
-				
-				// right: -$sml;
+				right: -$sml;
 			}
 
 			@extend %upperspace;
 		}
 	}
-
-.block_related_page .col-lg-8 {
-	// background-color: $accent-vlight;
-	border-top: 4px solid $accent-med;
-}

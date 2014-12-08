@@ -16,6 +16,7 @@ $navy:	 		#222334;
 $tan: 			#faf3db;		
 $newgreen: 		#80C25D;
 $dred: 			#D14A29;
+$orange: 		lighten(#D14A29, 20%);
 $light-tan: 	#fdfaf1;
 
 
@@ -27,6 +28,7 @@ $accent-med:	$newgreen;
 $accent-dark:	$navy;
 
 $alert-danger: 	$dred;
+$alert-warning: $orange;
 $alert-info: 	$blue;
 $alert-success: $accent-med;
 
