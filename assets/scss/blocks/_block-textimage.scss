@@ -39,6 +39,8 @@ figure {
 	.caption-image {
 		@include make-lg-column(5.5, false);
 		float: right;
+		border-top: $accent-border;
+
 		// img {
 		// 	width: 100%;
 		// }

@@ -1245,7 +1245,6 @@ h5, .ginput_complex label, table caption, .prompt, .prompt span {
 .menu-footer a {
   font-size: 0.975rem;
   font-family: "Source Sans Pro";
-  color: #999;
   margin: 0;
 }
 
@@ -2117,6 +2116,7 @@ figure {
 
 .caption-image {
   float: right;
+  border-top: 1px solid #80C25D;
 }
 @media (min-width: 65em) {
   .caption-image {

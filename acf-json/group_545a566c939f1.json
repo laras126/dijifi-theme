@@ -8,7 +8,7 @@
             "name": "content",
             "prefix": "",
             "type": "flexible_content",
-            "instructions": "Sections are the main containers for page content. They can be separated by \"Dividers\" to provide marketing content.",
+            "instructions": "Add a new section for each part of this page's content. Sections act as \"sub pages\" so to speak, and each will appear in a sub menu below the header.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -568,12 +568,12 @@
                                     "display": "row",
                                     "sub_fields": [
                                         {
-                                            "key": "field_546bb5b2a6324",
-                                            "label": "Icon",
-                                            "name": "icon",
+                                            "key": "field_5485bd22593e9",
+                                            "label": "Description",
+                                            "name": "description",
                                             "prefix": "",
-                                            "type": "select",
-                                            "instructions": "Select an icon to display next to the Page's summary.",
+                                            "type": "textarea",
+                                            "instructions": "A description of the page, and how it relates to this one. 2-4 sentences.",
                                             "required": 0,
                                             "conditional_logic": 0,
                                             "wrapper": {
@@ -581,17 +581,13 @@
                                                 "class": "",
                                                 "id": ""
                                             },
-                                            "choices": {
-                                                "scanner": "Scanner"
-                                            },
-                                            "default_value": [],
-                                            "allow_null": 0,
-                                            "multiple": 0,
-                                            "ui": 0,
-                                            "ajax": 0,
+                                            "default_value": "",
                                             "placeholder": "",
-                                            "disabled": 0,
-                                            "readonly": 0
+                                            "maxlength": "",
+                                            "rows": 4,
+                                            "new_lines": "wpautop",
+                                            "readonly": 0,
+                                            "disabled": 0
                                         },
                                         {
                                             "key": "field_5462573ef68e2",
@@ -661,7 +657,7 @@
                                 },
                                 {
                                     "key": "5485958fbfa99",
-                                    "name": "call_to_action",
+                                    "name": "block_cta",
                                     "label": "Call to Action",
                                     "display": "row",
                                     "sub_fields": [
@@ -815,9 +811,9 @@
         ],
         [
             {
-                "param": "page",
+                "param": "page_template",
                 "operator": "==",
-                "value": "313"
+                "value": "template-long_form.php"
             }
         ]
     ],

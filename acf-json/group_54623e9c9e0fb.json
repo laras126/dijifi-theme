@@ -191,107 +191,10 @@
                 },
                 {
                     "key": "5473474cbc132",
-                    "name": "divider",
+                    "name": "block_cta",
                     "label": "Divider",
                     "display": "row",
                     "sub_fields": [
-                        {
-                            "key": "field_54734982db8b9",
-                            "label": "Divider Type",
-                            "name": "divider_type",
-                            "prefix": "",
-                            "type": "select",
-                            "instructions": "Select the type of divider to display.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "testimonial": "Testimonial",
-                                "cta": "Call to Action",
-                                "related": "Related Content"
-                            },
-                            "default_value": [],
-                            "allow_null": 0,
-                            "multiple": 0,
-                            "ui": 0,
-                            "ajax": 0,
-                            "placeholder": "",
-                            "disabled": 0,
-                            "readonly": 0
-                        },
-                        {
-                            "key": "field_54623e9cb702a",
-                            "label": "Related Content",
-                            "name": "related_content",
-                            "prefix": "",
-                            "type": "relationship",
-                            "instructions": "If you'd like to highlight a certain page, connect it here. The title of the page, it's excerpt, and associated icon will display.",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_54734982db8b9",
-                                        "operator": "==",
-                                        "value": "related"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "post_type": [
-                                "page",
-                                "dfi_case_study",
-                                "dfi_service"
-                            ],
-                            "taxonomy": "",
-                            "filters": [
-                                "search",
-                                "post_type"
-                            ],
-                            "elements": "",
-                            "max": 1,
-                            "return_format": "object"
-                        },
-                        {
-                            "key": "field_54623e9cb7036",
-                            "label": "Testimonial",
-                            "name": "testimonial",
-                            "prefix": "",
-                            "type": "relationship",
-                            "instructions": "Select the testimonial to display.",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_54734982db8b9",
-                                        "operator": "==",
-                                        "value": "testimonial"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "post_type": [
-                                "dfi_testimonial"
-                            ],
-                            "taxonomy": "",
-                            "filters": [
-                                "search"
-                            ],
-                            "elements": "",
-                            "max": 1,
-                            "return_format": "object"
-                        },
                         {
                             "key": "field_54623e9cb703f",
                             "label": "Text",
@@ -381,6 +284,130 @@
                             "taxonomy": "",
                             "allow_null": 0,
                             "multiple": 0
+                        },
+                        {
+                            "key": "field_5485be8fff980",
+                            "label": "Raw Link",
+                            "name": "cta_raw_link",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "If the link isn't available as a page on the site, paste the URL here.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "5485be4fff97f",
+                    "name": "block_testimonial",
+                    "label": "Testimonial",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_54623e9cb7036",
+                            "label": "Testimonial",
+                            "name": "testimonial",
+                            "prefix": "",
+                            "type": "relationship",
+                            "instructions": "Select the testimonial to display.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_54734982db8b9",
+                                        "operator": "==",
+                                        "value": "testimonial"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "dfi_testimonial"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "search"
+                            ],
+                            "elements": "",
+                            "max": 1,
+                            "return_format": "object"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "5485bdedff97e",
+                    "name": "block_related_page",
+                    "label": "Related Page",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5485bda33cf4b",
+                            "label": "Description",
+                            "name": "description",
+                            "prefix": "",
+                            "type": "textarea",
+                            "instructions": "A description of the page, and how it relates to this one. 2-4 sentences.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 4,
+                            "new_lines": "wpautop",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_5485bda53cf4c",
+                            "label": "Connect a Page",
+                            "name": "page",
+                            "prefix": "",
+                            "type": "relationship",
+                            "instructions": "Select a page to link to.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "page",
+                                "dfi_case_study",
+                                "dfi_service"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "search"
+                            ],
+                            "elements": "",
+                            "max": "",
+                            "return_format": "object"
                         }
                     ],
                     "min": "",
@@ -397,9 +424,9 @@
                 "value": "page"
             },
             {
-                "param": "page",
+                "param": "page_template",
                 "operator": "!=",
-                "value": "313"
+                "value": "template-long_form.php"
             }
         ]
     ],

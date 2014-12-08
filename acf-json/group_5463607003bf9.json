@@ -11,6 +11,11 @@
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "return_format": "array",
             "preview_size": "thumbnail",
             "library": "all"
@@ -24,6 +29,11 @@
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "default_value": "",
             "placeholder": "",
             "maxlength": 200,
@@ -41,6 +51,11 @@
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "default_value": "",
             "tabs": "all",
             "toolbar": "text_based",
@@ -72,7 +87,6 @@
         "format",
         "page_attributes",
         "featured_image",
-        "categories",
         "tags",
         "send-trackbacks"
     ]

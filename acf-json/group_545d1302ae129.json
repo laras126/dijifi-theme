@@ -11,6 +11,11 @@
             "instructions": "Select the type of page intro you would like.",
             "required": 0,
             "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "choices": {
                 "text": "Text Only",
                 "image": "Header Image",
@@ -38,6 +43,11 @@
                     }
                 ]
             ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "return_format": "array",
             "preview_size": "thumbnail",
             "library": "all"
@@ -59,6 +69,11 @@
                     }
                 ]
             ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "default_value": "",
             "placeholder": ""
         },
@@ -79,6 +94,11 @@
                     }
                 ]
             ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "return_format": "url",
             "preview_size": "thumbnail",
             "library": "all"
@@ -100,24 +120,12 @@
                     }
                 ]
             ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "message": "The \"Text Only\" header will display the page title, tagline, and summary."
-        },
-        {
-            "key": "field_545a8607b0f51",
-            "label": "Tagline",
-            "name": "tagline",
-            "prefix": "",
-            "type": "text",
-            "instructions": "A few words describing the page. Should be friendly and informative, no longer than a tweet.",
-            "required": 0,
-            "conditional_logic": 0,
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": 140,
-            "readonly": 0,
-            "disabled": 0
         },
         {
             "key": "field_545a8366b7ae4",
@@ -125,13 +133,18 @@
             "name": "summary",
             "prefix": "",
             "type": "textarea",
-            "instructions": "2-3 sentences summarizing the page content. This summary will be used if you connect this page in a \"Related Pages\" block.",
+            "instructions": "1-2 sentences summarizing the page content. This will display below the page title.",
             "required": 0,
             "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "default_value": "",
             "placeholder": "",
-            "maxlength": "",
-            "rows": "",
+            "maxlength": 350,
+            "rows": 3,
             "new_lines": "wpautop",
             "readonly": 0,
             "disabled": 0
@@ -174,7 +187,6 @@
         "revisions",
         "author",
         "format",
-        "page_attributes",
         "featured_image",
         "categories",
         "tags",
