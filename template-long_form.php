@@ -2,7 +2,7 @@
 
 /*
  * Template Name: Long Form
- * Description: A Page Template with a darker design.
+ * Description: A Page Template using the "Complex Content" ACF structure.
  */
 
 $context = Timber::get_context();

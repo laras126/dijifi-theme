@@ -1,0 +1,17 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<div class="contain">
+		<br>
+		{% for type in studies %}
+			<br>
+			<p class="meta">{{type.name}}</p>
+			{% for case in type.posts %}
+				<h2 class="no-margin"><a href="{{case.guid}}">{{case.post_title}}</a></h2>
+				<p class="lead">{{case.summary}}</p>
+			{% endfor %}
+		{% endfor %}
+	</div>
+	
+{% endblock %}
