@@ -56,28 +56,6 @@
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_54623e9ca5697",
-                            "label": "Text",
-                            "name": "text",
-                            "prefix": "",
-                            "type": "textarea",
-                            "instructions": "Text should supporting the image next to it. It's kind of like an expanded caption, and can be no more than 350 characters.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "maxlength": 350,
-                            "rows": "",
-                            "new_lines": "br",
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
                             "key": "field_54623e9ca569e",
                             "label": "Image",
                             "name": "image",
@@ -192,6 +170,35 @@
                     "label": "Call to Action",
                     "display": "row",
                     "sub_fields": [
+                        {
+                            "key": "field_548b066a66a03",
+                            "label": "Background Color",
+                            "name": "cta_rotate",
+                            "prefix": "",
+                            "type": "select",
+                            "instructions": "Select the background color for the call to action box.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "clear": "Clear",
+                                "light": "Light",
+                                "med": "Medium",
+                                "dark": "Dark"
+                            },
+                            "default_value": [],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "disabled": 0,
+                            "readonly": 0
+                        },
                         {
                             "key": "field_548af71041917",
                             "label": "Text",
@@ -318,5 +325,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1418396501
+    "modified": 1418417248
 }

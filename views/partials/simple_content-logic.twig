@@ -1,5 +1,7 @@
 {% for blck in post.get_field('blocks') %} 
+
     {% set block_class = blck.acf_fc_layout %}
+
     {% if blck.acf_fc_layout == 'block_text' %}
         {% include 'blocks/block-text.twig' %}   
     {% elseif blck.acf_fc_layout == 'block_textimage' %}
@@ -8,14 +10,10 @@
         {% include 'blocks/block-related.twig' %}
     {% elseif blck.acf_fc_layout == 'block_blank' %}
         {% include 'blocks/block-blank.twig' %}
-    {% elseif blck.acf_fc_layout == 'divider' %}
-        {% set div = blck %} {# b/c using a different var in the template #}
-        {% if div.divider_type == 'testimonial' %}
-            {% include 'dividers/div-testimonial.twig' %}
-        {% elseif div.divider_type == 'cta' %}
-            {% include 'dividers/div-cta.twig' %}
-        {% elseif div.divider_type == 'related' %}
-            {% include 'dividers/div-related.twig' %}
-        {% endif %}
+    {% elseif blck.acf_fc_layout == 'block_cta' %}
+        {% include 'blocks/block-cta.twig' %}
+    {% elseif blck.acf_fc_layout == 'block_testimonial' %}
+        {% include 'blocks/block-testimonial.twig' %}
     {% endif %}
+    
 {% endfor %}
