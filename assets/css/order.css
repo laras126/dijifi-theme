@@ -1236,6 +1236,10 @@ th {
   clear: both;
 }
 
+.creds {
+  padding: 1.3rem 0;
+}
+
 .order-full-txt-alert,
 .order-full-txt-alert2,
 .order-full-txt-alert3,
@@ -1255,7 +1259,7 @@ th {
   display: inline-block;
 }
 
-h5, .ginput_complex label, table caption, .sum-table-right {
+.ginput_complex label, table caption, .sum-table-right {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -1264,7 +1268,7 @@ h5, .ginput_complex label, table caption, .sum-table-right {
 .ginput_complex label,
 .sum-table-right,
 .header-tag,
-.menu-footer a,
+.site-footer li,
 .gfield_description,
 .gfield_checkbox label,
 .link-edit,
@@ -1444,7 +1448,7 @@ nav[role="navigation"] {
 }
 
 .menu-main li {
-  border-bottom: 1px solid #999;
+  border-false: bottom solid #999;
 }
 .menu-main li:last-child {
   border-bottom: none;
@@ -1537,7 +1541,7 @@ nav[role="navigation"] {
 
   .subnav {
     background-color: #fefefe;
-    border-top: 1px solid #3C7AAA;
+    border-false: top solid #3C7AAA;
   }
   .subnav a {
     padding-top: 0;
@@ -1694,9 +1698,13 @@ nav[role="navigation"] {
 }
 
 .site-footer {
-  background-color: #D14A29;
-  color: #fefefe;
   font-family: "source-sans-pro", Georgia, serif;
+  border-top: 4px solid #FFCC53;
+}
+
+.creds {
+  background-color: #3C7AAA;
+  color: #fefefe;
 }
 
 @media (min-width: 50em) {
@@ -3181,11 +3189,19 @@ strong {
 blockquote {
   font-size: 1.56rem;
   font-style: italic;
-  padding-left: 3.12rem;
+  overflow: visible;
   margin-left: 0;
+  margin: 0;
+  padding: 0;
+}
+blockquote:before {
+  content: " ";
+  width: 2.6rem;
+  height: 2.6rem;
+  position: absolute;
+  left: -1.3rem;
   background-image: url(../img/svgs/quotes-left.svg);
   background-repeat: no-repeat;
-  margin: 0;
 }
 
 *:focus {
@@ -3511,7 +3527,7 @@ nav[role="navigation"] {
 }
 
 .menu-main li {
-  border-bottom: 1px solid #999;
+  border-false: bottom solid #999;
 }
 .menu-main li:last-child {
   border-bottom: none;
@@ -3604,7 +3620,7 @@ nav[role="navigation"] {
 
   .subnav {
     background-color: #fefefe;
-    border-top: 1px solid #3C7AAA;
+    border-false: top solid #3C7AAA;
   }
   .subnav a {
     padding-top: 0;
@@ -3761,9 +3777,13 @@ nav[role="navigation"] {
 }
 
 .site-footer {
-  background-color: #D14A29;
-  color: #fefefe;
   font-family: "source-sans-pro", Georgia, serif;
+  border-top: 4px solid #FFCC53;
+}
+
+.creds {
+  background-color: #3C7AAA;
+  color: #fefefe;
 }
 
 @media (min-width: 50em) {

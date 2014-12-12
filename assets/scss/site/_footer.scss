@@ -1,17 +1,26 @@
 
 .site-footer {
-	@include rotate($bkgd: $alert-danger);
+	// background-color: $accent-vlight;
 	font-family: $sans-serif;
-
+	@include border($color: $accent-light, $width: 4px, $side: top);
+	
 	ul {
 		@extend %unstyle-list;
 	}
+
+	li {
+		@extend %meta;
+	}
 }
+
+	.creds {
+		@include rotate($text-light, $alert-info);
+		@extend %pad_tb;
+	}
 
 .menu-footer {
 	
 	a {
-		@extend %meta;
 	}
 }
 

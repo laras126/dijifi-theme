@@ -1,11 +1,5 @@
-.block_testimonial {
-
-	.inner {
-		padding-bottom: $h4;
-		padding-top: $h4;
-		@include border($accent-med, top);
-		@include border($accent-med, bottom);
-	}
+.block {
+	margin-top: $h3;
 	margin-bottom: $h3;
 }
 
@@ -17,3 +11,4 @@
 @import 'block-textimage';
 @import 'block-quoter';
 @import 'block-related';
+@import 'block-testimonial';

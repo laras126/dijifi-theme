@@ -49,7 +49,6 @@
 }
 
 .inner-squish {
-    // @include inner(squish);
     @include make-md-column(5);
     @include make-md-column-offset(1);
 

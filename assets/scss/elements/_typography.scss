@@ -78,7 +78,7 @@ h4 {
 
 h5 {
 	@extend %h5;
-	@extend %upperspace;
+	// @extend %upperspace;
 	margin-top: $base;
 }
 
@@ -105,9 +105,19 @@ strong {
 blockquote {
 	font-size: $h4;
 	font-style: italic;
-	padding-left: $h2;
+	overflow: visible;
 	margin-left: 0;
-	background-image: url(../img/svgs/quotes-left.svg);
-	background-repeat: no-repeat;
 	margin: 0;
+	padding: 0;
+
+	&:before {
+		content: " ";
+		width: $h3;
+		height: $h3;
+		position: absolute;
+		left: -$base;
+		background-image: url(../img/svgs/quotes-left.svg);
+		background-repeat: no-repeat;
+	}
 }
+

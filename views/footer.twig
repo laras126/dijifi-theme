@@ -1,62 +1,65 @@
 
 {% set blck = post %}
-
-<div class="rotate-med clearfix">
-		
-	<div class="inner inner-pad text-center">
-		<div>
-			<p class="lead">Blahbala</p>		
-		</div>
-		<div class="clearfix">
-			<p class="text-center">
-				<a href="{{blck.cta_link_to_page ? blck.cta_link_to_page : blck.cta_raw_link}}" class="button-cta">YO</a>
-			</p>
+	<div class="rotate-med clearfix">
+		<div class="inner text-center">
+			<div>
+				<p class="lead">Ready to roll? Use our handy tool to estimate your project cost, or feel free to call at (646) 519-2447.</p>		
+			</div>
+			<div class="clearfix">
+				<p class="text-center">
+					<a href="{{blck.cta_link_to_page ? blck.cta_link_to_page : blck.cta_raw_link}}" class="button-cta">Estimate Your Order</a>
+				</p>
+			</div>
 		</div>
 	</div>
-	
-</div>
 
-<div class="contain">
-	<div class="widget">
-		<h5>Yelp and Business Creds</h5>
-		<img src="{{site.url}}/wp-content/themes/dijifi-theme/assets/img/content/bbb.png" alt="Accredited Business">
-		{# <img src="{{site.url}}/wp-content/themes/dijifi-theme/assets/img/content/angies.png" alt="Angie's List Super Service Award, 2013"> #}
-		
-	</div>
+	<div class="contain">
+		<br>
+		<br>
+		<div class="widget">
+			<h5>Yelp and Business Creds</h5>
+			<img src="{{site.url}}/wp-content/themes/dijifi-theme/assets/img/content/bbb.png" alt="Accredited Business">
+			{# <img src="{{site.url}}/wp-content/themes/dijifi-theme/assets/img/content/angies.png" alt="Angie's List Super Service Award, 2013"> #}
+			<svg class="shape shape-yelp"><use xlink:href="#shape-yelp" /></svg>
+		</div>
 	
-	<div class="widget">
-		<h5>Read More</h5>
-		<nav class="menu-footer" role="navigation">	
+		<div class="widget">
+			<h5>Read More</h5>
+			<nav class="menu-footer" role="navigation">	
+				<ul>
+					{% for item in footer_nav.items %}
+						<li>
+							<a href="{{item.link}}">{{item.title}}</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</nav><!-- /.menu-footer -->		
+		</div>
+
+		<div class="widget">
+			<h5>Get in touch</h5>
 			<ul>
-				{% for item in footer_nav.items %}
-					<li>
-						<a href="{{item.link}}">{{item.title}}</a>
-					</li>
-				{% endfor %}
+				<li>1166 Manhattan Ave #100<br>
+					Brooklyn NY 11222</li>
+				<li>10-6 Mon-Fri</li>
+				<li>(646) 519-2447</li>
 			</ul>
-		</nav><!-- /.menu-footer -->		
+		</div>
+
+		<div class="widget">
+			<h5>Get in touch</h5>
+			<ul>
+				<li>1166 Manhattan Ave #100<br>
+					Brooklyn NY 11222</li>
+				<li>10-6 Mon-Fri</li>
+				<li>(646) 519-2447</li>
+			</ul>
+		</div>
 	</div>
 
-	<div class="widget">
-		<h5>Get in touch</h5>
-		<ul>
-			<li>1166 Manhattan Ave #100<br>
-				Brooklyn NY 11222</li>
-			<li>10-6 Mon-Fri</li>
-			<li>(646) 519-2447</li>
-		</ul>
+	<div class="creds rotate-dark">
+		<div class="contain">
+			<p class="col-sm-4-np meta">Powered by WordPress and Timber.</p>
+			<p class="meta col-sm-3-np text-right">&copy; DiJiFi, LLC {{"now"|date('Y')}}</p>	
+		</div>	
 	</div>
-
-	<div class="widget">
-		<h5>Get in touch</h5>
-		<ul>
-			<li>1166 Manhattan Ave #100<br>
-				Brooklyn NY 11222</li>
-			<li>10-6 Mon-Fri</li>
-			<li>(646) 519-2447</li>
-		</ul>
-	</div>
-
-	<p class="meta">Copyright {{"now"|date('Y')}}</p>
-
-</div>

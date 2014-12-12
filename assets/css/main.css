@@ -397,7 +397,7 @@ th {
 .col-xs-1, .col-xs-1-np, .col-xs-2, .col-xs-2-np, .col-xs-3, .col-xs-3-np, .col-xs-4, .col-xs-4-np, .col-xs-5, .col-xs-5-np, .col-xs-6, .col-xs-6-np, .col-sm-1, .col-sm-1-np, .col-sm-2, .col-sm-2-np, .col-sm-3, .col-sm-3-np, .col-sm-4, .col-sm-4-np, .col-sm-5, .col-sm-5-np, .col-sm-6, .col-sm-6-np, .col-md-1, .col-md-1-np, .col-md-2, .col-md-2-np, .col-md-3, .col-md-3-np, .col-md-4, .col-md-4-np, .col-md-5, .col-md-5-np, .col-md-6, .col-md-6-np, .col-lg-1, .col-lg-1-np, .col-lg-2, .col-lg-2-np, .col-lg-3, .col-lg-3-np, .col-lg-4, .col-lg-4-np, .col-lg-5, .col-lg-5-np, .col-lg-6, .col-lg-6-np, .inner, .inner-squish, .dfi-field-name, .dfi-field-name .ginput_left,
 .dfi-field-name .ginput_right, .dfi-field-email, .gform_footer,
 .dfi-field-message,
-.dfi-field-signup, .item-split, .header-brand, .header-nav-link, .header-nav, .focus-text, .widget, .artifact, .icon-item, .artifact-img, .icon-item-img, .artifact-desc, .icon-item-desc, .caption, .caption-image, .paragraph-image, .format-paragraph, .param-option, .divider-overlay {
+.dfi-field-signup, .item-split, .header-brand, .header-nav-link, .header-nav, .focus-text, .widget, .artifact, .icon-item, .artifact-img, .icon-item-img, .artifact-desc, .icon-item-desc, .caption, .caption-image, .paragraph-image, .format-paragraph, .param-option {
   float: left;
   position: relative;
   min-height: 1px;
@@ -1216,6 +1216,10 @@ th {
   display: block;
 }
 
+.creds {
+  padding: 1.3rem 0;
+}
+
 .alert {
   background-color: #faf3db;
   color: #111;
@@ -1231,7 +1235,7 @@ th {
   display: inline-block;
 }
 
-h5, .ginput_complex label, table caption, .prompt, .prompt span {
+.ginput_complex label, table caption, .prompt, .prompt span {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -1242,7 +1246,7 @@ h5, .ginput_complex label, table caption, .prompt, .prompt span {
 .gfield_checkbox label,
 .link-edit,
 .header-tag,
-.menu-footer a {
+.site-footer li {
   font-size: 0.975rem;
   font-family: "source-sans-pro", Georgia, serif;
   margin: 0;
@@ -1430,11 +1434,19 @@ strong {
 blockquote {
   font-size: 1.56rem;
   font-style: italic;
-  padding-left: 3.12rem;
+  overflow: visible;
   margin-left: 0;
+  margin: 0;
+  padding: 0;
+}
+blockquote:before {
+  content: " ";
+  width: 2.6rem;
+  height: 2.6rem;
+  position: absolute;
+  left: -1.3rem;
   background-image: url(../img/svgs/quotes-left.svg);
   background-repeat: no-repeat;
-  margin: 0;
 }
 
 *:focus {
@@ -1760,7 +1772,7 @@ nav[role="navigation"] {
 }
 
 .menu-main li {
-  border-bottom: 1px solid #999;
+  border-false: bottom solid #999;
 }
 .menu-main li:last-child {
   border-bottom: none;
@@ -1853,7 +1865,7 @@ nav[role="navigation"] {
 
   .subnav {
     background-color: #fefefe;
-    border-top: 1px solid #3C7AAA;
+    border-false: top solid #3C7AAA;
   }
   .subnav a {
     padding-top: 0;
@@ -2010,9 +2022,13 @@ nav[role="navigation"] {
 }
 
 .site-footer {
-  background-color: #D14A29;
-  color: #fefefe;
   font-family: "source-sans-pro", Georgia, serif;
+  border-top: 4px solid #FFCC53;
+}
+
+.creds {
+  background-color: #3C7AAA;
+  color: #fefefe;
 }
 
 @media (min-width: 50em) {
@@ -2023,14 +2039,9 @@ nav[role="navigation"] {
   }
 }
 
-.block_testimonial {
+.block {
+  margin-top: 2.6rem;
   margin-bottom: 2.6rem;
-}
-.block_testimonial .inner {
-  padding-bottom: 1.56rem;
-  padding-top: 1.56rem;
-  border-top: 1px solid #80C25D;
-  border-bottom: 1px solid #80C25D;
 }
 
 .block-intro {
@@ -2258,20 +2269,11 @@ figure {
   }
 }
 
-.divider-overlay {
-  padding-left: 1.3rem;
-  padding-right: 1.3rem;
-  width: 171.42857%;
-  min-height: 1px;
-  background-color: rgba(254, 254, 254, 0.8);
-  margin-top: 10%;
-}
-@media (min-width: 50em) {
-  .divider-overlay {
-    padding-left: 1.3rem;
-    padding-right: 1.3rem;
-    width: 114.28571%;
-  }
+.block_testimonial .inner-squish {
+  padding-bottom: 1.3rem;
+  padding-top: 1.3rem;
+  border-top: 1px solid #80C25D;
+  border-bottom: 1px solid #80C25D;
 }
 
 .svgsprites {
@@ -2300,6 +2302,19 @@ figure {
   margin: 0;
 }
 
+.rotate-dark {
+  background-color: #111;
+  color: #fefefe;
+}
+.rotate-med {
+  background-color: #80C25D;
+  color: #fefefe;
+}
+.rotate-light {
+  background-color: #FFCC53;
+  color: #fefefe;
+}
+
 .rotate {
   background-color: #111;
   color: #fefefe;
@@ -2313,6 +2328,11 @@ a.special {
 .green {
   background-color: #80C25D;
   color: #fefefe;
+}
+
+.border-tb {
+  border-top: 1px solid #80C25D;
+  border-bottom: 1px solid #80C25D;
 }
 
 .padded-sides {
@@ -2338,21 +2358,6 @@ a.special {
 .logo svg {
   display: block;
   margin-left: 25%;
-}
-
-.rotate-med {
-  background-color: #80C25D;
-  color: #fefefe;
-}
-
-.rotate-light {
-  background-color: #FFCC53;
-  color: #fefefe;
-}
-
-.rotate-misc {
-  background-color: #D14A29;
-  color: #fefefe;
 }
 
 .menu-sub-items li {
