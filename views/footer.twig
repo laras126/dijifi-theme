@@ -1,10 +1,15 @@
 
+{% set blck = post %}
+{% include 'blocks/block-cta.twig' %}
+				
+<div class="contain">
 	<div class="widget">
 		<h5>Yelp and Business Creds</h5>
-		<img src="http://www.dijifi.com/images/pic_bbb_rating.jpg" alt="">
-		<img src="http://www.angieslist.com/webbadge/86f894b9de6aa2a2fe8fcb6d67f74590.png" alt="">
+		<img src="{{site.url}}/wp-content/themes/dijifi-theme/assets/img/content/bbb.png" alt="Accredited Business">
+		<img src="{{site.url}}/wp-content/themes/dijifi-theme/assets/img/content/angies.png" alt="Angie's List Super Service Award, 2013">
 		<img src="http://dyn.yelpcdn.com/extimg/rc1/CwBYC8nVLbG7KjVU6nwR4A.png" alt="">
 	</div>
+	
 	<div class="widget">
 		<h5>Read More</h5>
 		<nav class="menu-footer" role="navigation">	
@@ -17,6 +22,17 @@
 			</ul>
 		</nav><!-- /.menu-footer -->		
 	</div>
+
+	<div class="widget">
+		<h5>Get in touch</h5>
+		<ul>
+			<li>1166 Manhattan Ave #100<br>
+				Brooklyn NY 11222</li>
+			<li>10-6 Mon-Fri</li>
+			<li>(646) 519-2447</li>
+		</ul>
+	</div>
+
 	<div class="widget">
 		<h5>Get in touch</h5>
 		<ul>
@@ -28,3 +44,5 @@
 	</div>
 
 	<p class="meta">Copyright {{"now"|date('Y')}}</p>
+
+</div>

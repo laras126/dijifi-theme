@@ -153,4 +153,9 @@
 	}
 	add_filter( 'acf/fields/wysiwyg/toolbars' , 'dfi_acf_wysiwyg_toolbar'  );
 
+
+	// Include other files from lib/
+
+	require('lib/widgets.php'); // Widgets
+	
 ?>

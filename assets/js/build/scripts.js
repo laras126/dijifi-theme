@@ -2,7 +2,9 @@
 
 $(document).ready(function() {
 	
+
 	$('body').addClass('js');
+
 
 	// ----
 	// Toggle Menu
@@ -28,6 +30,7 @@ $(document).ready(function() {
 		$this.toggleClass('open').next('ul').toggleClass('open');
 	});
 		
+
 
 	// ----
 	// Submenu

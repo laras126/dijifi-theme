@@ -33,6 +33,21 @@
 }
 
 .rotate {
+
+	&-dark {
+		@include rotate($text-light, $text-dark);
+	}
+
+	&-med {
+		@include rotate($text-light, $accent-med);
+	}
+
+	&-light {
+		@include rotate($text-light, $accent-light);	
+	}
+}
+
+.rotate {
 	@include rotate($text-light, $text-dark);
 }
 

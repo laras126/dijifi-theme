@@ -1374,7 +1374,13 @@ nav a {
 @media (min-width: 65em) {
   .fixed-image {
     background-attachment: fixed;
-    background-position: center 60px;
+    background-position: center;
+    padding-top: 50%;
+  }
+}
+@media (min-width: 78em) {
+  .fixed-image {
+    padding-top: 41.66667%;
   }
 }
 .page-header .fixed-image {
@@ -1697,7 +1703,7 @@ nav[role="navigation"] {
   .widget {
     padding-left: 1.3rem;
     padding-right: 1.3rem;
-    width: 33.33333%;
+    width: 25%;
   }
 }
 
@@ -3435,7 +3441,13 @@ nav a {
 @media (min-width: 65em) {
   .fixed-image {
     background-attachment: fixed;
-    background-position: center 60px;
+    background-position: center;
+    padding-top: 50%;
+  }
+}
+@media (min-width: 78em) {
+  .fixed-image {
+    padding-top: 41.66667%;
   }
 }
 .page-header .fixed-image {
@@ -3758,7 +3770,7 @@ nav[role="navigation"] {
   .widget {
     padding-left: 1.3rem;
     padding-right: 1.3rem;
-    width: 19.44444%;
+    width: 14.58333%;
   }
 }
 

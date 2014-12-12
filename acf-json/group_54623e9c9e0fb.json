@@ -56,12 +56,12 @@
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_54623e9ca56a6",
-                            "label": "Text Format",
-                            "name": "text_format",
+                            "key": "field_54623e9ca5697",
+                            "label": "Text",
+                            "name": "text",
                             "prefix": "",
-                            "type": "radio",
-                            "instructions": "What format should the text take?",
+                            "type": "textarea",
+                            "instructions": "Text should supporting the image next to it. It's kind of like an expanded caption, and can be no more than 350 characters.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -69,14 +69,13 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "choices": {
-                                "caption": "Caption",
-                                "paragraph": "Paragraph"
-                            },
-                            "other_choice": 0,
-                            "save_other_choice": 0,
                             "default_value": "",
-                            "layout": "vertical"
+                            "placeholder": "",
+                            "maxlength": 350,
+                            "rows": "",
+                            "new_lines": "br",
+                            "readonly": 0,
+                            "disabled": 0
                         },
                         {
                             "key": "field_54623e9ca569e",
@@ -97,64 +96,27 @@
                             "library": "all"
                         },
                         {
-                            "key": "field_54623e9ca5697",
-                            "label": "Text",
-                            "name": "text",
+                            "key": "field_54623e9ca56a6",
+                            "label": "Text Location",
+                            "name": "text_location",
                             "prefix": "",
-                            "type": "textarea",
-                            "instructions": "This text will display as a paragraph next to the image. It should relate to any text above and below.",
+                            "type": "radio",
+                            "instructions": "Should the text display on the left or right?",
                             "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_54623e9ca56a6",
-                                        "operator": "==",
-                                        "value": "paragraph"
-                                    }
-                                ]
-                            ],
+                            "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "placeholder": "",
-                            "maxlength": "",
-                            "rows": "",
-                            "new_lines": "br",
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
-                            "key": "field_54859a5125801",
-                            "label": "Caption",
-                            "name": "caption",
-                            "prefix": "",
-                            "type": "textarea",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_54623e9ca56a6",
-                                        "operator": "==",
-                                        "value": "caption"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
+                            "choices": {
+                                "left": "Left",
+                                "right": "Right"
                             },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
                             "default_value": "",
-                            "placeholder": "",
-                            "maxlength": "",
-                            "rows": 4,
-                            "new_lines": "br",
-                            "readonly": 0,
-                            "disabled": 0
+                            "layout": "vertical"
                         }
                     ],
                     "min": "",
@@ -190,150 +152,20 @@
                     "max": ""
                 },
                 {
-                    "key": "5473474cbc132",
-                    "name": "block_cta",
-                    "label": "Divider",
-                    "display": "row",
-                    "sub_fields": [
-                        {
-                            "key": "field_54623e9cb703f",
-                            "label": "Text",
-                            "name": "cta_text",
-                            "prefix": "",
-                            "type": "text",
-                            "instructions": "Something like \"Use our estimator tool to get a detailed cost estimate of your transfer.\"",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_54734982db8b9",
-                                        "operator": "==",
-                                        "value": "cta"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": 140,
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
-                            "key": "field_54623e9cb7061",
-                            "label": "Button Text",
-                            "name": "cta_btn_text",
-                            "prefix": "",
-                            "type": "text",
-                            "instructions": "No more than three words.",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_54734982db8b9",
-                                        "operator": "==",
-                                        "value": "cta"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
-                            "key": "field_54623e9cb707c",
-                            "label": "Link to Page",
-                            "name": "cta_link_to_page",
-                            "prefix": "",
-                            "type": "page_link",
-                            "instructions": "Select a page or service for the button to link to.",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_54734982db8b9",
-                                        "operator": "==",
-                                        "value": "cta"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "post_type": [
-                                "page",
-                                "dfi_service"
-                            ],
-                            "taxonomy": "",
-                            "allow_null": 0,
-                            "multiple": 0
-                        },
-                        {
-                            "key": "field_5485be8fff980",
-                            "label": "Raw Link",
-                            "name": "cta_raw_link",
-                            "prefix": "",
-                            "type": "text",
-                            "instructions": "If the link isn't available as a page on the site, paste the URL here.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                {
-                    "key": "5485be4fff97f",
+                    "key": "548af6f24190c",
                     "name": "block_testimonial",
                     "label": "Testimonial",
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_54623e9cb7036",
+                            "key": "field_548af6f24190f",
                             "label": "Testimonial",
                             "name": "testimonial",
                             "prefix": "",
                             "type": "relationship",
                             "instructions": "Select the testimonial to display.",
                             "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_54734982db8b9",
-                                        "operator": "==",
-                                        "value": "testimonial"
-                                    }
-                                ]
-                            ],
+                            "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -355,18 +187,18 @@
                     "max": ""
                 },
                 {
-                    "key": "5485bdedff97e",
-                    "name": "block_related_page",
-                    "label": "Related Page",
+                    "key": "548af71041913",
+                    "name": "block_cta",
+                    "label": "Call to Action",
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_5485bda33cf4b",
-                            "label": "Description",
-                            "name": "description",
+                            "key": "field_548af71041917",
+                            "label": "Text",
+                            "name": "cta_text",
                             "prefix": "",
-                            "type": "textarea",
-                            "instructions": "A description of the page, and how it relates to this one. 2-4 sentences.",
+                            "type": "text",
+                            "instructions": "Something like \"Use our estimator tool to get a detailed cost estimate of your transfer.\"",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -376,19 +208,41 @@
                             },
                             "default_value": "",
                             "placeholder": "",
-                            "maxlength": "",
-                            "rows": 4,
-                            "new_lines": "wpautop",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": 140,
                             "readonly": 0,
                             "disabled": 0
                         },
                         {
-                            "key": "field_5485bda53cf4c",
-                            "label": "Connect a Page",
-                            "name": "page",
+                            "key": "field_548af71041918",
+                            "label": "Button Text",
+                            "name": "cta_btn_text",
                             "prefix": "",
-                            "type": "relationship",
-                            "instructions": "Select a page to link to.",
+                            "type": "text",
+                            "instructions": "No more than three words.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_548af71041919",
+                            "label": "Link to Page",
+                            "name": "cta_link_to_page",
+                            "prefix": "",
+                            "type": "page_link",
+                            "instructions": "Select a page or service for the button to link to.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -398,16 +252,33 @@
                             },
                             "post_type": [
                                 "page",
-                                "dfi_case_study",
                                 "dfi_service"
                             ],
                             "taxonomy": "",
-                            "filters": [
-                                "search"
-                            ],
-                            "elements": "",
-                            "max": "",
-                            "return_format": "object"
+                            "allow_null": 0,
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_548af71f4191a",
+                            "label": "Raw Link",
+                            "name": "cta_raw_link",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Paste a link here if it is not part of this WP install (order page).",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
                         }
                     ],
                     "min": "",
@@ -424,9 +295,9 @@
                 "value": "page"
             },
             {
-                "param": "page_template",
+                "param": "page",
                 "operator": "!=",
-                "value": "template-long_form.php"
+                "value": "313"
             }
         ]
     ],
@@ -446,5 +317,6 @@
         "categories",
         "tags",
         "send-trackbacks"
-    ]
+    ],
+    "modified": 1418396501
 }

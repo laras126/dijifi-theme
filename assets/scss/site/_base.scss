@@ -80,7 +80,12 @@ nav a {
 
 	@include bp(large) {
 		background-attachment: fixed;
-		background-position: center 60px;
+		background-position: center;
+		padding-top: percentage(1.5/3);
+	}
+	
+	@include bp(xl) {
+		padding-top: percentage(1.25/3);	
 	}
 
 	.page-header & {

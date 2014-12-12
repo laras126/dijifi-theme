@@ -48,27 +48,12 @@
 	text-align: right;
 }
 
-
-
 .logo {
 	svg {
 		display: block;
 		margin-left: 25%;
 	}
 }
-
-.rotate-med {
-	@include rotate($bkgd: $accent-med);
-}
-
-.rotate-light {
-	@include rotate($bkgd: $accent-light);
-}
-
-.rotate-misc {
-	@include rotate($bkgd: $alert-danger);
-}
-
 
 .button-block {
 	@extend %btn-block;
