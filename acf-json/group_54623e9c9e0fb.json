@@ -44,6 +44,25 @@
                             "tabs": "all",
                             "toolbar": "text_based",
                             "media_upload": 0
+                        },
+                        {
+                            "key": "field_54623e9ca566c",
+                            "label": "Text",
+                            "name": "text",
+                            "prefix": "",
+                            "type": "wysiwyg",
+                            "instructions": "Add text content here. It will display in a column at the center of the page. Take care to use the headings appropriately, and use minimal formatting.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "text_based",
+                            "media_upload": 0
                         }
                     ],
                     "min": "",
@@ -55,6 +74,86 @@
                     "label": "Text and Image",
                     "display": "row",
                     "sub_fields": [
+                        {
+                            "key": "field_54623e9ca56a6",
+                            "label": "Text Format",
+                            "name": "text_format",
+                            "prefix": "",
+                            "type": "radio",
+                            "instructions": "What format should the text be?",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "caption": "Caption",
+                                "paragraph": "Paragraph"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "caption",
+                            "layout": "vertical"
+                        },
+                        {
+                            "key": "field_548ef11f16a8d",
+                            "label": "Caption",
+                            "name": "caption",
+                            "prefix": "",
+                            "type": "textarea",
+                            "instructions": "The caption to display next to the image.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_54623e9ca56a6",
+                                        "operator": "==",
+                                        "value": "caption"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 3,
+                            "new_lines": "br",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_54623e9ca5697",
+                            "label": "Text",
+                            "name": "text",
+                            "prefix": "",
+                            "type": "wysiwyg",
+                            "instructions": "The text will display in a paragraph format next to the image. The paragraph text should be related to any text above and below.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_54623e9ca56a6",
+                                        "operator": "==",
+                                        "value": "paragraph"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "visual",
+                            "toolbar": "text_based",
+                            "media_upload": 1
+                        },
                         {
                             "key": "field_54623e9ca569e",
                             "label": "Image",
@@ -72,29 +171,6 @@
                             "return_format": "array",
                             "preview_size": "thumbnail",
                             "library": "all"
-                        },
-                        {
-                            "key": "field_54623e9ca56a6",
-                            "label": "Text Location",
-                            "name": "text_location",
-                            "prefix": "",
-                            "type": "radio",
-                            "instructions": "Should the text display on the left or right?",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "left": "Left",
-                                "right": "Right"
-                            },
-                            "other_choice": 0,
-                            "save_other_choice": 0,
-                            "default_value": "",
-                            "layout": "vertical"
                         }
                     ],
                     "min": "",
@@ -106,6 +182,25 @@
                     "label": "Blank",
                     "display": "row",
                     "sub_fields": [
+                        {
+                            "key": "field_54623f85b5036",
+                            "label": "Blank",
+                            "name": "blank",
+                            "prefix": "",
+                            "type": "wysiwyg",
+                            "instructions": "This code should be used for a shortcode or embed code, and not for text or image content.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "text",
+                            "toolbar": "text_based",
+                            "media_upload": 0
+                        },
                         {
                             "key": "field_54623f85b5036",
                             "label": "Blank",
@@ -170,35 +265,6 @@
                     "label": "Call to Action",
                     "display": "row",
                     "sub_fields": [
-                        {
-                            "key": "field_548b066a66a03",
-                            "label": "Background Color",
-                            "name": "cta_rotate",
-                            "prefix": "",
-                            "type": "select",
-                            "instructions": "Select the background color for the call to action box.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "clear": "Clear",
-                                "light": "Light",
-                                "med": "Medium",
-                                "dark": "Dark"
-                            },
-                            "default_value": [],
-                            "allow_null": 0,
-                            "multiple": 0,
-                            "ui": 0,
-                            "ajax": 0,
-                            "placeholder": "",
-                            "disabled": 0,
-                            "readonly": 0
-                        },
                         {
                             "key": "field_548af71041917",
                             "label": "Text",
@@ -325,5 +391,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1418417248
+    "modified": 1418654017
 }
