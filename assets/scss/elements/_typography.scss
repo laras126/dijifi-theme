@@ -62,18 +62,18 @@ h1 {
 
 h2 {
 	@extend %h2;
-	margin-top: $h4;
+	margin-top: $h3;
 }
 
 h3 {
 	@extend %h3;
-	margin-top: $h4;
+	margin-top: $h3;
 }
 
 h4 { 
 	@extend %h4;
 	// 
-	margin-top: $base;
+	margin-top: $h3;
 }
 
 h5 {
@@ -89,6 +89,7 @@ h6 {
 
 p {
 	margin-top: $base;
+	margin-bottom: 0;
 	font-size: $base;
 }
 
@@ -108,7 +109,11 @@ blockquote {
 	overflow: visible;
 	margin-left: 0;
 	margin: 0;
-	padding: 0;
+	padding: 0 0 0 $h4;
+
+	@include bp(med) {
+		padding-left: 0;
+	}
 
 	&:before {
 		content: " ";

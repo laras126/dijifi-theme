@@ -32,6 +32,7 @@ $(document).ready(function() {
 		
 
 
+
 	// ----
 	// Submenu
 	// ----
@@ -44,33 +45,15 @@ $(document).ready(function() {
 		total_ht = header_ht;
 	  
 
-	// $('.fixed-image ').css('padding-top', nav_ht + 'px');
-
-	// Copy Pasta from S.O. link below
-	var topMenu = $(".content-nav"),
-	    topMenuHeight = topMenu.outerHeight(),
-	  
-	    // All list items
-	    menuItems = topMenu.find(".menuitem a"),
-
-	    // Anchors corresponding to menu items
-	    scrollItems = menuItems.map( function() {
-			var item = $($(this).attr("href"));
-			if (item.length) { return item; }
-		});
-	
-
 	$('.content-nav a').click( function() {
 		var hash = $(this).attr('href');
 
 		// Add and remove active class from nav item and section
-		// $('.content-nav a').removeClass('content-nav-active');
-		// $(this).addClass('content-nav-active');
-		// $('.content').removeClass('content-active');
+		$('.content-nav li').removeClass('content-nav-active');
+		$(this).parent().addClass('content-nav-active');
+		$('.content').removeClass('content-active');
 
 		var $target = $(hash);
-		// $('.content').removeClass('content-active');
-		// $target.addClass('content-active');
 
 		// Slide to section corresponding to link
 		$('html,body').animate({
@@ -81,44 +64,49 @@ $(document).ready(function() {
 
 	});
 
+	// Copy Pasta from SO link below
+	var topMenu = $(".content-nav"),
+	    topMenuHeight = topMenu.outerHeight()+15,
+	  
+	    // All list items
+	    menuItems = topMenu.find("a"),
+
+	    // Anchors corresponding to menu items
+	    scrollItems = menuItems.map(function(){
+			var item = $($(this).attr("href"));
+			if (item.length) { return item; }
+		});
+
 
 	$(window).scroll( function() {
 
 		// Add the class to make the nav stick
 		if( $(this).scrollTop() > total_ht ) {
 			$nav.addClass(scroll_class);
-			$('.top-link').css('opacity', '1');
-			$('.top-link').css('width', '50px');
 		} else if( $(this).scrollTop() < total_ht ) {
 			$nav.removeClass(scroll_class);
-			$('.top-link').css('opacity', '0');
-			$('.top-link').css('width', '0');
 		}
 
 		// Highlight the current item according to position on the screen
-		// (Copy Pasta)
 		// http://stackoverflow.com/questions/9979827/change-active-menu-item-on-page-scroll
 		
 		// Get container scroll position
 		var fromTop = $(this).scrollTop()+topMenuHeight;
 
 		// Get id of current scroll item
-		var cur = scrollItems.map( function() {
-		if ($(this).offset().top < fromTop) {
+		var cur = scrollItems.map(function(){
+		if ($(this).offset().top < fromTop)
 			return this;
-		}
+		});
 	   	
 	   	// Get the id of the current element
 		cur = cur[cur.length-1];
 		var id = cur && cur.length ? cur[0].id : "";
-		
 		// Set/remove active class
 		menuItems
 			.parent().removeClass("content-nav-active")
 			.end().filter("[href=#"+id+"]").parent().addClass("content-nav-active");
-		});
 	});
-
 
 
 

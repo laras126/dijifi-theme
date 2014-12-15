@@ -1,6 +1,10 @@
 .block {
 	margin-top: $h3;
 	margin-bottom: $h3;
+
+	&:nth-of-type(1) {
+		margin-top: 0;
+	}
 }
 
 // Block modules

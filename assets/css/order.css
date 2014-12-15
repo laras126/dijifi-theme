@@ -3153,15 +3153,15 @@ h1 {
 }
 
 h2 {
-  margin-top: 1.56rem;
+  margin-top: 2.6rem;
 }
 
 h3 {
-  margin-top: 1.56rem;
+  margin-top: 2.6rem;
 }
 
 h4 {
-  margin-top: 1.3rem;
+  margin-top: 2.6rem;
 }
 
 h5 {
@@ -3174,6 +3174,7 @@ h6 {
 
 p, .order-full-txt {
   margin-top: 1.3rem;
+  margin-bottom: 0;
   font-size: 1.3rem;
 }
 
@@ -3192,7 +3193,12 @@ blockquote {
   overflow: visible;
   margin-left: 0;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 1.56rem;
+}
+@media (min-width: 50em) {
+  blockquote {
+    padding-left: 0;
+  }
 }
 blockquote:before {
   content: " ";
