@@ -49,7 +49,7 @@
 }
 
 	.artifact {
-		@extend %list-three;
+		@include make-sm-column(7/2, false);
 
 		&:last-child {
 			border-bottom: none;
@@ -62,11 +62,11 @@
 	}
 	
 	.artifact-img {
-		@extend %list-item-img;	
+		@include make-sm-column(1.5, false);
 	}
 
 	.artifact-desc {
-		@extend %list-item-desc;	
+		@include make-sm-column(5.5);
 	}
 
 	.artifact-title {

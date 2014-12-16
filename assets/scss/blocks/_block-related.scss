@@ -1,8 +1,16 @@
 
 .block_related_page {
-	background-color: $accent-vlight;
-	border-top: 4px solid $accent-med;
-	border-bottom: 4px solid $accent-med;
+
+	.inner-squish {
+		background-color: $accent-vlight;
+		// border-top: 1px solid $accent-med;
+		// border-bottom: 4px solid $accent-med;	
+	}
+	
+}
+
+.related-title {
+	margin-top: $base;
 }
 
 .prompt-wrap {}
@@ -19,7 +27,7 @@
 			transform-origin: left bottom;
 			position: absolute;
 			left: 0;
-			top: 88px;
+			top: 90px;
 		}
 		
 		span {

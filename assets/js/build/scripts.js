@@ -83,8 +83,10 @@ $(document).ready(function() {
 		// Add the class to make the nav stick
 		if( $(this).scrollTop() > total_ht ) {
 			$nav.addClass(scroll_class);
+			$('.top-link').css('width', '50px');
 		} else if( $(this).scrollTop() < total_ht ) {
 			$nav.removeClass(scroll_class);
+			$('.top-link').css('width', '0');
 		}
 
 		// Highlight the current item according to position on the screen

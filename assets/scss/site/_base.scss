@@ -75,11 +75,28 @@ nav a {
 	background-size: cover;
 	background-repeat: no-repeat;
 	width: 100%;
-	padding-top: percentage(2/3);
 
 	@include bp(large) {
 		background-attachment: fixed;
 		background-position: center;
+	}
+
+	.section-header & {
+		@include bp(large) {
+			padding-top: percentage(1.5/3);
+		}
+		
+		@include bp(xl) {
+			padding-top: percentage(1.25/3);	
+		}
+	}
+
+}
+
+.fixed-wrap {
+	padding-top: percentage(1/3);
+
+	@include bp(large) {
 		padding-top: percentage(1.5/3);
 	}
 	
@@ -88,17 +105,26 @@ nav a {
 	}
 
 	.page-header & {
-		padding-top: percentage(1/3);
-		@media(min-width: 1420px) {
-			padding-top: percentage(0.5/3);
-		}
+		// padding-top: percentage(1/3);
+		// @include bp(med) {
+			padding-top: percentage(0.75/3);
+		// }
 	}
-}
 
-.fixed-wrap {
 	color: $text-light;
-	background-image: linear-gradient(to top, $text-dark, rgba(0,0,0,0));
+	// background-image: linear-gradient(to top, $text-dark, rgba(0,0,0,0));
+	
+	.page-header & {
+		background-image:
+	    radial-gradient(
+			ellipse at 20% center,
+			rgba($text-dark, 0) 0,
+			$text-dark
+	    );
+	}
+	
 	padding-bottom: $h2;
+	padding-top: percentage(2/3);
 	@extend .clearfix;
 }
 

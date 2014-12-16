@@ -3,13 +3,16 @@
 	{% if content.fixed_image_tf == 'true' %}
 		{% include 'partials/fixed-image.twig' %}
 	{% endif %}
-		<div class="contain">
-			<div class="inner-squish">
-					
-				<h3 class="section-title">{{content.section_title}}</h3>
-				<p class="lead">{{content.lead}}</p>
 
+	<div class="contain">
+		<div class="inner-squish">
+			
+			<div class="section-title-wrap">	
+				<h3 class="section-title"><span>{{content.section_title}}</span></h3>
 			</div>
+			<p class="lead">{{content.lead}}</p>
+
 		</div>
+	</div>
 
 </header> <!-- /.section-header -->

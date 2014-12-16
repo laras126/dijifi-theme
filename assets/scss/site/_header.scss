@@ -1,15 +1,24 @@
 .site-header {
 	// position: fixed;
+	color: $text-light;
 	// z-index: $ztop;
 	// top: 0;
 	width: 100%;
 	display: table;
+	background-color: $text-dark;
 	// @include rotate();
+	// position: relative;
+	position: absolute;
+	z-index: $ztop;
+	@include bp(med) {
+		
+		background-color: rgba($text-dark, 0);
+	}
 }
 
 .header-brand {
-	@include make-xs-column(6);
-	@include make-md-column(1.5, false);
+	@include make-xs-column(6.5, false);
+	@include make-md-column(2.5, false);
 	display: table-row;
 }
 
@@ -19,17 +28,25 @@
 	vertical-align: middle;
 }
 
+
+.header-logo {
+	// @include make-xs-column(3, false);
+}
+
 .header-tag {
 	@extend %meta;
-	@extend %hide-after-md;
+	// @include make-xs-column(4, false);
+
+	// @extend %hide-after-md;
 	padding-left: $base;
+	padding-top: $sml/2;
 }
 
 .header-nav-link {
-	@include make-xs-column(1);
+	@include make-xs-column(0.5, false);
 }
 
 .header-nav {
     @include make-xs-column(7, false); 
-    @include make-md-column(5.5, false);
+    @include make-md-column(4.5, false);
 }

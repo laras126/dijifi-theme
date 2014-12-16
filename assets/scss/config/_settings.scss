@@ -37,7 +37,7 @@ $text-med: 			$grey;
 $text-medlight: 	lighten($text-med, 20%);
 $text-light: 		$white;
 
-$link-color:		$accent-dark;
+$link-color:		$dred;
 $link-hover: 		darken($link-color, 20%);
 
 
@@ -60,10 +60,10 @@ $rotate-link: 		$text-light;
 
 // Rem Unit Scale
 
-$contain-lg: 			110%;
-$contain-md: 			102%;
-$contain-sm: 			98%;
-$contain: 				90%;
+$contain-lg: 		110%;
+$contain-md: 		102%;
+$contain-sm: 		98%;
+$contain: 			90%;
 
 $base:  			1.3rem;
 $line-height-base: 	1.3;
@@ -86,7 +86,7 @@ $h6:  				$sml;
 $serif:             'chaparral-pro', Georgia, serif;
 // $serif: 			'Chaparral Pro';
 // $sans-serif:        'Source Sans Pro';
-$sans-serif:        'source-sans-pro', Georgia, serif;
+$sans-serif:        'source-sans-pro', Helvetica, serif;
 // $sans-serif:        'Open Sans';
 
 $heading-font: 		$sans-serif;
@@ -95,11 +95,6 @@ $nav-font: 			$sans-serif;
 $form-font: 		$sans-serif;
 $lead-font: 		$sans-serif;
 
-
-// Semantic variable names
-
-$link-color:		$blue;
-$link-hover: 		darken($link-color, 20%);
 
 
 

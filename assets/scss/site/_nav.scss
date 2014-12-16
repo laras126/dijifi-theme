@@ -1,9 +1,4 @@
 
-nav[role="navigation"] {
-    font-family: $nav-font;
-}
-
-
 // General menu styles
 
 .menu-items {
@@ -18,15 +13,14 @@ nav[role="navigation"] {
     
     a {
         padding: $sml;
+        color: $text-light;
     }
 
     margin: $sml/2 0;
-    position: relative;
-
-    @include bp(med) {
-        padding-right: $base;
-    }
+    // position: relative;
 }
+
+
 
 
 
@@ -46,19 +40,14 @@ nav[role="navigation"] {
 .subnav {
     overflow: hidden;
     max-height: 0;
-    transition: all 0.3s ease-out;
 
     &.open {
         max-height: 55em;
     }
 }
 
-.subnav {
-    a {
-        font-weight: 400;    
-    }
-
-    background: $accent-vlight;
+.header-nav {
+    position: relative;
 }
 
 .menu-main {
@@ -72,19 +61,32 @@ nav[role="navigation"] {
 
     a {
         display: block;
-        
+        font-weight: 700;
+
         @include bp(med) {
             display: inline-block;
         }
-        
-        @extend %h5;
+
+        &:hover {
+            color: $accent-light;
+        }
     }
 }
+
+    .subnav {
+        background-color: $accent-med;
+        a {
+            font-weight: 400;
+            color: $text-light;
+            @extend %upperspace;
+        }
+    }
 
 .menu-item-complex {
     @extend .clearfix;
     background-color: $alert-info;
     text-align: center;
+
     a {
         color: $text-light;
     }
@@ -96,26 +98,27 @@ nav[role="navigation"] {
 
 .menu-item-cta {
     a {
-        color: $accent-light;
-        font-weight: 700;
+        padding-top: 0;
+        @extend .button-success;
+
     }
 }
 
+
+    .has-subnav a {
+        // color: $alert-info;
+    }
+
     .header-nav li.has-subnav > a:after {
-        content: '+';
-        position: absolute;
-        top: 0;
-        left: $h1*2;
-        display: block;
-        font-size: $h4;
-        padding: $sml/1.25 $sml;
+        content: '\25bc';
+        padding-left: $sml/2;
         color: $accent-med;
+        font-size: $sml*0.75;
     }
 
     .header-nav li.has-subnav > a.open:after {
-        content: "-";
+        content: '\25b2';
     }
-        
         
 
 
@@ -135,7 +138,7 @@ nav[role="navigation"] {
         border-radius: 1px;
         height: 3px;
         display: block;
-        background: $text-dark;
+        background: $text-light;
         margin: 0 0 7px 0;
     }
 }
@@ -166,32 +169,43 @@ nav[role="navigation"] {
        display: none;
     }
 
-    .js .header-nav, 
-    .js .subnav {
+    .js .header-nav {
         max-height: none;
     }
 
+    .header-nav {
+        overflow: visible;
+    }
+
     .subnav {
-        background-color: $body-bkgd;
-        @include border($alert-info, top);
+        background-color: transparent;
+        // @include border($alert-info, top);
+        position: absolute;
+        z-index: $ztop*10;
+        top: $h1;
+        right: 0;
+
+        &.open {
+            overflow: visible;
+        }
+
         a {
             padding-top: 0;
             font-size: $sml;
+            color: $text-light;
+            // background-color: $alert-info;
         }
     }
 
-    .has-subnav > a {
-        display: none;
-    }
 
     .menu-items {
         text-align: right;
 
         li {
-            &:not(.menu-item-complex) {    
+            // &:not(.menu-item-complex) {    
                 display: inline-block;
                 border: 0;
-            }
+            // }
 
             &:last-child {
                 padding-right: 0;
@@ -219,7 +233,7 @@ nav[role="navigation"] {
 
 .content-nav {
     @extend %horizontal-list;
-    @include rotate($bkgd: $alert-info);
+    @include rotate($bkgd: $text-dark);
     text-align: center;
 
     li {
@@ -230,6 +244,10 @@ nav[role="navigation"] {
         padding: $sml/2 $base;
         display: inline-block;
         color: $text-light;
+        @extend %meta;
+        @extend %upperspace;
+        border-top: 3px solid transparent;
+        border-bottom: 3px solid transparent;
     }
 
     ul {
@@ -242,7 +260,13 @@ nav[role="navigation"] {
 }
 
     .content-nav-active {
-        background-color: $accent-med;
+        position: relative;
+        
+        a {
+            transition: all 0.25s ease-in-out;
+            border-color: $accent-med;
+            color: $accent-med;
+        }
     }
 
     .stuck {
@@ -253,6 +277,7 @@ nav[role="navigation"] {
     }
 
     .top-link {
+        background-color: $text-dark;
         width: 0;
         position: relative;
 

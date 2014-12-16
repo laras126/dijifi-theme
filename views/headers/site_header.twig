@@ -2,7 +2,7 @@
 	<a class="header-logo" href="/" title="{{site.name}}" rel="home">
 		<svg class="shape shape-logo"><use xlink:href="#shape-logo" /></svg>
 	</a>	
-	<p class="header-tag hide-after-md">New York's trusted digitization studio.<span class="hide-until-md"> <a href="{{site.url}}/location">Brooklyn, NY</a> &bull; (646) 519-2447</span></p>
+	<p class="header-tag">New York's trusted digitization studio.<span class="hide-until-md"> <a href="{{site.url}}/location">Brooklyn, NY</a> &bull; (646) 519-2447</span></p>
 </div>
 
 <div class="header-nav-link menu-link">	
@@ -23,9 +23,9 @@
 				<a href="{{item.link}}">{{item.title}}</a>
 			</li>
 		{% endfor %}
-		<li class="menu-item menu-item-cta hide-until-md"><a href="{{site.url}}/order">Estimate your Order</a></li>
-		<li class="has-subnav menu-item">
-			<a href="#">Information</a>
+		{# <li class="menu-item menu-item-cta hide-until-md"><a href="{{site.url}}/order">Estimate your Order</a></li>
+		 #}<li class="has-subnav menu-item">
+			<a href="#">Info</a>
 			<ul class="subnav">
 				{% for item in header_nav.items %}
 					<li class="{{item.classes | join(' ')}}">
@@ -34,7 +34,7 @@
 				{% endfor %}
 			</ul>
 		</li>
-		<li class="menu-item menu-item-cta hide-after-md"><a href="{{site.url}}/order">Estimate your Order</a></li>
+		<li class="menu-item menu-item-cta"><a href="{{site.url}}/order">Estimate your Order</a></li>
 	</ul>
 {# 	<ul class="menu-items menu-items-secondary">
 		<li class="has-subnav">
@@ -49,4 +49,4 @@
 	</ul> #}
 </nav><!-- /#menu -->
 
-<p class="hide-until-md header-tag">New York's trusted digitization studio.<span class="hide-until-md"> <a href="{{site.url}}/location">Brooklyn, NY</a> &bull; (646) 519-2447</span></p>
+{# <p class="hide-until-md header-tag">New York's trusted digitization studio.<span class="hide-until-md"> <a href="{{site.url}}/location">Brooklyn, NY</a> &bull; (646) 519-2447</span></p> #}
