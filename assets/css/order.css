@@ -3870,6 +3870,15 @@ nav a {
   }
 }
 
+#wrapper {
+  padding-top: 7.8rem;
+}
+
+.site-header {
+  background-color: #111;
+  color: #fefefe;
+}
+
 .order-full-txt-alert,
 .order-full-txt-alert2,
 .order-full-txt-alert3,
@@ -4305,6 +4314,21 @@ tr.pickup-notice td:first-child {
     padding-right: 1.3rem;
     width: 33.33333%;
   }
+}
+
+.reveal-if-active {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: scale(0.8);
+  transition: 0.5s;
+}
+input[type="radio"]:checked ~ .reveal-if-active {
+  opacity: 1;
+  max-height: 100px;
+  overflow: visible;
+  padding: 10px 20px;
+  transform: scale(1);
 }
 
 /*# sourceMappingURL=order.css.map */

@@ -159,6 +159,33 @@ $(document).ready(function() {
 		}
 	});
 
+	// var q1_P1 = $('#q1_P1').val(),
+	// 	q1_P2 = $('#q1_P2').val(),
+	// 	q2_P1 = $('#q2_P1').val(),
+	// 	q2_P2 = $('#q2_P2').val();
+
+	var service;
+	var res;
+
+	$('.submit').click(function() {
+
+		if( $('#q1_P2').is(':checked') && $('#q2_P1').is(':checked') ) {
+			service = 'Raw';
+		} else if( $('#q1_P1').is(':checked') && $('#q2_P2').is(':checked') ) {
+			service = 'Complete';
+		} else {
+			service = 'Direct';
+		}
+
+		if( $('#q3_P2').is(':checked') ) {
+			res = 'Full';
+		} else {
+			res = 'Standard';
+		}
+
+		console.log(service + ' + ' + res);
+	});
+
 
 });
 
