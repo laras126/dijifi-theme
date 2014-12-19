@@ -166,8 +166,18 @@ $(document).ready(function() {
 	var service;
 	var res;
 
-	$('.submit').click(function() {
+	$('.panel').change( function(event) {	
+		
+		$(this).next('.panel').slideDown(200).removeClass('closed');
 
+		// If the format is Film or Photo, include the resolution question in the "panel reveal" logic
+		if( $('#q0_P1').is(':checked') || $('#q0_P3').is(':checked') ) {
+			$('#resQues').addClass('panel');
+			$('#resResults').show();
+		}
+
+		// Logic for services. 
+		// Compare the questions and assign the appropriate string to the service variable.
 		if( $('#q1_P2').is(':checked') && $('#q2_P1').is(':checked') ) {
 			service = 'Raw';
 		} else if( $('#q1_P1').is(':checked') && $('#q2_P2').is(':checked') ) {
@@ -175,16 +185,34 @@ $(document).ready(function() {
 		} else {
 			service = 'Direct';
 		}
+		
+		// Update the service and resolution HTML
+		$('#serviceLevel').html(service);
+		$('#resolution').html(res);
 
+
+		// Logic for resolution question
+		// NOTE: these are showing up opposite for some reason...
+		// FIX IT!!!! But not this second.
 		if( $('#q3_P2').is(':checked') ) {
-			res = 'Full';
-		} else {
 			res = 'Standard';
+		} else if ($('#q3_P1').is(':checked')) {
+			res = 'Full';
 		}
 
-		console.log(service + ' + ' + res);
-	});
 
+		// Show the results panel if the panel in question is the last one.
+		if( $(this).is('fieldset:last-of-type') ) {
+			$(this).css('background', 'green');
+			console.log(service + ' + ' + res);
+			$('.results').slideDown(200);
+		}
+
+		$(this).find('label').removeClass('selected');
+		$(event.target).siblings('label').addClass('selected');
+
+		// $(':checked + label').addClass('selected');
+	}); // END panel.change()
 
 });
 

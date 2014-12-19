@@ -4316,19 +4316,46 @@ tr.pickup-notice td:first-child {
   }
 }
 
-.reveal-if-active {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transform: scale(0.8);
-  transition: 0.5s;
+.closed {
+  display: none;
 }
-input[type="radio"]:checked ~ .reveal-if-active {
-  opacity: 1;
-  max-height: 100px;
-  overflow: visible;
-  padding: 10px 20px;
-  transform: scale(1);
+
+#resResults {
+  display: none;
+}
+
+.panel {
+  padding: 1.3rem;
+  border: 1px solid #80C25D;
+}
+.panel input[type="radio"] {
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  vertical-align: middle;
+  padding: 1.3rem;
+}
+.panel label {
+  padding: 1.3rem;
+  cursor: pointer;
+}
+
+.panel-title {
+  text-align: center;
+}
+
+.choices-list {
+  list-style: none;
+  text-align: center;
+}
+.choices-list li {
+  display: inline-block;
+  position: relative;
+  margin: 0.975rem;
+}
+
+.selected {
+  background-color: #80C25D;
 }
 
 /*# sourceMappingURL=order.css.map */
