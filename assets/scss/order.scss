@@ -543,9 +543,10 @@ input[type="text"] {
 	}
 
 	label {
-		padding: $base;
+		// padding: $sml/2 $base;
 		// background-color: $accent-light;
 		cursor: pointer;
+		@extend %btn;
 	}
 }
 
@@ -557,13 +558,13 @@ input[type="text"] {
 	list-style: none;
 	text-align: center;
 
+	:checked+label {
+		background-color: $text-dark;
+	}
+
 	li {
 		display: inline-block;
 		position: relative;
 		margin: $sml;
 	}
-}
-
-.selected {
-	background-color: $alert-success;
 }

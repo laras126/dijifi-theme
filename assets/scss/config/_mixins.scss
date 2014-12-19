@@ -7,7 +7,8 @@
 @mixin button( $button-color, $text-color: $white ) {
 	background: $button-color;
 	font-weight: 700;
-
+	border-radius: 4px;
+	
 	// TODO: BAD BAD
 	// Remove important
 	// Or is this better than a new style to override the <a> color?

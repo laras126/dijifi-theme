@@ -194,7 +194,7 @@ $(document).ready(function() {
 
 		// Logic for resolution question
 		// NOTE: these are showing up opposite for some reason...
-		// FIX IT!!!! But not this second/
+		// FIX IT!!!! But not this second.
 		if( $('#q3_P2').is(':checked') ) {
 			res = 'Standard';
 		} else if ($('#q3_P1').is(':checked')) {
@@ -209,8 +209,12 @@ $(document).ready(function() {
 			$('.results').slideDown(200);
 		}
 
-		$(this).find('label').removeClass('selected');
-		$(event.target).siblings('label').addClass('selected');
+		$('html,body').animate({
+		    scrollTop: $(this).offset().top - ( $(window).height() - $(this).outerHeight(true) ) / 3
+		}, 200);
+
+		// $(this).find('label').removeClass('selected');
+		// $(event.target).siblings('label').addClass('selected');
 
 		// $(':checked + label').addClass('selected');
 	}); // END panel.change()

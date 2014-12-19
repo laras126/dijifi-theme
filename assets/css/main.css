@@ -1294,6 +1294,7 @@ button, .button-cta, .button-success, .menu-item-cta a, .link-more {
   font-family: "source-sans-pro", Helvetica, serif;
   background: #80C25D;
   font-weight: 700;
+  border-radius: 4px;
   color: #fefefe !important;
 }
 input[type="submit"]:hover,
@@ -1601,6 +1602,7 @@ fieldset {
 .button-cta {
   background: #222334;
   font-weight: 700;
+  border-radius: 4px;
   color: #fefefe !important;
 }
 .button-cta:hover, .button-cta:focus {
@@ -1614,6 +1616,7 @@ fieldset {
 .button-success, .menu-item-cta a {
   background: #80C25D;
   font-weight: 700;
+  border-radius: 4px;
   color: #fefefe !important;
 }
 .button-success:hover, .menu-item-cta a:hover, .button-success:focus, .menu-item-cta a:focus {
@@ -1627,6 +1630,7 @@ fieldset {
 .link-more {
   background: #FFCC53;
   font-weight: 700;
+  border-radius: 4px;
   color: #fefefe !important;
 }
 .link-more:hover, .link-more:focus {

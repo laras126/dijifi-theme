@@ -208,8 +208,12 @@ $(document).ready(function() {
 			$('.results').slideDown(200);
 		}
 
-		$(this).find('label').removeClass('selected');
-		$(event.target).siblings('label').addClass('selected');
+		$('html,body').animate({
+		    scrollTop: $(this).offset().top - ( $(window).height() - $(this).outerHeight(true) ) / 3
+		}, 200);
+
+		// $(this).find('label').removeClass('selected');
+		// $(event.target).siblings('label').addClass('selected');
 
 		// $(':checked + label').addClass('selected');
 	}); // END panel.change()
