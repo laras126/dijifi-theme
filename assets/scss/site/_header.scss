@@ -1,19 +1,20 @@
 .site-header {
 	// position: fixed;
-	color: $text-light;
+	// color: $text-light;
 	// z-index: $ztop;
 	// top: 0;
 	width: 100%;
 	display: table;
-	background-color: $text-dark;
+	// background-color: $text-dark;
 	// @include rotate();
 	// position: relative;
-	position: absolute;
+	// position: absolute;
 	z-index: $ztop;
+
 	@include bp(med) {
-		
-		background-color: rgba($text-dark, 0);
+		// background-color: rgba($text-dark, 1);
 	}
+	border-bottom: 3px solid $alert-info;
 }
 
 .header-brand {

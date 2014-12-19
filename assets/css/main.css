@@ -1600,17 +1600,17 @@ fieldset {
 }
 
 .button-cta {
-  background: #222334;
+  background: #3C7AAA;
   font-weight: 700;
   border-radius: 4px;
   color: #fefefe !important;
 }
 .button-cta:hover, .button-cta:focus {
-  background: #0e0e15;
+  background: #2f5f84;
   color: #fefefe;
 }
 .button-cta:active {
-  background: black;
+  background: #070e13;
 }
 
 .button-success, .menu-item-cta a {
@@ -1760,7 +1760,7 @@ nav a {
 }
 .menu-item a {
   padding: 0.975rem;
-  color: #fefefe;
+  color: #111;
 }
 
 .header-nav,
@@ -1844,7 +1844,7 @@ nav a {
   border-radius: 1px;
   height: 3px;
   display: block;
-  background: #fefefe;
+  background: #111;
   margin: 0 0 7px 0;
 }
 
@@ -1975,17 +1975,10 @@ nav a {
 }
 
 .site-header {
-  color: #fefefe;
   width: 100%;
   display: table;
-  background-color: #111;
-  position: absolute;
   z-index: 4;
-}
-@media (min-width: 50em) {
-  .site-header {
-    background-color: rgba(17, 17, 17, 0);
-  }
+  border-bottom: 3px solid #3C7AAA;
 }
 
 .header-brand {

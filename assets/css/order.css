@@ -1323,7 +1323,7 @@ input[type="tel"], input {
 }
 
 input[type="submit"],
-button, .button-cta, .button-success, .menu-item-cta a, .link-more, .panel label {
+button, .button-cta, .panel label, .button-success, .menu-item-cta a, .link-more {
   border: none;
   padding: 0.4875rem 0.975rem;
   font-family: "source-sans-pro", Helvetica, serif;
@@ -1333,13 +1333,13 @@ button, .button-cta, .button-success, .menu-item-cta a, .link-more, .panel label
   color: #fefefe !important;
 }
 input[type="submit"]:hover,
-button:hover, .button-cta:hover, .button-success:hover, .menu-item-cta a:hover, .link-more:hover, .panel label:hover, input[type="submit"]:focus,
-button:focus, .button-cta:focus, .button-success:focus, .menu-item-cta a:focus, .link-more:focus, .panel label:focus {
+button:hover, .button-cta:hover, .panel label:hover, .button-success:hover, .menu-item-cta a:hover, .link-more:hover, input[type="submit"]:focus,
+button:focus, .button-cta:focus, .panel label:focus, .button-success:focus, .menu-item-cta a:focus, .link-more:focus {
   background: #66ab41;
   color: #fefefe;
 }
 input[type="submit"]:active,
-button:active, .button-cta:active, .button-success:active, .menu-item-cta a:active, .link-more:active, .panel label:active {
+button:active, .button-cta:active, .panel label:active, .button-success:active, .menu-item-cta a:active, .link-more:active {
   background: #243c17;
 }
 
@@ -1430,7 +1430,7 @@ nav a {
 }
 .menu-item a {
   padding: 0.975rem;
-  color: #fefefe;
+  color: #111;
 }
 
 .header-nav,
@@ -1514,7 +1514,7 @@ nav a {
   border-radius: 1px;
   height: 3px;
   display: block;
-  background: #fefefe;
+  background: #111;
   margin: 0 0 7px 0;
 }
 
@@ -1645,17 +1645,10 @@ nav a {
 }
 
 .site-header {
-  color: #fefefe;
   width: 100%;
   display: table;
-  background-color: #111;
-  position: absolute;
   z-index: 4;
-}
-@media (min-width: 50em) {
-  .site-header {
-    background-color: rgba(17, 17, 17, 0);
-  }
+  border-bottom: 3px solid #3C7AAA;
 }
 
 .header-brand {
@@ -3392,18 +3385,18 @@ fieldset {
   font-weight: 400;
 }
 
-.button-cta {
-  background: #222334;
+.button-cta, .panel label {
+  background: #3C7AAA;
   font-weight: 700;
   border-radius: 4px;
   color: #fefefe !important;
 }
-.button-cta:hover, .button-cta:focus {
-  background: #0e0e15;
+.button-cta:hover, .panel label:hover, .button-cta:focus, .panel label:focus {
+  background: #2f5f84;
   color: #fefefe;
 }
-.button-cta:active {
-  background: black;
+.button-cta:active, .panel label:active {
+  background: #070e13;
 }
 
 .button-success, .menu-item-cta a {
@@ -3553,7 +3546,7 @@ nav a {
 }
 .menu-item a {
   padding: 0.975rem;
-  color: #fefefe;
+  color: #111;
 }
 
 .header-nav,
@@ -3637,7 +3630,7 @@ nav a {
   border-radius: 1px;
   height: 3px;
   display: block;
-  background: #fefefe;
+  background: #111;
   margin: 0 0 7px 0;
 }
 
@@ -3768,17 +3761,10 @@ nav a {
 }
 
 .site-header {
-  color: #fefefe;
   width: 100%;
   display: table;
-  background-color: #111;
-  position: absolute;
   z-index: 4;
-}
-@media (min-width: 50em) {
-  .site-header {
-    background-color: rgba(17, 17, 17, 0);
-  }
+  border-bottom: 3px solid #3C7AAA;
 }
 
 .header-brand {
@@ -4352,7 +4338,7 @@ tr.pickup-notice td:first-child {
   text-align: center;
 }
 .choices-list :checked + label {
-  background-color: #111;
+  background-color: #80C25D;
 }
 .choices-list li {
   display: inline-block;

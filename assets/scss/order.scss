@@ -546,7 +546,7 @@ input[type="text"] {
 		// padding: $sml/2 $base;
 		// background-color: $accent-light;
 		cursor: pointer;
-		@extend %btn;
+		@extend .button-cta;
 	}
 }
 
@@ -559,7 +559,7 @@ input[type="text"] {
 	text-align: center;
 
 	:checked+label {
-		background-color: $text-dark;
+		background-color: $alert-success;
 	}
 
 	li {
