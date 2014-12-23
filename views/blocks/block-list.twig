@@ -3,13 +3,14 @@
 {# List Block #}
 
 {% block content %}
-<div class="inner">
+
 	{% set type = blck.list_type %}
 
 	{{blck.text}}
 	
 	{% if type == 'artifacts' %}
-
+	
+	<div class="inner">
 		<ul class="list list-artifacts">
 		{% for arti in blck.connected_artifacts %}
 		
@@ -37,8 +38,10 @@
 
 		{% endfor %}
 		</ul>
-
+	</div>
+	
 	{% elseif type == 'text_icon' %}
+	<div class="inner-full">
 
 		<ul class="list list-icons">
 
@@ -63,8 +66,7 @@
 			{% endfor %}
 
 		</ul>
-		
+	</div>
 	{% endif %}
-
-</div>
+	
 {% endblock %}

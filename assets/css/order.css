@@ -4378,6 +4378,7 @@ tr.pickup-notice td:first-child {
 .panel {
   position: relative;
   padding: 0;
+  margin-bottom: 1.3rem;
 }
 .panel:nth-child(2n) .arrow-down {
   border-top-color: #c9e5ba;

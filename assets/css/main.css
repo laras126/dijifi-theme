@@ -492,7 +492,7 @@ input[type="tel"] {
 .col-xs-1, .col-xs-1-np, .col-xs-2, .col-xs-2-np, .col-xs-3, .col-xs-3-np, .col-xs-4, .col-xs-4-np, .col-xs-5, .col-xs-5-np, .col-xs-6, .col-xs-6-np, .col-sm-1, .col-sm-1-np, .col-sm-2, .col-sm-2-np, .col-sm-3, .col-sm-3-np, .col-sm-4, .col-sm-4-np, .col-sm-5, .col-sm-5-np, .col-sm-6, .col-sm-6-np, .col-md-1, .col-md-1-np, .col-md-2, .col-md-2-np, .col-md-3, .col-md-3-np, .col-md-4, .col-md-4-np, .col-md-5, .col-md-5-np, .col-md-6, .col-md-6-np, .col-lg-1, .col-lg-1-np, .col-lg-2, .col-lg-2-np, .col-lg-3, .col-lg-3-np, .col-lg-4, .col-lg-4-np, .col-lg-5, .col-lg-5-np, .col-lg-6, .col-lg-6-np, .inner, .inner-squish, .dfi-field-name, .dfi-field-name .ginput_left,
 .dfi-field-name .ginput_right, .dfi-field-email, .gform_footer,
 .dfi-field-message,
-.dfi-field-signup, .item-split, .header-brand, .header-nav-link, .header-nav, .focus-text, .widget, .icon-item, .icon-item-img, .icon-item-desc, .artifact-img, .artifact-desc, .caption, .caption-image, .paragraph-image, .format-paragraph, .param-option {
+.dfi-field-signup, .item-split, .header-brand, .header-nav-link, .header-nav, .focus-text, .widget, .icon-item, .icon-item-img, .icon-item-desc, .artifact, .artifact-img, .artifact-desc, .caption, .caption-image, .paragraph-image, .format-paragraph, .param-option {
   float: left;
   position: relative;
   min-height: 1px;
@@ -2160,10 +2160,12 @@ nav a {
 }
 
 .artifact {
-  width: 40%;
-  display: inline-block;
-  margin: auto;
   margin-bottom: 2.6rem;
+}
+@media (min-width: 50em) {
+  .artifact {
+    width: 50%;
+  }
 }
 .artifact:last-child {
   border-bottom: none;
@@ -2175,9 +2177,7 @@ nav a {
 
 @media (min-width: 34em) {
   .artifact-img {
-    padding-left: 1.3rem;
-    padding-right: 1.3rem;
-    width: 100%;
+    width: 21.42857%;
   }
 }
 
@@ -2185,7 +2185,7 @@ nav a {
   .artifact-desc {
     padding-left: 1.3rem;
     padding-right: 1.3rem;
-    width: 100%;
+    width: 78.57143%;
   }
 }
 

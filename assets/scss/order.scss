@@ -560,6 +560,7 @@ input[type="text"] {
 .panel {
 	position: relative;
 	padding: 0;
+	margin-bottom: $base;
 	// background-color: $accent-vlight;
 
 	&:nth-child(2n) {
