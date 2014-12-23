@@ -7,7 +7,7 @@
 	@extend %unstyle-list;
 	font-family: $form-font;
 	margin-bottom: $sml;
-	@extend %clearfix;
+	@include clearfix;
 }
 
 .active {

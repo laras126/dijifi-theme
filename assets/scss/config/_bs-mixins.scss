@@ -17,19 +17,6 @@
 // ---
 
 
-// ----
-// ---- Screen sizes
-// ----
-
-$screen-sm:    34em;
-$screen-md:    50em;
-$screen-lg:    65em;
-$screen-xl:    78em;
-
-$contain-full: 55em;
-
-
-
 
 
 // ----
@@ -79,7 +66,7 @@ $gutter:                    $h3 !default;
 // Max width of the widest inner wrap (below).
 .contain {
   @extend %container;
-  @extend %clearfix;
+  @include clearfix;
 }
 
 

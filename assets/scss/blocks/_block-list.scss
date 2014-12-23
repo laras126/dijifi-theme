@@ -45,32 +45,43 @@
 // ----
 
 .list-artifacts {
-	@extend .clearfix;
+	@include bp(large) {
+		@include make-row();
+	}
 }
 
 	.artifact {
-		@include make-sm-column(7/2, false);
-
+		width: 40%;
+		
+		display: inline-block;
+		margin: auto;
+		margin-bottom: $h3;
+		
 		&:last-child {
 			border-bottom: none;
 		}
 
 		img {	
-			@extend %center-block;
+			@include center-block;
 			// max-width: 80%;
 		}
 	}
 	
 	.artifact-img {
-		@include make-sm-column(1.5, false);
+		@include make-sm-column(7);
+		// @include make-sm-column(1.5, false);
 	}
 
 	.artifact-desc {
-		@include make-sm-column(5.5);
+		@include make-sm-column(7);
+
+		p {
+			@extend %meta;
+		}
 	}
 
 	.artifact-title {
-		// margin-top: 0;
+		margin-top: 0;
 	}
 
 

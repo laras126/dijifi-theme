@@ -6,7 +6,9 @@
 @import 'settings';
 
 // Dynamic
+
 @import 'mixins';
+@import 'helpers';
+
 @import 'bs-mixins';
 @import 'bs-classes';
-@import 'extends';

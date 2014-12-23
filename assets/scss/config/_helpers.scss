@@ -1,35 +1,39 @@
 
+/*  
 
-// A few coding conventions to note about @extends:
-// - Placeholders used in layouts are separated with underscores
-// - Used wherever possible for any redundant layout functionality
+In the words of Harry Roberts:
 
+"Only use @extend when the rulesets that you are trying 
+to DRY out are inherently and thematically related."
+
+- http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/
+- http://www.sitepoint.com/avoid-sass-extend/
+
+*/
 
 
 // ----
-// Layout
+// Formatting
 // ----
 
-%row {
-    @include make-row();
+@mixin center-block() {
+    margin: 0 auto;
+    display: block;
 }
 
-%clearfix,
 .clearfix {
     @include clearfix;
 }
 
-%center-block {
-    margin: 0 auto;
-    display: block;
-}
+
+
 
 %img_full {
     width: 100%;
 }
 
 %full_at_base {
-    @include make-xs-column(12);
+    // @include make-xs-column(12);
 }
 
 %pad_base {
@@ -39,6 +43,40 @@
 %pad_tb {
     padding: $base 0;
 }
+
+
+
+
+
+// ----
+// Typography
+// ----
+
+@mixin change-text-align($base, $bp, $new) {
+    text-align: $base;
+    
+    @include bp($bp) {
+        text-align: $new;
+    }
+}
+
+
+
+
+
+
+
+// ----
+// Visual Design
+// ----
+
+// Rotating color blocks
+@mixin rotate($text: $text-light, $bkgd: $text-dark) {
+    background-color: $bkgd;
+    color: $text;
+}
+
+
 
 
 
@@ -61,11 +99,6 @@
     padding: $base;
 }
 
-
-
-// ----
-// Typography
-// ----
 
 
 
@@ -164,19 +197,4 @@
     }
 
 
-// Forms
-
-%btn {
-    border: none;
-    padding: $sml/2 $sml;
-    font-family: $form-font;
-    @include button($accent-med, $text-light);
-}
-
-%btn-block {
-    width: 90%;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-}
 

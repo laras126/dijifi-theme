@@ -49,6 +49,28 @@
                             "disabled": 0
                         },
                         {
+                            "key": "field_545cfe6294265",
+                            "label": "Menu Item Title",
+                            "name": "menu_item_title",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "The text to appear in the submenu linking to this section. An example is \"Process\" or \"Formats\".",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": 20,
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
                             "key": "field_5462583a023a8",
                             "label": "Fixed Image",
                             "name": "fixed_image_tf",
@@ -64,6 +86,49 @@
                             },
                             "message": "",
                             "default_value": 0
+                        },
+                        {
+                            "key": "field_5462583a023a8",
+                            "label": "Fixed Image",
+                            "name": "fixed_image_tf",
+                            "prefix": "",
+                            "type": "true_false",
+                            "instructions": "Should a background image display as you scroll?",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_54625842023a9",
+                            "label": "Image (1200x800)",
+                            "name": "fixed_image",
+                            "prefix": "",
+                            "type": "image",
+                            "instructions": "This image will be revealed behind the section as you scroll.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5462583a023a8",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all"
                         },
                         {
                             "key": "field_54625842023a9",
@@ -110,6 +175,50 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": 116,
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_545cfed494266",
+                            "label": "Section Title",
+                            "name": "section_title",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "The title for the section. Does not have to be the same as the \"Menu Item Title\", but should be limited to 4 words.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": 116,
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_545d07a4eb5cc",
+                            "label": "Lead",
+                            "name": "lead",
+                            "prefix": "",
+                            "type": "textarea",
+                            "instructions": "A sentence or two introducing the section.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 4,
+                            "new_lines": "",
                             "readonly": 0,
                             "disabled": 0
                         },
@@ -568,28 +677,6 @@
                                     "display": "row",
                                     "sub_fields": [
                                         {
-                                            "key": "field_5485bd22593e9",
-                                            "label": "Description",
-                                            "name": "description",
-                                            "prefix": "",
-                                            "type": "textarea",
-                                            "instructions": "A description of the page, and how it relates to this one. 2-4 sentences.",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "placeholder": "",
-                                            "maxlength": "",
-                                            "rows": 4,
-                                            "new_lines": "wpautop",
-                                            "readonly": 0,
-                                            "disabled": 0
-                                        },
-                                        {
                                             "key": "field_5462573ef68e2",
                                             "label": "Connect a Page",
                                             "name": "page",
@@ -615,6 +702,28 @@
                                             "elements": "",
                                             "max": "",
                                             "return_format": "object"
+                                        },
+                                        {
+                                            "key": "field_5485bd22593e9",
+                                            "label": "Description",
+                                            "name": "description",
+                                            "prefix": "",
+                                            "type": "textarea",
+                                            "instructions": "A description of the page, and how it relates to this one. 2-4 sentences.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "maxlength": "",
+                                            "rows": 4,
+                                            "new_lines": "br",
+                                            "readonly": 0,
+                                            "disabled": 0
                                         }
                                     ],
                                     "min": "",
@@ -803,5 +912,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1418653406
+    "modified": 1419296157
 }

@@ -1,4 +1,19 @@
 
+.btn,
+%btn {
+    border: none;
+    padding: $sml/2 $sml;
+    font-family: $form-font;
+    @include button($accent-med, $text-light);
+}
+
+%btn-block {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
 
 .button-cta {
 	@include button($alert-info);
@@ -9,10 +24,11 @@
 }
 
 .link-more {
-	@include button($accent-light);
+	// @include button($accent-light);
 }
 
-.link-edit {
+.link-edit,
+.link-more {
 	@extend %meta;
 	font-weight: 700;
 	color: $alert-danger;

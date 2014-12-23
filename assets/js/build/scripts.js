@@ -204,7 +204,7 @@ $(document).ready(function() {
 
 		// Show the results panel if the panel in question is the last one.
 		if( $(this).is('fieldset:last-of-type') ) {
-			$(this).css('background', 'green');
+			// $(this).css('background', 'green');
 			console.log(service + ' + ' + res);
 			$('.results').slideDown(200);
 		}

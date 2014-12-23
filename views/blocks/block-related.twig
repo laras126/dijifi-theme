@@ -3,10 +3,11 @@
 {% block content %}
 	
 	<div class="inner-squish">
-		<div class="prompt"><span class="meta">Explore</span></div>
 		{% for related in blck.page %}
+			<div class="prompt"><a href="{{related.guid}}"><span class="meta">Explore</span></a></div>
 			<h4 class="related-title">{{related.post_title}}</h4>
-			<p>{{blck.description}} <a href="{{related.guid}}">Read more...</a></p>
+			<p>{{blck.description}}</p>
+			<p class="text-right"><a class="link-more" href="{{related.guid}}">Read more &rarr;</a><br></p>
 		{% endfor %}
 	</div>
 

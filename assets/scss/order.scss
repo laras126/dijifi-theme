@@ -1,14 +1,5 @@
-// Reset
-@import 'config/normalize';
 
-// Variables
-@import 'config/settings';
-
-// Dynamic
-@import 'config/mixins';
-@import 'config/bs-mixins';
-@import 'config/bs-classes';
-@import 'config/extends';
+@import 'config/all';
 
 @import 'site/all';
 @import 'blocks/block-quoter';
@@ -55,10 +46,17 @@ $grid-columns: 12;
 @import 'site/all'; // Main site components
 
 
+// Site overrides
+
+h1 {
+	font-size: $h2;
+	text-align: center;
+}
+
 // Structural Hacks
 
 #wrapper {
-	padding-top: $h1*2;
+	// padding-top: $h1*2;
 }
 
 .site-header {
@@ -90,7 +88,7 @@ $grid-columns: 12;
 .pickup-notice {
 	@extend %meta;
 	@extend %alert;
-	@extend .clearfix;
+	@include clearfix;
 	margin-top: $base;
 	margin-bottom: $base;
 }
@@ -114,7 +112,7 @@ $grid-columns: 12;
 }
 
 .section {
-	@extend %clearfix;
+	@include clearfix;
 	@include bp(large) {
 		@include make-row($h2);
 	}
@@ -160,21 +158,31 @@ $grid-columns: 12;
 
 // Product rows and options
 
+// Sub products
+
+.image-extra-question,
+.album-extra-question {
+	font-size: $sml/1.25;
+}
+
 .product,
 .sub-section,
 .product-drive {
-	@extend %clearfix;
+	@include clearfix;
 	margin-bottom: $sml;
 }
 
 	.product {
 		border-bottom: 1px solid $accent-vlight;
+		padding-top: $sml;
 	}
 
 	.product-nodivs,
 	.sub-products {
-		@extend %clearfix;
+		@include clearfix;
 		@include make-xs-column(12);
+		padding-bottom: $sml;
+
 		input {
 			width: 25%;
 			@include bp(small) {
@@ -274,6 +282,11 @@ $grid-columns: 12;
 	@include make-xs-column(7, false);
 	font-weight: 700;
 }
+
+	.product-description, 
+	.product-description-nores {
+		font-size: $sml/1.25;
+	}
 
 	.product-description {
 		@include make-xs-column(12, false);
@@ -530,9 +543,33 @@ input[type="text"] {
 	display: none;
 }
 
+.arrow-down {
+	// width: $sml; 
+	// height: $sml;
+
+	// border-left: $sml solid transparent;
+	// border-right: $sml solid transparent;
+	// border-top: $sml solid $accent-vlight;
+
+	// position: absolute;
+	// bottom: -$sml;
+	// left: 45%;
+	// z-index: $ztop;
+}
+
 .panel {
-	padding: $base;
-	border: $accent-border;
+	position: relative;
+	padding: 0;
+	// background-color: $accent-vlight;
+
+	&:nth-child(2n) {
+		// background-color: lighten($accent-med, 25%);
+
+		.arrow-down {
+			border-top-color: lighten($accent-med, 25%);
+		}
+	}
+	// margin-bottom: $base;
 
 	input[type="radio"] {
 		opacity: 0;
@@ -540,23 +577,29 @@ input[type="text"] {
 		position: absolute;
 		vertical-align: middle;
 		padding: $base;
+		z-index: -1;
 	}
 
 	label {
-		// padding: $sml/2 $base;
-		// background-color: $accent-light;
 		cursor: pointer;
 		@extend .button-cta;
+		font-weight: normal;
 	}
 }
 
+	.results {
+		// background-color: $body-bkgd;
+	}
+
 	.panel-title {
-		text-align: center;
+		// text-align: center;
+		margin-bottom: $base;
+		// font-weight: normal;
 	}
 
 .choices-list {
 	list-style: none;
-	text-align: center;
+	// text-align: center;
 
 	:checked+label {
 		background-color: $alert-success;
@@ -566,5 +609,6 @@ input[type="text"] {
 		display: inline-block;
 		position: relative;
 		margin: $sml;
+
 	}
 }

@@ -394,10 +394,105 @@ th {
   padding: 0;
 }
 
+/*  
+
+In the words of Harry Roberts:
+
+"Only use @extend when the rulesets that you are trying 
+to DRY out are inherently and thematically related."
+
+- http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/
+- http://www.sitepoint.com/avoid-sass-extend/
+
+*/
+.clearfix:before, .fixed-wrap:before, .menu-item-complex:before, .icon-item:before, .list-icons:before, .clearfix:after, .fixed-wrap:after, .menu-item-complex:after, .icon-item:after, .list-icons:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after, .fixed-wrap:after, .menu-item-complex:after, .icon-item:after, .list-icons:after {
+  clear: both;
+}
+
+.creds {
+  padding: 1.3rem 0;
+}
+
+.alert {
+  background-color: #faf3db;
+  color: #111;
+  padding: 1.3rem;
+}
+
+.content-nav ul, .gfield,
+.gfield_checkbox, .menu-item, .site-footer ul, .list, .param-options-list {
+  list-style: none;
+}
+
+.content-nav li {
+  display: inline-block;
+}
+
+.ginput_complex label, table caption, .content-nav a, .prompt, .prompt span {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.meta,
+.ginput_complex label,
+.gfield_description,
+.gfield_checkbox label,
+.link-edit,
+.link-more,
+.content-nav a,
+.header-tag,
+.site-footer li,
+.artifact-desc p {
+  font-size: 0.975rem;
+  font-family: "source-sans-pro", Helvetica, serif;
+  margin: 0;
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"] {
+  padding: 0.325rem 0.4875rem;
+  font-family: "source-sans-pro", Helvetica, serif;
+}
+
+.hide-until-md {
+  display: none !important;
+}
+@media (min-width: 50em) {
+  .hide-until-md {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: 50em) {
+  .hide-after-md {
+    display: none !important;
+  }
+}
+
+.ginput_complex label {
+  color: #999;
+}
+
 .col-xs-1, .col-xs-1-np, .col-xs-2, .col-xs-2-np, .col-xs-3, .col-xs-3-np, .col-xs-4, .col-xs-4-np, .col-xs-5, .col-xs-5-np, .col-xs-6, .col-xs-6-np, .col-sm-1, .col-sm-1-np, .col-sm-2, .col-sm-2-np, .col-sm-3, .col-sm-3-np, .col-sm-4, .col-sm-4-np, .col-sm-5, .col-sm-5-np, .col-sm-6, .col-sm-6-np, .col-md-1, .col-md-1-np, .col-md-2, .col-md-2-np, .col-md-3, .col-md-3-np, .col-md-4, .col-md-4-np, .col-md-5, .col-md-5-np, .col-md-6, .col-md-6-np, .col-lg-1, .col-lg-1-np, .col-lg-2, .col-lg-2-np, .col-lg-3, .col-lg-3-np, .col-lg-4, .col-lg-4-np, .col-lg-5, .col-lg-5-np, .col-lg-6, .col-lg-6-np, .inner, .inner-squish, .dfi-field-name, .dfi-field-name .ginput_left,
 .dfi-field-name .ginput_right, .dfi-field-email, .gform_footer,
 .dfi-field-message,
-.dfi-field-signup, .item-split, .header-brand, .header-nav-link, .header-nav, .focus-text, .widget, .icon-item, .icon-item-img, .icon-item-desc, .artifact, .artifact-img, .artifact-desc, .caption, .caption-image, .paragraph-image, .format-paragraph, .param-option {
+.dfi-field-signup, .item-split, .header-brand, .header-nav-link, .header-nav, .focus-text, .widget, .icon-item, .icon-item-img, .icon-item-desc, .artifact-img, .artifact-desc, .caption, .caption-image, .paragraph-image, .format-paragraph, .param-option {
   float: left;
   position: relative;
   min-height: 1px;
@@ -415,6 +510,14 @@ th {
   padding-left: 1.3rem;
   padding-right: 1.3rem;
   max-width: 55em;
+}
+
+.contain:before, .contain:after {
+  content: " ";
+  display: table;
+}
+.contain:after {
+  clear: both;
 }
 
 .row {
@@ -1182,139 +1285,6 @@ th {
   }
 }
 
-.contain:before, .param-options-list:before, .contain:after, .param-options-list:after,
-.clearfix:before,
-.fixed-wrap:before,
-.menu-item-complex:before,
-.icon-item:before,
-.list-artifacts:before,
-.list-icons:before,
-.clearfix:after,
-.fixed-wrap:after,
-.menu-item-complex:after,
-.icon-item:after,
-.list-artifacts:after,
-.list-icons:after {
-  content: " ";
-  display: table;
-}
-.contain:after, .param-options-list:after,
-.clearfix:after,
-.fixed-wrap:after,
-.menu-item-complex:after,
-.icon-item:after,
-.list-artifacts:after,
-.list-icons:after {
-  clear: both;
-}
-
-.artifact img {
-  margin: 0 auto;
-  display: block;
-}
-
-.creds {
-  padding: 1.3rem 0;
-}
-
-.alert {
-  background-color: #faf3db;
-  color: #111;
-  padding: 1.3rem;
-}
-
-.content-nav ul, .gfield,
-.gfield_checkbox, .menu-item, .site-footer ul, .list, .param-options-list {
-  list-style: none;
-}
-
-.content-nav li {
-  display: inline-block;
-}
-
-.ginput_complex label, table caption, .subnav a, .content-nav a, .prompt, .prompt span {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.meta,
-.ginput_complex label,
-.gfield_description,
-.gfield_checkbox label,
-.link-edit,
-.content-nav a,
-.header-tag,
-.site-footer li {
-  font-size: 0.975rem;
-  font-family: "source-sans-pro", Helvetica, serif;
-  margin: 0;
-}
-
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"] {
-  padding: 0.325rem 0.4875rem;
-  font-family: "source-sans-pro", Helvetica, serif;
-}
-
-.hide-until-md {
-  display: none !important;
-}
-@media (min-width: 50em) {
-  .hide-until-md {
-    display: inline-block !important;
-  }
-}
-
-@media (min-width: 50em) {
-  .hide-after-md {
-    display: none !important;
-  }
-}
-
-.ginput_complex label {
-  color: #999;
-}
-
-input[type="submit"],
-button, .button-cta, .button-success, .menu-item-cta a, .link-more {
-  border: none;
-  padding: 0.4875rem 0.975rem;
-  font-family: "source-sans-pro", Helvetica, serif;
-  background: #80C25D;
-  font-weight: 700;
-  border-radius: 4px;
-  color: #fefefe !important;
-}
-input[type="submit"]:hover,
-button:hover, .button-cta:hover, .button-success:hover, .menu-item-cta a:hover, .link-more:hover, input[type="submit"]:focus,
-button:focus, .button-cta:focus, .button-success:focus, .menu-item-cta a:focus, .link-more:focus {
-  background: #66ab41;
-  color: #fefefe;
-}
-input[type="submit"]:active,
-button:active, .button-cta:active, .button-success:active, .menu-item-cta a:active, .link-more:active {
-  background: #243c17;
-}
-
-.button-block {
-  width: 90%;
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-}
-
 .shape {
   max-width: 100%;
 }
@@ -1599,6 +1569,54 @@ fieldset {
   font-weight: 400;
 }
 
+.btn,
+input[type="submit"],
+button,
+.btn,
+.button-cta,
+.button-success,
+.menu-item-cta a {
+  border: none;
+  padding: 0.4875rem 0.975rem;
+  font-family: "source-sans-pro", Helvetica, serif;
+  background: #80C25D;
+  font-weight: 700;
+  border-radius: 4px;
+  color: #fefefe !important;
+}
+.btn:hover, .btn:focus,
+input[type="submit"]:hover,
+button:hover,
+.btn:hover,
+.button-cta:hover,
+.button-success:hover,
+.menu-item-cta a:hover,
+input[type="submit"]:focus,
+button:focus,
+.btn:focus,
+.button-cta:focus,
+.button-success:focus,
+.menu-item-cta a:focus {
+  background: #66ab41;
+  color: #fefefe;
+}
+.btn:active,
+input[type="submit"]:active,
+button:active,
+.btn:active,
+.button-cta:active,
+.button-success:active,
+.menu-item-cta a:active {
+  background: #243c17;
+}
+
+.button-block {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .button-cta {
   background: #3C7AAA;
   font-weight: 700;
@@ -1627,21 +1645,8 @@ fieldset {
   background: #243c17;
 }
 
+.link-edit,
 .link-more {
-  background: #FFCC53;
-  font-weight: 700;
-  border-radius: 4px;
-  color: #fefefe !important;
-}
-.link-more:hover, .link-more:focus {
-  background: #ffbd20;
-  color: #fefefe;
-}
-.link-more:active {
-  background: #865e00;
-}
-
-.link-edit {
   font-weight: 700;
   color: #D14A29;
 }
@@ -1739,7 +1744,7 @@ nav a {
   }
 }
 .page-header .fixed-wrap {
-  padding-top: 25%;
+  padding-top: 16.66667%;
 }
 .page-header .fixed-wrap {
   background-image: radial-gradient(ellipse at 20% center, rgba(17, 17, 17, 0) 0, #111);
@@ -2019,7 +2024,7 @@ nav a {
 }
 
 .page-title {
-  font-size: 4.875rem;
+  font-size: 5.85rem;
   text-shadow: 2px 1px 1px #111;
 }
 
@@ -2140,18 +2145,39 @@ nav a {
   margin-bottom: 3.12rem;
 }
 
-@media (min-width: 34em) {
-  .artifact {
-    width: 50%;
+@media (min-width: 65em) {
+  .list-artifacts {
+    margin-left: -1.3rem;
+    margin-right: -1.3rem;
   }
+  .list-artifacts:before, .list-artifacts:after {
+    content: " ";
+    display: table;
+  }
+  .list-artifacts:after {
+    clear: both;
+  }
+}
+
+.artifact {
+  width: 40%;
+  display: inline-block;
+  margin: auto;
+  margin-bottom: 2.6rem;
 }
 .artifact:last-child {
   border-bottom: none;
 }
+.artifact img {
+  margin: 0 auto;
+  display: block;
+}
 
 @media (min-width: 34em) {
   .artifact-img {
-    width: 21.42857%;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    width: 100%;
   }
 }
 
@@ -2159,8 +2185,12 @@ nav a {
   .artifact-desc {
     padding-left: 1.3rem;
     padding-right: 1.3rem;
-    width: 78.57143%;
+    width: 100%;
   }
+}
+
+.artifact-title {
+  margin-top: 0;
 }
 
 figure {
@@ -2242,6 +2272,13 @@ figure {
 .param-options-list {
   font-family: "source-sans-pro", Helvetica, serif;
   margin-bottom: 0.975rem;
+}
+.param-options-list:before, .param-options-list:after {
+  content: " ";
+  display: table;
+}
+.param-options-list:after {
+  clear: both;
 }
 
 .active {
