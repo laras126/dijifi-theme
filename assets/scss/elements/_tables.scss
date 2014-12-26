@@ -10,7 +10,7 @@ table {
         margin: 0 0 7px;
         font-size: 0.75em;
         color: $text-light;
-        @extend %upperspace;
+        @include upperspace;
     }
 }
 

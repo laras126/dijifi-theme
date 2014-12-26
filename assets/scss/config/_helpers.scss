@@ -1,13 +1,20 @@
 
 /*  
 
-In the words of Harry Roberts:
+Harry Roberts says:
 
 "Only use @extend when the rulesets that you are trying 
 to DRY out are inherently and thematically related."
 
 - http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/
 - http://www.sitepoint.com/avoid-sass-extend/
+
+These are mixins because they are "helpers" and not used
+in a thematically related fashion.
+
+There are a few classes printed here as well as mixins.
+Those are primarily for prototyping purposes, but not
+exclusively.
 
 */
 
@@ -24,9 +31,6 @@ to DRY out are inherently and thematically related."
 .clearfix {
     @include clearfix;
 }
-
-
-
 
 %img_full {
     width: 100%;
@@ -52,6 +56,9 @@ to DRY out are inherently and thematically related."
 // Typography
 // ----
 
+
+// Change text alignment at a certain breakpoint.
+
 @mixin change-text-align($base, $bp, $new) {
     text-align: $base;
     
@@ -61,7 +68,60 @@ to DRY out are inherently and thematically related."
 }
 
 
+// Font Size Mixin
 
+// Gah.
+// a) This may be overly abstracted and not necessary.
+// b) Ran into the interpolation issue, so had to write this gross function.
+
+@function output-size($value) {
+    @if $value == h1 {
+        @return $h1;
+    }
+    @elseif $value == h2 {
+        @return $h2;
+    }
+    @elseif $value == h3 {
+        @return $h3;
+    }
+    @elseif $value == h4 {
+        @return $h4;
+    }
+    @elseif $value == h5 {
+        @return $h5;
+    }
+    @elseif $value == h6 {
+        @return $h6;
+    }
+    @elseif $value == base {
+        @return $base;
+    }
+    @elseif $value == sml {
+        @return $sml;
+    }
+}
+
+@mixin font-size($size) {
+    font-size: output-size($size);
+}
+
+
+// Uppercase and letterspacing.
+
+@mixin upperspace {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+// Small, sans-serif text.
+// Used primarily for forms and complimentary information.
+
+@mixin meta {
+    font-size: $sml;
+    font-family: $form-font;
+    margin: 0;
+}
 
 
 
@@ -70,7 +130,9 @@ to DRY out are inherently and thematically related."
 // Visual Design
 // ----
 
-// Rotating color blocks
+
+// Change background and text color.
+
 @mixin rotate($text: $text-light, $bkgd: $text-dark) {
     background-color: $bkgd;
     color: $text;
@@ -131,22 +193,6 @@ to DRY out are inherently and thematically related."
 
 
 
-// ----
-// Typography
-// ----
-
-%upperspace {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.meta,
-%meta {
-    font-size: $sml;
-    font-family: $form-font;
-    margin: 0;
-}
-
 
 
 
@@ -186,13 +232,18 @@ to DRY out are inherently and thematically related."
 	background-color: $rotate-bkgd;
 }
 
+.meta,
+%meta {
+    @include meta;
+}
+
     %meta-light {
-        @extend %meta;
+        @include meta;
         color: $text-med;
     }
 
     %meta-dark {
-        @extend %meta;
+        @include meta;
         color: $text-med;
     }
 

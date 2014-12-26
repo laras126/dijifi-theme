@@ -16,7 +16,7 @@
 .prompt-wrap {}
 
 	.prompt {
-		@extend %upperspace;
+		@include upperspace;
 		position: relative;
 		top: 4px;
 		// @include make-lg-column(2);
@@ -41,6 +41,6 @@
 				right: -$sml;
 			}
 
-			@extend %upperspace;
+			@include upperspace;
 		}
 	}

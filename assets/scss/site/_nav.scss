@@ -78,7 +78,7 @@
         a {
             font-weight: 400;
             color: $text-light;
-            // @extend %upperspace;
+            // @include upperspace;
         }
     }
 
@@ -99,7 +99,7 @@
 .menu-item-cta {
     a {
         padding-top: 0;
-        @extend .button-success;
+        @extend .btn-success;
 
     }
 }
@@ -245,7 +245,7 @@
         display: inline-block;
         color: $text-light;
         @extend %meta;
-        @extend %upperspace;
+        @include upperspace;
         border-top: 3px solid transparent;
         border-bottom: 3px solid transparent;
     }

@@ -57,9 +57,7 @@ $gutter:                    $h3 !default;
 %container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: $gutter / 2;
-  padding-right: $gutter / 2;
-  max-width: $contain-full;
+  max-width: $contain;
 }
 
 // To contain a primary section of content. 
@@ -149,7 +147,7 @@ $gutter:                    $h3 !default;
 }
 @mixin make-sm-column-push($columns) {
   @media (min-width: $screen-sm) {
-    margin-left: percentage(($columns / $grid-columns));
+    left: percentage(($columns / $grid-columns));
   }
 }
 @mixin make-sm-column-pull($columns) {
@@ -212,6 +210,9 @@ $gutter:                    $h3 !default;
     right: percentage(($columns / $grid-columns));
   }
 }
+
+
+// Utility
 
 .np {
   padding: 0;

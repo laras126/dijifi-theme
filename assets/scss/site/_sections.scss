@@ -1,120 +1,14 @@
 
-
 .section-header {
-
-	// text-align: center;
-
-	.inner-squish {
-		// padding-top: $h3;
-		// border-top: $accent-border; 
-	}
-
 	margin-bottom: $h3;
-
 }
 
-.section-title {
-	// text-transform: uppercase;
-// 	position: relative;
-
-// 	span { 
-// 		position: relative; 
-// 		top: $h5;
-
-// 		@include bp(med) {
-// 			top: $h4; 
-// 		}
-		
-// 		padding: 0 $h4 0;
-// 		background-color: $body-bkgd;
-// 	}
-}
-
-// .section-title-wrap {
-// 	display: block;
-// 	margin: 0;
-// }
-
-.content {
-	
+.section-content {
+	position: relative;
 	padding-bottom: $base;
- //    position: relative;
-
-	// &:after,
-	// &::after {
-	//     position: absolute;
-	//     z-index: $ztop*2;
-	//     bottom: -$h2;
-	//     left: 50%;
-	//     content: '';
-	//     width: 0;
-	//     height: 0;
-	//     border-top: solid $h3 red;
-	//     border-left: solid $h2 transparent;
-	//     border-right: solid $h2 transparent;
-	// }
-
 }
 
 	.content-active {
 		background-color: $accent-med;
 	}
 
-.focus-text {
-	@include make-md-column(8);
-	@include make-lg-column(6, false);
-}
-
-
-.content {
-	position: relative;
-	// border: 4px solid #c2e1f5;
-}
-
-.section-header
-.fixed-image {
-	// border-bottom: $accent-border;
-	// border-top: $accent-border;
-	
-}
-
-.section-header .fixed-image {
-	box-shadow: 0 -6px 0 $text-dark,
-				0 -10px 0 rgba($text-dark, 0.6),
-				0 -15px 0 rgba($text-dark, 0.3),
-				0 6px 0 $text-dark,
-				0 10px 0 rgba($text-dark, 0.6),
-				0 15px 0 rgba($text-dark, 0.3);
-}
-
-.section-header {
-
-}
-
-// .section-header:after, .section-header:before {
-// 	left: 50%;
-// 	border: solid transparent;
-// 	content: " ";
-// 	height: 0;
-// 	width: 0;
-// 	position: absolute;
-// 	pointer-events: none;
-// }
-
-// .section-header:after {
-// 	border-color: rgba(136, 183, 213, 0);
-// 	border-top-color: $body-bkgd;
-// 	border-width: $h2 $h1*2;
-// 	margin-left: -$h1;
-// }
-// .section-header:before {
-// 	border-color: rgba(194, 225, 245, 0);
-// 	border-top-color: $body-bkgd;
-// 	border-width: $h2 $h1*4;
-// 	margin-left: -20%;
-// }
-
-
-// ----
-// Components
-// ----

@@ -22,7 +22,7 @@
 
 	&-child {
 		background-color: lighten($accent-med, 40%);
-		@extend %h5;
+		@include font-size(h5);
 	}
 
 	&-submenu {

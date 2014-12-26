@@ -161,7 +161,7 @@ fieldset {
 
 .ginput_complex label{
 	@extend %meta-light;
-	@extend %upperspace;
+	@include upperspace;
 	
 	margin-top: $sml/2;
 	margin-bottom: $sml;

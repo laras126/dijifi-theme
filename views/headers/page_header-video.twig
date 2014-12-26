@@ -1,0 +1,11 @@
+{% extends "headers/page_header.twig" %}
+
+{% block content %}
+
+{# <p class="meta">video header</p> #}
+<video src="{{post.video}}" autoplay loop></video>
+<svg class="shape shape-logo"><use xlink:href="#shape-logo" /></svg>
+{{site.description}}
+<p class="lead">{{post.summary}}</p>
+
+{% endblock %}

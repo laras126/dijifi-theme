@@ -44,59 +44,45 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 0;
 }
 
-//
-// %h1-%h6 placeholders for font-size utility use.
-//
-
-%h1 { font-size: $h1; }
-%h2 { font-size: $h2; }
-%h3 { font-size: $h3; }
-%h4 { font-size: $h4; }
-%h5 { font-size: $h5; }
-%h6 { font-size: $sml; }
-
 h1 {
-	@extend %h1;
+	@include font-size(h1);
 	margin-top: $h3;
 }
 
 h2 {
-	@extend %h2;
+	@include font-size(h2);
 	margin-top: $h3;
 }
 
 h3 {
-	@extend %h3;
+	@include font-size(h3);
 	margin-top: $h3;
 }
 
 h4 { 
-	@extend %h4;
-	// 
+	@include font-size(h4);
 	margin-top: $h3;
 }
 
 h5 {
-	@extend %h5;
-	// @extend %upperspace;
+	@include font-size(h5);
 	margin-top: $base;
 }
 
 h6 {	
-	@extend %h6;
+	@include font-size(h6);
 	margin-top: $base;
 }
 
 p {
+	@include font-size(base);
 	margin-top: $base;
 	margin-bottom: 0;
-	font-size: $base;
 }
 
 small {
-	font-size: $sml;
+	@include font-size(sml);
 }
-
 
 strong {
 	font-weight: normal;
@@ -104,9 +90,11 @@ strong {
 }
 
 blockquote {
-	font-size: $h4;
+	@include font-size(h4);
 	font-style: italic;
+	
 	overflow: visible;
+
 	margin-left: 0;
 	margin: 0;
 	padding: 0 0 0 $h4;
@@ -116,13 +104,16 @@ blockquote {
 	}
 
 	&:before {
-		content: " ";
-		width: $h3;
-		height: $h3;
-		position: absolute;
-		left: -$base;
 		background-image: url(../img/svgs/quotes-left.svg);
 		background-repeat: no-repeat;
+
+		content: " ";
+		
+		width: $h3;
+		height: $h3;
+		
+		position: absolute;
+		left: -$base;
 	}
 }
 

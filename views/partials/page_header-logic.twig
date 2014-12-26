@@ -1,9 +1,9 @@
 {% set header_class = post.header_display %}
 
 {% if post.header_display == 'image' %}
-    {% include 'headers/main_header-image.twig' %}
+    {% include 'headers/page_header-image.twig' %}
 {% elseif post.header_display == 'video' %}
-    {% include 'headers/main_header-video.twig' %}
+    {% include 'headers/page_header-video.twig' %}
 {% elseif post.header_display == 'text' %}
-    {% include 'headers/main_header-text.twig' %}
+    {% include 'headers/page_header-text.twig' %}
 {% endif %}

@@ -44,20 +44,19 @@
 }
 
 .inner-full {
-    // @include make-md-column(12);
-    // @include inner(full);
+    @extend %bs-pad;
 }
 
 .inner-squish {
-    @include make-md-column(5);
-    @include make-md-column-offset(1);
+    @include make-md-column(6);
+    @include make-md-column-offset(0.5);
 
     @include make-lg-column(4, false);
     @include make-lg-column-offset(1.5);
 }
 
 .inner-pad {
-    @extend %bs-pad;
+    
 }
 
 // .offset-l {

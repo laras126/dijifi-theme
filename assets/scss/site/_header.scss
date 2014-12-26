@@ -35,10 +35,7 @@
 }
 
 .header-tag {
-	@extend %meta;
-	// @include make-xs-column(4, false);
-
-	// @extend %hide-after-md;
+	@include meta;
 	padding-left: $base;
 	padding-top: $sml/2;
 }

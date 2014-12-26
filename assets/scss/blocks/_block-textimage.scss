@@ -19,6 +19,9 @@ figure {
 }
 
 .caption {
+
+	@include change-text-align(center, large, left);
+
 	@include make-xs-column(7);
 	@include make-lg-column(1.5, false);
 
@@ -26,12 +29,9 @@ figure {
 	
 	padding-top: $sml/2;
 	padding-bottom: $sml;
-	float: right;
-	// background-color: #f9f9f9;
-
+	
 	@include bp(large) {
 		float: left;
-		// border-top: $accent-border;
 		border-bottom: none;
 	}
 }

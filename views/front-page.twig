@@ -1,0 +1,21 @@
+{% block html_head_container %}
+{% include 'html-header.twig' %}
+	{% block head %}
+	{% endblock %}
+	</head>
+{% endblock %}
+
+	<body class="{{body_class}}" data-template="base.twig" id="pageTop">
+		<div class="svgsprites">{% include 'partials/svg-defs.svg' %}</div>
+
+		{% include 'headers/page_header-video.twig' %}
+
+		{# {% block footer %} #}
+			<footer id="footer" class="site-footer" role="contentinfo">
+				{% include 'footer.twig' %}
+			</footer>
+			{{ function('wp_footer') }}
+		{# {% endblock %} #}
+
+	</body>
+</html>

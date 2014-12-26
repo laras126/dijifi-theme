@@ -6,67 +6,41 @@
 
 	{% set type = blck.list_type %}
 
+	{% if type == 'artifacts' %}
+		{% set list = blck.connected_artifacts %}
+	{% elseif type == 'text_icon' %}
+		{% set list = blck.icon_items %}
+	{% endif %}
+
 	{{blck.text}}
 	
-	{% if type == 'artifacts' %}
-	
-	<div class="inner">
-		<ul class="list list-artifacts">
-		{% for arti in blck.connected_artifacts %}
+	<ul class="list list-{{type}} list-{{list|length}}">
+
+	{% for item in list %}
+		<li>
+			<div class="item-support">
+				{% if type == 'artifacts' %}
+					<img src="{{TimberImage(item.image).src('medium')}}" alt="{{item.post_title}}">	
+				{% elseif type == 'text_icon' %}
+					<svg class="shape shape-{{item.item_icon}}"><use xlink:href="#shape-{{item.item_icon}}" /></svg>
+				{% endif %}
+			</div>
+			<div class="item-main">
+				{% if type == 'artifacts' %}
+					<h5 class="item-title">{{item.post_title}}</h5>
+					<p>{{item.short_description}}</p>
+				{% elseif type == 'text_icon' %}
+					<h5 class="item-title">{{item.item_title}}</h5>
+					<p>{{item.item_desc}}</p>
+					{% for related in item.related_content %}
+						{{related.link}}
+						<p><a href="{{related.link}}" title="{{related.post_title}}">Read more on our {{related.post_title}} page.</a></p>
+					{% endfor %}
+				{% endif %}
+			</div>
+		</li>
+	{% endfor %}
 		
-			<li class="artifact">
-				{# {% if (loop.index % 2) %} #}
-					<div class="artifact-img">
-						<img src="{{TimberImage(arti.image).src('medium')}}" alt="{{arti.post_title}}">	
-					</div>
-					<div class="artifact-desc">
-						<h5 class="artifact-title">{{arti.post_title}}</h5>
-						<p>{{arti.short_description}}</p>	
-						{% include 'partials/edit-link.twig' %}
-					</div>
-				{# {% else %}
-					<div class="artifact-desc">
-						<h5 class="artifact-title">{{arti.post_title}}</h5>
-						<p>{{arti.short_description}}</p>	
-						{% include 'partials/edit-link.twig' %}
-					</div>
-					<div class="artifact-img">
-						<img src="{{TimberImage(arti.image).src('medium')}}" alt="{{arti.post_title}}">	
-					</div>
-				{% endif %} #}
-			</li>
+	</ul> <!-- /.list-{{type}} -->
 
-		{% endfor %}
-		</ul>
-	</div>
-	
-	{% elseif type == 'text_icon' %}
-	<div class="inner-full">
-
-		<ul class="list list-icons">
-
-			{% for item in blck.icon_items %}
-				<li class="icon-item">
-					<div class="icon-item-img">
-						{% if item.item_icon %}
-							<svg class="shape shape-{{item.item_icon}}"><use xlink:href="#shape-{{item.item_icon}}" /></svg>
-						{% else %}
-							<svg class="shape shape-default"><use xlink:href="#shape-default" /></svg>
-						{% endif %}
-					</div>
-					<div class="icon-item-desc">
-						<h5>{{item.item_title}}</h5>
-						<p class="icon-desc">{{item.item_desc}}</p>
-						{% for related in item.related_content %}
-							{{related.link}}
-							<p><a href="{{related.link}}" title="{{related.post_title}}">Read more on our {{related.post_title}} page.</a></p>
-						{% endfor %}
-					</div>
-				</li>
-			{% endfor %}
-
-		</ul>
-	</div>
-	{% endif %}
-	
 {% endblock %}

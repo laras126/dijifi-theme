@@ -1,103 +1,81 @@
 
-%list-three {
-	@extend .clearfix;
-	@include make-lg-column((7/3));
-	// @include make-lg-column-push(0.5);
-}
-
-
-%list-item-img {
-	@include make-sm-column(3);
-	@include make-lg-column(7, false);
-
-	margin-bottom: $base;
-	margin-top: $base;	
-}
-
-%list-item-desc {
-	@include make-sm-column(4);
-	@include make-lg-column(7, 0);
-
-	@include change-text-align(left, large, center);
-	p {
-		// @extend %meta;
-	}
-}
-
-
 
 .block_list {
 	margin-bottom: $h2;
 }
 
+
+
 // ----
-// General
+// General List
 // ----
 
 .list {
 	@extend %unstyle-list;
-}
 
-
-
-// ----
-// Artifacts (equipment, formats, files)
-// ----
-
-.list-artifacts {
-	@include bp(large) {
-		@include make-row();
+	li {
+		margin-bottom: $h3;
 	}
 }
 
-	.artifact {
-		@include make-md-column(7/2, false);
-		margin-bottom: $h3;
-		&:last-child {
-			border-bottom: none;
-		}
+	// TODO: this could be in a Sass list or loop
 
-		img {	
-			@include center-block;
-			// max-width: 80%;
+	.list-2 {
+		@extend .inner;
+
+		li {
+			@include make-md-column(7/2, false);
 		}
+	}
+
+	.list-3 {
+		li {
+			@include make-md-column(7/3, false);
+		}
+	}
+
+
+
+
+
+// ----
+// List items
+// ----
+
+.item-support {
+
+	img {	
+		@include center-block;
+	}
+
+	@include make-xs-column(4, false);
+	@include make-xs-column-push(1.5);
+
+	@include make-sm-column(1.5);
+	@include make-sm-column-push(0);		
+		
+	@include make-md-column(5, false);
+	@include make-md-column-push(1);	
+}
+
+.item-main {
+
+	@include make-sm-column(5.5, false);
+
+	@include make-md-column(7);
+
+	@include change-text-align(center, small, left);
+	@include bp(med) {
+		text-align: center;
 	}
 	
-	.artifact-img {
-		@include make-sm-column(1.5, false);
-	}
-
-	.artifact-desc {
-		@include make-sm-column(5.5);
-
-		p {
-			@extend %meta;
+	p {
+		font-family: $sans-serif;
+		@include bp(small) {
+			@include font-size(sml);	
 		}
 	}
-
-	.artifact-title {
-		margin-top: 0;
-	}
-
-
-
-// ----
-// Icons/Text (usually connected pages, service options)
-// ----
-
-.list-icons {
-	@extend .clearfix;
 }
 
-.icon-item {
-	@extend %list-three;
-}
 
-	.icon-item-img {
-		@extend %list-item-img;
-	}
-
-	.icon-item-desc {
-		@extend %list-item-desc;
-	}
 
