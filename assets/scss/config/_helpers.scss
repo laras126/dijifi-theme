@@ -99,6 +99,9 @@ exclusively.
     @elseif $value == sml {
         @return $sml;
     }
+    @elseif $value == xsml {
+        @return $xsml;
+    }
 }
 
 @mixin font-size($size) {

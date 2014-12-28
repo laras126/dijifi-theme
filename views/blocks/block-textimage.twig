@@ -7,13 +7,14 @@
 			<img class="caption-image" src="{{TimberImage(blck.image).src|resize(800)}}" alt="">
 		</figure>
 	{% elseif blck.text_format == 'paragraph'%}
-	<div class="inner">
-		<div class="col-sm-3">
+	<div class="inner-squish">
+		<h4>{{blck.text_heading}}</h4>
+		<div class="textimage-image">
 			<img src="{{TimberImage(blck.image).src|resize(800)}}">	
 		</div>
-		<div class="col-sm-4">
-			{{blck.text}}	
-		</div>
+		{# <div class="textimage-text"> #}
+		{{blck.text}}	
+		{# </div> #}
 	</div>
 	{% endif %}
 {% endblock %}

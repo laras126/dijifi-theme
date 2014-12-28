@@ -1,12 +1,10 @@
 
 .block_related_page {
-
-	.inner-squish {
-		background-color: $accent-vlight;
-		// border-top: 1px solid $accent-med;
-		// border-bottom: 4px solid $accent-med;	
+	background-color: $accent-vlight;
+	padding-bottom: $base;
+	p {
+		// @include meta;
 	}
-	
 }
 
 .related-title {
@@ -33,7 +31,7 @@
 		span {
 			position: relative;
 			padding: $sml/2 $sml;
-			@include rotate($text-light, $accent-med);
+			@include rotate($text-light, $alert-info);
 			position: relative;
 			z-index: $ztop;
 

@@ -36,6 +36,7 @@
 
 .header-tag {
 	@include meta;
+	font-size: $sml/1.25;
 	padding-left: $base;
 	padding-top: $sml/2;
 }

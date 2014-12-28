@@ -34,7 +34,7 @@
 
 .link-edit,
 .link-more {
-	@extend %meta;
+	@include meta;
 	font-weight: 700;
 	color: $alert-danger;
 }

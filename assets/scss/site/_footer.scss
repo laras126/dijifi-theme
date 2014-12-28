@@ -1,6 +1,5 @@
 
 .site-footer {
-	// background-color: $accent-vlight;
 	font-family: $sans-serif;
 	@include border($color: $accent-light, $width: 4px, $side: top);
 	
@@ -9,13 +8,25 @@
 	}
 
 	li {
-		@extend %meta;
+		@include font-size(sml);
 	}
 }
 
-	.creds {
+	.colophon {
 		@include rotate($text-light, $alert-info);
-		@extend %pad_tb;
+		p {
+			@include font-size(xsml);	
+		}
+		padding-bottom: $base;
+	}
+
+	.creds {
+		@include make-md-column(3.5, false);
+	}
+	
+	.copyright {
+		@include make-md-column(3.5, false);
+		text-align: right;
 	}
 
 .menu-footer {

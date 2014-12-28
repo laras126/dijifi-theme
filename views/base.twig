@@ -6,9 +6,10 @@
 {% endblock %}
 
 	<body class="{{body_class}}" data-template="base.twig" id="pageTop">
+
 		<div class="svgsprites">{% include 'partials/svg-defs.svg' %}</div>
 
-		<header role="banner" class="site-header">
+		<header class="site-header" role="banner">
 			{% block header %}
 				<div class="contain">					
 					{% include 'headers/site_header.twig' %}
@@ -16,8 +17,7 @@
 			{% endblock %}	
 		</header>
 
-
-		<main id="content" role="main" class="main">
+		<main id="content" class="main" role="main">
 
 			{% include 'partials/page_header-logic.twig' %}
 			
@@ -46,7 +46,9 @@
 			<footer id="footer" class="site-footer" role="contentinfo">
 				{% include 'footer.twig' %}
 			</footer>
+
 			{{ function('wp_footer') }}
+			
 		{% endblock %}
 
 	</body>

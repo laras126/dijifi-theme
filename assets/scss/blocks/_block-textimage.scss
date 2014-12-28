@@ -19,7 +19,7 @@ figure {
 }
 
 .caption {
-
+	@include font-size(xsml);
 	@include change-text-align(center, large, left);
 
 	@include make-xs-column(7);
@@ -27,7 +27,7 @@ figure {
 
 	border-top: $accent-border;
 	
-	padding-top: $sml/2;
+	padding-top: $xsml;
 	padding-bottom: $sml;
 	
 	@include bp(large) {
@@ -40,13 +40,9 @@ figure {
 		@include make-lg-column(5.5, false);
 		float: right;
 		border-top: $accent-border;
-
-		// img {
-		// 	width: 100%;
-		// }
 	}
 
-.paragraph-image {
+.textimage-image {
 	@include make-sm-column(4, false);
 	// @include make-sm-column-offset(3, right);
 	
@@ -57,6 +53,7 @@ figure {
 	@include bp(large) {
 		margin-left: percentage(2/7)*-1;
 	}
+
 	float: left;
 	padding-right: $gutter;
 	padding-bottom: $gutter/2;
@@ -71,7 +68,7 @@ figure {
 	}
 }
 
-.format-paragraph {
-	@include make-sm-column(4.5);
+.textimage-text {
+	@include make-sm-column(4.5, false);
 	@include make-sm-column-offset(1);
 }

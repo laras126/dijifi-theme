@@ -12,9 +12,11 @@
 
 .list {
 	@extend %unstyle-list;
+	@include clearfix;
 
 	li {
 		margin-bottom: $h3;
+		margin-top: $h3;
 	}
 }
 
@@ -47,26 +49,46 @@
 	img {	
 		@include center-block;
 	}
-
+	
+	padding-right: $gutter/2;
+	
 	@include make-xs-column(4, false);
 	@include make-xs-column-push(1.5);
 
-	@include make-sm-column(1.5);
-	@include make-sm-column-push(0);		
-		
-	@include make-md-column(5, false);
-	@include make-md-column-push(1);	
+	@include make-sm-column(1.5, false);
+	@include make-sm-column-push(0);	
+	
+	.list-3 & {
+		@include make-md-column(5);
+		@include make-md-column-push(1);		
+	}
+
+	
 }
 
 .item-main {
 
 	@include make-sm-column(5.5, false);
 
-	@include make-md-column(7);
+	.list-3 & {
 
-	@include change-text-align(center, small, left);
-	@include bp(med) {
-		text-align: center;
+		@include make-md-column(7);
+
+		@include change-text-align(center, small, left);
+		@include bp(med) {
+			text-align: center;
+		}
+	}
+	
+
+	.list-2 & {
+		h5 {
+			margin-top: 0;
+		}
+
+		p {
+			margin-top: $xsml;
+		}
 	}
 	
 	p {

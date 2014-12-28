@@ -7,7 +7,7 @@
 @mixin button( $button-color, $text-color: $white ) {
 	background: $button-color;
 	font-weight: 700;
-	border-radius: 4px;
+	border-radius: 2px;
 	
 	// TODO: BAD BAD
 	// Remove important
