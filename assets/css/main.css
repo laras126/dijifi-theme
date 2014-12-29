@@ -2478,28 +2478,28 @@ nav a {
   float: left;
   position: relative;
   min-height: 1px;
+  text-align: center;
 }
 @media (min-width: 34em) {
   .item-main {
     width: 78.57143%;
   }
 }
+@media (min-width: 34em) {
+  .item-main {
+    text-align: left;
+  }
+}
 .list-major .item-main {
   float: left;
   position: relative;
   min-height: 1px;
-  text-align: center;
 }
 @media (min-width: 47em) {
   .list-major .item-main {
     padding-left: 1.2rem;
     padding-right: 1.2rem;
     width: 100%;
-  }
-}
-@media (min-width: 34em) {
-  .list-major .item-main {
-    text-align: left;
   }
 }
 @media (min-width: 47em) {

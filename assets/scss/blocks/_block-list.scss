@@ -84,12 +84,12 @@
 .item-main {
 
 	@include make-sm-column(5.5, false);
-
+	@include change-text-align(center, small, left);
+	
 	.list-major & {
 
 		@include make-md-column(7);
 
-		@include change-text-align(center, small, left);
 		@include bp(med) {
 			text-align: center;
 		}
