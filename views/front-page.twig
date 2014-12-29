@@ -7,15 +7,21 @@
 
 	<body class="{{body_class}}" data-template="base.twig" id="pageTop">
 		<div class="svgsprites">{% include 'partials/svg-defs.svg' %}</div>
-
-		{% include 'headers/page_header-video.twig' %}
-
-		{# {% block footer %} #}
-			<footer id="footer" class="site-footer" role="contentinfo">
-				{% include 'footer.twig' %}
-			</footer>
-			{{ function('wp_footer') }}
-		{# {% endblock %} #}
+		
+		{# <header class="site-header" style="position:relative" role="banner">
+			{% block header %}
+				<div class="contain">					
+					{% include 'headers/site_header.twig' %}
+				</div> <!-- /.contain -->
+			{% endblock %}
+		</header>
+ #}
+		{% include 'partials/page_header-logic.twig' %}
+		
+		<footer id="footer" class="site-footer" role="contentinfo">
+			{% include 'footer.twig' %}
+		</footer>
+		{{ function('wp_footer') }}
 
 	</body>
 </html>

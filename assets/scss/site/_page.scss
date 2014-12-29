@@ -5,8 +5,13 @@
 }
 
 .page-header {}
+
 	.header-video {
 		video {
+			top: 0;
+			left: 0;
+			position: absolute;
 			width: 100%;
+			height: auto;
 		}
 	}

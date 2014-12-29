@@ -1,18 +1,21 @@
 
+
+
+html, 
+body, 
+.home .page-header {
+	height: 100%;
+}
+
+.video-header-content {
+	position: absolute;
+	top: 25%;
+	// left: 25%;
+	z-index: $ztop;
+	text-align: center;
+}
+
 // Blocks
-
-.block_textimage {
-	// img {
-	// 	width: 100%;
-	// }
-}
-
-
-.border-tb {
-	border-top: $accent-border;
-	border-bottom: $accent-border;
-}
-
 
 
 // .section-header {

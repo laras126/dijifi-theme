@@ -430,13 +430,9 @@ exclusively.
   padding: 1.2rem;
 }
 
-.content-nav ul, .menu-item, .site-footer ul, .param-options-list, .gfield,
+.menu-item, .site-footer ul, .param-options-list, .gfield,
 .gfield_checkbox {
   list-style: none;
-}
-
-.content-nav li {
-  display: inline-block;
 }
 
 textarea,
@@ -454,7 +450,7 @@ input[type="url"],
 input[type="search"],
 input[type="tel"], input {
   padding: 0.3rem 0.45rem;
-  font-family: "open-sans", Helvetica, sans-serif;
+  font-family: "source-sans-pro", Helvetica, serif;
 }
 
 .hide-until-md {
@@ -482,34 +478,15 @@ input[type="tel"], input {
 .pickup-notice,
 .sum-table {
   font-size: 0.9rem;
-  font-family: "open-sans", Helvetica, sans-serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   margin: 0;
 }
 
 .ginput_complex label, .sum-table-right {
   font-size: 0.9rem;
-  font-family: "open-sans", Helvetica, sans-serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   margin: 0;
   color: #999;
-}
-
-.col-xs-1, .col-xs-1-np, .col-xs-2, .col-xs-2-np, .col-xs-3, .col-xs-3-np, .col-xs-4, .col-xs-4-np, .col-xs-5, .col-xs-5-np, .col-xs-6, .col-xs-6-np, .col-sm-1, .col-sm-1-np, .col-sm-2, .col-sm-2-np, .col-sm-3, .col-sm-3-np, .col-sm-4, .col-sm-4-np, .col-sm-5, .col-sm-5-np, .col-sm-6, .col-sm-6-np, .col-md-1, .col-md-1-np, .col-md-2, .col-md-2-np, .col-md-3, .col-md-3-np, .col-md-4, .col-md-4-np, .col-md-5, .col-md-5-np, .col-md-6, .col-md-6-np, .col-lg-1, .col-lg-1-np, .col-lg-2, .col-lg-2-np, .col-lg-3, .col-lg-3-np, .col-lg-4, .col-lg-4-np, .col-lg-5, .col-lg-5-np, .col-lg-6, .col-lg-6-np, .inner, .wrapper, .inner-squish, .item-split, .header-brand, .header-nav-link, .header-nav, .creds, .copyright, .widget, .param-option, .col-xs-7, .col-xs-7-np, .col-xs-8, .col-xs-8-np, .col-xs-9, .col-xs-9-np, .col-xs-10, .col-xs-10-np, .col-xs-11, .col-xs-11-np, .col-sm-7, .col-sm-7-np, .col-sm-8, .col-sm-8-np, .col-sm-9, .col-sm-9-np, .col-sm-10, .col-sm-10-np, .col-sm-11, .col-sm-11-np, .col-md-7, .col-md-7-np, .col-md-8, .col-md-8-np, .col-md-9, .col-md-9-np, .col-md-10, .col-md-10-np, .col-md-11, .col-md-11-np, .col-lg-7, .col-lg-7-np, .col-lg-8, .col-lg-8-np, .col-lg-9, .col-lg-9-np, .col-lg-10, .col-lg-10-np, .col-lg-11, .col-lg-11-np, .dfi-field-name, .dfi-field-name .ginput_left,
-.dfi-field-name .ginput_right, .dfi-field-email, .gform_footer,
-.dfi-field-message,
-.dfi-field-signup, .product-nodivs,
-.sub-products, .provided, .provided-drive-choices, .choices,
-.nochoice, #sub-total,
-#grand-total,
-#tax-total, .product-description,
-.product-description-nores,
-#sub-title,
-#grand-title,
-#tax-title, .qualities, .price, .product-total, .drives, .product-description-drives, .purchase, .section-title,
-.service, .order-table tr:not(.pickup-notice) td:first-child, .order-table td[align="left"], .order-table td[align="left"] input[type="text"],
-.order-table td[align="left"] textarea, .order-table tr:last-child td, tr.pickup-notice, tr.pickup-notice td:first-child {
-  float: left;
-  position: relative;
-  min-height: 1px;
 }
 
 .inner-full {
@@ -548,6 +525,9 @@ input[type="tel"], input {
 }
 
 .col-xs-1 {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 14.28571%;
@@ -563,6 +543,9 @@ input[type="tel"], input {
 }
 
 .col-xs-1-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 0;
   padding-right: 0;
   width: 14.28571%;
@@ -570,6 +553,9 @@ input[type="tel"], input {
 }
 
 .col-xs-2 {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 28.57143%;
@@ -585,6 +571,9 @@ input[type="tel"], input {
 }
 
 .col-xs-2-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 0;
   padding-right: 0;
   width: 28.57143%;
@@ -592,6 +581,9 @@ input[type="tel"], input {
 }
 
 .col-xs-3 {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 42.85714%;
@@ -607,6 +599,9 @@ input[type="tel"], input {
 }
 
 .col-xs-3-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 0;
   padding-right: 0;
   width: 42.85714%;
@@ -614,6 +609,9 @@ input[type="tel"], input {
 }
 
 .col-xs-4 {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 57.14286%;
@@ -629,6 +627,9 @@ input[type="tel"], input {
 }
 
 .col-xs-4-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 0;
   padding-right: 0;
   width: 57.14286%;
@@ -636,6 +637,9 @@ input[type="tel"], input {
 }
 
 .col-xs-5 {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 71.42857%;
@@ -651,6 +655,9 @@ input[type="tel"], input {
 }
 
 .col-xs-5-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 0;
   padding-right: 0;
   width: 71.42857%;
@@ -658,6 +665,9 @@ input[type="tel"], input {
 }
 
 .col-xs-6 {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 85.71429%;
@@ -673,12 +683,20 @@ input[type="tel"], input {
 }
 
 .col-xs-6-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 0;
   padding-right: 0;
   width: 85.71429%;
   min-height: 1px;
 }
 
+.col-sm-1 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-1 {
     padding-left: 1.2rem;
@@ -705,6 +723,11 @@ input[type="tel"], input {
   }
 }
 
+.col-sm-1-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-1-np {
     padding-left: 0;
@@ -713,6 +736,11 @@ input[type="tel"], input {
   }
 }
 
+.col-sm-2 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-2 {
     padding-left: 1.2rem;
@@ -739,6 +767,11 @@ input[type="tel"], input {
   }
 }
 
+.col-sm-2-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-2-np {
     padding-left: 0;
@@ -747,6 +780,11 @@ input[type="tel"], input {
   }
 }
 
+.col-sm-3 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-3 {
     padding-left: 1.2rem;
@@ -773,6 +811,11 @@ input[type="tel"], input {
   }
 }
 
+.col-sm-3-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-3-np {
     padding-left: 0;
@@ -781,6 +824,11 @@ input[type="tel"], input {
   }
 }
 
+.col-sm-4 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-4 {
     padding-left: 1.2rem;
@@ -807,6 +855,11 @@ input[type="tel"], input {
   }
 }
 
+.col-sm-4-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-4-np {
     padding-left: 0;
@@ -815,6 +868,11 @@ input[type="tel"], input {
   }
 }
 
+.col-sm-5 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-5 {
     padding-left: 1.2rem;
@@ -841,6 +899,11 @@ input[type="tel"], input {
   }
 }
 
+.col-sm-5-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-5-np {
     padding-left: 0;
@@ -849,6 +912,11 @@ input[type="tel"], input {
   }
 }
 
+.col-sm-6 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-6 {
     padding-left: 1.2rem;
@@ -875,6 +943,11 @@ input[type="tel"], input {
   }
 }
 
+.col-sm-6-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-6-np {
     padding-left: 0;
@@ -883,6 +956,11 @@ input[type="tel"], input {
   }
 }
 
+.col-md-1 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-1 {
     padding-left: 1.2rem;
@@ -903,6 +981,11 @@ input[type="tel"], input {
   }
 }
 
+.col-md-1-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-1-np {
     padding-left: 0;
@@ -911,6 +994,11 @@ input[type="tel"], input {
   }
 }
 
+.col-md-2 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-2 {
     padding-left: 1.2rem;
@@ -931,6 +1019,11 @@ input[type="tel"], input {
   }
 }
 
+.col-md-2-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-2-np {
     padding-left: 0;
@@ -939,6 +1032,11 @@ input[type="tel"], input {
   }
 }
 
+.col-md-3 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-3 {
     padding-left: 1.2rem;
@@ -959,6 +1057,11 @@ input[type="tel"], input {
   }
 }
 
+.col-md-3-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-3-np {
     padding-left: 0;
@@ -967,6 +1070,11 @@ input[type="tel"], input {
   }
 }
 
+.col-md-4 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-4 {
     padding-left: 1.2rem;
@@ -987,6 +1095,11 @@ input[type="tel"], input {
   }
 }
 
+.col-md-4-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-4-np {
     padding-left: 0;
@@ -995,6 +1108,11 @@ input[type="tel"], input {
   }
 }
 
+.col-md-5 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-5 {
     padding-left: 1.2rem;
@@ -1015,6 +1133,11 @@ input[type="tel"], input {
   }
 }
 
+.col-md-5-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-5-np {
     padding-left: 0;
@@ -1023,6 +1146,11 @@ input[type="tel"], input {
   }
 }
 
+.col-md-6 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-6 {
     padding-left: 1.2rem;
@@ -1043,6 +1171,11 @@ input[type="tel"], input {
   }
 }
 
+.col-md-6-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-6-np {
     padding-left: 0;
@@ -1051,6 +1184,11 @@ input[type="tel"], input {
   }
 }
 
+.col-lg-1 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-1 {
     padding-left: 1.2rem;
@@ -1071,6 +1209,11 @@ input[type="tel"], input {
   }
 }
 
+.col-lg-1-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-1-np {
     padding-left: 0;
@@ -1085,6 +1228,11 @@ input[type="tel"], input {
   }
 }
 
+.col-lg-2 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-2 {
     padding-left: 1.2rem;
@@ -1105,6 +1253,11 @@ input[type="tel"], input {
   }
 }
 
+.col-lg-2-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-2-np {
     padding-left: 0;
@@ -1119,6 +1272,11 @@ input[type="tel"], input {
   }
 }
 
+.col-lg-3 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-3 {
     padding-left: 1.2rem;
@@ -1139,6 +1297,11 @@ input[type="tel"], input {
   }
 }
 
+.col-lg-3-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-3-np {
     padding-left: 0;
@@ -1153,6 +1316,11 @@ input[type="tel"], input {
   }
 }
 
+.col-lg-4 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-4 {
     padding-left: 1.2rem;
@@ -1173,6 +1341,11 @@ input[type="tel"], input {
   }
 }
 
+.col-lg-4-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-4-np {
     padding-left: 0;
@@ -1187,6 +1360,11 @@ input[type="tel"], input {
   }
 }
 
+.col-lg-5 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-5 {
     padding-left: 1.2rem;
@@ -1207,6 +1385,11 @@ input[type="tel"], input {
   }
 }
 
+.col-lg-5-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-5-np {
     padding-left: 0;
@@ -1221,6 +1404,11 @@ input[type="tel"], input {
   }
 }
 
+.col-lg-6 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-6 {
     padding-left: 1.2rem;
@@ -1241,6 +1429,11 @@ input[type="tel"], input {
   }
 }
 
+.col-lg-6-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-6-np {
     padding-left: 0;
@@ -1255,10 +1448,16 @@ input[type="tel"], input {
   }
 }
 
+.inner, .wrapper {
+  float: left;
+  position: relative;
+  min-height: 1px;
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .inner, .wrapper {
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
     width: 100%;
   }
 }
@@ -1273,10 +1472,16 @@ input[type="tel"], input {
   }
 }
 
+.inner-squish {
+  float: left;
+  position: relative;
+  min-height: 1px;
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .inner-squish {
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
     width: 85.71429%;
   }
 }
@@ -1313,13 +1518,17 @@ ul, ol {
   padding: 0;
 }
 
-.lead, .page-tagline {
-  font-size: 1.44rem;
-  font-family: "open-sans", Helvetica, sans-serif;
+.lead {
+  font-size: 1.56rem;
+}
+
+.page-tagline {
+  font-family: "source-sans-pro", Helvetica, serif;
+  font-size: 1.56rem;
 }
 
 nav a {
-  font-family: "open-sans", Helvetica, sans-serif;
+  font-family: "source-sans-pro", Helvetica, serif;
 }
 
 .fixed-image {
@@ -1432,6 +1641,9 @@ nav a {
 }
 
 .item-split {
+  float: left;
+  position: relative;
+  min-height: 1px;
   width: 50%;
   min-height: 1px;
 }
@@ -1537,6 +1749,12 @@ nav a {
   color: #fefefe;
   text-align: center;
 }
+.content-nav ul {
+  list-style-type: none;
+}
+.content-nav ul > li {
+  display: inline-block;
+}
 .content-nav li {
   transition: all 0.3s ease-in-out;
 }
@@ -1603,7 +1821,13 @@ nav a {
 }
 
 .header-brand {
+  float: left;
+  position: relative;
+  min-height: 1px;
   width: 92.85714%;
+  min-height: 1px;
+  float: left;
+  position: relative;
   min-height: 1px;
   display: table-row;
 }
@@ -1621,7 +1845,7 @@ nav a {
 
 .header-tag {
   font-size: 0.9rem;
-  font-family: "open-sans", Helvetica, sans-serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   margin: 0;
   font-size: 0.72rem;
   padding-left: 1.2rem;
@@ -1629,12 +1853,21 @@ nav a {
 }
 
 .header-nav-link {
+  float: left;
+  position: relative;
+  min-height: 1px;
   width: 7.14286%;
   min-height: 1px;
 }
 
 .header-nav {
+  float: left;
+  position: relative;
+  min-height: 1px;
   width: 100%;
+  min-height: 1px;
+  float: left;
+  position: relative;
   min-height: 1px;
 }
 @media (min-width: 47em) {
@@ -1649,7 +1882,11 @@ nav a {
 }
 
 .header-video video {
+  top: 0;
+  left: 0;
+  position: absolute;
   width: 100%;
+  height: auto;
 }
 
 .section-header {
@@ -1666,7 +1903,7 @@ nav a {
 }
 
 .site-footer {
-  font-family: "open-sans", Helvetica, sans-serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   border-top: 4px solid #FFCC53;
 }
 .site-footer li {
@@ -1682,6 +1919,11 @@ nav a {
   font-size: 0.72rem;
 }
 
+.creds {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .creds {
     width: 50%;
@@ -1689,6 +1931,9 @@ nav a {
 }
 
 .copyright {
+  float: left;
+  position: relative;
+  min-height: 1px;
   text-align: right;
 }
 @media (min-width: 47em) {
@@ -1697,6 +1942,11 @@ nav a {
   }
 }
 
+.widget {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .widget {
     padding-left: 1.2rem;
@@ -1711,7 +1961,7 @@ nav a {
 }
 
 .param-options-list {
-  font-family: "open-sans", Helvetica, sans-serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   margin-bottom: 0.9rem;
 }
 .param-options-list:before, .param-options-list:after {
@@ -1728,6 +1978,9 @@ nav a {
 }
 
 .param-option {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 0.45rem;
   padding-right: 0.45rem;
   width: 85.71429%;
@@ -1740,7 +1993,7 @@ nav a {
 
 .int {
   border: 3px solid transparent;
-  padding: 1.44rem;
+  padding: 1.56rem;
   text-align: center;
 }
 .int:hover {
@@ -1750,7 +2003,7 @@ nav a {
 
 .quote-param {
   display: block;
-  padding: 0 1.44rem;
+  padding: 0 1.56rem;
   margin-bottom: 2.4rem;
 }
 .quote-param.closed {
@@ -1768,6 +2021,9 @@ nav a {
 }
 
 .col-xs-1 {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 8.33333%;
@@ -1783,6 +2039,9 @@ nav a {
 }
 
 .col-xs-1-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 0;
   padding-right: 0;
   width: 8.33333%;
@@ -1790,6 +2049,9 @@ nav a {
 }
 
 .col-xs-2 {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 16.66667%;
@@ -1805,6 +2067,9 @@ nav a {
 }
 
 .col-xs-2-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 0;
   padding-right: 0;
   width: 16.66667%;
@@ -1812,6 +2077,9 @@ nav a {
 }
 
 .col-xs-3 {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 25%;
@@ -1827,6 +2095,9 @@ nav a {
 }
 
 .col-xs-3-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 0;
   padding-right: 0;
   width: 25%;
@@ -1834,6 +2105,9 @@ nav a {
 }
 
 .col-xs-4 {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 33.33333%;
@@ -1849,6 +2123,9 @@ nav a {
 }
 
 .col-xs-4-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 0;
   padding-right: 0;
   width: 33.33333%;
@@ -1856,6 +2133,9 @@ nav a {
 }
 
 .col-xs-5 {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 41.66667%;
@@ -1871,6 +2151,9 @@ nav a {
 }
 
 .col-xs-5-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 0;
   padding-right: 0;
   width: 41.66667%;
@@ -1878,6 +2161,9 @@ nav a {
 }
 
 .col-xs-6 {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 50%;
@@ -1893,6 +2179,9 @@ nav a {
 }
 
 .col-xs-6-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 0;
   padding-right: 0;
   width: 50%;
@@ -1900,6 +2189,9 @@ nav a {
 }
 
 .col-xs-7 {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 58.33333%;
@@ -1915,6 +2207,9 @@ nav a {
 }
 
 .col-xs-7-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 0;
   padding-right: 0;
   width: 58.33333%;
@@ -1922,6 +2217,9 @@ nav a {
 }
 
 .col-xs-8 {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 66.66667%;
@@ -1937,6 +2235,9 @@ nav a {
 }
 
 .col-xs-8-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 0;
   padding-right: 0;
   width: 66.66667%;
@@ -1944,6 +2245,9 @@ nav a {
 }
 
 .col-xs-9 {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 75%;
@@ -1959,6 +2263,9 @@ nav a {
 }
 
 .col-xs-9-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 0;
   padding-right: 0;
   width: 75%;
@@ -1966,6 +2273,9 @@ nav a {
 }
 
 .col-xs-10 {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 83.33333%;
@@ -1981,6 +2291,9 @@ nav a {
 }
 
 .col-xs-10-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 0;
   padding-right: 0;
   width: 83.33333%;
@@ -1988,6 +2301,9 @@ nav a {
 }
 
 .col-xs-11 {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 91.66667%;
@@ -2003,12 +2319,20 @@ nav a {
 }
 
 .col-xs-11-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 0;
   padding-right: 0;
   width: 91.66667%;
   min-height: 1px;
 }
 
+.col-sm-1 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-1 {
     padding-left: 1.2rem;
@@ -2035,6 +2359,11 @@ nav a {
   }
 }
 
+.col-sm-1-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-1-np {
     padding-left: 0;
@@ -2043,6 +2372,11 @@ nav a {
   }
 }
 
+.col-sm-2 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-2 {
     padding-left: 1.2rem;
@@ -2069,6 +2403,11 @@ nav a {
   }
 }
 
+.col-sm-2-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-2-np {
     padding-left: 0;
@@ -2077,6 +2416,11 @@ nav a {
   }
 }
 
+.col-sm-3 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-3 {
     padding-left: 1.2rem;
@@ -2103,6 +2447,11 @@ nav a {
   }
 }
 
+.col-sm-3-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-3-np {
     padding-left: 0;
@@ -2111,6 +2460,11 @@ nav a {
   }
 }
 
+.col-sm-4 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-4 {
     padding-left: 1.2rem;
@@ -2137,6 +2491,11 @@ nav a {
   }
 }
 
+.col-sm-4-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-4-np {
     padding-left: 0;
@@ -2145,6 +2504,11 @@ nav a {
   }
 }
 
+.col-sm-5 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-5 {
     padding-left: 1.2rem;
@@ -2171,6 +2535,11 @@ nav a {
   }
 }
 
+.col-sm-5-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-5-np {
     padding-left: 0;
@@ -2179,6 +2548,11 @@ nav a {
   }
 }
 
+.col-sm-6 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-6 {
     padding-left: 1.2rem;
@@ -2205,6 +2579,11 @@ nav a {
   }
 }
 
+.col-sm-6-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-6-np {
     padding-left: 0;
@@ -2213,6 +2592,11 @@ nav a {
   }
 }
 
+.col-sm-7 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-7 {
     padding-left: 1.2rem;
@@ -2239,6 +2623,11 @@ nav a {
   }
 }
 
+.col-sm-7-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-7-np {
     padding-left: 0;
@@ -2247,6 +2636,11 @@ nav a {
   }
 }
 
+.col-sm-8 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-8 {
     padding-left: 1.2rem;
@@ -2273,6 +2667,11 @@ nav a {
   }
 }
 
+.col-sm-8-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-8-np {
     padding-left: 0;
@@ -2281,6 +2680,11 @@ nav a {
   }
 }
 
+.col-sm-9 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-9 {
     padding-left: 1.2rem;
@@ -2307,6 +2711,11 @@ nav a {
   }
 }
 
+.col-sm-9-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-9-np {
     padding-left: 0;
@@ -2315,6 +2724,11 @@ nav a {
   }
 }
 
+.col-sm-10 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-10 {
     padding-left: 1.2rem;
@@ -2341,6 +2755,11 @@ nav a {
   }
 }
 
+.col-sm-10-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-10-np {
     padding-left: 0;
@@ -2349,6 +2768,11 @@ nav a {
   }
 }
 
+.col-sm-11 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-11 {
     padding-left: 1.2rem;
@@ -2375,6 +2799,11 @@ nav a {
   }
 }
 
+.col-sm-11-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .col-sm-11-np {
     padding-left: 0;
@@ -2383,6 +2812,11 @@ nav a {
   }
 }
 
+.col-md-1 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-1 {
     padding-left: 1.2rem;
@@ -2403,6 +2837,11 @@ nav a {
   }
 }
 
+.col-md-1-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-1-np {
     padding-left: 0;
@@ -2411,6 +2850,11 @@ nav a {
   }
 }
 
+.col-md-2 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-2 {
     padding-left: 1.2rem;
@@ -2431,6 +2875,11 @@ nav a {
   }
 }
 
+.col-md-2-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-2-np {
     padding-left: 0;
@@ -2439,6 +2888,11 @@ nav a {
   }
 }
 
+.col-md-3 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-3 {
     padding-left: 1.2rem;
@@ -2459,6 +2913,11 @@ nav a {
   }
 }
 
+.col-md-3-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-3-np {
     padding-left: 0;
@@ -2467,6 +2926,11 @@ nav a {
   }
 }
 
+.col-md-4 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-4 {
     padding-left: 1.2rem;
@@ -2487,6 +2951,11 @@ nav a {
   }
 }
 
+.col-md-4-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-4-np {
     padding-left: 0;
@@ -2495,6 +2964,11 @@ nav a {
   }
 }
 
+.col-md-5 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-5 {
     padding-left: 1.2rem;
@@ -2515,6 +2989,11 @@ nav a {
   }
 }
 
+.col-md-5-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-5-np {
     padding-left: 0;
@@ -2523,6 +3002,11 @@ nav a {
   }
 }
 
+.col-md-6 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-6 {
     padding-left: 1.2rem;
@@ -2543,6 +3027,11 @@ nav a {
   }
 }
 
+.col-md-6-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-6-np {
     padding-left: 0;
@@ -2551,6 +3040,11 @@ nav a {
   }
 }
 
+.col-md-7 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-7 {
     padding-left: 1.2rem;
@@ -2571,6 +3065,11 @@ nav a {
   }
 }
 
+.col-md-7-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-7-np {
     padding-left: 0;
@@ -2579,6 +3078,11 @@ nav a {
   }
 }
 
+.col-md-8 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-8 {
     padding-left: 1.2rem;
@@ -2599,6 +3103,11 @@ nav a {
   }
 }
 
+.col-md-8-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-8-np {
     padding-left: 0;
@@ -2607,6 +3116,11 @@ nav a {
   }
 }
 
+.col-md-9 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-9 {
     padding-left: 1.2rem;
@@ -2627,6 +3141,11 @@ nav a {
   }
 }
 
+.col-md-9-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-9-np {
     padding-left: 0;
@@ -2635,6 +3154,11 @@ nav a {
   }
 }
 
+.col-md-10 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-10 {
     padding-left: 1.2rem;
@@ -2655,6 +3179,11 @@ nav a {
   }
 }
 
+.col-md-10-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-10-np {
     padding-left: 0;
@@ -2663,6 +3192,11 @@ nav a {
   }
 }
 
+.col-md-11 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-11 {
     padding-left: 1.2rem;
@@ -2683,6 +3217,11 @@ nav a {
   }
 }
 
+.col-md-11-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .col-md-11-np {
     padding-left: 0;
@@ -2691,6 +3230,11 @@ nav a {
   }
 }
 
+.col-lg-1 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-1 {
     padding-left: 1.2rem;
@@ -2711,6 +3255,11 @@ nav a {
   }
 }
 
+.col-lg-1-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-1-np {
     padding-left: 0;
@@ -2725,6 +3274,11 @@ nav a {
   }
 }
 
+.col-lg-2 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-2 {
     padding-left: 1.2rem;
@@ -2745,6 +3299,11 @@ nav a {
   }
 }
 
+.col-lg-2-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-2-np {
     padding-left: 0;
@@ -2759,6 +3318,11 @@ nav a {
   }
 }
 
+.col-lg-3 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-3 {
     padding-left: 1.2rem;
@@ -2779,6 +3343,11 @@ nav a {
   }
 }
 
+.col-lg-3-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-3-np {
     padding-left: 0;
@@ -2793,6 +3362,11 @@ nav a {
   }
 }
 
+.col-lg-4 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-4 {
     padding-left: 1.2rem;
@@ -2813,6 +3387,11 @@ nav a {
   }
 }
 
+.col-lg-4-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-4-np {
     padding-left: 0;
@@ -2827,6 +3406,11 @@ nav a {
   }
 }
 
+.col-lg-5 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-5 {
     padding-left: 1.2rem;
@@ -2847,6 +3431,11 @@ nav a {
   }
 }
 
+.col-lg-5-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-5-np {
     padding-left: 0;
@@ -2861,6 +3450,11 @@ nav a {
   }
 }
 
+.col-lg-6 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-6 {
     padding-left: 1.2rem;
@@ -2881,6 +3475,11 @@ nav a {
   }
 }
 
+.col-lg-6-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-6-np {
     padding-left: 0;
@@ -2895,6 +3494,11 @@ nav a {
   }
 }
 
+.col-lg-7 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-7 {
     padding-left: 1.2rem;
@@ -2915,6 +3519,11 @@ nav a {
   }
 }
 
+.col-lg-7-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-7-np {
     padding-left: 0;
@@ -2929,6 +3538,11 @@ nav a {
   }
 }
 
+.col-lg-8 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-8 {
     padding-left: 1.2rem;
@@ -2949,6 +3563,11 @@ nav a {
   }
 }
 
+.col-lg-8-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-8-np {
     padding-left: 0;
@@ -2963,6 +3582,11 @@ nav a {
   }
 }
 
+.col-lg-9 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-9 {
     padding-left: 1.2rem;
@@ -2983,6 +3607,11 @@ nav a {
   }
 }
 
+.col-lg-9-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-9-np {
     padding-left: 0;
@@ -2997,6 +3626,11 @@ nav a {
   }
 }
 
+.col-lg-10 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-10 {
     padding-left: 1.2rem;
@@ -3017,6 +3651,11 @@ nav a {
   }
 }
 
+.col-lg-10-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-10-np {
     padding-left: 0;
@@ -3031,6 +3670,11 @@ nav a {
   }
 }
 
+.col-lg-11 {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-11 {
     padding-left: 1.2rem;
@@ -3051,6 +3695,11 @@ nav a {
   }
 }
 
+.col-lg-11-np {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 72em) {
   .col-lg-11-np {
     padding-left: 0;
@@ -3114,7 +3763,7 @@ a:link {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "open-sans", Helvetica, sans-serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   margin-bottom: 0;
 }
 
@@ -3134,12 +3783,12 @@ h3 {
 }
 
 h4 {
-  font-size: 1.44rem;
+  font-size: 1.56rem;
   margin-top: 2.4rem;
 }
 
 h5 {
-  font-size: 1.2rem;
+  font-size: 1.32rem;
   margin-top: 1.2rem;
 }
 
@@ -3164,17 +3813,12 @@ strong {
 }
 
 blockquote {
-  font-size: 1.44rem;
+  font-size: 1.56rem;
   font-style: italic;
   overflow: visible;
   margin-left: 0;
   margin: 0;
-  padding: 0 0 0 1.44rem;
-}
-@media (min-width: 47em) {
-  blockquote {
-    padding-left: 0;
-  }
+  padding: 0 0 0 1.56rem;
 }
 blockquote:before {
   background-image: url(../img/svgs/quotes-left.svg);
@@ -3183,7 +3827,7 @@ blockquote:before {
   width: 2.4rem;
   height: 2.4rem;
   position: absolute;
-  left: -1.2rem;
+  left: -1.56rem;
 }
 
 *:focus {
@@ -3191,9 +3835,9 @@ blockquote:before {
 }
 
 label {
-  margin-top: 1.44rem;
+  margin-top: 1.56rem;
   margin-bottom: 0.45rem;
-  font-family: "open-sans", Helvetica, sans-serif;
+  font-family: "source-sans-pro", Helvetica, serif;
 }
 
 input[type="search"] {
@@ -3292,6 +3936,11 @@ fieldset {
   margin-top: 0.9rem;
 }
 
+.dfi-field-name {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .dfi-field-name {
     padding-left: 1.2rem;
@@ -3302,6 +3951,12 @@ fieldset {
 .dfi-field-name:first-child {
   padding-left: 0;
 }
+.dfi-field-name .ginput_left,
+.dfi-field-name .ginput_right {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 34em) {
   .dfi-field-name .ginput_left,
   .dfi-field-name .ginput_right {
@@ -3309,6 +3964,11 @@ fieldset {
   }
 }
 
+.dfi-field-email {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .dfi-field-email {
     width: 29.16667%;
@@ -3318,6 +3978,9 @@ fieldset {
 .gform_footer,
 .dfi-field-message,
 .dfi-field-signup {
+  float: left;
+  position: relative;
+  min-height: 1px;
   width: 58.33333%;
   min-height: 1px;
 }
@@ -3336,12 +3999,12 @@ fieldset {
 
 input[type="submit"],
 button,
-.btn, .btn-cta, .panel label, .btn-success, .menu-item-cta a,
+.btn, .btn-cta, .panel label, .btn-success, .menu-item-cta a, .link-more,
 .btn {
   border: none;
   padding: 0.45rem 0.9rem;
   display: inline-block;
-  font-family: "open-sans", Helvetica, sans-serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   background: #80C25D;
   font-weight: 700;
   border-radius: 2px;
@@ -3349,9 +4012,9 @@ button,
 }
 input[type="submit"]:hover,
 button:hover,
-.btn:hover, .btn-cta:hover, .panel label:hover, .btn-success:hover, .menu-item-cta a:hover, input[type="submit"]:focus,
+.btn:hover, .btn-cta:hover, .panel label:hover, .btn-success:hover, .menu-item-cta a:hover, .link-more:hover, input[type="submit"]:focus,
 button:focus,
-.btn:focus, .btn-cta:focus, .panel label:focus, .btn-success:focus, .menu-item-cta a:focus,
+.btn:focus, .btn-cta:focus, .panel label:focus, .btn-success:focus, .menu-item-cta a:focus, .link-more:focus,
 .btn:hover,
 .btn:focus {
   background: #66ab41;
@@ -3359,7 +4022,7 @@ button:focus,
 }
 input[type="submit"]:active,
 button:active,
-.btn:active, .btn-cta:active, .panel label:active, .btn-success:active, .menu-item-cta a:active,
+.btn:active, .btn-cta:active, .panel label:active, .btn-success:active, .menu-item-cta a:active, .link-more:active,
 .btn:active {
   background: #243c17;
 }
@@ -3399,18 +4062,33 @@ button:active,
   background: #243c17;
 }
 
+.link-more {
+  background: #FFCC53;
+  font-weight: 700;
+  border-radius: 2px;
+  color: #fefefe !important;
+}
+.link-more:hover, .link-more:focus {
+  background: #ffbd20;
+  color: #fefefe;
+}
+.link-more:active {
+  background: #865e00;
+}
+
 .link-edit,
 .link-more {
   font-size: 0.9rem;
-  font-family: "open-sans", Helvetica, sans-serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   margin: 0;
+  text-align: center;
+  margin-top: 0.9rem;
   font-weight: 700;
-  color: #D14A29;
 }
 
 table {
   width: 100%;
-  font-family: "open-sans", Helvetica, sans-serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   margin-bottom: 1.5em;
 }
 table caption {
@@ -3454,13 +4132,17 @@ ul, ol {
   padding: 0;
 }
 
-.lead, .page-tagline {
-  font-size: 1.44rem;
-  font-family: "open-sans", Helvetica, sans-serif;
+.lead {
+  font-size: 1.56rem;
+}
+
+.page-tagline {
+  font-family: "source-sans-pro", Helvetica, serif;
+  font-size: 1.56rem;
 }
 
 nav a {
-  font-family: "open-sans", Helvetica, sans-serif;
+  font-family: "source-sans-pro", Helvetica, serif;
 }
 
 .fixed-image {
@@ -3573,6 +4255,9 @@ nav a {
 }
 
 .item-split {
+  float: left;
+  position: relative;
+  min-height: 1px;
   width: 29.16667%;
   min-height: 1px;
 }
@@ -3678,6 +4363,12 @@ nav a {
   color: #fefefe;
   text-align: center;
 }
+.content-nav ul {
+  list-style-type: none;
+}
+.content-nav ul > li {
+  display: inline-block;
+}
 .content-nav li {
   transition: all 0.3s ease-in-out;
 }
@@ -3744,7 +4435,13 @@ nav a {
 }
 
 .header-brand {
+  float: left;
+  position: relative;
+  min-height: 1px;
   width: 54.16667%;
+  min-height: 1px;
+  float: left;
+  position: relative;
   min-height: 1px;
   display: table-row;
 }
@@ -3762,7 +4459,7 @@ nav a {
 
 .header-tag {
   font-size: 0.9rem;
-  font-family: "open-sans", Helvetica, sans-serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   margin: 0;
   font-size: 0.72rem;
   padding-left: 1.2rem;
@@ -3770,12 +4467,21 @@ nav a {
 }
 
 .header-nav-link {
+  float: left;
+  position: relative;
+  min-height: 1px;
   width: 4.16667%;
   min-height: 1px;
 }
 
 .header-nav {
+  float: left;
+  position: relative;
+  min-height: 1px;
   width: 58.33333%;
+  min-height: 1px;
+  float: left;
+  position: relative;
   min-height: 1px;
 }
 @media (min-width: 47em) {
@@ -3790,7 +4496,11 @@ nav a {
 }
 
 .header-video video {
+  top: 0;
+  left: 0;
+  position: absolute;
   width: 100%;
+  height: auto;
 }
 
 .section-header {
@@ -3807,7 +4517,7 @@ nav a {
 }
 
 .site-footer {
-  font-family: "open-sans", Helvetica, sans-serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   border-top: 4px solid #FFCC53;
 }
 .site-footer li {
@@ -3823,6 +4533,11 @@ nav a {
   font-size: 0.72rem;
 }
 
+.creds {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .creds {
     width: 29.16667%;
@@ -3830,6 +4545,9 @@ nav a {
 }
 
 .copyright {
+  float: left;
+  position: relative;
+  min-height: 1px;
   text-align: right;
 }
 @media (min-width: 47em) {
@@ -3838,6 +4556,11 @@ nav a {
   }
 }
 
+.widget {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .widget {
     padding-left: 1.2rem;
@@ -3886,14 +4609,14 @@ h1 {
   margin-bottom: 1.2rem;
 }
 
-.lead, .page-tagline {
+.lead {
   text-align: center;
 }
 
 .section,
 .order-table {
   font-size: 0.9rem;
-  font-family: "open-sans", Helvetica, sans-serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   margin: 0;
 }
 
@@ -3986,6 +4709,9 @@ input[type="radio"] {
 
 .product-nodivs,
 .sub-products {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 100%;
@@ -4015,6 +4741,9 @@ input[type="radio"] {
 }
 
 .provided {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 100%;
@@ -4035,6 +4764,9 @@ input.included,
 }
 
 .provided-drive-choices {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 66.66667%;
@@ -4048,6 +4780,9 @@ input.included,
 }
 
 .product-nodivs {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 75%;
@@ -4060,7 +4795,13 @@ input.included,
 
 .choices,
 .nochoice {
+  float: left;
+  position: relative;
+  min-height: 1px;
   width: 25%;
+  min-height: 1px;
+  float: left;
+  position: relative;
   min-height: 1px;
 }
 @media (min-width: 34em) {
@@ -4085,12 +4826,15 @@ input.included,
 }
 
 #total {
-  font-family: "open-sans", Helvetica, sans-serif;
+  font-family: "source-sans-pro", Helvetica, serif;
 }
 
 #sub-total,
 #grand-total,
 #tax-total {
+  float: left;
+  position: relative;
+  min-height: 1px;
   text-align: right;
 }
 @media (min-width: 34em) {
@@ -4109,7 +4853,7 @@ input.included,
 
 #grand-total,
 #grand-title {
-  font-size: 1.44rem;
+  font-size: 1.56rem;
   border-top: 1px solid #80C25D;
 }
 
@@ -4123,6 +4867,9 @@ input.included,
 #sub-title,
 #grand-title,
 #tax-title {
+  float: left;
+  position: relative;
+  min-height: 1px;
   width: 58.33333%;
   min-height: 1px;
   font-weight: 700;
@@ -4134,7 +4881,13 @@ input.included,
 }
 
 .product-description {
+  float: left;
+  position: relative;
+  min-height: 1px;
   width: 100%;
+  min-height: 1px;
+  float: left;
+  position: relative;
   min-height: 1px;
 }
 @media (min-width: 34em) {
@@ -4144,7 +4897,13 @@ input.included,
 }
 
 .product-description-nores {
+  float: left;
+  position: relative;
+  min-height: 1px;
   width: 100%;
+  min-height: 1px;
+  float: left;
+  position: relative;
   min-height: 1px;
 }
 @media (min-width: 34em) {
@@ -4154,9 +4913,15 @@ input.included,
 }
 
 .qualities {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 100%;
+  min-height: 1px;
+  float: left;
+  position: relative;
   min-height: 1px;
 }
 @media (min-width: 34em) {
@@ -4168,7 +4933,13 @@ input.included,
 }
 
 .price {
+  float: left;
+  position: relative;
+  min-height: 1px;
   width: 50%;
+  min-height: 1px;
+  float: left;
+  position: relative;
   min-height: 1px;
 }
 @media (min-width: 34em) {
@@ -4183,7 +4954,13 @@ input.included,
 }
 
 .product-total {
+  float: left;
+  position: relative;
+  min-height: 1px;
   width: 50%;
+  min-height: 1px;
+  float: left;
+  position: relative;
   min-height: 1px;
   text-align: center;
 }
@@ -4204,6 +4981,9 @@ input.included,
 }
 
 .drives {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 58.33333%;
@@ -4211,6 +4991,9 @@ input.included,
 }
 
 .product-description-drives {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 16.66667%;
@@ -4230,6 +5013,9 @@ input.included,
 }
 
 .purchase {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 100%;
@@ -4238,9 +5024,9 @@ input.included,
 
 .sub-section-title,
 .section-title-long {
-  font-size: 1.2rem;
+  font-size: 1.32rem;
   margin-bottom: 1.2rem;
-  margin-top: 1.44rem;
+  margin-top: 1.56rem;
   padding-left: 1.2rem;
   padding-bottom: 0.45rem;
   border-bottom: 1px solid #80C25D;
@@ -4249,7 +5035,7 @@ input.included,
 .section-title,
 #output .section-title-long,
 #questions .section-title-long {
-  font-size: 1.44rem;
+  font-size: 1.56rem;
   font-weight: 700;
   bottom: -0.45rem;
 }
@@ -4264,6 +5050,9 @@ input.included,
 
 .section-title,
 .service {
+  float: left;
+  position: relative;
+  min-height: 1px;
   width: 50%;
   min-height: 1px;
 }
@@ -4277,7 +5066,13 @@ input[type="text"]:focus {
 
 .order-table tr:not(.pickup-notice) td:first-child {
   text-align: right;
+  float: left;
+  position: relative;
+  min-height: 1px;
   width: 16.66667%;
+  min-height: 1px;
+  float: left;
+  position: relative;
   min-height: 1px;
 }
 @media (min-width: 47em) {
@@ -4291,7 +5086,13 @@ input[type="text"]:focus {
   }
 }
 .order-table td[align="left"] {
+  float: left;
+  position: relative;
+  min-height: 1px;
   width: 83.33333%;
+  min-height: 1px;
+  float: left;
+  position: relative;
   min-height: 1px;
 }
 @media (min-width: 47em) {
@@ -4301,7 +5102,16 @@ input[type="text"]:focus {
 }
 .order-table td[align="left"] input[type="text"],
 .order-table td[align="left"] textarea {
+  float: left;
+  position: relative;
+  min-height: 1px;
   width: 100%;
+  min-height: 1px;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  float: left;
+  position: relative;
   min-height: 1px;
 }
 @media (min-width: 47em) {
@@ -4317,6 +5127,9 @@ input[type="text"]:focus {
   }
 }
 .order-table tr:last-child td {
+  float: left;
+  position: relative;
+  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 83.33333%;
@@ -4326,17 +5139,23 @@ input[type="text"]:focus {
 }
 
 tr.pickup-notice {
+  float: left;
+  position: relative;
+  min-height: 1px;
   width: 100%;
   min-height: 1px;
 }
 tr.pickup-notice td:first-child {
   text-align: left;
+  float: left;
+  position: relative;
+  min-height: 1px;
   width: 100%;
   min-height: 1px;
 }
 
 #order-summary h1 {
-  font-size: 1.44rem;
+  font-size: 1.56rem;
   margin-bottom: 1.2rem;
   text-align: center;
   border-bottom: 1px solid #80C25D;
@@ -4357,6 +5176,11 @@ tr.pickup-notice td:first-child {
   width: 33.33333% !important;
 }
 
+.widget {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
 @media (min-width: 47em) {
   .widget {
     padding-left: 1.2rem;

@@ -101,7 +101,7 @@ blockquote {
 	padding: 0 0 0 $h4;
 
 	@include bp(med) {
-		padding-left: 0;
+		// padding-left: 0;
 	}
 
 	&:before {
@@ -114,7 +114,7 @@ blockquote {
 		height: $h3;
 		
 		position: absolute;
-		left: -$base;
+		left: -$h4;
 	}
 }
 

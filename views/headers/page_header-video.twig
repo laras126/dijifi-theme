@@ -2,10 +2,52 @@
 
 {% block content %}
 
-{# <p class="meta">video header</p> #}
-<video src="{{post.video}}" autoplay loop></video>
-<svg class="shape shape-logo"><use xlink:href="#shape-logo" /></svg>
-{{site.description}}
-<p class="lead">{{post.summary}}</p>
+	<video src="{{post.video}}" autoplay loop></video>
+	<div class="video-header-content">
+		<svg class="shape shape-logo"><use xlink:href="#shape-logo" /></svg>
+		{{site.description}}
+
+		<div class="inner-squish text-center">
+			<p class="lead">{{post.summary}}</p>			
+		</div>
+		
+
+		<div class="block block_list">
+			<div class="contain">
+
+				<ul class="list list-text_icon list-3">
+					<li>
+						<div class="item-support">
+							<svg class="shape shape-disk"><use xlink:href="#shape-disk" /></svg>
+						</div>
+						<div class="item-main">
+							<h5 class="item-title">Raw</h5>
+							<p>Raw service means we get the best possible scan from your photo, and only organize and rename them. You will need to rotate, crop out unwanted borders, and adjust color or contrast.</p>
+						</div>
+					</li>
+					<li>
+						<div class="item-support">
+							<svg class="shape shape-rocket"><use xlink:href="#shape-rocket" /></svg>
+						</div>
+						<div class="item-main">
+							<h5 class="item-title">Direct</h5>
+							<p>Direct service adds rotation and hand cropping of unwanted borders from your digital images. Color and contrast adjustments are not made, so faded images still appear faded.</p>
+						</div>
+					</li>
+					<li>
+						<div class="item-support">
+							<svg class="shape shape-radio-checked"><use xlink:href="#shape-radio-checked" /></svg>
+						</div>
+						<div class="item-main">
+							<h5 class="item-title">Complete</h5>
+							<p>Complete service adds hand adjustments to color and contrast. Faded images tend to have their original look restored, and under or overexposed images are improved.</p>
+						</div>
+					</li>
+
+				</ul> <!-- /.list-text_icon -->
+
+			</div>
+		</div> <!-- /.block_list -->                            
+	</div>
 
 {% endblock %}

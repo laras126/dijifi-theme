@@ -1,21 +1,6 @@
-.block_textimage {
-	p:first-of-type {
-		// margin-top: 0;
-	}
-	// .image {
-	// 	@include make-md-column(5.5, false);
-		
-		
-	// }
-	
-}
 
 figure {
 	margin: 0;
-}
-
-.caption-format {
-
 }
 
 .caption {
@@ -36,16 +21,24 @@ figure {
 	}
 }
 
-	.caption-image {
+	img.caption-image {
+		width: 100%;
+		@include bp(med) {
+
+		}
 		@include make-lg-column(5.5, false);
-		float: right;
 		border-top: $accent-border;
+		
+
 	}
 
 .textimage-image {
 	@include make-sm-column(4, false);
-	// @include make-sm-column-offset(3, right);
-	
+
+	@include bp(small) {
+		padding-right: $gutter;
+	}
+
 	@include bp(med) {
 		margin-left: percentage(1/7)*-1;
 	}
@@ -54,18 +47,8 @@ figure {
 		margin-left: percentage(2/7)*-1;
 	}
 
-	float: left;
-	padding-right: $gutter;
 	padding-bottom: $gutter/2;
 	position: relative;
-
-	img {
-		// position: absolute;
-		// position: relative;
-		// top: 0;
-		// right: 10%;
-		// width: 110%;
-	}
 }
 
 .textimage-text {

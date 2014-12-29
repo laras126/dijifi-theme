@@ -29,12 +29,17 @@
 
 
 .link-more {
-	// @include button($accent-light);
+	@include button($accent-light);
 }
 
 .link-edit,
 .link-more {
+
+    // display: inline-block;
+    // margin: 0 auto;
 	@include meta;
+    text-align: center;
+    margin-top: $sml;
 	font-weight: 700;
-	color: $alert-danger;
+	// color: $alert-danger;
 }

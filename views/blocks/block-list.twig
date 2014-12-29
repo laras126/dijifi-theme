@@ -5,33 +5,34 @@
 {% block content %}
 
 	{% set type = blck.list_type %}
+		{% set display = blck.list_display %}
 
-	{% if type == 'artifacts' %}
-		{% set list = blck.connected_artifacts %}
-	{% elseif type == 'text_icon' %}
-		{% set list = blck.icon_items %}
-	{% endif %}
+			{% if type == 'artifacts' %}
+				{% set list = blck.connected_artifacts %}
+					{% elseif type == 'free_form' %}
+					{% set list = blck.freeform_items %}
+					{% endif %}
 
-	{{blck.text}}
-	
-	<ul class="list list-{{type}} list-{{list|length}}">
+					<div class="inner-squish">
+						<h4>{{blck.list_title}}</h4>	
+					</div>
+
+<ul class="list list-{{display}} list-{{list|length}}">
 
 	{% for item in list %}
 		<li>
 			<div class="item-support">
-				{% if type == 'artifacts' %}
-					<img src="{{TimberImage(item.image).src('medium')}}" alt="{{item.post_title}}">	
-				{% elseif type == 'text_icon' %}
-					<svg class="shape shape-{{item.item_icon}}"><use xlink:href="#shape-{{item.item_icon}}" /></svg>
+				{% if item.image %}
+				<img src="{{TimberImage(item.image).src('medium')}}" alt="{{item.post_title}}">
 				{% endif %}
 			</div>
 			<div class="item-main">
 				{% if type == 'artifacts' %}
 					<h5 class="item-title">{{item.post_title}}</h5>
 					<p>{{item.short_description}}</p>
-				{% elseif type == 'text_icon' %}
+				{% elseif type == 'free_form' %}
 					<h5 class="item-title">{{item.item_title}}</h5>
-					<p>{{item.item_desc}}</p>
+					<p>{{item.description}}</p>
 					{% for related in item.related_content %}
 						{{related.link}}
 						<p><a href="{{related.link}}" title="{{related.post_title}}">Read more on our {{related.post_title}} page.</a></p>
@@ -41,6 +42,45 @@
 		</li>
 	{% endfor %}
 		
-	</ul> <!-- /.list-{{type}} -->
+</ul> <!-- /.list-{{display}} -->
+
+
+{# <ul class="list list-major list-3">
+
+	<li>
+		<div class="item-support">
+			<img src="http://dfi.local/wp-content/uploads/2014/11/raw.png" alt="">
+		</div>
+		<div class="item-main">
+			<h5 class="item-title">Raw</h5>
+			<p><p>Raw service means we get the best possible scan from your photo, and only organize and rename them. You will need to rotate, crop out unwanted borders, and adjust color or contrast.</p>
+		</p>
+	</div>
+</li>
+<li>
+	<div class="item-support">
+		<img src="http://dfi.local/wp-content/uploads/2014/11/direct.png" alt="">
+	</div>
+	<div class="item-main">
+		<h5 class="item-title">Direct</h5>
+		<ul>
+			<li>Rotation and hand cropping</li>
+			<li>No color and contrast adjustments</li>
+		</ul>
+	</div>
+</li>
+<li>
+	<div class="item-support">
+		<img src="http://dfi.local/wp-content/uploads/2014/11/complete.png" alt="">
+	</div>
+	<div class="item-main">
+		<h5 class="item-title">Complete</h5>
+		<p><p>Complete service adds hand adjustments to color and contrast. Faded images tend to have their original look restored, and under or overexposed images are improved.</p>
+	</p>
+</div>
+</li>
+
+</ul> #} <!-- /.list-free_form -->
+
 
 {% endblock %}

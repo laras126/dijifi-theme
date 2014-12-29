@@ -29,7 +29,7 @@ $gutter:                    $h3 !default;
 
 
 // Add static grid styles into an extend
-%bs-base {
+@mixin bs-base() {
     float: left;
     position: relative;
     min-height: 1px;
@@ -111,7 +111,7 @@ $gutter:                    $h3 !default;
 // Extra Small
 
 @mixin make-xs-column($columns, $gutter: $gutter) {
-  @extend %bs-base;
+  @include bs-base;
   @include bs-gutter($gutter);
   
   width: percentage(($columns / $grid-columns));
@@ -132,7 +132,7 @@ $gutter:                    $h3 !default;
 // Small
 
 @mixin make-sm-column($columns, $gutter: $gutter) {
-  @extend %bs-base;
+  @include bs-base;
 
   @media (min-width: $screen-sm) {
     @include bs-gutter($gutter);
@@ -160,7 +160,7 @@ $gutter:                    $h3 !default;
 // Medium
 
 @mixin make-md-column($columns, $gutter: $gutter) {
-  @extend %bs-base;
+  @include bs-base;
 
   @media (min-width: $screen-md) {
     @include bs-gutter($gutter);
@@ -187,7 +187,7 @@ $gutter:                    $h3 !default;
 // Large
 
 @mixin make-lg-column($columns, $gutter: $gutter) {
-  @extend %bs-base;
+  @include bs-base;
 
   @media (min-width: $screen-lg) {
     @include bs-gutter($gutter);

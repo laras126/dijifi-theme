@@ -2,9 +2,6 @@
 .block_related_page {
 	background-color: $accent-vlight;
 	padding-bottom: $base;
-	p {
-		// @include meta;
-	}
 }
 
 .related-title {
@@ -16,16 +13,15 @@
 	.prompt {
 		@include upperspace;
 		position: relative;
-		top: 4px;
-		// @include make-lg-column(2);
+		top: 0;
 		
 		@include bp(large) {
 			transform: rotate(-90deg);
 			// IMPORTANT: Can't leave this like this
 			transform-origin: left bottom;
 			position: absolute;
-			left: 0;
-			top: 90px;
+			left: -$base;
+			top: 82px;
 		}
 		
 		span {

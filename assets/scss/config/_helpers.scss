@@ -175,23 +175,27 @@ exclusively.
 // Lists
 // ----
 
+@mixin unstyle-list() {
+    list-style: none;
+}
+
 %unstyle-list {
     list-style: none;
 }
 
-%horizontal-list {
+@mixin horizontal-list() {
     ul {
-        @extend %unstyle-list;
-    }
-    
-    li {
-        display: inline-block;    
+        list-style-type: none;
+
+      &>li {
+            display: inline-block;    
+        }
     }
 }
 
 %horizontal-list-center {
     text-align: center;
-    @extend %horizontal-list;
+    @include horizontal-list;
 }
 
 

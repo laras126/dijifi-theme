@@ -43,8 +43,8 @@ ul, ol {
 // ---
 
 .lead {
-	font-size: $h4;
-	font-family: $lead-font;
+	@include font-size(h4);
+	// font-family: $lead-font;
 	// margin-bottom: 0;
 	// text-align: center;
 }
@@ -54,7 +54,8 @@ ul, ol {
 }
 
 .page-tagline {
-	@extend .lead;
+	font-family: $lead-font;
+	@include font-size(h4);
 }
 
 nav a {

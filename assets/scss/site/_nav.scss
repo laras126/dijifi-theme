@@ -233,7 +233,7 @@
 
 
 .content-nav {
-    @extend %horizontal-list;
+    @include horizontal-list;
     @include rotate($bkgd: $text-dark);
     text-align: center;
 

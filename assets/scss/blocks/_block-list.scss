@@ -7,33 +7,33 @@
 
 
 // ----
-// General List
+// General Lists
 // ----
 
 .list {
-	@extend %unstyle-list;
 	@include clearfix;
 
-	li {
+	& > li {
+		list-style: none;
 		margin-bottom: $h3;
 		margin-top: $h3;
 	}
 }
 
-	// TODO: this could be in a Sass list or loop
+	// Minor lists are 2 across
 
-	.list-2 {
+	.list-minor {
 		@extend .inner;
 
-		li {
+		& > li {
 			@include make-md-column(7/2, false);
 		}
 	}
 
-	.list-3 {
-		li {
-			@include make-md-column(7/3, false);
-		}
+	// Major lists are 3 across
+	
+	.list-major > li {
+		@include make-md-column(7/3, false);
 	}
 
 
@@ -51,14 +51,14 @@
 	}
 	
 	padding-right: $gutter/2;
-	
+
 	@include make-xs-column(4, false);
 	@include make-xs-column-push(1.5);
 
 	@include make-sm-column(1.5, false);
 	@include make-sm-column-push(0);	
 	
-	.list-3 & {
+	.list-major & {
 		@include make-md-column(5);
 		@include make-md-column-push(1);		
 	}
@@ -70,7 +70,7 @@
 
 	@include make-sm-column(5.5, false);
 
-	.list-3 & {
+	.list-major & {
 
 		@include make-md-column(7);
 
@@ -80,8 +80,16 @@
 		}
 	}
 	
+	&>ul {
+		padding-top: $base;
+		li {
+			display: block;
+			padding: 0;
+			margin: 0;
+		}
+	}
 
-	.list-2 & {
+	.list-minor & {
 		h5 {
 			margin-top: 0;
 		}
@@ -91,7 +99,7 @@
 		}
 	}
 	
-	p {
+	p, ul, li {
 		font-family: $sans-serif;
 		@include bp(small) {
 			@include font-size(sml);	
