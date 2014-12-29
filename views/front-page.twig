@@ -8,16 +8,63 @@
 	<body class="{{body_class}}" data-template="base.twig" id="pageTop">
 		<div class="svgsprites">{% include 'partials/svg-defs.svg' %}</div>
 		
-		{# <header class="site-header" style="position:relative" role="banner">
+		<header class="site-header" role="banner">
 			{% block header %}
 				<div class="contain">					
 					{% include 'headers/site_header.twig' %}
 				</div> <!-- /.contain -->
 			{% endblock %}
 		</header>
- #}
+
 		{% include 'partials/page_header-logic.twig' %}
 		
+
+		<div class="block block_list">
+			<div class="contain">
+
+				<ul class="list list-minor">
+					<li>
+						<div class="item-support">
+							<svg class="shape shape-disk"><use xlink:href="#shape-disk" /></svg>
+						</div>
+						<div class="item-main">
+							<h5 class="item-title">Photos</h5>
+							<p>Raw service means we get the best possible scan from your photo, and only organize and rename them. You will need to rotate, crop out unwanted borders, and adjust color or contrast.</p>
+							<p>Raw service means we get the best possible scan from your photo, and only organize and rename them. You will need to rotate, crop out unwanted borders, and adjust color or contrast.</p>
+						</div>
+					</li>
+					<li>
+						<div class="item-support">
+							<svg class="shape shape-rocket"><use xlink:href="#shape-rocket" /></svg>
+						</div>
+						<div class="item-main">
+							<h5 class="item-title">Videos</h5>
+							<p>Direct service adds rotation and hand cropping of unwanted borders from your digital images. Color and contrast adjustments are not made, so faded images still appear faded.</p>
+						</div>
+					</li>
+					<li>
+						<div class="item-support">
+							<svg class="shape shape-radio-checked"><use xlink:href="#shape-radio-checked" /></svg>
+						</div>
+						<div class="item-main">
+							<h5 class="item-title">Film</h5>
+							<p>Complete service adds hand adjustments to color and contrast. Faded images tend to have their original look restored, and under or overexposed images are improved.</p>
+						</div>
+					</li>
+					<li>
+						<div class="item-support">
+							<svg class="shape shape-radio-checked"><use xlink:href="#shape-radio-checked" /></svg>
+						</div>
+						<div class="item-main">
+							<h5 class="item-title">Audio</h5>
+							<p>Complete service adds hand adjustments to color and contrast. Faded images tend to have their original look restored, and under or overexposed images are improved.</p>
+						</div>
+					</li>
+
+				</ul> <!-- /.list-text_icon -->
+
+			</div>
+		</div> <!-- /.block_list -->        
 		<footer id="footer" class="site-footer" role="contentinfo">
 			{% include 'footer.twig' %}
 		</footer>

@@ -2282,13 +2282,12 @@ nav a {
   height: auto;
 }
 
-.section-header {
+.section-title {
   margin-top: 2.88rem;
 }
 
 .section-content {
   position: relative;
-  padding-bottom: 1.2rem;
 }
 
 .content-active {
@@ -2368,6 +2367,9 @@ nav a {
   margin-bottom: 2.88rem;
 }
 
+.list {
+  margin-bottom: 2.4rem;
+}
 .list:before, .list:after {
   content: " ";
   display: table;
@@ -2377,7 +2379,6 @@ nav a {
 }
 .list > li {
   list-style: none;
-  margin-bottom: 2.4rem;
   margin-top: 2.4rem;
 }
 
@@ -2391,6 +2392,12 @@ nav a {
     width: 50%;
   }
 }
+@media (min-width: 47em) {
+  .list-minor > li:nth-child(2n+1) {
+    clear: left;
+    padding-right: 1.2rem;
+  }
+}
 
 .list-major > li {
   float: left;
@@ -2400,6 +2407,11 @@ nav a {
 @media (min-width: 47em) {
   .list-major > li {
     width: 33.33333%;
+  }
+}
+@media (min-width: 47em) {
+  .list-major > li:nth-child(3n+1) {
+    clear: left;
   }
 }
 
@@ -2480,27 +2492,19 @@ nav a {
     text-align: center;
   }
 }
-.item-main > ul {
-  padding-top: 1.2rem;
-}
-.item-main > ul li {
-  display: block;
-  padding: 0;
-  margin: 0;
-}
 .list-minor .item-main h5 {
   margin-top: 0;
 }
 .list-minor .item-main p {
   margin-top: 0.72rem;
 }
-.item-main p, .item-main ul, .item-main li {
-  font-family: "source-sans-pro", Helvetica, serif;
-}
 @media (min-width: 34em) {
-  .item-main p, .item-main ul, .item-main li {
+  .list-minor .item-main p {
     font-size: 0.9rem;
   }
+}
+.item-main p, .item-main ul, .item-main li {
+  font-family: "source-sans-pro", Helvetica, serif;
 }
 
 figure {
@@ -2508,7 +2512,7 @@ figure {
 }
 
 .caption {
-  font-size: 0.72rem;
+  font-size: 0.9rem;
   text-align: center;
   float: left;
   position: relative;

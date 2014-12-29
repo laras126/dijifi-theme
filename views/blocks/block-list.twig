@@ -5,44 +5,44 @@
 {% block content %}
 
 	{% set type = blck.list_type %}
-		{% set display = blck.list_display %}
+	{% set display = blck.list_display %}
 
-			{% if type == 'artifacts' %}
-				{% set list = blck.connected_artifacts %}
-					{% elseif type == 'free_form' %}
-					{% set list = blck.freeform_items %}
+	{% if type == 'artifacts' %}
+		{% set list = blck.connected_artifacts %}
+	{% elseif type == 'free_form' %}
+		{% set list = blck.freeform_items %}
+	{% endif %}
+
+	<div class="inner-squish">
+		<h4>{{blck.list_title}}</h4>	
+	</div>
+
+	<ul class="list list-{{display}} list-{{list|length}}">
+
+		{% for item in list %}
+			<li>
+				<div class="item-support">
+					{% if item.image %}
+					<img src="{{TimberImage(item.image).src('medium')}}" alt="{{item.post_title}}">
 					{% endif %}
-
-					<div class="inner-squish">
-						<h4>{{blck.list_title}}</h4>	
-					</div>
-
-<ul class="list list-{{display}} list-{{list|length}}">
-
-	{% for item in list %}
-		<li>
-			<div class="item-support">
-				{% if item.image %}
-				<img src="{{TimberImage(item.image).src('medium')}}" alt="{{item.post_title}}">
-				{% endif %}
-			</div>
-			<div class="item-main">
-				{% if type == 'artifacts' %}
-					<h5 class="item-title">{{item.post_title}}</h5>
-					<p>{{item.short_description}}</p>
-				{% elseif type == 'free_form' %}
-					<h5 class="item-title">{{item.item_title}}</h5>
-					<p>{{item.description}}</p>
-					{% for related in item.related_content %}
-						{{related.link}}
-						<p><a href="{{related.link}}" title="{{related.post_title}}">Read more on our {{related.post_title}} page.</a></p>
-					{% endfor %}
-				{% endif %}
-			</div>
-		</li>
-	{% endfor %}
-		
-</ul> <!-- /.list-{{display}} -->
+				</div>
+				<div class="item-main">
+					{% if type == 'artifacts' %}
+						<h5 class="item-title">{{item.post_title}}</h5>
+						<p>{{item.short_description}}</p>
+					{% elseif type == 'free_form' %}
+						<h5 class="item-title">{{item.item_title}}</h5>
+						<p>{{item.description}}</p>
+						{% for related in item.related_content %}
+							{{related.link}}
+							<p><a href="{{related.link}}" title="{{related.post_title}}">Read more on our {{related.post_title}} page.</a></p>
+						{% endfor %}
+					{% endif %}
+				</div>
+			</li>
+		{% endfor %}
+			
+	</ul> <!-- /.list-{{display}} -->
 
 
 {# <ul class="list list-major list-3">

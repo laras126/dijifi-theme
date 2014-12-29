@@ -12,10 +12,11 @@
 
 .list {
 	@include clearfix;
-
+	margin-bottom: $h3;
+	
 	& > li {
 		list-style: none;
-		margin-bottom: $h3;
+		// margin-bottom: $h3;
 		margin-top: $h3;
 	}
 }
@@ -27,6 +28,13 @@
 
 		& > li {
 			@include make-md-column(7/2, false);
+
+			@include bp(med) {
+		        &:nth-child(2n+1){
+		            clear: left;
+		            padding-right: $gutter/2;
+		        }  
+		    }
 		}
 	}
 
@@ -34,6 +42,13 @@
 	
 	.list-major > li {
 		@include make-md-column(7/3, false);
+
+		@include bp(med) {
+			&:nth-child(3n+1){
+				clear: left;
+			}  
+	    }  
+
 	}
 
 
@@ -80,14 +95,14 @@
 		}
 	}
 	
-	&>ul {
-		padding-top: $base;
-		li {
-			display: block;
-			padding: 0;
-			margin: 0;
-		}
-	}
+	// &>ul {
+	// 	padding-top: $base;
+	// 	li {
+	// 		display: block;
+	// 		padding: 0;
+	// 		margin: 0;
+	// 	}
+	// }
 
 	.list-minor & {
 		h5 {
@@ -96,14 +111,14 @@
 
 		p {
 			margin-top: $xsml;
+			@include bp(small) {
+				@include font-size(sml);	
+			}
 		}
 	}
 	
 	p, ul, li {
 		font-family: $sans-serif;
-		@include bp(small) {
-			@include font-size(sml);	
-		}
 	}
 }
 

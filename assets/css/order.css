@@ -1889,13 +1889,12 @@ nav a {
   height: auto;
 }
 
-.section-header {
+.section-title {
   margin-top: 2.88rem;
 }
 
 .section-content {
   position: relative;
-  padding-bottom: 1.2rem;
 }
 
 .content-active {
@@ -4503,13 +4502,12 @@ nav a {
   height: auto;
 }
 
-.section-header {
+.section-title {
   margin-top: 2.88rem;
 }
 
 .section-content {
   position: relative;
-  padding-bottom: 1.2rem;
 }
 
 .content-active {

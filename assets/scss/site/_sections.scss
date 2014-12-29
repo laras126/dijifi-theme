@@ -1,12 +1,16 @@
 
 .section-header {
-	margin-top: $h2;
+	// margin-top: $h2;
 	// text-align: center;
+}
+
+.section-title {
+	margin-top: $h2;
 }
 
 .section-content {
 	position: relative;
-	padding-bottom: $base;
+	// padding-bottom: $base;
 }
 
 	.content-active {
