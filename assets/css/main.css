@@ -422,7 +422,7 @@ exclusively.
 
 .alert {
   background-color: #faf3db;
-  color: #111;
+  color: #222334;
   padding: 1.2rem;
 }
 
@@ -1526,7 +1526,7 @@ html {
 body {
   font-family: "chaparral-pro", Georgia, serif;
   font-size: 1.2rem;
-  color: #111;
+  color: #222334;
 }
 
 a {
@@ -1598,6 +1598,11 @@ blockquote {
   margin: 0;
   padding: 0 0 0 1.56rem;
 }
+@media (min-width: 47em) {
+  blockquote {
+    padding-left: 0;
+  }
+}
 blockquote:before {
   background-image: url(../img/svgs/quotes-left.svg);
   background-repeat: no-repeat;
@@ -1606,6 +1611,11 @@ blockquote:before {
   height: 2.4rem;
   position: absolute;
   left: -1.56rem;
+}
+@media (min-width: 47em) {
+  blockquote:before {
+    left: -2.4rem;
+  }
 }
 
 *:focus {
@@ -1967,7 +1977,7 @@ nav a {
   padding-top: 16.66667%;
 }
 .page-header .fixed-wrap {
-  background-image: radial-gradient(ellipse at 20% center, rgba(17, 17, 17, 0) 0, #111);
+  background-image: radial-gradient(ellipse at 20% center, rgba(34, 35, 52, 0) 0, #222334);
 }
 
 .menu-items {
@@ -1980,7 +1990,7 @@ nav a {
 }
 .menu-item a {
   padding: 0.9rem;
-  color: #111;
+  color: #222334;
 }
 
 .header-nav,
@@ -2004,7 +2014,6 @@ nav a {
   border-bottom: none;
 }
 .menu-main a {
-  font-size: 0.9rem;
   display: block;
   font-weight: 700;
 }
@@ -2068,7 +2077,7 @@ nav a {
   border-radius: 1px;
   height: 3px;
   display: block;
-  background: #111;
+  background: #222334;
   margin: 0 0 7px 0;
 }
 
@@ -2138,7 +2147,7 @@ nav a {
   }
 }
 .content-nav {
-  background-color: #111;
+  background-color: #222334;
   color: #fefefe;
   text-align: center;
 }
@@ -2191,7 +2200,7 @@ nav a {
 }
 
 .top-link {
-  background-color: #111;
+  background-color: #222334;
   width: 0;
   position: relative;
 }
@@ -2270,8 +2279,12 @@ nav a {
 }
 
 .page-title {
-  font-size: 5.4rem;
-  text-shadow: 2px 1px 1px #111;
+  text-shadow: 2px 1px 1px #222334;
+}
+@media (min-width: 47em) {
+  .page-title {
+    font-size: 5.4rem;
+  }
 }
 
 .header-video video {
@@ -2284,10 +2297,12 @@ nav a {
 
 .section-title {
   margin-top: 2.88rem;
+  position: relative;
 }
 
 .section-content {
   position: relative;
+  padding-bottom: 2.88rem;
 }
 
 .content-active {
@@ -2358,7 +2373,7 @@ nav a {
 }
 
 .block-intro {
-  background-color: #111;
+  background-color: #222334;
   color: #fefefe;
   background-size: cover;
 }
@@ -2498,13 +2513,13 @@ nav a {
 .list-minor .item-main p {
   margin-top: 0.72rem;
 }
+.item-main p, .item-main li {
+  font-family: "source-sans-pro", Helvetica, serif;
+}
 @media (min-width: 34em) {
-  .list-minor .item-main p {
+  .item-main p, .item-main li {
     font-size: 0.9rem;
   }
-}
-.item-main p, .item-main ul, .item-main li {
-  font-family: "source-sans-pro", Helvetica, serif;
 }
 
 figure {
@@ -2708,7 +2723,10 @@ img.caption-image {
 }
 
 .block_testimonial {
-  padding-top: 1.2rem;
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+  background-color: #f9f9f9;
+  color: #222334;
 }
 
 .svgsprites {
@@ -2739,7 +2757,7 @@ img.caption-image {
 }
 
 .rotate-dark {
-  background-color: #111;
+  background-color: #222334;
   color: #fefefe;
 }
 .rotate-med {
@@ -2752,7 +2770,7 @@ img.caption-image {
 }
 
 .rotate {
-  background-color: #111;
+  background-color: #222334;
   color: #fefefe;
 }
 

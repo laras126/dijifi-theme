@@ -1,6 +1,5 @@
 .block_testimonial {
-	// .inner {
-		// padding-bottom: $base;
-		padding-top: $base;
-	// }
+	padding-top: $h3;
+	padding-bottom: $h3;
+	@include rotate($bkgd: #f9f9f9, $text: $text-dark);
 }

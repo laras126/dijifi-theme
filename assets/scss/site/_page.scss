@@ -1,5 +1,8 @@
 .page-title {
-	font-size: $h1*1.5;
+	@include bp(med) {
+		font-size: $h1*1.5;	
+	}
+	
 	// text-transform: uppercase;
 	text-shadow: 2px 1px 1px $text-dark;
 }

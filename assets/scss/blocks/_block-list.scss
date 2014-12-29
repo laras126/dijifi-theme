@@ -111,14 +111,15 @@
 
 		p {
 			margin-top: $xsml;
-			@include bp(small) {
-				@include font-size(sml);	
-			}
+
 		}
 	}
 	
-	p, ul, li {
-		font-family: $sans-serif;
+	p, li {
+		font-family: $sans-serif;			
+		@include bp(small) {
+			@include font-size(sml);	
+		}
 	}
 }
 
