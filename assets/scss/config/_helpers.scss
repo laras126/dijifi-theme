@@ -202,9 +202,6 @@ exclusively.
 
 
 
-
-
-
 // Hold
 
 
@@ -218,6 +215,12 @@ exclusively.
 	padding: $h4 $h3;
 }
 
+
+.hide-after-lg {
+    @include bp(large) {
+        display: none; 
+    }
+}
 
 .hide-until-md, 
 %hide-until-md {

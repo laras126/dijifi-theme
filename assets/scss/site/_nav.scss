@@ -235,27 +235,23 @@
 
 .content-nav {
 
+    ul {
+        display: none;    
+
+        @include bp(med) {
+            display: block;
+        }
+    }
+
+    border-bottom: 3px solid $alert-info;
+    
     @include horizontal-list;
+
     @include rotate($bkgd: $text-dark);
     text-align: center;
-    // position: absolute;
 
     li {
         transition: all 0.3s ease-in-out;
-        
-        width: $base;
-        text-align: center;
-        height: $sml;
-        margin: $xsml $sml 0 0;
-        
-        @include bp(large) {
-            background-color: $text-dark;
-            width: auto;
-            height: auto;
-            margin: 0;
-        }
-        
-        background-color: darken($alert-info, 20%);
         
         &:hover {
             background-color: darken($alert-info, 20%);
@@ -273,17 +269,9 @@
         color: $text-light;
         @include meta;
         @include upperspace;
-
-        span {
-            display: none;
-            @include bp(large) {
-                display: inline;
-            }
-        }
     }
 
 } // .content-nav
-
 
 
     li.content-nav-active {
@@ -300,28 +288,68 @@
     }
 
     .stuck {
-        -webkit-backface-visibility:hidden;
-        transition: all 0.3s ease-in-out;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: $ztop;
+        @include bp(large) {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: $ztop;
+        }
     }
 
     .top-link {
-        background-color: $text-dark !important;
         width: 0;
-        margin: 0;
+
         a {
             padding: 0;
         }
     }
 
+    .top-link-top {
+        background-color: $text-dark;
+
+        // You pixel pusher, you.
+        .shape {
+            position: relative;
+            top: 5px;
+        }
+    }
+
+    .top-link-bottom {
+        position: fixed;
+        bottom: 5px;
+        right: 5px;
+        z-index: $ztop;
+
+        width: 50px;
+        display: none;
+
+        padding-top: $xsml/3;
+        padding-bottom: $xsml/3;
+        
+        @include button($alert-info);
+
+        a {    
+            display: block;
+            margin: 0 auto;
+        }
+
+        // padding-top: $xsml;
+
+        @include bp(large) {
+            opacity: 0;
+        }
+
+         .shape-arrow-up {
+            display: block;
+            margin: 0 auto;
+         }
+
+    }
+
         .shape-arrow-up {
             fill: $text-light;
-            z-index: $ztop*2;
             height: $base;
-            width: $h4;
+            width: $base;
         }
 
 

@@ -4,7 +4,7 @@ $(document).ready(function() {
 	$('body').addClass('js');
 
 
-	
+
 	// ----
 	// Toggle Menu
 	// ----
@@ -30,7 +30,25 @@ $(document).ready(function() {
 	});
 		
 
+	function isElementInViewport (el) {
 
+	    //special bonus for those using jQuery
+	    if (typeof jQuery === "function" && el instanceof jQuery) {
+	        el = el[0];
+	    }
+
+	    var rect = el.getBoundingClientRect();
+
+	    return (
+	        rect.top >= 0 &&
+	        rect.left >= 0 &&
+	        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+	        rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+	    );
+	}
+
+
+	
 	
 	// ----
 	// Submenu
@@ -59,7 +77,7 @@ $(document).ready(function() {
 
 	// 1. Highlight current item
 	// 2. Slide to current section on click
-	$('.content-nav a').click( function() {
+	$('.content-nav a, .top-link-bottom a').click( function() {
 		var hash = $(this).attr('href');
 		var $target = $(hash);
 
@@ -67,10 +85,6 @@ $(document).ready(function() {
 		$('html,body').animate({
 			scrollTop: $target.offset().top
         }, 500);
-
-		// Add and remove active class from nav item and section
-		$('.content-nav li').removeClass('content-nav-active');
-		$(this).parent().addClass('content-nav-active');
 
 		return false;
 	}); // END click
@@ -81,10 +95,12 @@ $(document).ready(function() {
 		// Add the class to make the nav stick
 		if( $(this).scrollTop() > total_ht ) {
 			$nav.addClass(scroll_class);
-			$('.top-link').css('width', '50px');
+			$('.top-link-top').css('width', '50px');
+			$('.top-link-bottom').fadeIn(300);
 		} else if( $(this).scrollTop() < total_ht ) {
 			$nav.removeClass(scroll_class);
-			$('.top-link').css('width', '0');
+			$('.top-link-top').css('width', '0');
+			$('.top-link-bottom').fadeOut(300);
 		}
 
 

@@ -1,15 +1,14 @@
 
 <nav class="content-nav">
-	<div class="contain">	
-
+	<div class="contain">
 		<ul>
-			<li class="top-link">
+			<li class="top-link top-link-top">
 				<a href="#pageTop"><svg class="shape shape-arrow-up"><use xlink:href="#shape-arrow-up" /></svg></a>
 			</li>
 			{% for item in post.get_field('content') %}
 				{% if item.acf_fc_layout == 'section' %}
 					<li>
-						<a href="#{{item.menu_item_title|replace({ (space): replace_space })}}"><span class="content-nav-text">{{item.menu_item_title}}</span></a>
+						<a href="#{{item.menu_item_title|replace({ (space): replace_space })}}">{{item.menu_item_title}}</span></a>
 					</li>
 				{% endif %}
 			{% endfor %}
