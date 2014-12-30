@@ -8,7 +8,7 @@ $(document).ready(function() {
 	// Hack to keep out widows
 	// http://css-tricks.com/preventing-widows-in-post-titles/
    
-	$('h4,h5,.main p').each( function() {
+	$('h4, h5, .section-title, .main p').each( function() {
 		var wordArray = $(this).text().split(" ");
 		if (wordArray.length > 1) {
 			wordArray[wordArray.length-2] += "&nbsp;" + wordArray[wordArray.length-1];

@@ -13,9 +13,11 @@
 		{% set list = blck.freeform_items %}
 	{% endif %}
 
-	<div class="inner-squish">
-		<h4>{{blck.list_title}}</h4>	
-	</div>
+	{% if blck.list_title %}
+		<div class="inner-squish">
+			<h4>{{blck.list_title}}</h4>	
+		</div>
+	{% endif %}
 
 	<ul class="list list-{{display}} list-{{list|length}}">
 

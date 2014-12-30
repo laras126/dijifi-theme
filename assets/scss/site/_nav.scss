@@ -233,40 +233,67 @@
 
 
 .content-nav {
+
     @include horizontal-list;
     @include rotate($bkgd: $text-dark);
     text-align: center;
 
     li {
         transition: all 0.3s ease-in-out;
+        
+        width: $base;
+        text-align: center;
+        height: $sml;
+        margin: $xsml $sml 0 0;
+        
+        @include bp(large) {
+            background-color: $text-dark;
+            width: auto;
+            height: auto;
+            margin: 0;
+        }
+        
+        background-color: darken($alert-info, 20%);
+        
+        &:hover {
+            background-color: darken($alert-info, 20%);
+        }
+
+        &:active {
+            background-color: darken($alert-info, 50%);
+        }
     }
 
     a {
         padding: $sml/2 $base;
         display: inline-block;
+
         color: $text-light;
-        @extend %meta;
+        @include meta;
         @include upperspace;
-        border-top: 3px solid transparent;
-        border-bottom: 3px solid transparent;
+
+        span {
+            display: none;
+            @include bp(large) {
+                display: inline;
+            }
+        }
     }
 
-    ul {
-        margin-top: 0;
-        margin-bottom: 0;
-        // This should be able to be an extend, but the margin is being overwritten somewhere
-        @include make-row();
-    }
+} // .content-nav
 
-}
 
-    .content-nav-active {
+
+    li.content-nav-active {
         position: relative;
-        
+        background-color: $alert-info;
+
+        &:hover {
+            background-color: $alert-info;
+        }
+
         a {
             transition: all 0.25s ease-in-out;
-            border-color: $accent-med;
-            color: $accent-med;
         }
     }
 
@@ -278,10 +305,9 @@
     }
 
     .top-link {
-        background-color: $text-dark;
+        background-color: $text-dark !important;
         width: 0;
-        position: relative;
-
+        margin: 0;
         a {
             padding: 0;
         }
@@ -291,7 +317,7 @@
             fill: $text-light;
             z-index: $ztop*2;
             height: $base;
-            width: $base;
+            width: $h4;
         }
 
 

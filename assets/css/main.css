@@ -466,8 +466,7 @@ input[type="tel"] {
 
 .meta,
 .gfield_description,
-.gfield_checkbox label,
-.content-nav a {
+.gfield_checkbox label {
   font-size: 0.9rem;
   font-family: "source-sans-pro", Helvetica, serif;
   margin: 0;
@@ -2159,37 +2158,54 @@ nav a {
 }
 .content-nav li {
   transition: all 0.3s ease-in-out;
+  width: 1.2rem;
+  text-align: center;
+  height: 0.9rem;
+  margin: 0.72rem 0.9rem 0 0;
+  background-color: #21445f;
+}
+@media (min-width: 72em) {
+  .content-nav li {
+    background-color: #222334;
+    width: auto;
+    height: auto;
+    margin: 0;
+  }
+}
+.content-nav li:hover {
+  background-color: #21445f;
+}
+.content-nav li:active {
+  background-color: black;
 }
 .content-nav a {
   padding: 0.45rem 1.2rem;
   display: inline-block;
   color: #fefefe;
+  font-size: 0.9rem;
+  font-family: "source-sans-pro", Helvetica, serif;
+  margin: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
-  border-top: 3px solid transparent;
-  border-bottom: 3px solid transparent;
 }
-.content-nav ul {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: -1.2rem;
-  margin-right: -1.2rem;
+.content-nav a span {
+  display: none;
 }
-.content-nav ul:before, .content-nav ul:after {
-  content: " ";
-  display: table;
-}
-.content-nav ul:after {
-  clear: both;
+@media (min-width: 72em) {
+  .content-nav a span {
+    display: inline;
+  }
 }
 
-.content-nav-active {
+li.content-nav-active {
   position: relative;
+  background-color: #3C7AAA;
 }
-.content-nav-active a {
+li.content-nav-active:hover {
+  background-color: #3C7AAA;
+}
+li.content-nav-active a {
   transition: all 0.25s ease-in-out;
-  border-color: #80C25D;
-  color: #80C25D;
 }
 
 .stuck {
@@ -2200,9 +2216,9 @@ nav a {
 }
 
 .top-link {
-  background-color: #222334;
+  background-color: #222334 !important;
   width: 0;
-  position: relative;
+  margin: 0;
 }
 .top-link a {
   padding: 0;
@@ -2212,7 +2228,7 @@ nav a {
   fill: #fefefe;
   z-index: 8;
   height: 1.2rem;
-  width: 1.2rem;
+  width: 1.56rem;
 }
 
 .site-header {
@@ -2725,8 +2741,6 @@ img.caption-image {
 .block_testimonial {
   padding-top: 2.4rem;
   padding-bottom: 2.4rem;
-  background-color: #f9f9f9;
-  color: #222334;
 }
 
 .svgsprites {
