@@ -301,6 +301,7 @@
 
     .stuck {
         -webkit-backface-visibility:hidden;
+        transition: all 0.3s ease-in-out;
         position: fixed;
         top: 0;
         width: 100%;
