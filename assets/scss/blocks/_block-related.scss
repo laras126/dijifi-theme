@@ -29,7 +29,7 @@
 			padding: $sml/2 $sml;
 			@include rotate($text-light, $alert-info);
 			position: relative;
-			z-index: $ztop;
+			z-index: $zmid;
 
 			@include bp(large) {
 				right: -$sml;

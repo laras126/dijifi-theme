@@ -7,6 +7,12 @@
 .section-title {
 	margin-top: $h2;
 	position:relative; 
+
+	font-size: $h3;
+
+	@include bp(small) {
+		font-size: $h2;
+	}
 }
 
 .section-content {

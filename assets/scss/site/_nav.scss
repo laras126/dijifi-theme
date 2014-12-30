@@ -127,7 +127,8 @@
 // http://codepen.io/lexstefan/pen/mwtcn
 
 .menu-link {
-    margin-top: $base;
+
+    margin-top: $sml;
 
     a {
         float: right;
@@ -237,6 +238,7 @@
     @include horizontal-list;
     @include rotate($bkgd: $text-dark);
     text-align: center;
+    // position: absolute;
 
     li {
         transition: all 0.3s ease-in-out;

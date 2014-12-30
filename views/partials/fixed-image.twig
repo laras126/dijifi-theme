@@ -1,13 +1,11 @@
 <div class="fixed-image" style="background-image:url({{TimberImage(content.fixed_image).src}});">
-
-{% if page_header == true %}		
 	<div class="fixed-wrap">
+	{% if page_header == true %}
 		<div class="contain">
 			<h1 class="page-title">{{post.title}}</h1>
 			<div class="inner">
 			<p class="page-tagline">{{post.summary}}</p>
 		</div>
+	{% endif %}
 	</div> <!-- /.fixed-wrap -->
-{% endif %}
-
 </div> <!-- /.fixed-image -->

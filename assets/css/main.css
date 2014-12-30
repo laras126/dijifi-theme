@@ -2065,7 +2065,7 @@ nav a {
 }
 
 .menu-link {
-  margin-top: 1.2rem;
+  margin-top: 0.9rem;
 }
 .menu-link a {
   float: right;
@@ -2233,8 +2233,8 @@ li.content-nav-active a {
 
 .site-header {
   width: 100%;
-  display: table;
-  z-index: 4;
+  padding-top: 0.36rem;
+  padding-bottom: 0.36rem;
   border-bottom: 3px solid #3C7AAA;
 }
 
@@ -2247,18 +2247,12 @@ li.content-nav-active a {
   float: left;
   position: relative;
   min-height: 1px;
-  display: table-row;
+  display: table-row !important;
 }
 @media (min-width: 47em) {
   .header-brand {
     width: 35.71429%;
   }
-}
-
-.header-tag,
-.header-logo {
-  display: table-cell;
-  vertical-align: middle;
 }
 
 .header-tag {
@@ -2268,6 +2262,12 @@ li.content-nav-active a {
   font-size: 0.72rem;
   padding-left: 1.2rem;
   padding-top: 0.45rem;
+}
+
+.header-tag,
+.header-logo {
+  display: table-cell !important;
+  vertical-align: middle !important;
 }
 
 .header-nav-link {
@@ -2314,6 +2314,12 @@ li.content-nav-active a {
 .section-title {
   margin-top: 2.88rem;
   position: relative;
+  font-size: 2.4rem;
+}
+@media (min-width: 34em) {
+  .section-title {
+    font-size: 2.88rem;
+  }
 }
 
 .section-content {
@@ -2728,7 +2734,7 @@ img.caption-image {
   background-color: #3C7AAA;
   color: #fefefe;
   position: relative;
-  z-index: 4;
+  z-index: 3;
   text-transform: uppercase;
   letter-spacing: 1px;
 }

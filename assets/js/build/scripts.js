@@ -4,18 +4,7 @@ $(document).ready(function() {
 	
 
 	$('body').addClass('js');
-	
-	// Hack to keep out widows
-	// http://css-tricks.com/preventing-widows-in-post-titles/
-   
-	$('h4, h5, .section-title, .main p').each( function() {
-		var wordArray = $(this).text().split(" ");
-		if (wordArray.length > 1) {
-			wordArray[wordArray.length-2] += "&nbsp;" + wordArray[wordArray.length-1];
-			wordArray.pop();
-	    	$(this).html(wordArray.join(" "));
-	  	}
-	});
+
 
 
 	// ----
@@ -43,6 +32,7 @@ $(document).ready(function() {
 	});
 		
 
+
 	
 	// ----
 	// Submenu
@@ -50,43 +40,42 @@ $(document).ready(function() {
 
 	// This jumps...will need to fix
 	 var scroll_class = 'stuck',
-		header_ht = $('.page-header').outerHeight() + $('.site-header').outerHeight(),
 		$nav = $('.content-nav'),
 		nav_ht = $nav.outerHeight(),
+		header_ht = $('.page-header').outerHeight() + $('.site-header').outerHeight(),
 		total_ht = header_ht;
+  	
+  	// (from SO link below)
+  	var topMenu = $nav,
+	    topMenuHeight = topMenu.outerHeight(),
 	  
+	    // All list items
+	    menuItems = topMenu.find('a'),
 
+	    // Anchors corresponding to menu items
+	    scrollItems = menuItems.map( function() {
+			var item = $($(this).attr('href'));
+			if (item.length) { return item; }
+		});
+
+
+	// 1. Highlight current item
+	// 2. Slide to current section on click
 	$('.content-nav a').click( function() {
 		var hash = $(this).attr('href');
-
-		// Add and remove active class from nav item and section
-		$('.content-nav li').removeClass('content-nav-active');
-		$(this).parent().addClass('content-nav-active');
-		$('.content').removeClass('content-active');
-
 		var $target = $(hash);
 
-		// Slide to section corresponding to link
+		// Slide to section corresponding to clicked hash
 		$('html,body').animate({
 			scrollTop: $target.offset().top
         }, 500);
 
+		// Add and remove active class from nav item and section
+		$('.content-nav li').removeClass('content-nav-active');
+		$(this).parent().addClass('content-nav-active');
+
 		return false;
-
-	});
-
-	// Copy Pasta from SO link below
-	var topMenu = $(".content-nav"),
-	    topMenuHeight = topMenu.outerHeight()+15,
-	  
-	    // All list items
-	    menuItems = topMenu.find("a"),
-
-	    // Anchors corresponding to menu items
-	    scrollItems = menuItems.map(function(){
-			var item = $($(this).attr("href"));
-			if (item.length) { return item; }
-		});
+	}); // END click
 
 
 	$(window).scroll( function() {
@@ -100,6 +89,7 @@ $(document).ready(function() {
 			$('.top-link').css('width', '0');
 		}
 
+
 		// Highlight the current item according to position on the screen
 		// http://stackoverflow.com/questions/9979827/change-active-menu-item-on-page-scroll
 		
@@ -107,19 +97,48 @@ $(document).ready(function() {
 		var fromTop = $(this).scrollTop()+topMenuHeight;
 
 		// Get id of current scroll item
-		var cur = scrollItems.map(function(){
-		if ($(this).offset().top < fromTop)
-			return this;
-		});
+		var cur = scrollItems.map( function() {
+			if ( $(this).offset().top < fromTop )
+				return this;
+			});
 	   	
 	   	// Get the id of the current element
 		cur = cur[cur.length-1];
 		var id = cur && cur.length ? cur[0].id : "";
+
 		// Set/remove active class
 		menuItems
-			.parent().removeClass("content-nav-active")
-			.end().filter("[href=#"+id+"]").parent().addClass("content-nav-active");
+			.parent().removeClass('content-nav-active')
+			.end().filter("[href=#"+id+"]").parent().addClass('content-nav-active');
+	
+	}); // END scroll
+
+
+
+	// ----
+	// Misc
+	// ----
+
+	// Hack to keep out widows
+	// http://css-tricks.com/preventing-widows-in-post-titles/
+   
+	$('.item-title, .section-title, .main p').each( function() {
+		var wordArray = $(this).text().split(" ");
+		if (wordArray.length > 1) {
+			wordArray[wordArray.length-2] += "&nbsp;" + wordArray[wordArray.length-1];
+			wordArray.pop();
+	    	$(this).html(wordArray.join(" "));
+	  	}
 	});
+
+
+
+
+
+
+
+
+
 
 
 

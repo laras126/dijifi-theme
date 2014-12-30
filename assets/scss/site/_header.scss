@@ -4,12 +4,19 @@
 	// z-index: $ztop;
 	// top: 0;
 	width: 100%;
-	display: table;
+
+	// .contain {
+	// 	display: table !important; 	
+	// }
+	
+	
 	// background-color: $text-dark;
 	// @include rotate();
 	// position: relative;
 	// position: absolute;
-	z-index: $ztop;
+
+	padding-top: $xsml/2;
+	padding-bottom: $xsml/2;
 
 	@include bp(med) {
 		// background-color: rgba($text-dark, 1);
@@ -20,25 +27,28 @@
 .header-brand {
 	@include make-xs-column(6.5, false);
 	@include make-md-column(2.5, false);
-	display: table-row;
+	display: table-row !important;
 }
 
-.header-tag, 
 .header-logo {
-	display: table-cell;
-	vertical-align: middle;
-}
-
-
-.header-logo {
+	// @include make-xs-column(2.5, false);
 	// @include make-xs-column(3, false);
+	// float: left;
 }
 
 .header-tag {
+	// @include make-xs-column(4.5, false);
+	// @include make-xs-column(4, false);
 	@include meta;
 	font-size: $sml/1.25;
 	padding-left: $base;
 	padding-top: $sml/2;
+}
+
+.header-tag, 
+.header-logo {
+	display: table-cell !important;
+	vertical-align: middle !important;
 }
 
 .header-nav-link {
