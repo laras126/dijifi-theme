@@ -136,12 +136,12 @@
 
     span {
         transition: all 0.25s ease-in-out;
-        width: 30px;
+        width: 25px;
         border-radius: 1px;
         height: 3px;
         display: block;
         background: $text-dark;
-        margin: 0 0 7px 0;
+        margin: 0 0 4px 0;
     }
 }
 
@@ -151,7 +151,7 @@
     
     .menu-link.open span:nth-of-type(1) {
         transform: rotate(45deg);
-        margin: 11px 0 0 0;
+        margin: 8px 0 0 0;
     }
 
     .menu-link.open span:nth-of-type(2) {
@@ -160,7 +160,7 @@
 
     .menu-link.open span:nth-of-type(3) {
         transform: rotate(-45deg);
-        margin: -13px 0 0 0;
+        margin: -8px 0 0 0;
     }
 
 

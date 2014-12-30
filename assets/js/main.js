@@ -1,11 +1,10 @@
 
 $(document).ready(function() {
 	
-
 	$('body').addClass('js');
 
 
-
+	
 	// ----
 	// Toggle Menu
 	// ----

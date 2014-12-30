@@ -4,7 +4,8 @@
 	// z-index: $ztop;
 	// top: 0;
 	width: 100%;
-
+	
+	padding-bottom: $xsml;
 	// .contain {
 	// 	display: table !important; 	
 	// }
@@ -15,8 +16,8 @@
 	// position: relative;
 	// position: absolute;
 
-	padding-top: $xsml/2;
-	padding-bottom: $xsml/2;
+	// padding-top: $xsml/2;
+	// padding-bottom: $xsml/2;
 
 	@include bp(med) {
 		// background-color: rgba($text-dark, 1);
@@ -30,10 +31,13 @@
 	display: table-row !important;
 }
 
-.header-logo {
-	// @include make-xs-column(2.5, false);
-	// @include make-xs-column(3, false);
-	// float: left;
+.header-logo img {
+	max-height: 30px;
+	padding-top: $xsml;
+	@include bp(med) {
+		max-height: 50px;
+	}
+	// padding-bottom: $xsml/3;
 }
 
 .header-tag {
