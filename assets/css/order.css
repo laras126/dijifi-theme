@@ -1806,6 +1806,7 @@ li.content-nav-active a {
 }
 
 .stuck {
+  -webkit-backface-visibility: hidden;
   position: fixed;
   top: 0;
   width: 100%;
@@ -4466,6 +4467,7 @@ li.content-nav-active a {
 }
 
 .stuck {
+  -webkit-backface-visibility: hidden;
   position: fixed;
   top: 0;
   width: 100%;
