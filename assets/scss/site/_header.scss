@@ -1,18 +1,8 @@
 .site-header {
-	// width: 100%;
 	border-bottom: 3px solid $alert-info;
-
-    // position: fixed;
-    // width: 100%;
-    // z-index: $ztop;
-
 	background-color: $body-bkgd;
- 	
- 	// transition: top 0.2s ease-in-out;
-    
-    // @include bp(large) {
-    //     position: relative;
-    // }
+ 	position: relative;
+ 	z-index: $ztop;
 }
 
 .header-brand {

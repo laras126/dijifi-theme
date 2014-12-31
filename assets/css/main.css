@@ -412,11 +412,11 @@ Those are primarily for prototyping purposes, but not
 exclusively.
 
 */
-.clearfix:before, .fixed-wrap:before, .menu-item-complex:before, .clearfix:after, .fixed-wrap:after, .menu-item-complex:after {
+.clearfix:before, .hero-wrap:before, .menu-item-complex:before, .clearfix:after, .hero-wrap:after, .menu-item-complex:after {
   content: " ";
   display: table;
 }
-.clearfix:after, .fixed-wrap:after, .menu-item-complex:after {
+.clearfix:after, .hero-wrap:after, .menu-item-complex:after {
   clear: both;
 }
 
@@ -449,7 +449,7 @@ input[type="tel"] {
   font-family: "source-sans-pro", Helvetica, serif;
 }
 
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .hide-after-lg {
     display: none;
   }
@@ -1185,7 +1185,7 @@ input[type="tel"] {
   position: relative;
   min-height: 1px;
 }
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-1 {
     padding-left: 1.2rem;
     padding-right: 1.2rem;
@@ -1193,13 +1193,13 @@ input[type="tel"] {
   }
 }
 
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-push-1 {
     left: 14.28571%;
   }
 }
 
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-pull-1 {
     right: 14.28571%;
   }
@@ -1210,7 +1210,7 @@ input[type="tel"] {
   position: relative;
   min-height: 1px;
 }
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-1-np {
     padding-left: 0;
     padding-right: 0;
@@ -1218,7 +1218,7 @@ input[type="tel"] {
   }
 }
 
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-offset-1 {
     margin-left: 14.28571%;
   }
@@ -1229,7 +1229,7 @@ input[type="tel"] {
   position: relative;
   min-height: 1px;
 }
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-2 {
     padding-left: 1.2rem;
     padding-right: 1.2rem;
@@ -1237,13 +1237,13 @@ input[type="tel"] {
   }
 }
 
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-push-2 {
     left: 28.57143%;
   }
 }
 
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-pull-2 {
     right: 28.57143%;
   }
@@ -1254,7 +1254,7 @@ input[type="tel"] {
   position: relative;
   min-height: 1px;
 }
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-2-np {
     padding-left: 0;
     padding-right: 0;
@@ -1262,7 +1262,7 @@ input[type="tel"] {
   }
 }
 
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-offset-2 {
     margin-left: 28.57143%;
   }
@@ -1273,7 +1273,7 @@ input[type="tel"] {
   position: relative;
   min-height: 1px;
 }
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-3 {
     padding-left: 1.2rem;
     padding-right: 1.2rem;
@@ -1281,13 +1281,13 @@ input[type="tel"] {
   }
 }
 
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-push-3 {
     left: 42.85714%;
   }
 }
 
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-pull-3 {
     right: 42.85714%;
   }
@@ -1298,7 +1298,7 @@ input[type="tel"] {
   position: relative;
   min-height: 1px;
 }
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-3-np {
     padding-left: 0;
     padding-right: 0;
@@ -1306,7 +1306,7 @@ input[type="tel"] {
   }
 }
 
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-offset-3 {
     margin-left: 42.85714%;
   }
@@ -1317,7 +1317,7 @@ input[type="tel"] {
   position: relative;
   min-height: 1px;
 }
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-4 {
     padding-left: 1.2rem;
     padding-right: 1.2rem;
@@ -1325,13 +1325,13 @@ input[type="tel"] {
   }
 }
 
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-push-4 {
     left: 57.14286%;
   }
 }
 
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-pull-4 {
     right: 57.14286%;
   }
@@ -1342,7 +1342,7 @@ input[type="tel"] {
   position: relative;
   min-height: 1px;
 }
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-4-np {
     padding-left: 0;
     padding-right: 0;
@@ -1350,7 +1350,7 @@ input[type="tel"] {
   }
 }
 
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-offset-4 {
     margin-left: 57.14286%;
   }
@@ -1361,7 +1361,7 @@ input[type="tel"] {
   position: relative;
   min-height: 1px;
 }
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-5 {
     padding-left: 1.2rem;
     padding-right: 1.2rem;
@@ -1369,13 +1369,13 @@ input[type="tel"] {
   }
 }
 
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-push-5 {
     left: 71.42857%;
   }
 }
 
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-pull-5 {
     right: 71.42857%;
   }
@@ -1386,7 +1386,7 @@ input[type="tel"] {
   position: relative;
   min-height: 1px;
 }
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-5-np {
     padding-left: 0;
     padding-right: 0;
@@ -1394,7 +1394,7 @@ input[type="tel"] {
   }
 }
 
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-offset-5 {
     margin-left: 71.42857%;
   }
@@ -1405,7 +1405,7 @@ input[type="tel"] {
   position: relative;
   min-height: 1px;
 }
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-6 {
     padding-left: 1.2rem;
     padding-right: 1.2rem;
@@ -1413,13 +1413,13 @@ input[type="tel"] {
   }
 }
 
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-push-6 {
     left: 85.71429%;
   }
 }
 
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-pull-6 {
     right: 85.71429%;
   }
@@ -1430,7 +1430,7 @@ input[type="tel"] {
   position: relative;
   min-height: 1px;
 }
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-6-np {
     padding-left: 0;
     padding-right: 0;
@@ -1438,7 +1438,7 @@ input[type="tel"] {
   }
 }
 
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .col-lg-offset-6 {
     margin-left: 85.71429%;
   }
@@ -1457,12 +1457,12 @@ input[type="tel"] {
     width: 100%;
   }
 }
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .inner, .list-minor {
     width: 71.42857%;
   }
 }
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .inner, .list-minor {
     margin-left: 14.28571%;
   }
@@ -1486,12 +1486,12 @@ input[type="tel"] {
     margin-left: 7.14286%;
   }
 }
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .inner-squish {
     width: 57.14286%;
   }
 }
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .inner-squish {
     margin-left: 21.42857%;
   }
@@ -1915,6 +1915,12 @@ th:last-child {
 
 body {
   background-color: #fefefe;
+  word-wrap: break-word;
+}
+@media (min-width: 34em) {
+  body {
+    word-wrap: normal;
+  }
 }
 
 img {
@@ -1939,49 +1945,63 @@ nav a {
   font-family: "source-sans-pro", Helvetica, serif;
 }
 
-.fixed-image {
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-video video {
+  top: 0;
+  left: 0;
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.hero-full-bkgd {
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
 }
-@media (min-width: 72em) {
-  .fixed-image {
+@media (min-width: 68em) {
+  .hero-full-bkgd {
     background-attachment: fixed;
     background-position: center;
   }
 }
 
-.fixed-wrap {
+.hero-wrap {
   padding-top: 33.33333%;
   color: #fefefe;
   padding-bottom: 2.88rem;
   padding-top: 66.66667%;
 }
-@media (min-width: 72em) {
-  .fixed-wrap {
+@media (min-width: 68em) {
+  .hero-wrap {
     padding-top: 50%;
   }
 }
 @media (min-width: 78em) {
-  .fixed-wrap {
+  .hero-wrap {
     padding-top: 33.33333%;
   }
 }
-.page-header .fixed-wrap {
+.page-header .hero-wrap {
   padding-top: 3.6rem;
 }
 @media (min-width: 34em) {
-  .page-header .fixed-wrap {
+  .page-header .hero-wrap {
     padding-top: 33.33333%;
   }
 }
 @media (min-width: 47em) {
-  .page-header .fixed-wrap {
+  .page-header .hero-wrap {
     padding-top: 16.66667%;
   }
 }
-.page-header .fixed-wrap {
+.page-header .hero-wrap {
   background-image: radial-gradient(ellipse at 20% center, rgba(34, 35, 52, 0) 0, #222334);
 }
 
@@ -2202,7 +2222,7 @@ li.content-nav-active a {
   transition: all 0.25s ease-in-out;
 }
 
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .stuck {
     position: fixed;
     top: 0;
@@ -2251,7 +2271,7 @@ li.content-nav-active a {
   display: block;
   margin: 0 auto;
 }
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .top-link-bottom {
     opacity: 0;
   }
@@ -2270,6 +2290,8 @@ li.content-nav-active a {
 .site-header {
   border-bottom: 3px solid #3C7AAA;
   background-color: #fefefe;
+  position: relative;
+  z-index: 4;
 }
 
 .header-brand {
@@ -2339,7 +2361,12 @@ li.content-nav-active a {
   }
 }
 
+.page-header {
+  text-align: center;
+}
+
 .page-title {
+  position: relative;
   text-shadow: 2px 1px 1px #222334;
 }
 @media (min-width: 47em) {
@@ -2348,12 +2375,10 @@ li.content-nav-active a {
   }
 }
 
-.header-video video {
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  height: auto;
+.page-body {
+  position: relative;
+  z-index: 3;
+  background-color: #fefefe;
 }
 
 .section-title {
@@ -2610,17 +2635,17 @@ figure {
   padding-top: 0.72rem;
   padding-bottom: 0.9rem;
 }
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .caption {
     text-align: left;
   }
 }
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .caption {
     width: 21.42857%;
   }
 }
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .caption {
     float: left;
     border-bottom: none;
@@ -2634,7 +2659,7 @@ img.caption-image {
   min-height: 1px;
   border-top: 1px solid #80C25D;
 }
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   img.caption-image {
     width: 78.57143%;
   }
@@ -2662,7 +2687,7 @@ img.caption-image {
     margin-left: -14.28571%;
   }
 }
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .textimage-image {
     margin-left: -28.57143%;
   }
@@ -2764,15 +2789,6 @@ img.caption-image {
   position: relative;
   top: 0;
 }
-@media (min-width: 72em) {
-  .prompt {
-    transform: rotate(-90deg);
-    transform-origin: left bottom;
-    position: absolute;
-    left: -1.2rem;
-    top: 82px;
-  }
-}
 .prompt span {
   position: relative;
   padding: 0.45rem 0.9rem;
@@ -2783,7 +2799,7 @@ img.caption-image {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-@media (min-width: 72em) {
+@media (min-width: 68em) {
   .prompt span {
     right: -0.9rem;
   }
@@ -2849,19 +2865,6 @@ a.special {
   color: #fefefe;
 }
 
-html,
-body,
-.home .page-header {
-  height: 100%;
-}
-
-.video-header-content {
-  position: absolute;
-  top: 25%;
-  z-index: 4;
-  text-align: center;
-}
-
 .padded-sides {
   padding: 0 2.4rem;
 }
@@ -2889,10 +2892,6 @@ body,
 
 .menu-sub-items li {
   text-align: left;
-}
-
-.page-header {
-  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */

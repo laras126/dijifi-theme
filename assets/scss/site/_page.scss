@@ -1,20 +1,22 @@
-.page-title {
-	@include bp(med) {
-		font-size: $h1*1.5;	
-	}
-	
-	// text-transform: uppercase;
-	text-shadow: 2px 1px 1px $text-dark;
+
+.page-header {
+	text-align: center;
 }
 
-.page-header {}
-
-	.header-video {
-		video {
-			top: 0;
-			left: 0;
-			position: absolute;
-			width: 100%;
-			height: auto;
+	.page-title {
+		position: relative;
+		@include bp(med) {
+			font-size: $h1*1.5;	
 		}
+		
+		// text-transform: uppercase;
+		text-shadow: 2px 1px 1px $text-dark;
 	}
+
+
+.page-body {
+	position: relative;
+	z-index: $zmid;
+	background-color: $body-bkgd;
+}
+

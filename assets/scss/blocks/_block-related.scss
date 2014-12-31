@@ -16,12 +16,12 @@
 		top: 0;
 		
 		@include bp(large) {
-			transform: rotate(-90deg);
+			// transform: rotate(-90deg);
 			// IMPORTANT: Can't leave this like this
-			transform-origin: left bottom;
-			position: absolute;
-			left: -$base;
-			top: 82px;
+			// transform-origin: left bottom;
+			// position: absolute;
+			// left: -$base;
+			// top: 82px;
 		}
 		
 		span {

@@ -1,37 +1,6 @@
 
 
 
-html, 
-body, 
-.home .page-header {
-	height: 100%;
-}
-
-.video-header-content {
-	position: absolute;
-	top: 25%;
-	// left: 25%;
-	z-index: $ztop;
-	text-align: center;
-}
-
-// Blocks
-
-
-// .section-header {
-// 	text-align: center;
-// }
-
-// Where should this go
-
-
-
-// Need a good place for these, maybe _page.scss in site/ ?
-
-.summary {
-	// font-family: $lead-font;
-}
-
 
 // Just for prototyping
 
@@ -72,12 +41,4 @@ body,
 	li {
 		text-align: left;
 	}
-}
-
-
-// Header
-
-
-.page-header {
-	text-align: center;
 }

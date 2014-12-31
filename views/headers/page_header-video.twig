@@ -2,15 +2,16 @@
 
 {% block content %}
 
-	<video src="{{post.video}}" autoplay loop></video>
-	<div class="video-header-content">
-		<svg class="shape shape-logo"><use xlink:href="#shape-logo" /></svg>
-		{{site.description}}
+<div class="hero hero-video">
+	
+	<video autoplay loop class="hero-full-bkgd" style="background-image:url({{TimberImage(post.video_placeholder).src}});">
+		<source src="{{post.video}}" media="screen and (max-width: 1088px)" type="video/mp4">
+	</video>
 
-		<div class="inner-squish text-center">
-			<p class="lead">{{post.summary}}</p>			
-		</div>
-		                    
-	</div>
+	<div class="hero-wrap">
+		{% include 'partials/hero-content.twig' %}
+	</div> <!-- /.hero-wrap -->
+
+</div> <!-- /.hero-image -->
 
 {% endblock %}

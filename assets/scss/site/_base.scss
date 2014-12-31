@@ -10,6 +10,11 @@
 
 body {
 	background-color: $body-bkgd;
+	word-wrap: break-word;
+	
+	@include bp(small) {
+		word-wrap: normal;
+	}
 }
 
 img {
@@ -70,20 +75,35 @@ nav a {
 // Components 
 // ---
 
+.hero {
+	position: relative;
+	overflow: hidden;
+}
 
-.fixed-image {
-	background-position: center top;
-	background-size: cover;
-	background-repeat: no-repeat;
-	width: 100%;
-
-	@include bp(large) {
-		background-attachment: fixed;
-		background-position: center;
+.hero-video {
+	video {
+		top: 0;
+		left: 0;
+		position: absolute;
+		min-width: 100%;
+		min-height: 100%;
+		z-index: -$zbase;
 	}
 }
 
-.fixed-wrap {
+	.hero-full-bkgd {
+		background-position: center top;
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 100%;
+
+		@include bp(large) {
+			background-attachment: fixed;
+			background-position: center;
+		}
+	}
+
+.hero-wrap {
 	padding-top: percentage(1/3);
 
 	@include bp(large) {

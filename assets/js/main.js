@@ -30,25 +30,7 @@ $(document).ready(function() {
 	});
 		
 
-	function isElementInViewport (el) {
 
-	    //special bonus for those using jQuery
-	    if (typeof jQuery === "function" && el instanceof jQuery) {
-	        el = el[0];
-	    }
-
-	    var rect = el.getBoundingClientRect();
-
-	    return (
-	        rect.top >= 0 &&
-	        rect.left >= 0 &&
-	        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
-	        rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
-	    );
-	}
-
-
-	
 	
 	// ----
 	// Submenu
@@ -138,7 +120,7 @@ $(document).ready(function() {
    
 	$('.item-title, .section-title, .main p').each( function() {
 		var wordArray = $(this).text().split(" ");
-		if (wordArray.length > 1) {
+		if (wordArray.length > 3) {
 			wordArray[wordArray.length-2] += "&nbsp;" + wordArray[wordArray.length-1];
 			wordArray.pop();
 	    	$(this).html(wordArray.join(" "));
