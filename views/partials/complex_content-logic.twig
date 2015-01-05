@@ -3,6 +3,10 @@
 
 {% include 'partials/content-nav.twig' %}
 
+{# Used to get around section wrapper in complex vs. simple content blocks #}
+{% set type = blck.list_type %}
+{% set display = blck.list_display %}
+
 {% for content in post.get_field('content') %}
     
     {% if content.acf_fc_layout == 'section' %}
