@@ -483,7 +483,7 @@
                                             "name": "image",
                                             "prefix": "",
                                             "type": "image",
-                                            "instructions": "Upload an image. If a caption format, it's dimensions should be approximately 800x600. If paragraph, it is best to be taller than wide, 600x800 would be good.",
+                                            "instructions": "Upload an image. If a caption format, it's dimensions should be approximately 800x600. If paragraph, it is best to be the height of the text, likely taller than wide.",
                                             "required": 0,
                                             "conditional_logic": 0,
                                             "wrapper": {

@@ -44,44 +44,6 @@
                             "tabs": "all",
                             "toolbar": "text_based",
                             "media_upload": 0
-                        },
-                        {
-                            "key": "field_54623e9ca566c",
-                            "label": "Text",
-                            "name": "text",
-                            "prefix": "",
-                            "type": "wysiwyg",
-                            "instructions": "Add text content here. It will display in a column at the center of the page. Take care to use the headings appropriately, and use minimal formatting.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "text_based",
-                            "media_upload": 0
-                        },
-                        {
-                            "key": "field_54623e9ca566c",
-                            "label": "Text",
-                            "name": "text",
-                            "prefix": "",
-                            "type": "wysiwyg",
-                            "instructions": "Add text content here. It will display in a column at the center of the page. Take care to use the headings appropriately, and use minimal formatting.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "text_based",
-                            "media_upload": 0
                         }
                     ],
                     "min": "",
@@ -94,69 +56,7 @@
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_54623e9ca5697",
-                            "label": "Text",
-                            "name": "text",
-                            "prefix": "",
-                            "type": "textarea",
-                            "instructions": "Text should supporting the image next to it. It's kind of like an expanded caption, and can be no more than 350 characters.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "maxlength": 350,
-                            "rows": "",
-                            "new_lines": "br",
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
-                            "key": "field_54623e9ca569e",
-                            "label": "Image",
-                            "name": "image",
-                            "prefix": "",
-                            "type": "image",
-                            "instructions": "Upload an image. It's dimensions should be approximately 800x600.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "preview_size": "thumbnail",
-                            "library": "all"
-                        },
-                        {
-                            "key": "field_54623e9ca5697",
-                            "label": "Text",
-                            "name": "text",
-                            "prefix": "",
-                            "type": "textarea",
-                            "instructions": "Text should supporting the image next to it. It's kind of like an expanded caption, and can be no more than 350 characters.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "maxlength": 350,
-                            "rows": "",
-                            "new_lines": "br",
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
-                            "key": "field_54623e9ca56a6",
+                            "key": "field_545a74693eedc",
                             "label": "Text Format",
                             "name": "text_format",
                             "prefix": "",
@@ -175,62 +75,48 @@
                             },
                             "other_choice": 0,
                             "save_other_choice": 0,
-                            "default_value": "caption",
-                            "layout": "vertical"
-                        },
-                        {
-                            "key": "field_54623e9ca56a6",
-                            "label": "Text Location",
-                            "name": "text_location",
-                            "prefix": "",
-                            "type": "radio",
-                            "instructions": "Should the text display on the left or right?",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "left": "Left",
-                                "right": "Right"
-                            },
-                            "other_choice": 0,
-                            "save_other_choice": 0,
                             "default_value": "",
                             "layout": "vertical"
                         },
                         {
-                            "key": "field_54623e9ca569e",
-                            "label": "Image",
-                            "name": "image",
+                            "key": "field_545a73ad3eeda",
+                            "label": "Text",
+                            "name": "text",
                             "prefix": "",
-                            "type": "image",
-                            "instructions": "Upload an image. It's dimensions should be approximately 800x600.",
+                            "type": "wysiwyg",
+                            "instructions": "The text will display in a paragraph format next to the image. The paragraph text should be related to any text above and below.",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_545a74693eedc",
+                                        "operator": "==",
+                                        "value": "paragraph"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "array",
-                            "preview_size": "thumbnail",
-                            "library": "all"
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "text_based",
+                            "media_upload": 0
                         },
                         {
-                            "key": "field_548ef11f16a8d",
+                            "key": "field_5485990b20199",
                             "label": "Caption",
                             "name": "caption",
                             "prefix": "",
                             "type": "textarea",
-                            "instructions": "The caption to display next to the image.",
+                            "instructions": "The caption to be displayed next to the image.",
                             "required": 0,
                             "conditional_logic": [
                                 [
                                     {
-                                        "field": "field_54623e9ca56a6",
+                                        "field": "field_545a74693eedc",
                                         "operator": "==",
                                         "value": "caption"
                                     }
@@ -244,68 +130,18 @@
                             "default_value": "",
                             "placeholder": "",
                             "maxlength": "",
-                            "rows": 3,
+                            "rows": -13,
                             "new_lines": "br",
                             "readonly": 0,
                             "disabled": 0
                         },
                         {
-                            "key": "field_54623e9ca56a6",
-                            "label": "Text Location",
-                            "name": "text_location",
-                            "prefix": "",
-                            "type": "radio",
-                            "instructions": "Should the text display on the left or right?",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "left": "Left",
-                                "right": "Right"
-                            },
-                            "other_choice": 0,
-                            "save_other_choice": 0,
-                            "default_value": "",
-                            "layout": "vertical"
-                        },
-                        {
-                            "key": "field_54623e9ca5697",
-                            "label": "Text",
-                            "name": "text",
-                            "prefix": "",
-                            "type": "wysiwyg",
-                            "instructions": "The text will display in a paragraph format next to the image. The paragraph text should be related to any text above and below.",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_54623e9ca56a6",
-                                        "operator": "==",
-                                        "value": "paragraph"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "visual",
-                            "toolbar": "text_based",
-                            "media_upload": 1
-                        },
-                        {
-                            "key": "field_54623e9ca569e",
+                            "key": "field_545a74233eedb",
                             "label": "Image",
                             "name": "image",
                             "prefix": "",
                             "type": "image",
-                            "instructions": "Upload an image. It's dimensions should be approximately 800x600.",
+                            "instructions": "Upload an image. If a caption format, it's dimensions should be approximately 800x600. If paragraph, it is best to be the height of the text, likely taller than wide.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -554,44 +390,6 @@
                             "tabs": "text",
                             "toolbar": "text_based",
                             "media_upload": 0
-                        },
-                        {
-                            "key": "field_54623f85b5036",
-                            "label": "Blank",
-                            "name": "blank",
-                            "prefix": "",
-                            "type": "wysiwyg",
-                            "instructions": "This code should be used for a shortcode or embed code, and not for text or image content.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "text",
-                            "toolbar": "text_based",
-                            "media_upload": 0
-                        },
-                        {
-                            "key": "field_54623f85b5036",
-                            "label": "Blank",
-                            "name": "blank",
-                            "prefix": "",
-                            "type": "wysiwyg",
-                            "instructions": "This code should be used for a shortcode or embed code, and not for text or image content.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "text",
-                            "toolbar": "text_based",
-                            "media_upload": 0
                         }
                     ],
                     "min": "",
@@ -603,31 +401,6 @@
                     "label": "Testimonial",
                     "display": "row",
                     "sub_fields": [
-                        {
-                            "key": "field_548af6f24190f",
-                            "label": "Testimonial",
-                            "name": "testimonial",
-                            "prefix": "",
-                            "type": "relationship",
-                            "instructions": "Select the testimonial to display.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "post_type": [
-                                "dfi_testimonial"
-                            ],
-                            "taxonomy": "",
-                            "filters": [
-                                "search"
-                            ],
-                            "elements": "",
-                            "max": 1,
-                            "return_format": "object"
-                        },
                         {
                             "key": "field_548af6f24190f",
                             "label": "Testimonial",
@@ -692,94 +465,6 @@
                             "prefix": "",
                             "type": "text",
                             "instructions": "No more than three words.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
-                            "key": "field_548af71041917",
-                            "label": "Text",
-                            "name": "cta_text",
-                            "prefix": "",
-                            "type": "text",
-                            "instructions": "Something like \"Use our estimator tool to get a detailed cost estimate of your transfer.\"",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": 140,
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
-                            "key": "field_548af71041919",
-                            "label": "Link to Page",
-                            "name": "cta_link_to_page",
-                            "prefix": "",
-                            "type": "page_link",
-                            "instructions": "Select a page or service for the button to link to.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "post_type": [
-                                "page",
-                                "dfi_service"
-                            ],
-                            "taxonomy": "",
-                            "allow_null": 0,
-                            "multiple": 0
-                        },
-                        {
-                            "key": "field_548af71041918",
-                            "label": "Button Text",
-                            "name": "cta_btn_text",
-                            "prefix": "",
-                            "type": "text",
-                            "instructions": "No more than three words.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
-                            "key": "field_548af71f4191a",
-                            "label": "Raw Link",
-                            "name": "cta_raw_link",
-                            "prefix": "",
-                            "type": "text",
-                            "instructions": "Paste a link here if it is not part of this WP install (order page).",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -877,5 +562,6 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1419875879
+    "modified": 1420638080,
+    "local": "json"
 }
