@@ -1,8 +1,12 @@
 .site-header {
 	border-bottom: 3px solid $alert-info;
-	background-color: $body-bkgd;
+	@include rotate();
  	position: relative;
  	z-index: $ztop;
+
+ 	a {
+ 		color: $text-light;
+ 	}
 }
 
 .header-brand {

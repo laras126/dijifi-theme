@@ -47,8 +47,10 @@
 			// $context['fixed_image_css'] = '<style>.fixed-image{background-image:url(' . new TimberImage(content.fixed_image).src . ');}</style>';
 			
 			$context['main_nav'] = new TimberMenu('main_nav');
-			$context['footer_nav'] = new TimberMenu('footer_nav');
 			$context['header_nav'] = new TimberMenu('header_nav');
+			$context['footer_nav'] = new TimberMenu('footer_nav');
+			$context['footer_nav_explore'] = new TimberMenu('footer_nav_explore');
+			
 			$context['site'] = $this;
 			return $context;
 		}

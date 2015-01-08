@@ -21,6 +21,12 @@
 	}
 }
 
+	.list-title {
+		@include upperspace;
+		@include meta;
+	}
+
+
 	// Minor lists are 2 across
 
 	.list-minor {

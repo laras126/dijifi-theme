@@ -1,7 +1,7 @@
 
 .site-footer {
 	font-family: $sans-serif;
-	@include border($color: $accent-light, $width: 4px, $side: top);
+	@include rotate($text-dark, $tan);
 	
 	ul {
 		@extend %unstyle-list;
@@ -10,14 +10,28 @@
 	li {
 		@include font-size(sml);
 	}
+
+	.block {
+		@include rotate($text-light, $alert-success);
+		padding: $base 0 $h3;
+		// margin-bottom: 0;
+	}
 }
 
 	.colophon {
 		@include rotate($text-light, $alert-info);
 		p {
 			@include font-size(xsml);	
+			color: $text-med;
 		}
 		padding-bottom: $base;
+
+		a {
+			color: lighten($text-med, 10%);
+			&:hover {
+				color: $accent-med;
+			}
+		}
 	}
 
 	.creds {
@@ -36,5 +50,14 @@
 }
 
 .widget {
+	@include change-text-align(center, med, left);
+
+	@include make-xs-column(7);
 	@include make-md-column((7/4));
 }
+
+	.widget-title {
+		@include meta;
+		@include upperspace;
+		margin-bottom: $sml;
+	}

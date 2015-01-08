@@ -242,6 +242,9 @@ exclusively.
 	background-color: $rotate-bkgd;
 }
 
+
+// Typography helpers
+
 .meta,
 %meta {
     @include meta;
@@ -258,4 +261,21 @@ exclusively.
     }
 
 
+.decor {
+    @include meta;
+    border-bottom: $accent-border; 
+    position:relative; 
+    
+    span { 
+        position: relative; 
+        top: $sml/1.5; 
+        padding: 0 $sml 0 0;
+        background-color: $body-bkgd;
+    }
+}
 
+.decor-wrap{
+    display: block; 
+    margin: 0;
+    @include clearfix;
+}

@@ -3,7 +3,7 @@
 
 {% include 'partials/content-nav.twig' %}
 
-{# Used to get around section wrapper in complex vs. simple content blocks #}
+{# Variables used to get around section wrapper in complex vs. simple content blocks and reuse the templates #}
 {% set type = blck.list_type %}
 {% set display = blck.list_display %}
 
@@ -29,7 +29,7 @@
                 {% elseif blck.acf_fc_layout == 'block_blank' %}
                     {% include 'blocks/block-blank.twig' %}
                 {% elseif blck.acf_fc_layout == 'block_testimonial' %}
-                    {% include 'blocks/block-testimonial.twig' %} {# Note: this should be a global testimonial template, and not part of dividers any more! #}
+                    {% include 'blocks/block-testimonial.twig' %}
                 {% elseif blck.acf_fc_layout == 'block_cta' %}
                     {% include 'blocks/block-cta.twig' %}
                 {% endif %}

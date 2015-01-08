@@ -27,12 +27,12 @@
 		span {
 			position: relative;
 			padding: $sml/2 $sml;
-			@include rotate($text-light, $alert-info);
+			@include rotate($text-light, $alert-success);
 			position: relative;
 			z-index: $zmid;
 
 			@include bp(large) {
-				right: -$sml;
+				// left: -$sml;
 			}
 
 			@include upperspace;

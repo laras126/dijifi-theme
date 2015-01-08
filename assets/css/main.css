@@ -485,6 +485,32 @@ input[type="tel"] {
   color: #999;
 }
 
+.decor {
+  font-size: 0.9rem;
+  font-family: "source-sans-pro", Helvetica, serif;
+  margin: 0;
+  border-bottom: 1px solid #80C25D;
+  position: relative;
+}
+.decor span {
+  position: relative;
+  top: 0.6rem;
+  padding: 0 0.9rem 0 0;
+  background-color: #fefefe;
+}
+
+.decor-wrap {
+  display: block;
+  margin: 0;
+}
+.decor-wrap:before, .decor-wrap:after {
+  content: " ";
+  display: table;
+}
+.decor-wrap:after {
+  clear: both;
+}
+
 .inner-full {
   padding-left: 1.2rem;
   padding-right: 1.2rem;
@@ -1507,6 +1533,10 @@ input[type="tel"] {
   width: 7.2rem;
 }
 
+.shape-yelp {
+  width: 80%;
+}
+
 html {
   font-size: 90%;
   line-height: 1.3;
@@ -1857,17 +1887,17 @@ button:active,
 }
 
 .link-more {
-  background: #FFCC53;
+  background: #3C7AAA;
   font-weight: 700;
   border-radius: 2px;
   color: #fefefe !important;
 }
 .link-more:hover, .link-more:focus {
-  background: #ffbd20;
+  background: #2f5f84;
   color: #fefefe;
 }
 .link-more:active {
-  background: #865e00;
+  background: #070e13;
 }
 
 .link-edit,
@@ -2008,14 +2038,20 @@ nav a {
 .menu-items {
   margin: 0;
   padding: 0;
+  text-align: center;
 }
-
-.menu-item {
-  margin: 0.45rem 0;
+.menu-items a {
+  display: block;
+  font-size: 1.2rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid #3C7AAA;
 }
-.menu-item a {
-  padding: 0.9rem;
-  color: #222334;
+@media (min-width: 47em) {
+  .menu-items a {
+    font-size: 0.9rem;
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
 }
 
 .header-nav,
@@ -2032,13 +2068,16 @@ nav a {
   position: relative;
 }
 
-.menu-main li {
-  border-false: bottom solid #999;
-}
-.menu-main li:last-child {
-  border-bottom: none;
+.menu-main {
+  margin: 0.45rem 0;
 }
 .menu-main a {
+  font-size: 0.9rem;
+  font-family: "source-sans-pro", Helvetica, serif;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #222334;
   display: block;
   font-weight: 700;
 }
@@ -2050,13 +2089,35 @@ nav a {
 .menu-main a:hover {
   color: #FFCC53;
 }
+@media (min-width: 47em) {
+  .menu-main {
+    text-align: right;
+  }
+  .menu-main li {
+    border-false: bottom solid #999;
+    margin-right: 0.9rem;
+    display: inline-block;
+    border: 0;
+  }
+  .menu-main li:last-child {
+    padding-right: 0;
+    margin-right: 0;
+  }
+  .menu-main li.menu-item-complex {
+    display: none;
+  }
+  .menu-main li:last-child {
+    border-bottom: none;
+  }
+}
 
 .subnav {
-  background-color: #80C25D;
+  background-color: #3C7AAA;
 }
 .subnav a {
   font-weight: 400;
   color: #fefefe;
+  border-color: #222334;
 }
 
 .menu-item-complex {
@@ -2073,10 +2134,6 @@ nav a {
   min-height: 1px;
   width: 50%;
   min-height: 1px;
-}
-
-.menu-item-cta a {
-  padding-top: 0;
 }
 
 .header-nav li.has-subnav > a:after {
@@ -2102,7 +2159,7 @@ nav a {
   border-radius: 1px;
   height: 3px;
   display: block;
-  background: #222334;
+  background: #fefefe;
   margin: 0 0 4px 0;
 }
 
@@ -2151,24 +2208,6 @@ nav a {
     padding-top: 0;
     font-size: 0.9rem;
     color: #fefefe;
-  }
-
-  .menu-items {
-    text-align: right;
-  }
-  .menu-items li {
-    display: inline-block;
-    border: 0;
-  }
-  .menu-items li:last-child {
-    padding-right: 0;
-  }
-  .menu-items li.menu-item-complex {
-    display: none;
-  }
-  .menu-items a {
-    border: 0;
-    padding-bottom: 0;
   }
 }
 .content-nav {
@@ -2287,11 +2326,24 @@ li.content-nav-active a {
   width: 1.2rem;
 }
 
+@media (min-width: 47em) {
+  .menu-footer .menu-items {
+    text-align: left;
+  }
+  .menu-footer .menu-items a {
+    padding: 0;
+  }
+}
+
 .site-header {
   border-bottom: 3px solid #3C7AAA;
-  background-color: #fefefe;
+  background-color: #222334;
+  color: #fefefe;
   position: relative;
   z-index: 4;
+}
+.site-header a {
+  color: #fefefe;
 }
 
 .header-brand {
@@ -2363,6 +2415,7 @@ li.content-nav-active a {
 
 .page-header {
   text-align: center;
+  border-bottom: 3px solid #3C7AAA;
 }
 
 .page-title {
@@ -2379,6 +2432,10 @@ li.content-nav-active a {
   position: relative;
   z-index: 3;
   background-color: #fefefe;
+}
+
+.section-header {
+  margin-bottom: 2.88rem;
 }
 
 .section-title {
@@ -2403,10 +2460,16 @@ li.content-nav-active a {
 
 .site-footer {
   font-family: "source-sans-pro", Helvetica, serif;
-  border-top: 4px solid #FFCC53;
+  background-color: #faf3db;
+  color: #222334;
 }
 .site-footer li {
   font-size: 0.9rem;
+}
+.site-footer .block {
+  background-color: #80C25D;
+  color: #fefefe;
+  padding: 1.2rem 0 2.4rem;
 }
 
 .colophon {
@@ -2416,6 +2479,13 @@ li.content-nav-active a {
 }
 .colophon p {
   font-size: 0.72rem;
+  color: #999;
+}
+.colophon a {
+  color: #b3b3b3;
+}
+.colophon a:hover {
+  color: #80C25D;
 }
 
 .creds {
@@ -2442,9 +2512,22 @@ li.content-nav-active a {
 }
 
 .widget {
+  text-align: center;
   float: left;
   position: relative;
   min-height: 1px;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  width: 100%;
+  min-height: 1px;
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
+@media (min-width: 47em) {
+  .widget {
+    text-align: left;
+  }
 }
 @media (min-width: 47em) {
   .widget {
@@ -2454,8 +2537,17 @@ li.content-nav-active a {
   }
 }
 
+.widget-title {
+  font-size: 0.9rem;
+  font-family: "source-sans-pro", Helvetica, serif;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.9rem;
+}
+
 .block {
-  margin: 3.6rem 0;
+  margin: 2.88rem 0;
 }
 .block:nth-of-type(1) {
   margin-top: 0;
@@ -2487,6 +2579,14 @@ li.content-nav-active a {
 .list > li {
   list-style: none;
   margin-top: 2.4rem;
+}
+
+.list-title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  font-family: "source-sans-pro", Helvetica, serif;
+  margin: 0;
 }
 
 .list-minor > li {
@@ -2792,17 +2892,12 @@ img.caption-image {
 .prompt span {
   position: relative;
   padding: 0.45rem 0.9rem;
-  background-color: #3C7AAA;
+  background-color: #80C25D;
   color: #fefefe;
   position: relative;
   z-index: 3;
   text-transform: uppercase;
   letter-spacing: 1px;
-}
-@media (min-width: 68em) {
-  .prompt span {
-    right: -0.9rem;
-  }
 }
 
 .block_testimonial {
