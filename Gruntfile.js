@@ -2,6 +2,14 @@ module.exports = function(grunt) {
 
     require('load-grunt-tasks')(grunt);
     
+    var jsFileList = [
+        'bower_components/imagesloaded/imagesloaded.pkgd.min.js',
+        'bower_components/jquery.lazyload/jquery.lazyload.min.js',
+        'assets/js/libs/*.js',
+        'assets/js/*.js',
+        'assets/js/_*.js'
+    ];
+
     // 1. All configuration goes here 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -18,11 +26,7 @@ module.exports = function(grunt) {
 
         concat: {   
             dist: {
-                src: [
-                    'assets/js/libs/*.js',
-                    'assets/js/*.js',
-                    'assets/js/_*.js'
-                ],
+                src: [jsFileList],
                 dest: 'assets/js/build/scripts.js',
             }
         },

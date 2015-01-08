@@ -31,7 +31,31 @@ $(document).ready(function() {
 		
 
 
+	// Plugins
+
+	$('.lazy').lazyload({
+		effect : 'fadeIn'
+	}); // Am I lazy for using this?
+
+
+
+	// Header image spinner (with imagesloaded)
+
+	var $container = $('.hero-image'),
+		$image = $('#headerImageLoader'),
+		imageSrc = $image.attr('src');
 	
+	$container.imagesLoaded( function() {
+		$('.spinner').hide();
+		$container.css({
+			'background-image': 'url(' + imageSrc + ')'
+		});
+	});
+	
+
+
+
+
 	// ----
 	// Submenu
 	// ----
@@ -176,10 +200,10 @@ $(document).ready(function() {
 			   .toggleClass('closed active');
 
 		// If there is only one closed panel, prompt to view results
-		if( $('.closed').length == 1 ) {
+		if( $('.closed').length === 1 ) {
 			$(this).text('Show me results!');
 		} 
-		if ( $('.closed').length == 0 ) {
+		if ( $('.closed').length === 0 ) {
 			$(this).remove();
 			$(this).removeClass('next');
 		}

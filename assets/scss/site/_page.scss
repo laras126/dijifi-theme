@@ -4,6 +4,10 @@
 	border-bottom: 3px solid $alert-info;
 }
 
+	#headerImageLoader {
+		display: none;
+	}
+
 	.page-title {
 		position: relative;
 		@include bp(med) {

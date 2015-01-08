@@ -446,7 +446,7 @@ input[type="url"],
 input[type="search"],
 input[type="tel"] {
   padding: 0.3rem 0.45rem;
-  font-family: "source-sans-pro", Helvetica, serif;
+  font-family: "source-sans-pro", "Helvetica", serif;
 }
 
 @media (min-width: 68em) {
@@ -474,20 +474,20 @@ input[type="tel"] {
 .gfield_description,
 .gfield_checkbox label {
   font-size: 0.9rem;
-  font-family: "source-sans-pro", Helvetica, serif;
+  font-family: "source-sans-pro", "Helvetica", serif;
   margin: 0;
 }
 
 .ginput_complex label {
   font-size: 0.9rem;
-  font-family: "source-sans-pro", Helvetica, serif;
+  font-family: "source-sans-pro", "Helvetica", serif;
   margin: 0;
   color: #999;
 }
 
 .decor {
   font-size: 0.9rem;
-  font-family: "source-sans-pro", Helvetica, serif;
+  font-family: "source-sans-pro", "Helvetica", serif;
   margin: 0;
   border-bottom: 1px solid #80C25D;
   position: relative;
@@ -1559,7 +1559,7 @@ html {
 }
 
 body {
-  font-family: "chaparral-pro", Georgia, serif;
+  font-family: "chaparral-pro", "Georgia", serif;
   font-size: 1.2rem;
   color: #222334;
 }
@@ -1576,7 +1576,7 @@ a:link {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "source-sans-pro", Helvetica, serif;
+  font-family: "source-sans-pro", "Helvetica", serif;
   margin-bottom: 0;
 }
 
@@ -1660,7 +1660,7 @@ blockquote:before {
 label {
   margin-top: 1.56rem;
   margin-bottom: 0.45rem;
-  font-family: "source-sans-pro", Helvetica, serif;
+  font-family: "source-sans-pro", "Helvetica", serif;
 }
 
 input[type="search"] {
@@ -1827,7 +1827,7 @@ button,
   border: none;
   padding: 0.45rem 0.9rem;
   display: inline-block;
-  font-family: "source-sans-pro", Helvetica, serif;
+  font-family: "source-sans-pro", "Helvetica", serif;
   background: #80C25D;
   font-weight: 700;
   border-radius: 2px;
@@ -1903,7 +1903,7 @@ button:active,
 .link-edit,
 .link-more {
   font-size: 0.9rem;
-  font-family: "source-sans-pro", Helvetica, serif;
+  font-family: "source-sans-pro", "Helvetica", serif;
   margin: 0;
   text-align: center;
   margin-top: 0.9rem;
@@ -1912,7 +1912,7 @@ button:active,
 
 table {
   width: 100%;
-  font-family: "source-sans-pro", Helvetica, serif;
+  font-family: "source-sans-pro", "Helvetica", serif;
   margin-bottom: 1.5em;
 }
 table caption {
@@ -1939,6 +1939,141 @@ th:last-child {
   border-right: 0;
 }
 
+.spinner {
+  margin: 100px auto;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 30%;
+  right: 48%;
+  right: calc(50% - 20px);
+}
+.no-js .spinner {
+  display: none;
+}
+
+.container1 > div, .container2 > div, .container3 > div {
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 100%;
+  position: absolute;
+  -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
+  animation: bouncedelay 1.2s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.spinner .spinner-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.container2 {
+  -webkit-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+}
+
+.container3 {
+  -webkit-transform: rotateZ(90deg);
+  transform: rotateZ(90deg);
+}
+
+.circle1 {
+  top: 0;
+  left: 0;
+}
+
+.circle2 {
+  top: 0;
+  right: 0;
+}
+
+.circle3 {
+  right: 0;
+  bottom: 0;
+}
+
+.circle4 {
+  left: 0;
+  bottom: 0;
+}
+
+.container2 .circle1 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.container3 .circle1 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.container1 .circle2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.container2 .circle2 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+.container3 .circle2 {
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+
+.container1 .circle3 {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+
+.container2 .circle3 {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+
+.container3 .circle3 {
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+
+.container1 .circle4 {
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s;
+}
+
+.container2 .circle4 {
+  -webkit-animation-delay: -0.2s;
+  animation-delay: -0.2s;
+}
+
+.container3 .circle4 {
+  -webkit-animation-delay: -0.1s;
+  animation-delay: -0.1s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -1967,12 +2102,12 @@ ul, ol {
 }
 
 .page-tagline {
-  font-family: "source-sans-pro", Helvetica, serif;
+  font-family: "source-sans-pro", "Helvetica", serif;
   font-size: 1.56rem;
 }
 
 nav a {
-  font-family: "source-sans-pro", Helvetica, serif;
+  font-family: "source-sans-pro", "Helvetica", serif;
 }
 
 .hero {
@@ -2073,7 +2208,7 @@ nav a {
 }
 .menu-main a {
   font-size: 0.9rem;
-  font-family: "source-sans-pro", Helvetica, serif;
+  font-family: "source-sans-pro", "Helvetica", serif;
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -2244,7 +2379,7 @@ nav a {
   display: inline-block;
   color: #fefefe;
   font-size: 0.9rem;
-  font-family: "source-sans-pro", Helvetica, serif;
+  font-family: "source-sans-pro", "Helvetica", serif;
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -2375,7 +2510,7 @@ li.content-nav-active a {
 
 .header-tag {
   font-size: 0.9rem;
-  font-family: "source-sans-pro", Helvetica, serif;
+  font-family: "source-sans-pro", "Helvetica", serif;
   margin: 0;
   font-size: 0.72rem;
   padding-left: 1.2rem;
@@ -2416,6 +2551,10 @@ li.content-nav-active a {
 .page-header {
   text-align: center;
   border-bottom: 3px solid #3C7AAA;
+}
+
+#headerImageLoader {
+  display: none;
 }
 
 .page-title {
@@ -2459,7 +2598,7 @@ li.content-nav-active a {
 }
 
 .site-footer {
-  font-family: "source-sans-pro", Helvetica, serif;
+  font-family: "source-sans-pro", "Helvetica", serif;
   background-color: #faf3db;
   color: #222334;
 }
@@ -2539,7 +2678,7 @@ li.content-nav-active a {
 
 .widget-title {
   font-size: 0.9rem;
-  font-family: "source-sans-pro", Helvetica, serif;
+  font-family: "source-sans-pro", "Helvetica", serif;
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -2585,7 +2724,7 @@ li.content-nav-active a {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.9rem;
-  font-family: "source-sans-pro", Helvetica, serif;
+  font-family: "source-sans-pro", "Helvetica", serif;
   margin: 0;
 }
 
@@ -2706,7 +2845,7 @@ li.content-nav-active a {
   margin-top: 0.72rem;
 }
 .item-main p, .item-main li {
-  font-family: "source-sans-pro", Helvetica, serif;
+  font-family: "source-sans-pro", "Helvetica", serif;
 }
 @media (min-width: 34em) {
   .item-main p, .item-main li {
@@ -2815,7 +2954,7 @@ img.caption-image {
 }
 
 .param-options-list {
-  font-family: "source-sans-pro", Helvetica, serif;
+  font-family: "source-sans-pro", "Helvetica", serif;
   margin-bottom: 0.9rem;
 }
 .param-options-list:before, .param-options-list:after {

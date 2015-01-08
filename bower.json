@@ -1,0 +1,20 @@
+{
+  "name": "dijifi-theme",
+  "version": "1.0",
+  "homepage": "https://github.com/laras126/dijifi-theme",
+  "authors": [
+    "laras126 <laras126@gmail.com>"
+  ],
+  "description": "WordPress theme for DiJiFi.com",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

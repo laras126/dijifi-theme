@@ -1,9 +1,16 @@
 {% set fixed_image = true %}
 
-<div class="hero hero-image hero-full-bkgd" style="background-image:url({{TimberImage(content.fixed_image).src}});">
+<div class="hero hero-image hero-full-bkgd">
+	
+	{% include 'partials/spinner.twig' %}
+	
+	<img id="headerImageLoader" src="{{TimberImage(content.fixed_image).src}}" alt="Header Image">
+	<noscript><img src="{{TimberImage(content.fixed_image).src}}" alt="Header Image"></noscript>
+	
 	<div class="hero-wrap">
 	{% if page_header == true %}
 		{% include 'partials/hero-content.twig' %}
 	{% endif %}
 	</div> <!-- /.fixed-wrap -->
+
 </div> <!-- /.fixed-image -->
