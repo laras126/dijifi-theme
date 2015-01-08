@@ -50,14 +50,25 @@ $(document).ready(function() {
 
 	// Header image spinner (with imagesloaded)
 
-	var $container = $('.hero-image'),
-		$image = $('#headerImageLoader'),
-		imageSrc = $image.attr('src');
+	var $hero = $('.hero-image');
+		
+	$hero.each( function() {
+		var $image = $(this).find('#headerImageLoader'),
+			$t = $(this),
+			imageSrc = $image.attr('src');
 	
-	$container.imagesLoaded( function() {
-		$('.spinner').hide();
-		$container.css({
-			'background-image': 'url(' + imageSrc + ')'
+		$(this).imagesLoaded( function() {
+
+			$t.fadeTo(200, 0.5, function() {
+			    $t.css('background-image', 'url(\'' + imageSrc + '\')');
+			}).fadeTo(600, 1);
+
+			// $t.css({
+			// 	'background-image': 'url(\'' + imageSrc + '\')'
+			// });
+
+			$t.find('.spinner').hide();
+			
 		});
 	});
 	

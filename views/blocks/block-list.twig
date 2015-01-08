@@ -25,7 +25,8 @@
 			<li>
 				<div class="item-support">
 					{% if item.image %}
-					<img src="{{TimberImage(item.image).src('medium')}}" alt="{{item.post_title}}">
+						<img class="lazy" data-original="{{TimberImage(item.image).src('medium')}}" alt="{{item.post_title}}" alt="{{item.post_title}}"/>
+						<noscript><img src="{{TimberImage(item.image).src('medium')}}" alt="{{m.title}}" height="400" width="400"></noscript>
 					{% endif %}
 				</div>
 				<div class="item-main">
@@ -45,44 +46,5 @@
 		{% endfor %}
 			
 	</ul> <!-- /.list-{{display}} -->
-
-
-{# <ul class="list list-major list-3">
-
-	<li>
-		<div class="item-support">
-			<img src="http://dfi.local/wp-content/uploads/2014/11/raw.png" alt="">
-		</div>
-		<div class="item-main">
-			<h5 class="item-title">Raw</h5>
-			<p><p>Raw service means we get the best possible scan from your photo, and only organize and rename them. You will need to rotate, crop out unwanted borders, and adjust color or contrast.</p>
-		</p>
-	</div>
-</li>
-<li>
-	<div class="item-support">
-		<img src="http://dfi.local/wp-content/uploads/2014/11/direct.png" alt="">
-	</div>
-	<div class="item-main">
-		<h5 class="item-title">Direct</h5>
-		<ul>
-			<li>Rotation and hand cropping</li>
-			<li>No color and contrast adjustments</li>
-		</ul>
-	</div>
-</li>
-<li>
-	<div class="item-support">
-		<img src="http://dfi.local/wp-content/uploads/2014/11/complete.png" alt="">
-	</div>
-	<div class="item-main">
-		<h5 class="item-title">Complete</h5>
-		<p><p>Complete service adds hand adjustments to color and contrast. Faded images tend to have their original look restored, and under or overexposed images are improved.</p>
-	</p>
-</div>
-</li>
-
-</ul> #} <!-- /.list-free_form -->
-
 
 {% endblock %}

@@ -1955,7 +1955,7 @@ th:last-child {
 .container1 > div, .container2 > div, .container3 > div {
   width: 6px;
   height: 6px;
-  background-color: #fff;
+  background-color: #222334;
   border-radius: 100%;
   position: absolute;
   -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
@@ -2124,14 +2124,16 @@ nav a {
   z-index: -1;
 }
 
-.hero-full-bkgd {
+.hero-image {
+  opacity: 0;
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: #222334;
   width: 100%;
 }
 @media (min-width: 68em) {
-  .hero-full-bkgd {
+  .hero-image {
     background-attachment: fixed;
     background-position: center;
   }
@@ -2168,6 +2170,16 @@ nav a {
 }
 .page-header .hero-wrap {
   background-image: radial-gradient(ellipse at 20% center, rgba(34, 35, 52, 0) 0, #222334);
+}
+
+#headerImageLoader {
+  display: none;
+}
+
+.test-spin {
+  position: absolute;
+  top: 25%;
+  left: 25%;
 }
 
 .menu-items {
@@ -2551,10 +2563,7 @@ li.content-nav-active a {
 .page-header {
   text-align: center;
   border-bottom: 3px solid #3C7AAA;
-}
-
-#headerImageLoader {
-  display: none;
+  background-color: #222334;
 }
 
 .page-title {

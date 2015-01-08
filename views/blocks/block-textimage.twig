@@ -4,13 +4,15 @@
 	{% if blck.text_format == 'caption'%}
 		<figure>			
 			<figcaption class="caption meta">{{blck.caption}}</figcaption>
-			<img class="lazy caption-image" src="{{TimberImage(blck.image).src|resize(800)}}" alt="">
+			<img class="lazy caption-image" data-original="{{TimberImage(blck.image).src|resize(800)}}" alt="">
+			<noscript><img src="{{TimberImage(blck.image).src|resize(800)}}" alt="{{item.post_title}}" width="800"></noscript>
 		</figure>
 	{% elseif blck.text_format == 'paragraph'%}
 	<div class="inner-squish">
 		<h4>{{blck.text_heading}}</h4>
 		<div class="textimage-image">
-			<img class="lazy" src="{{TimberImage(blck.image).src|resize(800)}}">	
+			<img class="lazy" data-original="{{TimberImage(blck.image).src|resize(600)}}" alt="{{item.post_title}}" alt="{{item.post_title}}"/>
+			<noscript><img src="{{TimberImage(blck.image).src|resize(600)}}" alt="{{item.post_title}}" width="600"></noscript>
 		</div>
 		{{blck.text}}
 	</div>

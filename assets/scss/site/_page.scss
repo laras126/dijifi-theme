@@ -2,11 +2,8 @@
 .page-header {
 	text-align: center;
 	border-bottom: 3px solid $alert-info;
+	background-color: $text-dark;
 }
-
-	#headerImageLoader {
-		display: none;
-	}
 
 	.page-title {
 		position: relative;
