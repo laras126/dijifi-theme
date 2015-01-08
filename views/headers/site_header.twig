@@ -1,10 +1,11 @@
 <div class="header-brand">	
 	<div class="header-logo">
 		<a href="/" title="{{site.name}}" rel="home">
-			<img src="{{site.url}}/wp-content/themes/dijifi-theme/assets/img/content/logo.png" alt="DiJiFi Logo">
+			{# <img src="{{site.url}}/wp-content/themes/dijifi-theme/assets/img/content/logo.png" alt="DiJiFi Logo"> #}
+			<svg class="shape shape-logo"><use xlink:href="#shape-logo" /></svg>
 		</a>	
 	</div>
-	<p class="header-tag">{{site.description}}<br><span class="hide-until-md"> <a href="{{site.url}}/location">Brooklyn, NY</a> &bull; (646) 519-2447</span></p>
+	<p class="header-tag">{{site.description}}<br><a href="{{site.url}}/location">Brooklyn, NY</a> &bull; (646) 519-2447</p>
 </div>
 
 <div class="header-nav-link menu-link">	

@@ -63,10 +63,6 @@ $(document).ready(function() {
 			    $t.css('background-image', 'url(\'' + imageSrc + '\')');
 			}).fadeTo(600, 1);
 
-			// $t.css({
-			// 	'background-image': 'url(\'' + imageSrc + '\')'
-			// });
-
 			$t.find('.spinner').hide();
 			
 		});

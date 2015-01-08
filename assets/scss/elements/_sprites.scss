@@ -2,10 +2,12 @@
 	max-width: 100%;
 
 }
-.logo {
+
+.shape-logo {
 	padding-top: $sml;
 	height: $h2;
-	width: $h1*2;
+	max-width: 100px;
+	fill: $text-light;
 }
 
 .shape-yelp {

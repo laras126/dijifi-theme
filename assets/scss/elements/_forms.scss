@@ -117,6 +117,8 @@ fieldset {
 }
 
 .gfield_label {
+	@include meta;
+	@include upperspace;
 	font-weight: 700;
 	margin-bottom: $sml/2;
 }

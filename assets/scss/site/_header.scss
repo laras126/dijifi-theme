@@ -2,14 +2,14 @@
 	border-bottom: 3px solid $alert-info;
 	background-color: $text-dark;
 
-	@include bp(med) {
-		background-color: rgba($text-dark, 0.7);	
-	}
+	// @include bp(med) {
+	// 	background-color: rgba($text-dark, 0.7);	
+	// }
 	
- 	position: absolute;
- 	top: 0;
- 	width: 100%;
- 	z-index: $ztop;
+ 	// position: absolute;
+ 	// top: 0;
+ 	// width: 100%;
+ 	// z-index: $ztop;
 	
 	color: $text-light;
 
@@ -24,7 +24,7 @@
 	display: table-row !important;
 }
 
-.header-logo img {
+.shape-logo {
 	max-height: 40px;
 	padding-top: $xsml;
 
@@ -41,12 +41,17 @@
 	font-size: $sml/1.25;
 	padding-left: $base;
 	padding-top: $sml/2;
+	// width: percentage(2/3);
 }
+
+// .header-logo {
+// 	max-width: 200px;
+// }
 
 .header-tag, 
 .header-logo {
-	display: table-cell !important;
-	vertical-align: middle !important;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 .header-nav-link {
