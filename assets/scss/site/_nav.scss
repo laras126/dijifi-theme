@@ -192,7 +192,7 @@
 
     .menu-link.open span:nth-of-type(3) {
         transform: rotate(-45deg);
-        margin: -8px 0 0 0;
+        margin: -10px 0 0 0;
     }
 
 
@@ -213,7 +213,6 @@
 
     .subnav {
         background-color: transparent;
-        // @include border($alert-info, top);
         position: absolute;
         z-index: $ztop*10;
         top: $h1;
@@ -227,7 +226,6 @@
             padding-top: 0;
             font-size: $sml;
             color: $text-light;
-            // background-color: $alert-info;
         }
     }
 }
@@ -291,15 +289,6 @@
 
         a {
             transition: all 0.25s ease-in-out;
-        }
-    }
-
-    .stuck {
-        @include bp(large) {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: $ztop;
         }
     }
 

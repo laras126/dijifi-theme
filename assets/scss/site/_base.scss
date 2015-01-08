@@ -119,12 +119,12 @@ nav a {
 	}
 
 	.page-header & {
-		padding-top: $h1;
+		padding-top: $h1*1.5;
 		@include bp(small) {
-			padding-top: percentage(1/3);
+			padding-top: percentage(1.5/3);
 		}
 		@include bp(med) {
-			padding-top: percentage(0.5/3);
+			padding-top: percentage(0.7/3);
 		}
 	}
 

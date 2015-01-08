@@ -520,6 +520,15 @@ input[type="tel"], input {
   clear: both;
 }
 
+@media (min-width: 68em) {
+  .stuck {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+  }
+}
+
 .inner-full {
   padding-left: 1.2rem;
   padding-right: 1.2rem;
@@ -1614,16 +1623,16 @@ nav a {
   }
 }
 .page-header .hero-wrap {
-  padding-top: 3.6rem;
+  padding-top: 5.4rem;
 }
 @media (min-width: 34em) {
   .page-header .hero-wrap {
-    padding-top: 33.33333%;
+    padding-top: 50%;
   }
 }
 @media (min-width: 47em) {
   .page-header .hero-wrap {
-    padding-top: 16.66667%;
+    padding-top: 23.33333%;
   }
 }
 .page-header .hero-wrap {
@@ -1783,7 +1792,7 @@ nav a {
 
 .menu-link.open span:nth-of-type(3) {
   transform: rotate(-45deg);
-  margin: -8px 0 0 0;
+  margin: -10px 0 0 0;
 }
 
 @media (min-width: 47em) {
@@ -1866,15 +1875,6 @@ li.content-nav-active a {
   transition: all 0.25s ease-in-out;
 }
 
-@media (min-width: 68em) {
-  .stuck {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 4;
-  }
-}
-
 .top-link {
   width: 0;
 }
@@ -1943,9 +1943,16 @@ li.content-nav-active a {
 .site-header {
   border-bottom: 3px solid #3C7AAA;
   background-color: #222334;
-  color: #fefefe;
-  position: relative;
+  position: absolute;
+  top: 0;
+  width: 100%;
   z-index: 4;
+  color: #fefefe;
+}
+@media (min-width: 47em) {
+  .site-header {
+    background-color: rgba(34, 35, 52, 0.7);
+  }
 }
 .site-header a {
   color: #fefefe;
@@ -4543,16 +4550,16 @@ nav a {
   }
 }
 .page-header .hero-wrap {
-  padding-top: 3.6rem;
+  padding-top: 5.4rem;
 }
 @media (min-width: 34em) {
   .page-header .hero-wrap {
-    padding-top: 33.33333%;
+    padding-top: 50%;
   }
 }
 @media (min-width: 47em) {
   .page-header .hero-wrap {
-    padding-top: 16.66667%;
+    padding-top: 23.33333%;
   }
 }
 .page-header .hero-wrap {
@@ -4712,7 +4719,7 @@ nav a {
 
 .menu-link.open span:nth-of-type(3) {
   transform: rotate(-45deg);
-  margin: -8px 0 0 0;
+  margin: -10px 0 0 0;
 }
 
 @media (min-width: 47em) {
@@ -4795,15 +4802,6 @@ li.content-nav-active a {
   transition: all 0.25s ease-in-out;
 }
 
-@media (min-width: 68em) {
-  .stuck {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 4;
-  }
-}
-
 .top-link {
   width: 0;
 }
@@ -4872,9 +4870,16 @@ li.content-nav-active a {
 .site-header {
   border-bottom: 3px solid #3C7AAA;
   background-color: #222334;
-  color: #fefefe;
-  position: relative;
+  position: absolute;
+  top: 0;
+  width: 100%;
   z-index: 4;
+  color: #fefefe;
+}
+@media (min-width: 47em) {
+  .site-header {
+    background-color: rgba(34, 35, 52, 0.7);
+  }
 }
 .site-header a {
   color: #fefefe;

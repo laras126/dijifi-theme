@@ -1,8 +1,17 @@
 .site-header {
 	border-bottom: 3px solid $alert-info;
-	@include rotate();
- 	position: relative;
+	background-color: $text-dark;
+
+	@include bp(med) {
+		background-color: rgba($text-dark, 0.7);	
+	}
+	
+ 	position: absolute;
+ 	top: 0;
+ 	width: 100%;
  	z-index: $ztop;
+	
+	color: $text-light;
 
  	a {
  		color: $text-light;
