@@ -284,7 +284,7 @@ exclusively.
 // Interactive (bad description?)
 
     .stuck {
-        @include bp(large) {
+        @include bp(med) {
             position: fixed;
             top: 0;
             width: 100%;

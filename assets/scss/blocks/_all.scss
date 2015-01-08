@@ -1,13 +1,16 @@
 .block {
 	margin: $h2 0;
 
-	&:nth-of-type(1) {
-		margin-top: 0;
+	.page-body & {
+		&:nth-of-type(1) {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 
-	&:last-child {
-		margin-bottom: 0;
-	}
 }
 
 // Block modules

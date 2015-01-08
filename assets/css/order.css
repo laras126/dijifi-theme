@@ -520,7 +520,7 @@ input[type="tel"], input {
   clear: both;
 }
 
-@media (min-width: 68em) {
+@media (min-width: 47em) {
   .stuck {
     position: fixed;
     top: 0;
@@ -1662,7 +1662,6 @@ nav a {
 }
 @media (min-width: 47em) {
   .menu-items a {
-    font-size: 0.9rem;
     border-bottom: 0;
     padding-bottom: 0;
   }
@@ -1672,6 +1671,7 @@ nav a {
 .subnav {
   overflow: hidden;
   max-height: 0;
+  transition: 0.5s max-height ease-in-out;
 }
 .header-nav.open,
 .subnav.open {
@@ -1686,11 +1686,6 @@ nav a {
   margin: 0.45rem 0;
 }
 .menu-main a {
-  font-size: 0.9rem;
-  font-family: "source-sans-pro", "Helvetica", serif;
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   color: #222334;
   display: block;
   font-weight: 700;
@@ -1703,13 +1698,16 @@ nav a {
 .menu-main a:hover {
   color: #FFCC53;
 }
+.menu-main .current-menu-item a {
+  color: #FFCC53;
+}
 @media (min-width: 47em) {
   .menu-main {
     text-align: right;
   }
   .menu-main li {
     border-false: bottom solid #999;
-    margin-right: 0.9rem;
+    margin-right: 1.2rem;
     display: inline-block;
     border: 0;
   }
@@ -1724,9 +1722,19 @@ nav a {
     border-bottom: none;
   }
 }
+@media (min-width: 68em) {
+  .menu-main li {
+    margin-right: 2.4rem;
+  }
+}
 
 .subnav {
   background-color: #3C7AAA;
+}
+@media (min-width: 47em) {
+  .subnav {
+    margin-top: 0.9rem;
+  }
 }
 .subnav a {
   font-weight: 400;
@@ -1748,6 +1756,14 @@ nav a {
   min-height: 1px;
   width: 50%;
   min-height: 1px;
+}
+
+@media (min-width: 47em) {
+  .menu-item-cta a {
+    padding-top: 0;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
 }
 
 .header-nav li.has-subnav > a:after {
@@ -1937,6 +1953,9 @@ li.content-nav-active a {
   }
   .menu-footer .menu-items a {
     padding: 0;
+    font-size: 0.9rem;
+    font-family: "source-sans-pro", "Helvetica", serif;
+    margin: 0;
   }
 }
 
@@ -2083,6 +2102,7 @@ li.content-nav-active a {
   background-color: #80C25D;
   color: #fefefe;
   padding: 1.2rem 0 2.4rem;
+  margin-top: 3.6rem;
 }
 
 .colophon {
@@ -4589,7 +4609,6 @@ nav a {
 }
 @media (min-width: 47em) {
   .menu-items a {
-    font-size: 0.9rem;
     border-bottom: 0;
     padding-bottom: 0;
   }
@@ -4599,6 +4618,7 @@ nav a {
 .subnav {
   overflow: hidden;
   max-height: 0;
+  transition: 0.5s max-height ease-in-out;
 }
 .header-nav.open,
 .subnav.open {
@@ -4613,11 +4633,6 @@ nav a {
   margin: 0.45rem 0;
 }
 .menu-main a {
-  font-size: 0.9rem;
-  font-family: "source-sans-pro", "Helvetica", serif;
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   color: #222334;
   display: block;
   font-weight: 700;
@@ -4630,13 +4645,16 @@ nav a {
 .menu-main a:hover {
   color: #FFCC53;
 }
+.menu-main .current-menu-item a {
+  color: #FFCC53;
+}
 @media (min-width: 47em) {
   .menu-main {
     text-align: right;
   }
   .menu-main li {
     border-false: bottom solid #999;
-    margin-right: 0.9rem;
+    margin-right: 1.2rem;
     display: inline-block;
     border: 0;
   }
@@ -4651,9 +4669,19 @@ nav a {
     border-bottom: none;
   }
 }
+@media (min-width: 68em) {
+  .menu-main li {
+    margin-right: 2.4rem;
+  }
+}
 
 .subnav {
   background-color: #3C7AAA;
+}
+@media (min-width: 47em) {
+  .subnav {
+    margin-top: 0.9rem;
+  }
 }
 .subnav a {
   font-weight: 400;
@@ -4675,6 +4703,14 @@ nav a {
   min-height: 1px;
   width: 29.16667%;
   min-height: 1px;
+}
+
+@media (min-width: 47em) {
+  .menu-item-cta a {
+    padding-top: 0;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
 }
 
 .header-nav li.has-subnav > a:after {
@@ -4864,6 +4900,9 @@ li.content-nav-active a {
   }
   .menu-footer .menu-items a {
     padding: 0;
+    font-size: 0.9rem;
+    font-family: "source-sans-pro", "Helvetica", serif;
+    margin: 0;
   }
 }
 
@@ -5010,6 +5049,7 @@ li.content-nav-active a {
   background-color: #80C25D;
   color: #fefefe;
   padding: 1.2rem 0 2.4rem;
+  margin-top: 3.6rem;
 }
 
 .colophon {

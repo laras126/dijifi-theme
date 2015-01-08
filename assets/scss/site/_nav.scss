@@ -17,7 +17,7 @@
         border-bottom: 1px solid $alert-info;
 
         @include bp(med) {
-            @include font-size(sml);
+            // @include font-size(sml);
             border-bottom: 0;
             padding-bottom: 0;
         }
@@ -47,9 +47,11 @@
 .subnav {
     overflow: hidden;
     max-height: 0;
+    transition: 0.5s max-height ease-in-out;
 
     &.open {
         max-height: 55em;
+
     }
 }
 
@@ -60,8 +62,6 @@
 .menu-main {
 
     a {
-        @include meta;
-        @include upperspace;
         color: $text-dark;
 
         display: block;
@@ -76,6 +76,10 @@
         }
     }
 
+    .current-menu-item a {
+        color: $accent-light;
+    }
+
     margin: $sml/2 0;
     
     @include bp(med) {
@@ -83,7 +87,7 @@
         
         li {
             @include border($text-med, bottom);
-            margin-right: $sml;
+            margin-right: $base;
 
             display: inline-block;
             border: 0;
@@ -103,9 +107,19 @@
         }
         
     }
+
+    @include bp(large) {
+        li {
+            margin-right: $h3;    
+        }
+    }
 }
 
     .subnav {
+        @include bp(med) {
+            margin-top: $sml;    
+        }
+        
         background-color: $alert-info;
         a {
             font-weight: 400;
@@ -131,16 +145,16 @@
 
 .menu-item-cta {
     a {
-        // padding-top: 0;
+        @include bp(med) {
+            padding-top: 0;    
+            padding-left: $sml;
+            padding-right: $sml;
+        }
+        
         @extend .btn-success;
 
     }
 }
-
-
-    .has-subnav a {
-        // color: $alert-info;
-    }
 
     .header-nav li.has-subnav > a:after {
         content: '\25bc';
@@ -365,6 +379,7 @@
 
             a {
                 padding: 0;
+                @include meta;
             }
         }
     }
