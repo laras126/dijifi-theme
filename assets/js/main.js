@@ -129,8 +129,9 @@ $(document).ready(function() {
 
 		// Get id of current scroll item
 		var cur = scrollItems.map( function() {
-			if ( $(this).offset().top < fromTop )
-				return this;
+			if ( $(this).offset().top < fromTop ) {
+					return this;
+				}
 			});
 	   	
 	   	// Get the id of the current element

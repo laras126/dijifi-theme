@@ -31,25 +31,58 @@ module.exports = function(grunt) {
             }
         },
 
-        sass: {
-          dist: {
-            options: {
-              style: 'expanded',
-              // Source maps are available, but require Sass 3.3.0 to be installed
-              // https://github.com/gruntassets/js/grunt-contrib-sass#sourcemap
-              sourcemap: false
-            },
-            files: {
-                'assets/css/main.css': 'assets/scss/main.scss',
-                'assets/css/order.css': 'assets/scss/order.scss'
+        uglify: {   
+            dist: {
+                src: 'assets/js/build/scripts.js',
+                dest: 'assets/js/build/scripts.min.js',
             }
-          }
+        },
+
+        sass: {
+            dist: {
+                options: {
+                    style: 'expanded',
+                    // Source maps are available, but require Sass 3.3.0 to be installed
+                    // https://github.com/gruntassets/js/grunt-contrib-sass#sourcemap
+                    sourcemap: false
+                },
+                
+                files: {
+                    'assets/css/main.css': 'assets/scss/main.scss',
+                    'assets/css/order.css': 'assets/scss/order.scss'
+                }
+            }
+        },
+        
+        autoprefixer: {
+            options: {
+                browsers: ['last 2 versions', 'ie 8', 'ie 9', 'android 2.3', 'android 4', 'opera 12']
+            },
+            
+            dist: {
+                options: {
+                    map: {
+                        prev: 'assets/css/'
+                    }
+                },
+            
+                src: 'assets/css/*.min.css'
+            }
         },
 
         cssmin: {
-            css: {
-                src: 'assets/css/order.css',
-                dest: 'assets/css/order.min.css'
+            // files: {
+            //     src: 'assets/css/order.css',
+            //     dest: 'assets/css/order.min.css'
+            // }
+            target: {
+                files: [{
+                    expand: true,
+                    cwd: 'assets/css',
+                    src: ['*.css', '!*.min.css'],
+                    dest: 'assets/css',
+                    ext: '.min.css'
+                }]
             }
         },
 
@@ -67,7 +100,7 @@ module.exports = function(grunt) {
         watch: {
             scripts: {
                 files: ['assets/js/*.js', 'assets/**/*.scss'],
-                tasks: ['concat', 'sass', 'cssmin'],
+                tasks: ['concat', 'sass', 'cssmin', 'uglify', 'autoprefixer'],
                 options: {
                     spawn: false,
                 },
@@ -94,28 +127,26 @@ module.exports = function(grunt) {
                     '*.twig'
 		        ]
 		    },
-
-        // svgstore: {
-        //     files: [
-        //       'assets/img/svgs/*.svg'
-        //     ]
-        //   }
-      }
+        }
         
     });
 
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-sass');
+    // grunt.loadNpmTasks('grunt-contrib-concat');
+    // grunt.loadNpmTasks('grunt-contrib-uglify');
+    // grunt.loadNpmTasks('grunt-contrib-jshint');
+    // grunt.loadNpmTasks('grunt-contrib-cssmin');
+    // grunt.loadNpmTasks('grunt-contrib-watch');
+    // grunt.loadNpmTasks('grunt-autoprefixer');
+    // grunt.loadNpmTasks('grunt-contrib-sass');
     
     // Register tasks
     grunt.registerTask('default', [
         'sass',
         'concat',
+        'autoprefixer',
         'cssmin',
-        'jshint'
+        'jshint',
+        'uglify'
       ]);
 
 };
