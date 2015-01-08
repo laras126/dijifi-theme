@@ -81,7 +81,10 @@
 	
 	.list-major & {
 		@include make-md-column(5);
-		@include make-md-column-push(1);		
+		@include make-md-column-push(1);	
+		// background-color: $white;
+		// border: 3px solid $tan;
+		// padding: $sml; 	
 	}
 
 	

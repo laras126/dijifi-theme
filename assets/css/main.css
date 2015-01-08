@@ -496,7 +496,7 @@ input[type="tel"] {
   position: relative;
   top: 0.6rem;
   padding: 0 0.9rem 0 0;
-  background-color: #fefefe;
+  background-color: #ffffff;
 }
 
 .decor-wrap {
@@ -518,6 +518,13 @@ input[type="tel"] {
     width: 100%;
     z-index: 4;
   }
+}
+
+.lazy {
+  display: none;
+  background-image: url("../img/util/loader.gif");
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .inner-full {
@@ -1538,9 +1545,17 @@ input[type="tel"] {
 
 .shape-logo {
   padding-top: 0.9rem;
-  height: 2.88rem;
   max-width: 100px;
-  fill: #fefefe;
+  max-height: 40px;
+  fill: #ffffff;
+  top: 0.72rem;
+  position: relative;
+}
+@media (min-width: 53em) {
+  .shape-logo {
+    top: 0;
+    max-height: 50px;
+  }
 }
 
 .shape-yelp {
@@ -1722,7 +1737,7 @@ input[type="url"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus {
   border-color: #3C7AAA;
-  background-color: #fefefe;
+  background-color: #ffffff;
 }
 
 input[type="radio"],
@@ -1846,7 +1861,7 @@ button,
   background: #80C25D;
   font-weight: 700;
   border-radius: 2px;
-  color: #fefefe !important;
+  color: #ffffff !important;
 }
 input[type="submit"]:hover,
 button:hover,
@@ -1856,7 +1871,7 @@ button:focus,
 .btn:hover,
 .btn:focus {
   background: #66ab41;
-  color: #fefefe;
+  color: #ffffff;
 }
 input[type="submit"]:active,
 button:active,
@@ -1877,11 +1892,11 @@ button:active,
   background: #3C7AAA;
   font-weight: 700;
   border-radius: 2px;
-  color: #fefefe !important;
+  color: #ffffff !important;
 }
 .btn-cta:hover, .btn-cta:focus {
   background: #2f5f84;
-  color: #fefefe;
+  color: #ffffff;
 }
 .btn-cta:active {
   background: #070e13;
@@ -1891,11 +1906,11 @@ button:active,
   background: #80C25D;
   font-weight: 700;
   border-radius: 2px;
-  color: #fefefe !important;
+  color: #ffffff !important;
 }
 .btn-success:hover, .menu-item-cta a:hover, .btn-success:focus, .menu-item-cta a:focus {
   background: #66ab41;
-  color: #fefefe;
+  color: #ffffff;
 }
 .btn-success:active, .menu-item-cta a:active {
   background: #243c17;
@@ -1905,11 +1920,11 @@ button:active,
   background: #3C7AAA;
   font-weight: 700;
   border-radius: 2px;
-  color: #fefefe !important;
+  color: #ffffff !important;
 }
 .link-more:hover, .link-more:focus {
   background: #2f5f84;
-  color: #fefefe;
+  color: #ffffff;
 }
 .link-more:active {
   background: #070e13;
@@ -1933,7 +1948,7 @@ table {
 table caption {
   margin: 0 0 7px;
   font-size: 0.75em;
-  color: #fefefe;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -1970,7 +1985,7 @@ th:last-child {
 .container1 > div, .container2 > div, .container3 > div {
   width: 6px;
   height: 6px;
-  background-color: #222334;
+  background-color: #ffffff;
   border-radius: 100%;
   position: absolute;
   -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
@@ -2094,7 +2109,7 @@ th:last-child {
 }
 
 body {
-  background-color: #fefefe;
+  background-color: #ffffff;
   word-wrap: break-word;
 }
 @media (min-width: 34em) {
@@ -2159,8 +2174,7 @@ nav a {
 
 .hero-wrap {
   padding-top: 33.33333%;
-  color: #fefefe;
-  background-image: radial-gradient(ellipse at 20% center, rgba(34, 35, 52, 0) 0, #222334);
+  color: #ffffff;
   padding-bottom: 2.88rem;
   padding-top: 66.66667%;
 }
@@ -2179,15 +2193,23 @@ nav a {
 }
 @media (min-width: 34em) {
   .page-header .hero-wrap {
-    padding-top: 33.33333%;
+    padding-top: 30%;
   }
 }
 @media (min-width: 53em) {
   .page-header .hero-wrap {
-    padding-top: 23.33333%;
+    padding-top: 18.33333%;
   }
   .home .page-header .hero-wrap {
     padding-top: 26.66667%;
+  }
+}
+.page-header .hero-wrap {
+  background-image: radial-gradient(ellipse at 20% center, rgba(34, 35, 52, 0) 0, #222334);
+}
+@media (min-width: 68em) {
+  .hero-wrap {
+    background-image: radial-gradient(ellipse at 20% center, rgba(34, 35, 52, 0) 0, #222334);
   }
 }
 
@@ -2290,7 +2312,7 @@ nav a {
 }
 .subnav a {
   font-weight: 400;
-  color: #fefefe;
+  color: #ffffff;
   border-color: #222334;
 }
 
@@ -2299,7 +2321,7 @@ nav a {
   text-align: center;
 }
 .menu-item-complex a {
-  color: #fefefe;
+  color: #ffffff;
 }
 
 .item-split {
@@ -2341,7 +2363,7 @@ nav a {
   border-radius: 1px;
   height: 3px;
   display: block;
-  background: #fefefe;
+  background: #ffffff;
   margin: 0 0 4px 0;
 }
 
@@ -2389,13 +2411,13 @@ nav a {
   .subnav a {
     padding-top: 0;
     font-size: 0.9rem;
-    color: #fefefe;
+    color: #ffffff;
   }
 }
 .content-nav {
   border-bottom: 3px solid #3C7AAA;
   background-color: #222334;
-  color: #fefefe;
+  color: #ffffff;
   text-align: center;
 }
 .content-nav ul {
@@ -2424,7 +2446,7 @@ nav a {
 .content-nav a {
   padding: 0.45rem 1.2rem;
   display: inline-block;
-  color: #fefefe;
+  color: #ffffff;
   font-size: 0.9rem;
   font-family: "source-sans-pro", "Helvetica", serif;
   margin: 0;
@@ -2470,11 +2492,11 @@ li.content-nav-active a {
   background: #3C7AAA;
   font-weight: 700;
   border-radius: 2px;
-  color: #fefefe !important;
+  color: #ffffff !important;
 }
 .top-link-bottom:hover, .top-link-bottom:focus {
   background: #2f5f84;
-  color: #fefefe;
+  color: #ffffff;
 }
 .top-link-bottom:active {
   background: #070e13;
@@ -2494,7 +2516,7 @@ li.content-nav-active a {
 }
 
 .shape-arrow-up {
-  fill: #fefefe;
+  fill: #ffffff;
   height: 1.2rem;
   width: 1.2rem;
 }
@@ -2511,13 +2533,39 @@ li.content-nav-active a {
   }
 }
 
+.site-cta {
+  display: none;
+}
+@media (min-width: 53em) {
+  .site-cta {
+    display: block;
+    position: relative;
+    background-color: #3C7AAA;
+    color: #ffffff;
+    padding: 0.72rem 0;
+  }
+  .site-cta p {
+    margin: 0;
+  }
+}
+
 .site-header {
   border-bottom: 3px solid #3C7AAA;
   background-color: #222334;
-  color: #fefefe;
+  position: absolute;
+  width: 100%;
+  z-index: 4;
+  color: #ffffff;
+}
+@media (min-width: 53em) {
+  .site-header {
+    background: linear-gradient(rgba(34, 35, 52, 0.5), rgba(34, 35, 52, 0));
+    padding-bottom: 3.6rem;
+    border-bottom: 0;
+  }
 }
 .site-header a {
-  color: #fefefe;
+  color: #ffffff;
 }
 
 .header-brand {
@@ -2534,16 +2582,6 @@ li.content-nav-active a {
 @media (min-width: 53em) {
   .header-brand {
     width: 35.71429%;
-  }
-}
-
-.shape-logo {
-  max-height: 40px;
-  padding-top: 0.72rem;
-}
-@media (min-width: 53em) {
-  .shape-logo {
-    max-height: 50px;
   }
 }
 
@@ -2606,7 +2644,7 @@ li.content-nav-active a {
 .page-body {
   position: relative;
   z-index: 3;
-  background-color: #fefefe;
+  background-color: #ffffff;
 }
 
 .section-title {
@@ -2639,14 +2677,13 @@ li.content-nav-active a {
 }
 .site-footer .block {
   background-color: #80C25D;
-  color: #fefefe;
+  color: #ffffff;
   padding: 1.2rem 0 2.4rem;
-  margin-top: 3.6rem;
 }
 
 .colophon {
   background-color: #3C7AAA;
-  color: #fefefe;
+  color: #ffffff;
   padding-bottom: 1.2rem;
 }
 .colophon p {
@@ -2695,6 +2732,7 @@ li.content-nav-active a {
   float: left;
   position: relative;
   min-height: 1px;
+  padding-bottom: 2.4rem;
 }
 @media (min-width: 53em) {
   .widget {
@@ -2721,16 +2759,13 @@ li.content-nav-active a {
 .block {
   margin: 2.88rem 0;
 }
-.page-body .block:nth-of-type(1) {
-  margin-top: 0;
-}
 .page-body .block:last-child {
   margin-bottom: 0;
 }
 
 .block-intro {
   background-color: #222334;
-  color: #fefefe;
+  color: #ffffff;
   background-size: cover;
 }
 
@@ -2983,7 +3018,7 @@ img.caption-image {
 
 .quick-quote-form {
   background-color: #222334;
-  color: #fefefe;
+  color: #ffffff;
 }
 
 .param-options-list {
@@ -3000,7 +3035,7 @@ img.caption-image {
 
 .active {
   background-color: #80C25D;
-  color: #fefefe;
+  color: #ffffff;
 }
 
 .param-option {
@@ -3065,7 +3100,7 @@ img.caption-image {
   position: relative;
   padding: 0.45rem 0.9rem;
   background-color: #80C25D;
-  color: #fefefe;
+  color: #ffffff;
   position: relative;
   z-index: 3;
   text-transform: uppercase;
@@ -3106,20 +3141,20 @@ img.caption-image {
 
 .rotate-dark {
   background-color: #222334;
-  color: #fefefe;
+  color: #ffffff;
 }
 .rotate-med {
   background-color: #80C25D;
-  color: #fefefe;
+  color: #ffffff;
 }
 .rotate-light {
   background-color: #FFCC53;
-  color: #fefefe;
+  color: #ffffff;
 }
 
 .rotate {
   background-color: #222334;
-  color: #fefefe;
+  color: #ffffff;
 }
 
 .special,
@@ -3129,7 +3164,7 @@ a.special {
 
 .green {
   background-color: #80C25D;
-  color: #fefefe;
+  color: #ffffff;
 }
 
 .padded-sides {

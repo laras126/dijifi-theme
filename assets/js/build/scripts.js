@@ -12,6 +12,7 @@ $(document).ready(function() {
 	
 	$('body').addClass('js');
 
+	console.log('Check it: https://github.com/laras126/dijifi-theme')
 
 
 	// ----
@@ -42,9 +43,10 @@ $(document).ready(function() {
 
 	// Plugins
 
-	$('.lazy').lazyload({
+	$('.lazy').show().lazyload({
 		effect : 'fadeIn'
-	}); // Am I lazy for using this?
+
+	}).css('background', 'none'); // Am I lazy for using this?
 
 
 
@@ -69,6 +71,23 @@ $(document).ready(function() {
 	});
 	
 
+
+	// Fade in video header when loaded
+    // Thx: http://atomicrobotdesign.com/blog/web-development/check-when-an-html5-video-has-loaded/
+    window.addEventListener('load', function() {
+        var video = document.querySelector('.hero-video video');
+        var preloader = document.querySelector('.spinner');
+
+        function checkLoad() {
+            if (video.readyState === 4) {
+                preloader.parentNode.removeChild(preloader);
+            } else {
+                setTimeout(checkLoad, 100);
+            }
+        }
+
+        checkLoad();
+    }, false);
 
 
 

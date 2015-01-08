@@ -3,15 +3,16 @@
 {% block content %}
 
 <div class="hero hero-video">
+	{% include 'partials/spinner.twig' %}
 	
 	<video autoplay loop class="hero-full-bkgd">
-		<source src="{{post.video}}" media="screen and (max-width: 1088px)" type="video/mp4">
+		<source src="{{post.video}}" media="screen and (min-width: 830px)" type="video/mp4">
 	</video>
 
 	<div class="hero-wrap">
 		{% include 'partials/hero-content.twig' %}
 	</div> <!-- /.hero-wrap -->
 
-</div> <!-- /.hero-image -->
+</div> <!-- /.hero-video -->
 
 {% endblock %}

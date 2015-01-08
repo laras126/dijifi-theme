@@ -1,22 +1,36 @@
+.site-cta {
+	display: none;
+	@include bp(med) {
+		display: block;
+		position: relative;
+		@include rotate($text-light, $alert-info);
+		padding: $xsml 0;
+		p {
+			margin: 0;
+		}
+	}
+}
+
 .site-header {
 	border-bottom: 3px solid $alert-info;
 	background-color: $text-dark;
 
-	// @include bp(med) {
-	// 	background-color: rgba($text-dark, 0.7);	
-	// }
+	@include bp(med) {
+	    background: linear-gradient(rgba($accent-dark, 0.5), rgba($accent-dark, 0));	
+	    padding-bottom: $h1;
+	    border-bottom: 0;
+	}
 	
- 	// position: absolute;
- 	// top: 0;
- 	// width: 100%;
- 	// z-index: $ztop;
+ 	position: absolute;
+ 	width: 100%;
+ 	z-index: $ztop;
 	
 	color: $text-light;
 
  	a {
  		color: $text-light;
  	}
-}
+}	
 
 .header-brand {
 	@include make-xs-column(6.5, false);
@@ -25,12 +39,7 @@
 }
 
 .shape-logo {
-	max-height: 40px;
-	padding-top: $xsml;
-
-	@include bp(med) {
-		max-height: 50px;
-	}
+	
 	// padding-bottom: $xsml/3;
 }
 

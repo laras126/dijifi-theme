@@ -5,9 +5,17 @@
 
 .shape-logo {
 	padding-top: $sml;
-	height: $h2;
 	max-width: 100px;
+	max-height: 40px;
 	fill: $text-light;
+
+	top: $xsml;
+	position: relative;
+
+	@include bp(med) {
+		top: 0;
+		max-height: 50px;
+	}
 }
 
 .shape-yelp {
