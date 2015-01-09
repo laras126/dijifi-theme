@@ -31,6 +31,10 @@
 
  	a {
  		color: $text-light;
+
+ 		&:hover {
+            color: $accent-light;
+        }
  	}
 }	
 

@@ -1,13 +1,43 @@
 
+%horiz-menu-spacing {
+     @include bp(med) {
+        text-align: right !important; // Gahh sorry.
+        
+        li {
+            margin-right: $base;
+
+            display: inline-block;
+            border: 0;
+
+            &:last-child {
+                padding-right: 0;
+                margin-right: 0;
+            }
+
+            &.menu-item-complex {
+                display: none;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+
+    @include bp(large) {
+        li {
+            margin-right: $h3;    
+        }
+    }
+}
+
+
 // General menu styles
 
 .menu-items {
     margin: 0;
     padding: 0;
     text-align: center;
-
-    li {
-    }
 
     a {
         display: block;
@@ -22,7 +52,6 @@
             padding-bottom: 0;
         }
     }
-
 }
 
     .menu-item {
@@ -31,9 +60,15 @@
 
 
 
+
+
 // ----
 // Header Menus
 // ----
+
+.header-nav-top {
+    @include horizontal-list;
+}
 
 
 // Toggle nav, courtesy Brad Frost
@@ -62,18 +97,7 @@
 .menu-main {
 
     a {
-        color: $text-dark;
-
-        display: block;
         font-weight: 700;
-
-        @include bp(med) {
-            display: inline-block;
-        }
-
-        &:hover {
-            color: $accent-light;
-        }
     }
 
     .current-menu-item a {
@@ -82,37 +106,7 @@
 
     margin: $sml/2 0;
     
-    @include bp(med) {
-        text-align: right;
-        
-        li {
-            @include border($text-med, bottom);
-            margin-right: $base;
-
-            display: inline-block;
-            border: 0;
-
-            &:last-child {
-                padding-right: 0;
-                margin-right: 0;
-            }
-
-            &.menu-item-complex {
-                display: none;
-            }
-
-            &:last-child {
-                border-bottom: none;
-            }
-        }
-        
-    }
-
-    @include bp(large) {
-        li {
-            margin-right: $h3;    
-        }
-    }
+    @extend %horiz-menu-spacing;
 }
 
     .subnav {
@@ -121,13 +115,24 @@
         }
         
         background-color: $alert-info;
+
         a {
             font-weight: 400;
-            color: $text-light;
             border-color: $text-dark;
             // @include upperspace;
         }
     }
+
+.menu-subtle {
+    @extend %horiz-menu-spacing;
+}
+
+
+
+
+// ----
+// Menu items
+// ----
 
 .menu-item-complex {
     @extend .clearfix;
@@ -169,80 +174,14 @@
         
 
 
-// Hamburger Menu Icon
-// http://codepen.io/lexstefan/pen/mwtcn
-
-.menu-link {
-
-    margin-top: $sml;
-
-    a {
-        float: right;
-    }
-
-    span {
-        transition: all 0.25s ease-in-out;
-        width: 25px;
-        border-radius: 1px;
-        height: 3px;
-        display: block;
-        background: $text-light;
-        margin: 0 0 4px 0;
-    }
-}
-
-    .menu-link span:last-child {
-        margin:0;
-    }
-    
-    .menu-link.open span:nth-of-type(1) {
-        transform: rotate(45deg);
-        margin: 8px 0 0 0;
-    }
-
-    .menu-link.open span:nth-of-type(2) {
-        opacity:0;
-    }
-
-    .menu-link.open span:nth-of-type(3) {
-        transform: rotate(-45deg);
-        margin: -10px 0 0 0;
-    }
 
 
-// Remove the burger
+// ----
+// Hamburger icon
+// ----
 
-@include bp(med) {
-    .menu-link {
-       display: none;
-    }
+@import 'burger';
 
-    .js .header-nav {
-        max-height: none;
-    }
-
-    .header-nav {
-        overflow: visible;
-    }
-
-    .subnav {
-        background-color: transparent;
-        position: absolute;
-        z-index: $ztop*10;
-        top: $h1;
-        right: 0;
-
-        &.open {
-            overflow: visible;
-        }
-
-        a {
-            padding-top: 0;
-            font-size: $sml;
-            color: $text-light;
-        }
-    }
-}
 
 
 
@@ -251,6 +190,7 @@
 // Content Nav 
 //----
 
+// Shows up on "complex content" pages, or those with section blocks. Mainly Services.
 
 .content-nav {
 
