@@ -2,8 +2,9 @@
 	@include bp(med) {
 		width: 100%;
 		position: relative;
-		@include rotate($text-light, $alert-info);
-		padding: $xsml 0;
+		// @include rotate($text-light, $alert-info);
+		padding-bottom: $xsml;
+		border-bottom: 1px solid $accent-dark;
 		
 		a {
 			font-weight: normal;
@@ -18,8 +19,8 @@
 	background-color: $text-dark;
 
 	@include bp(med) {
-	    background: linear-gradient(rgba($accent-dark, 0.5), rgba($accent-dark, 0));	
-	    padding-bottom: $h1;
+	    background: linear-gradient(rgba($accent-dark, 0.8), rgba($accent-dark, 0));	
+	    padding-bottom: $sml;
 	    border-bottom: 0;
 	}
 	

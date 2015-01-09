@@ -562,11 +562,9 @@ input[type="tel"] {
 .col-xs-1 {
   float: left;
   position: relative;
-  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 14.28571%;
-  min-height: 1px;
 }
 
 .col-xs-push-1 {
@@ -580,21 +578,17 @@ input[type="tel"] {
 .col-xs-1-np {
   float: left;
   position: relative;
-  min-height: 1px;
   padding-left: 0;
   padding-right: 0;
   width: 14.28571%;
-  min-height: 1px;
 }
 
 .col-xs-2 {
   float: left;
   position: relative;
-  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 28.57143%;
-  min-height: 1px;
 }
 
 .col-xs-push-2 {
@@ -608,21 +602,17 @@ input[type="tel"] {
 .col-xs-2-np {
   float: left;
   position: relative;
-  min-height: 1px;
   padding-left: 0;
   padding-right: 0;
   width: 28.57143%;
-  min-height: 1px;
 }
 
 .col-xs-3 {
   float: left;
   position: relative;
-  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 42.85714%;
-  min-height: 1px;
 }
 
 .col-xs-push-3 {
@@ -636,21 +626,17 @@ input[type="tel"] {
 .col-xs-3-np {
   float: left;
   position: relative;
-  min-height: 1px;
   padding-left: 0;
   padding-right: 0;
   width: 42.85714%;
-  min-height: 1px;
 }
 
 .col-xs-4 {
   float: left;
   position: relative;
-  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 57.14286%;
-  min-height: 1px;
 }
 
 .col-xs-push-4 {
@@ -664,21 +650,17 @@ input[type="tel"] {
 .col-xs-4-np {
   float: left;
   position: relative;
-  min-height: 1px;
   padding-left: 0;
   padding-right: 0;
   width: 57.14286%;
-  min-height: 1px;
 }
 
 .col-xs-5 {
   float: left;
   position: relative;
-  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 71.42857%;
-  min-height: 1px;
 }
 
 .col-xs-push-5 {
@@ -692,21 +674,17 @@ input[type="tel"] {
 .col-xs-5-np {
   float: left;
   position: relative;
-  min-height: 1px;
   padding-left: 0;
   padding-right: 0;
   width: 71.42857%;
-  min-height: 1px;
 }
 
 .col-xs-6 {
   float: left;
   position: relative;
-  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 85.71429%;
-  min-height: 1px;
 }
 
 .col-xs-push-6 {
@@ -720,17 +698,14 @@ input[type="tel"] {
 .col-xs-6-np {
   float: left;
   position: relative;
-  min-height: 1px;
   padding-left: 0;
   padding-right: 0;
   width: 85.71429%;
-  min-height: 1px;
 }
 
 .col-sm-1 {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 34em) {
   .col-sm-1 {
@@ -761,7 +736,6 @@ input[type="tel"] {
 .col-sm-1-np {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 34em) {
   .col-sm-1-np {
@@ -774,7 +748,6 @@ input[type="tel"] {
 .col-sm-2 {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 34em) {
   .col-sm-2 {
@@ -805,7 +778,6 @@ input[type="tel"] {
 .col-sm-2-np {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 34em) {
   .col-sm-2-np {
@@ -818,7 +790,6 @@ input[type="tel"] {
 .col-sm-3 {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 34em) {
   .col-sm-3 {
@@ -849,7 +820,6 @@ input[type="tel"] {
 .col-sm-3-np {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 34em) {
   .col-sm-3-np {
@@ -862,7 +832,6 @@ input[type="tel"] {
 .col-sm-4 {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 34em) {
   .col-sm-4 {
@@ -893,7 +862,6 @@ input[type="tel"] {
 .col-sm-4-np {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 34em) {
   .col-sm-4-np {
@@ -906,7 +874,6 @@ input[type="tel"] {
 .col-sm-5 {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 34em) {
   .col-sm-5 {
@@ -937,7 +904,6 @@ input[type="tel"] {
 .col-sm-5-np {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 34em) {
   .col-sm-5-np {
@@ -950,7 +916,6 @@ input[type="tel"] {
 .col-sm-6 {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 34em) {
   .col-sm-6 {
@@ -981,7 +946,6 @@ input[type="tel"] {
 .col-sm-6-np {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 34em) {
   .col-sm-6-np {
@@ -994,7 +958,6 @@ input[type="tel"] {
 .col-md-1 {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 53em) {
   .col-md-1 {
@@ -1019,7 +982,6 @@ input[type="tel"] {
 .col-md-1-np {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 53em) {
   .col-md-1-np {
@@ -1032,7 +994,6 @@ input[type="tel"] {
 .col-md-2 {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 53em) {
   .col-md-2 {
@@ -1057,7 +1018,6 @@ input[type="tel"] {
 .col-md-2-np {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 53em) {
   .col-md-2-np {
@@ -1070,7 +1030,6 @@ input[type="tel"] {
 .col-md-3 {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 53em) {
   .col-md-3 {
@@ -1095,7 +1054,6 @@ input[type="tel"] {
 .col-md-3-np {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 53em) {
   .col-md-3-np {
@@ -1108,7 +1066,6 @@ input[type="tel"] {
 .col-md-4 {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 53em) {
   .col-md-4 {
@@ -1133,7 +1090,6 @@ input[type="tel"] {
 .col-md-4-np {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 53em) {
   .col-md-4-np {
@@ -1146,7 +1102,6 @@ input[type="tel"] {
 .col-md-5 {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 53em) {
   .col-md-5 {
@@ -1171,7 +1126,6 @@ input[type="tel"] {
 .col-md-5-np {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 53em) {
   .col-md-5-np {
@@ -1184,7 +1138,6 @@ input[type="tel"] {
 .col-md-6 {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 53em) {
   .col-md-6 {
@@ -1209,7 +1162,6 @@ input[type="tel"] {
 .col-md-6-np {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 53em) {
   .col-md-6-np {
@@ -1222,7 +1174,6 @@ input[type="tel"] {
 .col-lg-1 {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 68em) {
   .col-lg-1 {
@@ -1247,7 +1198,6 @@ input[type="tel"] {
 .col-lg-1-np {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 68em) {
   .col-lg-1-np {
@@ -1266,7 +1216,6 @@ input[type="tel"] {
 .col-lg-2 {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 68em) {
   .col-lg-2 {
@@ -1291,7 +1240,6 @@ input[type="tel"] {
 .col-lg-2-np {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 68em) {
   .col-lg-2-np {
@@ -1310,7 +1258,6 @@ input[type="tel"] {
 .col-lg-3 {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 68em) {
   .col-lg-3 {
@@ -1335,7 +1282,6 @@ input[type="tel"] {
 .col-lg-3-np {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 68em) {
   .col-lg-3-np {
@@ -1354,7 +1300,6 @@ input[type="tel"] {
 .col-lg-4 {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 68em) {
   .col-lg-4 {
@@ -1379,7 +1324,6 @@ input[type="tel"] {
 .col-lg-4-np {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 68em) {
   .col-lg-4-np {
@@ -1398,7 +1342,6 @@ input[type="tel"] {
 .col-lg-5 {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 68em) {
   .col-lg-5 {
@@ -1423,7 +1366,6 @@ input[type="tel"] {
 .col-lg-5-np {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 68em) {
   .col-lg-5-np {
@@ -1442,7 +1384,6 @@ input[type="tel"] {
 .col-lg-6 {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 68em) {
   .col-lg-6 {
@@ -1467,7 +1408,6 @@ input[type="tel"] {
 .col-lg-6-np {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 68em) {
   .col-lg-6-np {
@@ -1486,10 +1426,8 @@ input[type="tel"] {
 .inner, .list-minor {
   float: left;
   position: relative;
-  min-height: 1px;
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 53em) {
   .inner, .list-minor {
@@ -1510,10 +1448,8 @@ input[type="tel"] {
 .inner-squish {
   float: left;
   position: relative;
-  min-height: 1px;
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 53em) {
   .inner-squish {
@@ -1541,16 +1477,22 @@ input[type="tel"] {
 }
 
 .shape-logo {
-  max-width: 100px;
-  max-height: 40px;
+  max-width: 70px;
+  max-height: 60px;
   fill: #ffffff;
   padding-top: 0.9rem;
   position: relative;
 }
 @media (min-width: 53em) {
   .shape-logo {
+    max-width: 100px;
     top: 0;
-    max-height: 50px;
+    max-height: 100px;
+  }
+}
+@media (min-width: 68em) {
+  .shape-logo {
+    max-width: 150px;
   }
 }
 
@@ -1789,7 +1731,6 @@ fieldset {
 .dfi-field-name {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 53em) {
   .dfi-field-name {
@@ -1805,7 +1746,6 @@ fieldset {
 .dfi-field-name .ginput_right {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 34em) {
   .dfi-field-name .ginput_left,
@@ -1817,7 +1757,6 @@ fieldset {
 .dfi-field-email {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 53em) {
   .dfi-field-email {
@@ -1830,9 +1769,7 @@ fieldset {
 .dfi-field-signup {
   float: left;
   position: relative;
-  min-height: 1px;
   width: 100%;
-  min-height: 1px;
 }
 
 .gform_footer {
@@ -2261,10 +2198,13 @@ nav a {
 @media (min-width: 53em) {
   .menu-items a {
     border-bottom: 0;
-    padding-bottom: 0;
+    padding: 0;
   }
 }
 
+.header-nav-top {
+  padding-top: 0.72rem;
+}
 .header-nav-top ul {
   list-style-type: none;
 }
@@ -2281,6 +2221,10 @@ nav a {
 .subnav.open {
   max-height: 55em;
 }
+.header-nav .current-menu-item a,
+.subnav .current-menu-item a {
+  color: #FFCC53;
+}
 
 .header-nav {
   position: relative;
@@ -2292,9 +2236,6 @@ nav a {
 }
 .menu-main a {
   font-weight: 700;
-}
-.menu-main .current-menu-item a {
-  color: #FFCC53;
 }
 
 .subnav {
@@ -2321,9 +2262,7 @@ nav a {
 .item-split {
   float: left;
   position: relative;
-  min-height: 1px;
   width: 50%;
-  min-height: 1px;
 }
 
 @media (min-width: 53em) {
@@ -2531,9 +2470,8 @@ li.content-nav-active a {
   .site-cta {
     width: 100%;
     position: relative;
-    background-color: #3C7AAA;
-    color: #ffffff;
-    padding: 0.72rem 0;
+    padding-bottom: 0.72rem;
+    border-bottom: 1px solid #222334;
   }
   .site-cta a {
     font-weight: normal;
@@ -2554,8 +2492,8 @@ li.content-nav-active a {
 }
 @media (min-width: 53em) {
   .site-header {
-    background: linear-gradient(rgba(34, 35, 52, 0.5), rgba(34, 35, 52, 0));
-    padding-bottom: 3.6rem;
+    background: linear-gradient(rgba(34, 35, 52, 0.8), rgba(34, 35, 52, 0));
+    padding-bottom: 0.9rem;
     border-bottom: 0;
   }
 }
@@ -2569,12 +2507,9 @@ li.content-nav-active a {
 .header-brand {
   float: left;
   position: relative;
-  min-height: 1px;
   width: 92.85714%;
-  min-height: 1px;
   float: left;
   position: relative;
-  min-height: 1px;
   display: table-row !important;
 }
 @media (min-width: 53em) {
@@ -2601,21 +2536,16 @@ li.content-nav-active a {
 .header-nav-link {
   float: left;
   position: relative;
-  min-height: 1px;
   width: 7.14286%;
-  min-height: 1px;
   position: relative;
 }
 
 .header-nav {
   float: left;
   position: relative;
-  min-height: 1px;
   width: 100%;
-  min-height: 1px;
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 53em) {
   .header-nav {
@@ -2698,7 +2628,6 @@ li.content-nav-active a {
 .creds {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 53em) {
   .creds {
@@ -2709,7 +2638,6 @@ li.content-nav-active a {
 .copyright {
   float: left;
   position: relative;
-  min-height: 1px;
   text-align: right;
 }
 @media (min-width: 53em) {
@@ -2722,14 +2650,11 @@ li.content-nav-active a {
   text-align: center;
   float: left;
   position: relative;
-  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 100%;
-  min-height: 1px;
   float: left;
   position: relative;
-  min-height: 1px;
   padding-bottom: 2.4rem;
 }
 @media (min-width: 53em) {
@@ -2797,7 +2722,6 @@ li.content-nav-active a {
 .list-minor > li {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 53em) {
   .list-minor > li {
@@ -2814,7 +2738,6 @@ li.content-nav-active a {
 .list-major > li {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 53em) {
   .list-major > li {
@@ -2831,13 +2754,10 @@ li.content-nav-active a {
   padding-right: 1.2rem;
   float: left;
   position: relative;
-  min-height: 1px;
   width: 57.14286%;
-  min-height: 1px;
   left: 21.42857%;
   float: left;
   position: relative;
-  min-height: 1px;
 }
 .item-support img {
   margin: 0 auto;
@@ -2856,7 +2776,6 @@ li.content-nav-active a {
 .list-major .item-support {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 53em) {
   .list-major .item-support {
@@ -2874,7 +2793,6 @@ li.content-nav-active a {
 .item-main {
   float: left;
   position: relative;
-  min-height: 1px;
   text-align: center;
 }
 @media (min-width: 34em) {
@@ -2890,7 +2808,6 @@ li.content-nav-active a {
 .list-major .item-main {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 53em) {
   .list-major .item-main {
@@ -2928,14 +2845,11 @@ figure {
   text-align: center;
   float: left;
   position: relative;
-  min-height: 1px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   width: 100%;
-  min-height: 1px;
   float: left;
   position: relative;
-  min-height: 1px;
   border-top: 1px solid #80C25D;
   padding-top: 0.72rem;
   padding-bottom: 0.9rem;
@@ -2961,7 +2875,6 @@ img.caption-image {
   width: 100%;
   float: left;
   position: relative;
-  min-height: 1px;
   border-top: 1px solid #80C25D;
 }
 @media (min-width: 68em) {
@@ -2973,7 +2886,6 @@ img.caption-image {
 .textimage-image {
   float: left;
   position: relative;
-  min-height: 1px;
   padding-bottom: 1.2rem;
   position: relative;
 }
@@ -3001,7 +2913,6 @@ img.caption-image {
 .textimage-text {
   float: left;
   position: relative;
-  min-height: 1px;
 }
 @media (min-width: 34em) {
   .textimage-text {
@@ -3039,11 +2950,9 @@ img.caption-image {
 .param-option {
   float: left;
   position: relative;
-  min-height: 1px;
   padding-left: 0.45rem;
   padding-right: 0.45rem;
   width: 85.71429%;
-  min-height: 1px;
 }
 .param-option.selected .int {
   border-color: #45742c;

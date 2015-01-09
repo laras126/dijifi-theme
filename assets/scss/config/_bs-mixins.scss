@@ -32,7 +32,6 @@ $gutter:                    $h3 !default;
 @mixin bs-base() {
     float: left;
     position: relative;
-    min-height: 1px;
 }
 
 %bs-pad {
@@ -115,7 +114,6 @@ $gutter:                    $h3 !default;
   @include bs-gutter($gutter);
   
   width: percentage(($columns / $grid-columns));
-  min-height: 1px;
 }
 @mixin make-xs-column-offset($columns, $side: left) {
   margin-#{$side}: percentage(($columns / $grid-columns));

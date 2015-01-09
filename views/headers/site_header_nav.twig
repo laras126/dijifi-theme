@@ -1,7 +1,19 @@
+<div class="site-cta hide-until-md header-nav">
+	<nav class="header-nav-top" role="navigation">	
+		<ul class="menu menu-subtle clearfix">
+		{% for item in header_nav.items %}
+			<li class="{{item.classes | join(' ')}}">
+				<a class="meta" href="{{item.link}}">{{item.title}}</a>
+			</li>
+		{% endfor %}
+		</ul>
+	</nav>
+</div>
+
 <nav id="menu" class="header-nav" role="navigation">	
 	<ul class="menu-items menu-main clearfix">
 		<li class="menu-item menu-item-complex">
-			<a class="item-split" href="{{site.url}}/location">Brooklyn, NY</a> <a href="tel:6465192447" class="item-split">(646) 519-2447</a>
+			<a class="item-split" href="{{site.url}}/location">info@dijifi.com</a><a href="tel:6465192447" class="item-split">(646) 519-2447</a>
 		</li>
 		{% for item in main_nav.items %}
 			<li class="{{item.classes | join(' ')}}">

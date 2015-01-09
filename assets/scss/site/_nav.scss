@@ -47,9 +47,8 @@
         border-bottom: 1px solid $alert-info;
 
         @include bp(med) {
-            // @include font-size(sml);
             border-bottom: 0;
-            padding-bottom: 0;
+            padding: 0;
         }
     }
 }
@@ -67,7 +66,11 @@
 // ----
 
 .header-nav-top {
+    padding-top: $xsml;
     @include horizontal-list;
+    .menu {
+        
+    }
 }
 
 
@@ -87,6 +90,10 @@
         max-height: 55em;
 
     }
+
+    .current-menu-item a {
+        color: $accent-light;
+    }
 }
 
 .header-nav {
@@ -95,18 +102,13 @@
 }
 
 .menu-main {
-
+    @extend %horiz-menu-spacing;
+    
     a {
         font-weight: 700;
     }
 
-    .current-menu-item a {
-        color: $accent-light;
-    }
-
     margin: $sml/2 0;
-    
-    @extend %horiz-menu-spacing;
 }
 
     .subnav {
