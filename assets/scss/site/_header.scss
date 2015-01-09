@@ -1,12 +1,14 @@
-.site-cta {
-	display: none;
+.site-cta {	
 	@include bp(med) {
-		display: block;
+		width: 100%;
 		position: relative;
 		@include rotate($text-light, $alert-info);
 		padding: $xsml 0;
-		p {
-			margin: 0;
+		
+		a {
+			font-weight: normal;
+			padding-top: 0;
+			@include meta;
 		}
 	}
 }
@@ -36,11 +38,6 @@
 	@include make-xs-column(6.5, false);
 	@include make-md-column(2.5, false);
 	display: table-row !important;
-}
-
-.shape-logo {
-	
-	// padding-bottom: $xsml/3;
 }
 
 .header-tag {

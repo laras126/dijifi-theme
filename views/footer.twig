@@ -18,8 +18,8 @@
 
 	<div class="widget">
 		<h5 class="widget-title">Read More</h5>
-		<nav class="menu-footer" role="navigation">	
-			<ul class="menu-items">
+		<nav class="nav-footer" role="navigation">	
+			<ul class="menu">
 				{% for item in footer_nav.items %}
 					<li class="{{item.classes | join(' ')}}">
 						<a href="{{item.link}}">{{item.title}}</a>
@@ -31,8 +31,8 @@
 
 	<div class="widget">
 		<h5 class="widget-title">Explore</h5>
-		<nav class="menu-footer" role="navigation">	
-			<ul class="menu-items">
+		<nav class="nav-footer" role="navigation">	
+			<ul class="menu">
 				{% for item in footer_nav_explore.items %}
 					<li class="{{item.classes | join(' ')}}">
 						<a href="{{item.link}}">{{item.title}}</a>

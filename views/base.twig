@@ -10,11 +10,11 @@
 		<div class="svgsprites">{% include 'partials/svg-defs.svg' %}</div>
 
 		<header class="site-header" role="banner">
+
 			{% block header %}
-				<div class="contain">					
-					{% include 'headers/site_header.twig' %}
-				</div> <!-- /.contain -->
+				{% include 'headers/site_header.twig' %}
 			{% endblock %}	
+
 		</header>
 
 		<main id="content" class="main" role="main">

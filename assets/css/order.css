@@ -530,10 +530,7 @@ input[type="tel"], input {
 }
 
 .lazy {
-  display: none;
   background-image: url("../img/util/loader.gif");
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 
 .inner-full {
@@ -1564,6 +1561,7 @@ body {
 
 img {
   max-width: 100%;
+  max-height: auto;
 }
 
 ul, ol {
@@ -1977,18 +1975,19 @@ li.content-nav-active a {
   }
 }
 
-.site-cta {
-  display: none;
-}
 @media (min-width: 53em) {
   .site-cta {
-    display: block;
+    width: 100%;
     position: relative;
     background-color: #3C7AAA;
     color: #ffffff;
     padding: 0.72rem 0;
   }
-  .site-cta p, .site-cta .order-full-txt {
+  .site-cta a {
+    font-weight: normal;
+    padding-top: 0;
+    font-size: 0.9rem;
+    font-family: "source-sans-pro", "Helvetica", serif;
     margin: 0;
   }
 }
@@ -3964,11 +3963,10 @@ li.content-nav-active a {
 }
 
 .shape-logo {
-  padding-top: 0.9rem;
   max-width: 100px;
   max-height: 40px;
   fill: #ffffff;
-  top: 0.72rem;
+  padding-top: 0.9rem;
   position: relative;
 }
 @media (min-width: 53em) {
@@ -3980,6 +3978,7 @@ li.content-nav-active a {
 
 .shape-yelp {
   width: 80%;
+  max-height: 100px;
 }
 
 html {
@@ -4539,6 +4538,7 @@ body {
 
 img {
   max-width: 100%;
+  max-height: auto;
 }
 
 ul, ol {
@@ -4952,18 +4952,19 @@ li.content-nav-active a {
   }
 }
 
-.site-cta {
-  display: none;
-}
 @media (min-width: 53em) {
   .site-cta {
-    display: block;
+    width: 100%;
     position: relative;
     background-color: #3C7AAA;
     color: #ffffff;
     padding: 0.72rem 0;
   }
-  .site-cta p, .site-cta .order-full-txt {
+  .site-cta a {
+    font-weight: normal;
+    padding-top: 0;
+    font-size: 0.9rem;
+    font-family: "source-sans-pro", "Helvetica", serif;
     margin: 0;
   }
 }

@@ -65,20 +65,20 @@ $(document).ready(function() {
 
 	// Fade in video header when loaded
     // Thx: http://atomicrobotdesign.com/blog/web-development/check-when-an-html5-video-has-loaded/
-    window.addEventListener('load', function() {
-        var video = document.querySelector('.hero-video video');
-        var preloader = document.querySelector('.spinner');
+    // window.addEventListener('load', function() {
+    //     var video = document.querySelector('.hero-video video');
+    //     var preloader = document.querySelector('.spinner');
 
-        function checkLoad() {
-            if (video.readyState === 4) {
-                preloader.parentNode.removeChild(preloader);
-            } else {
-                setTimeout(checkLoad, 100);
-            }
-        }
+    //     function checkLoad() {
+    //         if (video.readyState === 4) {
+    //             preloader.parentNode.removeChild(preloader);
+    //         } else {
+    //             setTimeout(checkLoad, 100);
+    //         }
+    //     }
 
-        checkLoad();
-    }, false);
+    //     checkLoad();
+    // }, false);
 
 
 

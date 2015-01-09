@@ -1,0 +1,48 @@
+{# <nav id="menu" class="nav-header" role="navigation">	
+	<ul class="menu menu-main clearfix">
+		<li class="menu-item menu-item-complex">
+			<a class="item-split" href="{{site.url}}/contact">info@dijifi.com</a> <a href="tel:6465192447" class="item-split">(646) 519-2447</a>
+		</li>
+		{% for item in main_nav.items %}
+			<li class="{{item.classes | join(' ')}}">
+				<a href="{{item.link}}">{{item.title}}</a>
+			</li>
+		{% endfor %}
+		<li class="has-subnav menu-item hide-after-md">
+			<a href="#">Info</a>
+			<ul class="subnav">
+				{% for item in header_nav.items %}
+					<li class="{{item.classes | join(' ')}}">
+						<a href="{{item.link}}">{{item.title}}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</li>
+		<li class="menu-item menu-item-cta"><a href="{{site.url}}/order">Get an Estimate</a></li>
+	</ul>
+</nav><!-- /#menu --> #}
+
+<nav id="menu" class="header-nav" role="navigation">	
+	<ul class="menu-items menu-main clearfix">
+		<li class="menu-item menu-item-complex">
+			<a class="item-split" href="{{site.url}}/location">Brooklyn, NY</a> <a href="tel:6465192447" class="item-split">(646) 519-2447</a>
+		</li>
+		{% for item in main_nav.items %}
+			<li class="{{item.classes | join(' ')}}">
+				<a href="{{item.link}}">{{item.title}}</a>
+			</li>
+		{% endfor %}
+		
+		<li class="has-subnav menu-item hide-after-md">
+			<a href="#">Info</a>
+			<ul class="subnav">
+				{% for item in header_nav.items %}
+					<li class="{{item.classes | join(' ')}}">
+						<a href="{{item.link}}">{{item.title}}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</li>
+		<li class="menu-item menu-item-cta"><a href="{{site.url}}/order">Get an Estimate</a></li>
+	</ul>
+</nav><!-- /#menu -->
