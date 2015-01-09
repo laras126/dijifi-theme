@@ -1,52 +1,27 @@
 
+
 @import 'config/all';
 
-@import 'site/all';
+@import 'main-new';
+
+@import 'site/header';
+@import 'site/nav';
+@import 'site/footer';
 @import 'blocks/block-quoter';
 
+@import 'elements/btns-links'; // Roots elements
+@import 'elements/typography'; // Roots elements
 
-$grid-columns: 12;
-
-@for $i from 1 to $grid-columns {
-    .col-xs-#{$i} { @include make-xs-column($i); }
-    .col-xs-push-#{$i} { @include make-xs-column-push($i); }
-    .col-xs-pull-#{$i} { @include make-xs-column-pull($i); }
-    // .col-xs-#{$i}-offset { @include make-xs-column-offset($i); }
-    .col-xs-#{$i}-np { @include make-xs-column($i, 0); }
-
-}
-@for $i from 1 to $grid-columns {
-    .col-sm-#{$i} { @include make-sm-column($i); }
-    .col-sm-push-#{$i} { @include make-sm-column-push($i); }
-    .col-sm-pull-#{$i} { @include make-sm-column-pull($i); }
-    .col-sm-offset-#{$i} { @include make-sm-column-offset($i); }
-    .col-sm-#{$i}-np { @include make-sm-column($i, 0); }
-}
-@for $i from 1 to $grid-columns {
-    .col-md-#{$i} { @include make-md-column($i); }
-    .col-md-push-#{$i} { @include make-md-column-push($i); }
-    .col-md-#{$i}-pull { @include make-md-column-pull($i); }
-    .col-md-#{$i}-np { @include make-md-column($i, 0); }
-    // .col-md-#{$i}-offset { @include make-md-column-offset($i); }
-}
-@for $i from 1 to $grid-columns {
-    .col-lg-#{$i} { @include make-lg-column($i); }
-    .col-lg-push-#{$i} { @include make-lg-column-push($i); }
-    .col-lg-pull-#{$i} { @include make-lg-column-pull($i); }
-    .col-lg-#{$i}-np { @include make-lg-column($i, 0); }
-
-    .col-lg-offset-#{$i} { @include make-lg-column-offset($i); }
-}
+// @import 'site/all'; // Main site components
 
 
-
-
-@import 'elements/all'; // Roots elements
-
-@import 'site/all'; // Main site components
-
+// .svgsprites {
+// 	display: none;
+// }
 
 // Site overrides
+
+
 
 h1 {
 	font-size: $h2;
@@ -56,559 +31,637 @@ h1 {
 // Structural Hacks
 
 #wrapper {
-	// padding-top: $h1*2;
-}
+	// width: 100%;
 
-.site-header {
-	@include rotate();
-}
+	// @include bp(small) {
+	// 	width: $screen-sm;
+	// }
 
-// ----
-// Order Form
-// ----
+	// @include bp(med) {
+	// 	width: $screen-sm;
+	// }
 
-// Note that these styles are not ideal at all - 
-// someone else created the order form, and my role
-// was to give it a nicer skin to match 
-// the rest of the site which I redid
-// @import 'main-new'; // Main site components
+	// @include bp(largef) {
+	// 	// width: $screen-lg;
+	// }
 
-.wrapper {
-	@extend .contain;
-	@extend .inner;
+	// margin
 }
 
 .order-full-txt {
-	@extend p;
+	font-size: $h4;
+	line-height: $line-height-base;
 }
 
-.order-full-txt-alert,
-.order-full-txt-alert2,
-.order-full-txt-alert3,
-.pickup-notice {
-	@extend %meta;
-	@extend %alert;
-	@include clearfix;
-	margin-top: $base;
-	margin-bottom: $base;
-}
-
-#order-form {
-	h1 {
-		@include font-size(h3);
-		text-align: center;
-		margin-bottom: $base;
-	}
-}
 .lead {
 	text-align: center;
 }
 
-// Section
-
-.section,
-.order-table {
-	@include meta;
+input[type="radio"],
+input[type="checkbox"] {
+	width: 15px;
+	height: 15px;
 }
 
-.section {
-	@include clearfix;
-	@include bp(large) {
-		@include make-row($h2);
-	}
-
-	padding-left: $base;
-	padding-right: $base;
-	
-	margin-bottom: $base;
-	border: 2px solid lighten($text-med, 25%);
-}
-
-
-// Header
-
-.header {
-	margin-bottom: $base;
-	@include make-row();
-	padding: $base;
-	// background-color: $accent-vlight;
-	// border-bottom: 2px solid $accent-med;
-	border-bottom: 2px solid $accent-med;
-	// background-color: lighten($text-med, 25%);
-	@include rotate($text-light, $accent-dark);
-}
-
-.service {
-	font {
-		display: block;
-		font-size: $sml/1.25;
-	}
-	text-align: center;
-}
-
-	input[type="radio"] {
-		display: inline-block;
-		margin-left: $sml/4;
-		margin-right: $base;
-
-	}
-
-
-
-// Product rows and options
-
-// Sub products
-
-.image-extra-question,
-.album-extra-question {
-	font-size: $sml/1.25;
-}
-
-.product,
-.sub-section,
-.product-drive {
-	@include clearfix;
-	margin-bottom: $sml;
-}
-
-	.product {
-		border-bottom: 1px solid $accent-vlight;
-		padding-top: $sml;
-	}
-
-	.product-nodivs,
-	.sub-products {
-		@include clearfix;
-		@include make-xs-column(12);
-		padding-bottom: $sml;
-
-		input {
-			width: 25%;
-			@include bp(small) {
-				width: 12.5%;	
-			}
-			
-			display: inline-block;
-		}
-	}
-
-	.provided {
-		@include make-xs-column(12);
-		@extend .clearfix;
-		margin-bottom: $base;
-	}
-
-		input.included,
-		.product-drive .product-input {
-			width: 25%;
-			@include bp(small) {
-				width: 7.5%;
-			}
-			margin-right: $base;
-
-		}
-
-	.provided-drive-choices {
-		@include make-xs-column(8);
-		display: inline-block;
-		float: right;
-	}
-
-	.will-bring {
-		display: none;
-	}
-	
-	.product-nodivs {
-		@include make-xs-column(9);
-	}
-
-.product-input {
-	text-align: center;
-}
-
-.choices,
-.nochoice {
-	@include make-xs-column(3, false);
-	@include make-sm-column(1.5);
-	input {
-		text-align: center;
-		margin: auto;
-		display: block;
-		margin-bottom: $sml/2;
-	}
-}
-
-	.tiff .choices {
-		width: 0;
-		padding: 0;
-	}
-	
-
-#total {
-	font-family: $form-font;
-	@extend .clearfix;
-
-}
-
-#sub-total,
-#grand-total,
-#tax-total {
-	@include make-sm-column(5);
-	text-align: right;
-}
-
-#total div {
-	// padding-top: $sml;
-	padding-bottom: $sml;
-}
-
-#grand-total,
-#grand-title {
-	@include font-size(h4);
-	border-top: $accent-border;
-}
-
-#grand-total,
-#grand-title {
-	padding-top: $sml;
+.sub-products {
+	font-size: 14px;
 }
 
 .product-description,
 .product-description-nores,
-#sub-title,
-#grand-title,
-#tax-title {
-	@include make-xs-column(7, false);
-	font-weight: 700;
+.drive-description {
+	font-weight: normal;
 }
 
-	.product-description, 
-	.product-description-nores {
-		font-size: $sml/1.25;
-	}
-
-	.product-description {
-		@include make-xs-column(12, false);
-		@include make-sm-column(3.5, false);
-	}
-
-	.product-description-nores {
-		@include make-xs-column(12, false);
-		@include make-sm-column(7.5, false);
-	}
-
-.qualities {
-	// @include make-xs-column(12, false);
-	@include make-xs-column(12);	
-	@include make-sm-column(4);	
+.drive-description {
+	font-size: 14px;
 }
 
-.price {
-	@include make-xs-column(6, false);
-	@include make-sm-column(1.5, false);
-	// float: right;
+// Forms
+
+*:focus {
+    outline: 0;
 }
 
-.price {
-	color: $text-med;
-	text-align: center;
-}
-
-.product-total {
-	@include make-xs-column(6, false);
-	// @include make-xs-column-pull(4, false);
-	@include make-sm-column(1.5, false);
-	text-align: center;
-}
-	
-	.product-drive .product-input,
-	.drive-description {
-		float: left;
-		display: inline-block;
-	}
-
-	.drive-description {
-		font-weight: 700;
-	}
-
-	// .product-drive .product-input {
-	// 	width: 7.5%;
-	// 	margin-right: $base;
-	// }
-
-.drives {
-	@include make-xs-column(7);
-}
-
-.product-description-drives {
-	@include make-xs-column(2);
-	font-weight: 700;
-}
-
-.qualities {
-	font-size: $sml/1.25;
-}
-
-.qualities,
-.price,
-.product-total,
-.product-description {
-	margin-top: $sml/3;
-}
-
-input,
+input[type="text"],
 textarea {
-	@extend %form-base;
-}
-
-
-// Purchase
-
-.purchase {
-	@include make-xs-column(12);
-}
-
-
-
-// Typography
-
-%title-base {
-	// padding: $sml/2 $sml;
-
-}
-
-.sub-section-title,
-.section-title-long {
-	// @extend %title-base;
-	@include font-size(h5);
-	margin-bottom: $base;
-	margin-top: $h4;
-	padding-left: $base;
-	padding-bottom: $sml/2;
-	border-bottom: $accent-border;
-}
-
-.section-title,
-#output .section-title-long,
-#questions .section-title-long {
-	@include font-size(h4);
-	font-weight: 700;
-	bottom: -$sml/2;
-	// @extend %title-base;
-}
-
-#output .section-title-long,
-#questions .section-title-long {
-	padding-left: 0;
-	padding-bottom: 0;
-	border-bottom: none;
-	margin: 0;
-}
-
-	.section-title,
-	.service {
-		@include make-xs-column(6, false);
-	}
-
-
-input[type="text"] {
 	border-radius: 3px;
-
+	border: 1px solid $accent-med;
+	
 	&:focus {
 		border: 1px solid $accent-dark;
 		// border-right: 2px solid $accent-med;
 	}
 }
 
-// Contact Info Table
 
-.order-table {
-	tr:not(.pickup-notice) td:first-child {
-		text-align: right;
-		@include make-xs-column(2, false);
-		@include make-md-column(2, false);
-		@include make-md-column-offset(1);
-	}
 
-	td[align="left"] {
-		@include make-xs-column(10, false);
-		@include make-md-column(8, false);
-		input[type="text"],
-		textarea {
-			@include make-xs-column(12, false);
-			@include make-md-column(8, false);
-			@include make-lg-column(10, false);
-		}
-	}
 
-	tr:last-child td {
-		@include make-xs-column(10);
-		@include make-xs-column-push(2);
-
-		text-align: center;
-	}
+.site-header {
+	@include rotate();
+	position: relative;
 }
 
-	tr.pickup-notice {
-		@include make-xs-column(12, false);
-		// @include make-md-column(10);
-		// @include make-md-column-push(1);
+// // ----
+// // Order Form
+// // ----
 
-		td:first-child {
-			text-align: left;
-			@include make-xs-column(12, false);
-		}
+// // Note that these styles are not ideal at all - 
+// // someone else created the order form, and my role
+// // was to give it a nicer skin to match 
+// // the rest of the site which I redid
+// // @import 'main-new'; // Main site components
 
+// .wrapper {
+// 	@extend .contain;
+// 	// @extend .inner;
+// }
+
+// .order-full-txt {
+// 	@extend p;
+// }
+
+// .order-full-txt-alert,
+// .order-full-txt-alert2,
+// .order-full-txt-alert3,
+// .pickup-notice {
+// 	@extend %meta;
+// 	@extend %alert;
+// 	@include clearfix;
+// 	margin-top: $base;
+// 	margin-bottom: $base;
+// }
+
+// #order-form {
+// 	h1 {
+// 		@include font-size(h3);
+// 		text-align: center;
+// 		margin-bottom: $base;
+// 	}
+// }
+// .lead {
+// 	text-align: center;
+// }
+
+// // Section
+
+// .section,
+// .order-table {
+// 	@include meta;
+// }
+
+// .section {
+// 	@include clearfix;
+// 	@include bp(large) {
+// 		@include make-row($h2);
+// 	}
+
+// 	padding-left: $base;
+// 	padding-right: $base;
+	
+// 	margin-bottom: $base;
+// 	border: 2px solid lighten($text-med, 25%);
+// }
+
+
+// // Header
+
+// .header {
+// 	margin-bottom: $base;
+// 	@include make-row();
+// 	padding: $base;
+// 	// background-color: $accent-vlight;
+// 	// border-bottom: 2px solid $accent-med;
+// 	border-bottom: 2px solid $accent-med;
+// 	// background-color: lighten($text-med, 25%);
+// 	@include rotate($text-light, $accent-dark);
+// }
+
+// .service {
+// 	font {
+// 		display: block;
+// 		font-size: $sml/1.25;
+// 	}
+// 	text-align: center;
+// }
+
+// 	input[type="radio"] {
+// 		display: inline-block;
+// 		margin-left: $sml/4;
+// 		margin-right: $base;
+
+// 	}
+
+
+
+// // Product rows and options
+
+// // Sub products
+
+// .image-extra-question,
+// .album-extra-question {
+// 	font-size: $sml/1.25;
+// }
+
+// .product,
+// .sub-section,
+// .product-drive {
+// 	@include clearfix;
+// 	margin-bottom: $sml;
+// }
+
+	.product {
+		border-bottom: 1px solid $accent-vlight;
+		padding-top: $sml;
+		padding-bottom: $sml;
 	}
 
+// 	.product-nodivs,
+// 	.sub-products {
+// 		@include clearfix;
+// 		@include make-xs-column(12);
+// 		padding-bottom: $sml;
+
+// 		input {
+// 			width: 25%;
+// 			@include bp(small) {
+// 				width: 12.5%;	
+// 			}
+			
+// 			display: inline-block;
+// 		}
+// 	}
+
+// 	.provided {
+// 		@include make-xs-column(12);
+// 		@extend .clearfix;
+// 		margin-bottom: $base;
+// 	}
+
+// 		input.included,
+// 		.product-drive .product-input {
+// 			width: 25%;
+// 			@include bp(small) {
+// 				width: 7.5%;
+// 			}
+// 			margin-right: $base;
+
+// 		}
+
+// 	.provided-drive-choices {
+// 		@include make-xs-column(8);
+// 		display: inline-block;
+// 		float: right;
+// 	}
+
+// 	.will-bring {
+// 		display: none;
+// 	}
+	
+// 	.product-nodivs {
+// 		@include make-xs-column(9);
+// 	}
+
+// .product-input {
+// 	text-align: center;
+// }
+
+// .choices,
+// .nochoice {
+// 	@include make-xs-column(3, false);
+// 	@include make-sm-column(1.5);
+// 	input {
+// 		text-align: center;
+// 		margin: auto;
+// 		display: block;
+// 		margin-bottom: $sml/2;
+// 	}
+// }
+
+// 	.tiff .choices {
+// 		width: 0;
+// 		padding: 0;
+// 	}
+	
+
+// #total {
+// 	font-family: $form-font;
+// 	@extend .clearfix;
+
+// }
+
+// #sub-total,
+// #grand-total,
+// #tax-total {
+// 	@include make-sm-column(5);
+// 	text-align: right;
+// }
+
+// #total div {
+// 	// padding-top: $sml;
+// 	padding-bottom: $sml;
+// }
+
+// #grand-total,
+// #grand-title {
+// 	@include font-size(h4);
+// 	border-top: $accent-border;
+// }
+
+// #grand-total,
+// #grand-title {
+// 	padding-top: $sml;
+// }
+
+// .product-description,
+// .product-description-nores,
+// #sub-title,
+// #grand-title,
+// #tax-title {
+// 	@include make-xs-column(7, false);
+// 	font-weight: 700;
+// }
+
+// 	.product-description, 
+// 	.product-description-nores {
+// 		font-size: $sml/1.25;
+// 	}
+
+// 	.product-description {
+// 		@include make-xs-column(12, false);
+// 		@include make-sm-column(3.5, false);
+// 	}
+
+// 	.product-description-nores {
+// 		@include make-xs-column(12, false);
+// 		@include make-sm-column(7.5, false);
+// 	}
+
+// .qualities {
+// 	// @include make-xs-column(12, false);
+// 	@include make-xs-column(12);	
+// 	@include make-sm-column(4);	
+// }
+
+// .price {
+// 	@include make-xs-column(6, false);
+// 	@include make-sm-column(1.5, false);
+// 	// float: right;
+// }
+
+// .price {
+// 	color: $text-med;
+// 	text-align: center;
+// }
+
+// .product-total {
+// 	@include make-xs-column(6, false);
+// 	// @include make-xs-column-pull(4, false);
+// 	@include make-sm-column(1.5, false);
+// 	text-align: center;
+// }
+	
+// 	.product-drive .product-input,
+// 	.drive-description {
+// 		float: left;
+// 		display: inline-block;
+// 	}
+
+// 	.drive-description {
+// 		font-weight: 700;
+// 	}
+
+// 	// .product-drive .product-input {
+// 	// 	width: 7.5%;
+// 	// 	margin-right: $base;
+// 	// }
+
+// .drives {
+// 	@include make-xs-column(7);
+// }
+
+// .product-description-drives {
+// 	@include make-xs-column(2);
+// 	font-weight: 700;
+// }
+
+// .qualities {
+// 	font-size: $sml/1.25;
+// }
+
+// .qualities,
+// .price,
+// .product-total,
+// .product-description {
+// 	margin-top: $sml/3;
+// }
+
+// input,
+// textarea {
+// 	@extend %form-base;
+// }
+
+
+// // Purchase
+
+// .purchase {
+// 	@include make-xs-column(12);
+// }
 
 
 
-// ----
-// Status
-// ----
+// // Typography
 
-#order-summary {
-	h1 {
-		@include font-size(h4);
-		margin-bottom: $base;
-		text-align: center;	
-		border-bottom: $accent-border;
-	}
-}
+// %title-base {
+// 	// padding: $sml/2 $sml;
 
-.sum-table {
-	@extend %meta;
+// }
 
-	tr {
-		border-bottom: 1px solid $text-medlight;
-	}
+// .sub-section-title,
+// .section-title-long {
+// 	// @extend %title-base;
+// 	@include font-size(h5);
+// 	margin-bottom: $base;
+// 	margin-top: $h4;
+// 	padding-left: $base;
+// 	padding-bottom: $sml/2;
+// 	border-bottom: $accent-border;
+// }
 
-	&.summary {
+// .section-title,
+// #output .section-title-long,
+// #questions .section-title-long {
+// 	@include font-size(h4);
+// 	font-weight: 700;
+// 	bottom: -$sml/2;
+// 	// @extend %title-base;
+// }
 
-	}
+// #output .section-title-long,
+// #questions .section-title-long {
+// 	padding-left: 0;
+// 	padding-bottom: 0;
+// 	border-bottom: none;
+// 	margin: 0;
+// }
 
-	td:last-child {
-		width: percentage(2/3) !important;	
-	}
-}
-
-	.sum-table-right {
-		text-align: right;
-		padding-right: $base;
-		@extend %meta-light;
-		@include upperspace;
-		width: percentage(1/3) !important;
-	}
+// 	.section-title,
+// 	.service {
+// 		@include make-xs-column(6, false);
+// 	}
 
 
-// ----
-// Main site overrides
-//----
+// input[type="text"] {
+// 	border-radius: 3px;
+// 	font-size: $sml;
+	
+// 	&:focus {
+// 		border: 1px solid $accent-dark;
+// 		// border-right: 2px solid $accent-med;
+// 	}
+// }
+
+// // Contact Info Table
+
+// .order-table {
+// 	tr:not(.pickup-notice) td:first-child {
+// 		text-align: right;
+// 		@include make-xs-column(2, false);
+// 		@include make-md-column(2, false);
+// 		@include make-md-column-offset(1);
+// 	}
+
+// 	td[align="left"] {
+// 		@include make-xs-column(10, false);
+// 		@include make-md-column(8, false);
+// 		input[type="text"],
+// 		textarea {
+// 			@include make-xs-column(12, false);
+// 			@include make-md-column(8, false);
+// 			@include make-lg-column(10, false);
+// 		}
+// 	}
+
+// 	tr:last-child td {
+// 		@include make-xs-column(10);
+// 		@include make-xs-column-push(2);
+
+// 		text-align: center;
+// 	}
+// }
+
+// 	tr.pickup-notice {
+// 		@include make-xs-column(12, false);
+// 		// @include make-md-column(10);
+// 		// @include make-md-column-push(1);
+
+// 		td:first-child {
+// 			text-align: left;
+// 			@include make-xs-column(12, false);
+// 		}
+
+// 	}
+
+
+
+
+// // ----
+// // Status
+// // ----
+
+// #order-summary {
+// 	h1 {
+// 		@include font-size(h4);
+// 		margin-bottom: $base;
+// 		text-align: center;	
+// 		border-bottom: $accent-border;
+// 	}
+// }
+
+// .sum-table {
+// 	@extend %meta;
+
+// 	tr {
+// 		border-bottom: 1px solid $text-medlight;
+// 	}
+
+// 	&.summary {
+
+// 	}
+
+// 	td:last-child {
+// 		width: percentage(2/3) !important;	
+// 	}
+// }
+
+// 	.sum-table-right {
+// 		text-align: right;
+// 		padding-right: $base;
+// 		@extend %meta-light;
+// 		@include upperspace;
+// 		width: percentage(1/3) !important;
+// 	}
+
+
+// // ----
+// // Main site overrides
+// //----
 
 .widget {
-	@include make-md-column(4);
+	width: percentage(1/4);
+	padding: $sml 0 0 0;
+
+	ul {
+		padding: 0;
+	}
+}
+
+.colophon {
+	background-color: $accent-dark;
 }
 
 
-
-
-
-// fieldset:last-of-type {
-// 	background-color: green;
+// .section-title {
+// 	margin-top: 0;
 // }
 
 
 
-// QQ Form
-// .reveal-if-active {
-//   opacity: 0;
-//   max-height: 0;
-//   overflow: hidden;
+// // fieldset:last-of-type {
+// // 	background-color: green;
+// // }
+
+
+
+// // QQ Form
+// // .reveal-if-active {
+// //   opacity: 0;
+// //   max-height: 0;
+// //   overflow: hidden;
+// // }
+
+// // input[type="radio"]:checked ~ .reveal-if-active,
+// // input[type="checkbox"]:checked ~ .reveal-if-active {
+// //   opacity: 1;
+// //   max-height: 100px; /* little bit of a magic number :( */
+// //   overflow: visible;
+// // }
+
+// .closed {
+// 	display: none;
 // }
 
-// input[type="radio"]:checked ~ .reveal-if-active,
-// input[type="checkbox"]:checked ~ .reveal-if-active {
-//   opacity: 1;
-//   max-height: 100px; /* little bit of a magic number :( */
-//   overflow: visible;
+// #resResults {
+// 	display: none;
 // }
 
-.closed {
-	display: none;
-}
+// .arrow-down {
+// 	// width: $sml; 
+// 	// height: $sml;
 
-#resResults {
-	display: none;
-}
+// 	// border-left: $sml solid transparent;
+// 	// border-right: $sml solid transparent;
+// 	// border-top: $sml solid $accent-vlight;
 
-.arrow-down {
-	// width: $sml; 
-	// height: $sml;
+// 	// position: absolute;
+// 	// bottom: -$sml;
+// 	// left: 45%;
+// 	// z-index: $ztop;
+// }
 
-	// border-left: $sml solid transparent;
-	// border-right: $sml solid transparent;
-	// border-top: $sml solid $accent-vlight;
+// .panel {
+// 	position: relative;
+// 	padding: 0;
+// 	margin-bottom: $base;
+// 	// background-color: $accent-vlight;
 
-	// position: absolute;
-	// bottom: -$sml;
-	// left: 45%;
-	// z-index: $ztop;
-}
+// 	&:nth-child(2n) {
+// 		// background-color: lighten($accent-med, 25%);
 
-.panel {
-	position: relative;
-	padding: 0;
-	margin-bottom: $base;
-	// background-color: $accent-vlight;
+// 		.arrow-down {
+// 			border-top-color: lighten($accent-med, 25%);
+// 		}
+// 	}
+// 	// margin-bottom: $base;
 
-	&:nth-child(2n) {
-		// background-color: lighten($accent-med, 25%);
+// 	input[type="radio"] {
+// 		opacity: 0;
+// 		width: 100%;
+// 		position: absolute;
+// 		vertical-align: middle;
+// 		padding: $base;
+// 		z-index: -1;
+// 	}
 
-		.arrow-down {
-			border-top-color: lighten($accent-med, 25%);
-		}
-	}
-	// margin-bottom: $base;
+// 	label {
+// 		cursor: pointer;
+// 		@extend .btn-cta;
+// 		font-weight: normal;
+// 	}
+// }
 
-	input[type="radio"] {
-		opacity: 0;
-		width: 100%;
-		position: absolute;
-		vertical-align: middle;
-		padding: $base;
-		z-index: -1;
-	}
+// 	.results {
+// 		// background-color: $body-bkgd;
+// 	}
 
-	label {
-		cursor: pointer;
-		@extend .btn-cta;
-		font-weight: normal;
-	}
-}
+// 	.panel-title {
+// 		// text-align: center;
+// 		margin-bottom: $base;
+// 		// font-weight: normal;
+// 	}
 
-	.results {
-		// background-color: $body-bkgd;
-	}
+// .choices-list {
+// 	list-style: none;
+// 	// text-align: center;
 
-	.panel-title {
-		// text-align: center;
-		margin-bottom: $base;
-		// font-weight: normal;
-	}
+// 	:checked+label {
+// 		background-color: $alert-success;
+// 	}
 
-.choices-list {
-	list-style: none;
-	// text-align: center;
+// 	li {
+// 		display: inline-block;
+// 		position: relative;
+// 		margin: $sml;
 
-	:checked+label {
-		background-color: $alert-success;
-	}
-
-	li {
-		display: inline-block;
-		position: relative;
-		margin: $sml;
-
-	}
-}
+// 	}
+// }

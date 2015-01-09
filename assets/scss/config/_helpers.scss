@@ -205,9 +205,13 @@ exclusively.
 // Hold
 
 
+@mixin form-base($pad-tb, $pad-rl, $font) {
+    padding: $pad-tb $pad-rl;
+    font-family: $font;
+}
+
 %form-base {
-    padding: $sml/3 $sml/2;
-    font-family: $form-font;
+    @include form-base($sml/3, $sml/2, $form-font);
 }
 
 
