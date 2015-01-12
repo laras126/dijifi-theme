@@ -45,6 +45,14 @@
 	&-light {
 		@include rotate($text-light, $accent-light);	
 	}
+
+	&-vlight {
+		@include rotate($text-light, $accent-vlight);	
+	}
+
+	&-info {
+		@include rotate($text-light, $alert-info);
+	}
 }
 
 .rotate {

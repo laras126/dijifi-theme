@@ -36,19 +36,22 @@
 
 .menu-items {
     margin: 0;
-    padding: 0;
+    // padding: 0;
     text-align: center;
 
     a {
-        display: block;
-
         @include font-size(base);
-        padding: $sml 0;
+        display: block;
         border-bottom: 1px solid $alert-info;
+        padding-top: $xsml;
+        padding-bottom: $xsml;
+
+
 
         @include bp(med) {
             border-bottom: 0;
-            padding: 0;
+            padding-top: $xsml/2;
+            padding-bottom: $xsml/2;
         }
     }
 }
@@ -64,14 +67,6 @@
 // ----
 // Header Menus
 // ----
-
-.header-nav-top {
-    @include horizontal-list;
-    
-    .menu {
-        
-    }
-}
 
 
 // Toggle nav, courtesy Brad Frost
@@ -94,6 +89,12 @@
     .current-menu-item a {
         color: $accent-light;
     }
+}
+
+// TODO - bad news bears lara
+
+.current-menu-item a {
+    color: $accent-light !important;
 }
 
 .header-nav {
@@ -148,17 +149,23 @@
 
 .item-split {
     @include make-xs-column(3.5, false);
+
+    span {
+        font-size: $sml;
+        color: $accent-light;
+    }
 }
 
 .menu-item-cta {
     a {
         @include bp(med) {
-            padding-top: 0;    
-            padding-left: $sml;
-            padding-right: $sml;
+            // padding-top: 0;    
+            // padding-left: $sml;
+            // padding-right: $sml;
         }
         
-        @extend .btn-success;
+        @include button($alert-success);
+
 
     }
 }

@@ -9,13 +9,16 @@
 
 		<div class="svgsprites">{% include 'partials/svg-defs.svg' %}</div>
 
+		{% block front_page_cta %}
+		{% endblock %}
+		
 		<header class="site-header" role="banner">
-
 			{% block header %}
 				{% include 'headers/site_header.twig' %}
 			{% endblock %}	
-
 		</header>
+		{% include 'headers/site_header_extra.twig' %}
+		
 
 		<main id="content" class="main" role="main">
 

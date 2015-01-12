@@ -2,15 +2,9 @@
 
 {% block content %}
 
-	<div class="inner text-center">
-		<div>
-			<p class="lead">{{blck.cta_text}}</p>		
-		</div>
-		<div class="clearfix">
-			<p class="text-center">
-				<a href="/order" class="btn-cta">Estimate Your Order</a>
-			</p>
-		</div>
+	<div class="inner inner-cta">
+		<p class="lead lead-cta">{{blck.cta_text}}</p>
+		<a href="/order" class="btn-cta">Estimate Your Order <span class="icon in-btn icon-next"></span></a>
 	</div>
 
 {% endblock %}

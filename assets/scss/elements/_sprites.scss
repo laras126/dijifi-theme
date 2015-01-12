@@ -16,11 +16,32 @@
 	}
 
 	@include bp(large) {
-		max-width: 150px;
+		// max-width: 150px;
 	}
 }
 
 .shape-yelp {
 	width: 80%;
 	max-height: 100px;
+}
+
+
+// Icons
+
+.in-btn {
+    margin-left: $xsml/2;
+    position: relative;
+    top: 2px;
+    color: $accent-light;
+}
+
+
+.icon-google-plus-square {
+	color: $alert-danger;
+	font-size: $h4;
+}
+
+.icon-facebook-square {
+	color: $alert-info;
+	font-size: $h4;
 }

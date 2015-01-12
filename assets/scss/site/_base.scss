@@ -95,7 +95,7 @@ nav a {
 		width: 100%;
 
 		@include bp(large) {
-			background-attachment: fixed;
+			// background-attachment: fixed;
 			background-position: center;
 		}
 	}
@@ -112,7 +112,7 @@ nav a {
 	}
 
 	.page-header & {
-		padding-top: $h1*1.5;
+		padding-top: $h1;
 		@include bp(small) {
 			padding-top: percentage(0.9/3);
 		}

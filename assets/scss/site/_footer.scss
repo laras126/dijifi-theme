@@ -15,6 +15,7 @@
 		@include rotate($text-light, $alert-success);
 		padding: $base 0 $h3;
 //		margin-top: $h1;
+		text-align: center;
 	}
 }
 
@@ -63,3 +64,16 @@
 		@include upperspace;
 		margin-bottom: $sml;
 	}
+
+	.widget-list {
+		li {
+			margin-bottom: $sml/2;
+		}
+	}
+
+	.list-social {
+		.meta {
+			
+		}
+	}
+
