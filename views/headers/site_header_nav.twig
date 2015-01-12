@@ -1,14 +1,3 @@
-<div class="site-cta hide-until-md header-nav">
-	<nav class="header-nav-top" role="navigation">	
-		<ul class="menu menu-subtle clearfix">
-		{% for item in header_nav.items %}
-			<li class="{{item.classes | join(' ')}}">
-				<a class="meta" href="{{item.link}}">{{item.title}}</a>
-			</li>
-		{% endfor %}
-		</ul>
-	</nav>
-</div>
 
 <nav id="menu" class="header-nav" role="navigation">	
 	<ul class="menu-items menu-main clearfix">
@@ -34,3 +23,15 @@
 		<li class="menu-item menu-item-cta"><a href="{{site.url}}/order">Get an Estimate</a></li>
 	</ul>
 </nav><!-- /#menu -->
+
+<div class="site-cta hide-until-md header-nav">
+	<nav class="header-nav-top" role="navigation">	
+		<ul class="menu menu-subtle clearfix">
+		{% for item in header_nav.items %}
+			<li class="{{item.classes | join(' ')}}">
+				<a class="meta" href="{{item.link}}">{{item.title}}</a>
+			</li>
+		{% endfor %}
+		</ul>
+	</nav>
+</div>

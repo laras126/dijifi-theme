@@ -2129,15 +2129,10 @@ div.sub-section-title.closed {
 .site-header {
   border-bottom: 3px solid #3C7AAA;
   background-color: #222334;
-  position: absolute;
-  width: 100%;
-  z-index: 4;
   color: #ffffff;
 }
 @media (min-width: 53em) {
   .site-header {
-    background: linear-gradient(rgba(34, 35, 52, 0.8), rgba(34, 35, 52, 0));
-    padding-bottom: 0.9rem;
     border-bottom: 0;
   }
 }
@@ -2185,6 +2180,7 @@ div.sub-section-title.closed {
 }
 
 .header-nav {
+  padding-top: 0.45rem;
   float: left;
   position: relative;
   width: 100%;
@@ -2241,9 +2237,6 @@ div.sub-section-title.closed {
   }
 }
 
-.header-nav-top {
-  padding-top: 0.72rem;
-}
 .header-nav-top ul {
   list-style-type: none;
 }

@@ -66,8 +66,8 @@
 // ----
 
 .header-nav-top {
-    padding-top: $xsml;
     @include horizontal-list;
+    
     .menu {
         
     }

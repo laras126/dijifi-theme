@@ -117,7 +117,7 @@ nav a {
 			padding-top: percentage(0.9/3);
 		}
 		@include bp(med) {
-			padding-top: percentage(0.55/3);
+			padding-top: percentage(0.4/3);
 
 			.home & {
 				padding-top: percentage(0.8/3);
