@@ -26,5 +26,5 @@ $post = new TimberPost();
 $context['post'] = $post;
 
 // Using page template for now - will likely change to front-page.
-// Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);
-Timber::render(array('front-page.twig'), $context);
+Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);
+// Timber::render(array('front-page.twig'), $context);
