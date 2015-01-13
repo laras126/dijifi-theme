@@ -41,7 +41,7 @@
     a {
         @include font-size(base);
         display: block;
-        border-bottom: 1px solid $alert-info;
+        border-bottom: 1px solid lighten($text-med, 20%);
         padding-top: $xsml;
         padding-bottom: $xsml;
 
@@ -100,12 +100,7 @@
 }
 
     .subnav {        
-        background-color: $alert-info;
-
-        a {
-            font-weight: 400;
-            border-color: $text-dark;
-        }
+        background-color: $accent-vlight;
     }
 
 .menu-subtle {
@@ -121,11 +116,11 @@
 
 .menu-item-complex {
     @extend .clearfix;
-    background-color: $alert-info;
+    // background-color: $accent-light;
     text-align: center;
 
     a {
-        color: $text-light;
+        color: $alert-info;
     }
 }
 
@@ -203,7 +198,7 @@
         }
 
         a {
-            padding: $sml/2 $base;
+            padding: $base;
             display: inline-block;
 
             color: $text-light;

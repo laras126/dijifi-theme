@@ -2,22 +2,18 @@
 <div class="header-sub">
 	<div class="contain">
 		<div class="row">
-			
-			<div class="col-md-3">
-				<p class="header-sub-tag">{{site_tagline}}</p>
-			</div>
-			<div class="col-md-4">
-				<nav class="header-nav-top" role="navigation">
-					<ul class="menu menu-subtle clearfix">
-						{% for item in header_nav.items %}
-							<li class="{{item.classes | join(' ')}}">
-								<a class="meta" href="{{item.link}}">{{item.title}}</a>
-							</li>
-						{% endfor %}
-					</ul>
-				</nav>
-			</div>
-
+		
+			<p class="header-sub-tag">{{site_tagline}}</p>
+			<nav class="header-nav-top" role="navigation">
+				<ul class="menu menu-subtle clearfix">
+					{% for item in header_nav.items %}
+						<li class="{{item.classes | join(' ')}}">
+							<a class="meta" href="{{item.link}}">{{item.title}}</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</nav>
+		
 		</div>
 	</div>
-</div>
+</div> <!-- /.header-sub -->

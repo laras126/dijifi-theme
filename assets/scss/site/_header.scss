@@ -22,11 +22,24 @@
 }
 
 	.header-sub-tag {
+		@include make-md-column(3);
 		color: $text-light;
 		@include meta;
 	}
 
-	
+	.header-nav-top {
+		@include make-md-column(4);
+		@include bp(med) {
+			padding-bottom: $xsml;
+			
+			a {
+				font-weight: normal;
+				padding-top: 0;
+				@include meta;
+			}
+		}
+	}
+
 
 .site-cta {
 	@include rotate($text-dark, $accent-vlight);
@@ -45,20 +58,6 @@
 	top: 25%;
 	color: $alert-info;
 	font-size: $h4;
-}
-
-.header-nav-top {	
-	@include bp(med) {
-		width: 100%;
-		position: relative;
-		padding-bottom: $xsml;
-		
-		a {
-			font-weight: normal;
-			padding-top: 0;
-			@include meta;
-		}
-	}
 }
 
 .site-header {
