@@ -3,6 +3,23 @@
     "title": "Theme Settings",
     "fields": [
         {
+            "key": "field_54b548a674aeb",
+            "label": "Show Callout?",
+            "name": "callout_tf",
+            "prefix": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Show the call out bar",
+            "default_value": 1
+        },
+        {
             "key": "field_54b53e74b01db",
             "label": "Callout Bar",
             "name": "callout_bar",
@@ -10,7 +27,15 @@
             "type": "text",
             "instructions": "Text to appear in the callout bar.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_54b548a674aeb",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -62,5 +87,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1421164364
+    "modified": 1421166821
 }

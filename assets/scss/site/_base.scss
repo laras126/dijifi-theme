@@ -70,6 +70,12 @@ nav a {
 	position: relative;
 	overflow: hidden;
 	color: $text-light;
+
+	.icon-down-open {
+		font-size: $h3;
+		padding-top: $base;
+		line-height: 0;
+	}
 }
 
 .hero-full-bkgd {
@@ -117,7 +123,16 @@ nav a {
 	}
 
 	.page-header & {
+
+		background-image:
+	    radial-gradient(
+			ellipse at 20% center,
+			rgba($text-dark, 0) 0,
+			$text-dark
+	    );
+
 		padding-top: $h1;
+		
 		@include bp(small) {
 			padding-top: percentage(0.9/3);
 		}
@@ -129,15 +144,6 @@ nav a {
 			}
 		}
 	}
-	
-	.page-header & {
-		background-image:
-	    radial-gradient(
-			ellipse at 20% center,
-			rgba($text-dark, 0) 0,
-			$text-dark
-	    );
-	}
 
 	@include bp(large) {
 		background-image:
@@ -148,8 +154,8 @@ nav a {
 	    );
 	}
 	
-	padding-bottom: $h2;
-	padding-top: percentage(2/3);
+	padding-bottom: $base;
+	// padding-top: percentage(2/3);
 	@extend .clearfix;
 }
 	

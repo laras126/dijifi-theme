@@ -20,7 +20,7 @@
 }
 
 	.colophon {
-		@include rotate($text-light, $alert-info);
+		// @include rotate($text-light, $alert-info);
 		p {
 			@include font-size(xsml);	
 			color: $text-med;
@@ -44,8 +44,6 @@
 		text-align: right;
 	}
 
-.menu-footer {
-}
 
 .widget {
 	@include change-text-align(center, med, left);

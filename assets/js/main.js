@@ -131,13 +131,24 @@ $(document).ready(function() {
 
 		// Add the class to make the nav stick
 		if( $(this).scrollTop() > total_ht ) {
+
 			$nav.addClass(scroll_class);
-			$('.top-link-top').css('width', '50px');
 			$('.top-link-bottom').fadeIn(300);
+
+			$('.top-link-top').css({
+				'width': '50px',
+				'opacity': '1'
+			});
+			
 		} else if( $(this).scrollTop() < total_ht ) {
+
 			$nav.removeClass(scroll_class);
-			$('.top-link-top').css('width', '0');
 			$('.top-link-bottom').fadeOut(300);
+
+			$('.top-link-top').css({
+				'width': '0',
+				'opacity': '0'
+			});
 		}
 
 

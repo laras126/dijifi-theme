@@ -45,6 +45,7 @@
 			
 			// ACF Options Page
 			$context['site_tagline'] = get_field('site_tagline', 'options');
+			$context['callout_tf'] = get_field('callout_tf', 'options');
 			$context['callout_bar'] = get_field('callout_bar', 'options');
 
 			// Site
@@ -191,7 +192,7 @@
 		return $content;
 	}
 	add_filter( 'gform_cdata_open', 'wrap_gform_cdata_open' );
-	
+
 	function wrap_gform_cdata_close( $content = '' ) {
 		$content = ' }, false );';
 		return $content;

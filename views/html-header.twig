@@ -4,36 +4,33 @@
 <!--[if IE 8]><html class="no-js ie ie8 lt-ie9" {{site.language_attributes}}> <![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" {{site.language_attributes}}> <!--<![endif]-->
     <head>
-    <meta charset="{{site.charset}}" />
-    <title>{{wp_title}}</title>
-    <meta name="description" content="{{site.description}}">
-    <link rel="stylesheet" href="http://i.icomoon.io/public/temp/3390799883/DiJiFi/style.css">
-    <link rel="stylesheet" href="{{site.theme.link}}/assets/css/main.css" type="text/css" media="screen" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="pingback" href="{{site.pingback_url}}" />
-    <script src="//use.typekit.net/enu2ame.js"></script>
-    <script>try{Typekit.load();}catch(e){}</script>
-    <!--<script>
-    WebFontConfig = {
-      typekit: { id: 'enu2ame' }
-    };
 
-    (function() {
-      var wf = document.createElement('script');
-      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-                '://ajax.googleapis.com/ajax/libs/webfont/1.5.6/webfont.js';
-      wf.type = 'text/javascript';
-      wf.async = 'true';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(wf, s);
-    })();
-</script> -->
-    
-    {# 
-        TODO: Figure out the $context for this in functions.php - if using a responsive image somehow.
-        {{fixed_image_css}}
-     #}
+        <meta charset="{{site.charset}}" />
+        <title>{{wp_title}}</title>
+        <meta name="description" content="{{site.description}}">
+        <link href="https://fontastic.s3.amazonaws.com/m7J4Tg3JMLVkh6f4EDFU28/icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{site.theme.link}}/assets/css/main.css" type="text/css" media="screen" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="pingback" href="{{site.pingback_url}}" />
+        <script src="//use.typekit.net/enu2ame.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+        
+        {# <script>
+        WebFontConfig = {
+          typekit: { id: 'enu2ame' }
+        };
 
-	{{function('wp_head')}}
+        (function() {
+          var wf = document.createElement('script');
+          wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+                    '://ajax.googleapis.com/ajax/libs/webfont/1.5.6/webfont.js';
+          wf.type = 'text/javascript';
+          wf.async = 'true';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(wf, s);
+        })();
+        </script> #}
+
+    	{{function('wp_head')}}

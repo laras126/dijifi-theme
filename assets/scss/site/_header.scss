@@ -27,18 +27,24 @@
 	}
 
 	
+
 .site-cta {
-	@include rotate($text-light, $alert-info);
+	@include rotate($text-dark, $accent-vlight);
 	padding: $xsml $sml;
 	text-align: center;
 	position: relative;
+
+	p {
+		@include meta;
+	}
 }
 
 .site-cta-close {
 	position: absolute;
 	right: 10px;
 	top: 25%;
-	color: $accent-light;
+	color: $alert-info;
+	font-size: $h4;
 }
 
 .header-nav-top {	
@@ -46,7 +52,6 @@
 		width: 100%;
 		position: relative;
 		padding-bottom: $xsml;
-		// border-bottom: 1px solid $accent-dark;
 		
 		a {
 			font-weight: normal;

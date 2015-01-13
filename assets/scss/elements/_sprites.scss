@@ -31,8 +31,16 @@
 .in-btn {
     margin-left: $xsml/2;
     position: relative;
-    top: 2px;
+    top: 3px;
     color: $accent-light;
+}
+
+.directional-icon {
+	font-size: $base;
+
+	&:before {
+		color: $text-light;
+	}
 }
 
 
@@ -45,3 +53,4 @@
 	color: $alert-info;
 	font-size: $h4;
 }
+

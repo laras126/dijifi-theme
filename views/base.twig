@@ -7,11 +7,15 @@
 
 	<body class="{{body_class}} wf-loading" data-template="base.twig" id="pageTop">
 
-		{# <div class="svgsprites">{% include 'partials/svg-defs.svg' %}</div> #}
+		{% if callout_tf == true %}
+			<aside class="site-cta">
+				<div class="contain">
+					<p>{{callout_bar}}</p>
+					<a class="site-cta-close icon-cancel" href="#"></a>
+				</div>
+			</aside>
+		{% endif %}
 
-		{% block front_page_cta %}
-		{% endblock %}
-		
 		<header class="site-header" role="banner">
 			{% block header %}
 				{% include 'headers/site_header.twig' %}
