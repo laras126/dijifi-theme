@@ -1,13 +1,37 @@
 {% extends 'base.twig' %}
+{% set is_home = true %}
+
+{% block header %}
+{% endblock %}
 
 {% block front_page_cta %}
 	<div class="site-cta">
 		<div class="contain">
-			<p>Welcome! We've got a new site and hope you like it. Email us or call when you need help: 222 222 222!</p>
+			<p>{{callout_bar}}</p>
 			<a class="site-cta-close icon-cross" href="#"></a>
 		</div>
 	</div>
 {% endblock %}
 
 {% block content %}
-	{% endblock %}
+
+	
+{# 	<div class="hero hero-video">
+		{% include 'partials/spinner.twig' %}
+		
+		<video autoplay loop class="hero-full-bkgd">
+			<source src="{{post.video}}" media="screen and (min-width: 830px)" type="video/mp4">
+		</video>
+
+		<div class="hero-wrap">
+			{% include 'partials/hero-content.twig' %}
+			<img class="home-logo" src="{{site.url}}/wp-content/themes/dijifi-theme/assets/img/content/logo.png" alt="">
+		</div> <!-- /.hero-wrap -->
+
+	</div> <!-- /.hero-video --> #}
+	<header class="site-header">
+		{% include 'headers/site_header.twig' %}	
+	</header>
+	
+	{% include 'partials/simple_content-logic.twig' %}
+{% endblock %}

@@ -19,7 +19,6 @@ body {
 
 img {
 	max-width: 100%;
-	max-height: auto;
 }
 
 ul, ol {
@@ -70,6 +69,7 @@ nav a {
 .hero {
 	position: relative;
 	overflow: hidden;
+	color: $text-light;
 }
 
 .hero-full-bkgd {
@@ -100,6 +100,11 @@ nav a {
 		}
 	}
 
+	.hero-text {
+		padding-top: $h1;
+		padding-bottom: $h1;
+	}
+
 .hero-wrap {
 	padding-top: percentage(1/3);
 
@@ -124,8 +129,6 @@ nav a {
 			}
 		}
 	}
-
-	color: $text-light;
 	
 	.page-header & {
 		background-image:

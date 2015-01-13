@@ -7,7 +7,7 @@
 
 	<body class="{{body_class}} wf-loading" data-template="base.twig" id="pageTop">
 
-		<div class="svgsprites">{% include 'partials/svg-defs.svg' %}</div>
+		{# <div class="svgsprites">{% include 'partials/svg-defs.svg' %}</div> #}
 
 		{% block front_page_cta %}
 		{% endblock %}
@@ -15,11 +15,10 @@
 		<header class="site-header" role="banner">
 			{% block header %}
 				{% include 'headers/site_header.twig' %}
+				{% include 'headers/site_header_extra.twig' %}
 			{% endblock %}	
 		</header>
-		{% include 'headers/site_header_extra.twig' %}
 		
-
 		<main id="content" class="main" role="main">
 
 			{% include 'partials/page_header-logic.twig' %}

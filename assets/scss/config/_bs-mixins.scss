@@ -55,7 +55,8 @@ $gutter:                    $h3 !default;
 %container {
   margin-right: auto;
   margin-left: auto;
-  max-width: $contain;
+  width: 90%;
+  max-width: $screen-contain;
 }
 
 // To contain a primary section of content. 

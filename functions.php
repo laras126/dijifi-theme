@@ -11,15 +11,12 @@
 
 		function __construct(){
 			add_theme_support('post-formats');
-			add_theme_support('post-thumbnails');
-
-			// update_option('thumbnail_size_w', 150);
-			// update_option('thumbnail_size_h', 150);
-			// update_option('large_size_w', 500);
-			
+			add_theme_support('post-thumbnails');			
 			add_theme_support('menus');
+
 			add_filter('timber_context', array($this, 'add_to_context'));
 			add_filter('get_twig', array($this, 'add_to_twig'));
+			
 			add_action('init', array($this, 'dfi_register_post_types'));
 			add_action('init', array($this, 'dfi_register_taxonomies'));
 			add_action('init', array($this, 'dfi_register_menus'));
@@ -39,26 +36,25 @@
 		}
 
 		function add_to_context($context){
-			// $context['foo'] = 'bar';
-			// $context['stuff'] = 'I am a value set in your functions.php file';
-			// $context['notes'] = 'These values are available everytime you call Timber::get_context();';
 
-			// TODO: figure this out. It's being printed inline at the moment, and needs to have min-widths, too.
-			// $context['fixed_image_css'] = '<style>.fixed-image{background-image:url(' . new TimberImage(content.fixed_image).src . ');}</style>';
-			
+			// Navs
 			$context['main_nav'] = new TimberMenu('main_nav');
 			$context['header_nav'] = new TimberMenu('header_nav');
 			$context['footer_nav'] = new TimberMenu('footer_nav');
 			$context['footer_nav_explore'] = new TimberMenu('footer_nav_explore');
 			
+			// ACF Options Page
+			$context['site_tagline'] = get_field('site_tagline', 'options');
+			$context['callout_bar'] = get_field('callout_bar', 'options');
+
+			// Site
 			$context['site'] = $this;
 			return $context;
 		}
 
 		function add_to_twig($twig){
-			/* this is where you can add your own fuctions to twig */
 			$twig->addExtension(new Twig_Extension_StringLoader());
-			$twig->addFilter('myfoo', new Twig_Filter_Function('myfoo'));
+			// $twig->addFilter('myfoo', new Twig_Filter_Function('myfoo'));
 			return $twig;
 		}
 
@@ -75,9 +71,6 @@
 	 ****************************
 	 */
 
-	// add_image_size( 'fixed-small', 400, 300 );
-	// add_image_size( 'fixed-med', 600, 400 );
-	// add_image_size( 'fixed-large', 1200, 800 );
 	
 
 	// Enqueue scripts
@@ -116,7 +109,6 @@
 
 	
 
-
 	// Change Title field placeholders
 	function dfi_title_placeholder_text ( $title ) {
 		if ( get_post_type() == 'dfi_service' ) {
@@ -131,7 +123,6 @@
 	add_filter( 'enter_title_here', 'dfi_title_placeholder_text' );
 
 
-	
 
 	// Customize the elements dropdown in TinyMCE
 	// http://support.advancedcustomfields.com/forums/topic/wysiwyg-formatselect/
@@ -156,9 +147,12 @@
 	add_filter( 'acf/fields/wysiwyg/toolbars' , 'dfi_acf_wysiwyg_toolbar'  );
 
 
+
 	// Include other files from lib/
 
+	// (not currently using this)
 	require('lib/widgets.php'); // Widgets
+
 
 
 	// Make custom fields work with Yoast SEO (only impacts the light, but helpful!)
@@ -185,6 +179,30 @@
 
 			remove_filter('wpseo_pre_analysis_post_content', 'add_custom_to_yoast'); // don't let WP execute this twice
 		}
+	}
+
+
+
+	// Load Gravity Forms JS in the footer...really? Sheesh.
+	// https://bjornjohansen.no/load-gravity-forms-js-in-footer
+
+	function wrap_gform_cdata_open( $content = '' ) {
+		$content = 'document.addEventListener( "DOMContentLoaded", function() { ';
+		return $content;
+	}
+	add_filter( 'gform_cdata_open', 'wrap_gform_cdata_open' );
+	
+	function wrap_gform_cdata_close( $content = '' ) {
+		$content = ' }, false );';
+		return $content;
+	}
+	add_filter( 'gform_cdata_close', 'wrap_gform_cdata_close' );
+
+
+
+	// ACF Options Page
+	if( function_exists('acf_add_options_page') ) {
+		acf_add_options_page('Theme Settings');
 	}
 	
 ?>

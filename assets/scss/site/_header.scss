@@ -6,18 +6,13 @@
 		display: block;
 	}
 
-    padding-top: $xsml;
+	padding-top: $xsml;
     background: linear-gradient(rgba($accent-dark, 0.8), rgba($accent-dark, 0));	
 	position: absolute;
 	width: 100%;
 	z-index: $ztop;
-
-	// border-bottom: $accent-border;
-
-	//TODO: BAD LARv
-	color: $text-light;
     
-    a {
+    li a {
     	color: $text-light;	
 
     	&:hover {
@@ -26,19 +21,17 @@
     }
 }
 
-.site-cta {
-
-	@include rotate($text-light, $alert-info);
-	font-family: $sans-serif;
-	padding: $xsml $sml;
-	text-align: center;
-	position: relative;
-
-	p {
+	.header-sub-tag {
+		color: $text-light;
 		@include meta;
 	}
 
-
+	
+.site-cta {
+	@include rotate($text-light, $alert-info);
+	padding: $xsml $sml;
+	text-align: center;
+	position: relative;
 }
 
 .site-cta-close {
@@ -76,15 +69,7 @@
  	// width: 100%;
  	// z-index: $ztop;
 	
-	// color: $text-light;
-
- 	a {
- 		color: $text-dark;
-
- 		&:hover {
-            color: $accent-light;
-        }
- 	}
+	// color: $text-dark;
 }	
 
 .header-brand {
@@ -97,7 +82,10 @@
 	// @include make-xs-column(4.5, false);
 	// @include make-xs-column(4, false);
 	@include meta;
-	font-size: $xsml;
+	.sml {
+	font-size: $xsml;	
+	}
+	
 	padding-left: $base;
 	padding-top: $sml/2;
 	// width: percentage(2/3);

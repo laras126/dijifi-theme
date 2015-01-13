@@ -3,7 +3,7 @@
      @include bp(med) {
         text-align: right !important; // Gahh sorry.
         
-        li {
+        .menu-item {
             margin-right: $base;
 
             display: inline-block;
@@ -25,7 +25,7 @@
     }
 
     @include bp(large) {
-        li {
+        .menu-item {
             margin-right: $h3;    
         }
     }
@@ -36,7 +36,6 @@
 
 .menu-items {
     margin: 0;
-    // padding: 0;
     text-align: center;
 
     a {
@@ -45,8 +44,6 @@
         border-bottom: 1px solid $alert-info;
         padding-top: $xsml;
         padding-bottom: $xsml;
-
-
 
         @include bp(med) {
             border-bottom: 0;
@@ -83,18 +80,7 @@
 
     &.open {
         max-height: 55em;
-
     }
-
-    .current-menu-item a {
-        color: $accent-light;
-    }
-}
-
-// TODO - bad news bears lara
-
-.current-menu-item a {
-    color: $accent-light !important;
 }
 
 .header-nav {
@@ -105,24 +91,20 @@
 .menu-main {
     @extend %horiz-menu-spacing;
     
-    a {
+    .menu-item a {
         font-weight: 700;
+        color: $text-dark;
     }
 
     margin: $sml/2 0;
 }
 
-    .subnav {
-        @include bp(med) {
-            margin-top: $sml;    
-        }
-        
+    .subnav {        
         background-color: $alert-info;
 
         a {
             font-weight: 400;
             border-color: $text-dark;
-            // @include upperspace;
         }
     }
 
@@ -156,18 +138,8 @@
     }
 }
 
-.menu-item-cta {
-    a {
-        @include bp(med) {
-            // padding-top: 0;    
-            // padding-left: $sml;
-            // padding-right: $sml;
-        }
-        
-        @include button($alert-success);
-
-
-    }
+.menu-item-cta a {
+    @include button($alert-success);
 }
 
     .header-nav li.has-subnav > a:after {
@@ -210,13 +182,13 @@
             display: block;
         }
     }
-
+    
+    text-align: center;
     border-bottom: 3px solid $alert-info;
     
     @include horizontal-list;
-
     @include rotate($bkgd: $text-dark);
-    text-align: center;
+    
 
     li {
         transition: all 0.3s ease-in-out;
@@ -333,3 +305,7 @@
         }
     }
 }
+
+
+
+

@@ -1,24 +1,23 @@
+{# This is soupy.. #}
 <div class="header-sub">
 	<div class="contain">
 		<div class="row">
 			
-		<div class="col-md-3">
-			<p class="meta">We DiJiFi your memories, and we do it well.</p>
-		</div>
-		<div class="col-md-4">
-			<nav class="header-nav-top" role="navigation">
-				<ul class="menu menu-subtle clearfix">
-					{% for item in header_nav.items %}
-						<li class="{{item.classes | join(' ')}}">
-							<a class="meta" href="{{item.link}}">{{item.title}}</a>
-						</li>
-					{% endfor %}
-				{# 	<li class="menu-item"><a href=""><span class="icon-envelope special"></span>&nbsp;info@dijifi.com</a></li>
-					<li class="menu-item"><a href=""><span class="icon-phone special"></span>&nbsp;(646)&nbsp;519-2447</a></li> #}
-				</ul>
-			</nav>
-		</div>
-	</div>
+			<div class="col-md-3">
+				<p class="header-sub-tag">{{site_tagline}}</p>
+			</div>
+			<div class="col-md-4">
+				<nav class="header-nav-top" role="navigation">
+					<ul class="menu menu-subtle clearfix">
+						{% for item in header_nav.items %}
+							<li class="{{item.classes | join(' ')}}">
+								<a class="meta" href="{{item.link}}">{{item.title}}</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</nav>
+			</div>
 
 		</div>
+	</div>
 </div>

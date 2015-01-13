@@ -44,94 +44,6 @@
                             "tabs": "all",
                             "toolbar": "text_based",
                             "media_upload": 0
-                        },
-                        {
-                            "key": "field_548af71041917",
-                            "label": "Text",
-                            "name": "cta_text",
-                            "prefix": "",
-                            "type": "text",
-                            "instructions": "Something like \"Use our estimator tool to get a detailed cost estimate of your transfer.\"",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": 140,
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
-                            "key": "field_548af71041918",
-                            "label": "Button Text",
-                            "name": "cta_btn_text",
-                            "prefix": "",
-                            "type": "text",
-                            "instructions": "No more than three words.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
-                            "key": "field_548af71041919",
-                            "label": "Link to Page",
-                            "name": "cta_link_to_page",
-                            "prefix": "",
-                            "type": "page_link",
-                            "instructions": "Select a page or service for the button to link to.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "post_type": [
-                                "page",
-                                "dfi_service"
-                            ],
-                            "taxonomy": "",
-                            "allow_null": 0,
-                            "multiple": 0
-                        },
-                        {
-                            "key": "field_548af71f4191a",
-                            "label": "Raw Link",
-                            "name": "cta_raw_link",
-                            "prefix": "",
-                            "type": "text",
-                            "instructions": "Paste a link here if it is not part of this WP install (order page).",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
                         }
                     ],
                     "min": "",
@@ -523,7 +435,30 @@
                     "name": "block_cta",
                     "label": "Call to Action",
                     "display": "row",
-                    "sub_fields": [],
+                    "sub_fields": [
+                            {
+                                "key": "field_548af71041917",
+                                "label": "Text",
+                                "name": "cta_text",
+                                "prefix": "",
+                                "type": "text",
+                                "instructions": "Something like \"Use our estimator tool to get a detailed cost estimate of your transfer.\"",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": 140,
+                                "readonly": 0,
+                                "disabled": 0
+                            }
+                        ],
                     "min": "",
                     "max": ""
                 }
@@ -561,6 +496,6 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1420674086,
+    "modified": 1421097223,
     "local": "json"
 }
