@@ -94,10 +94,11 @@ $(document).ready(function() {
 	// This jumps...will need to fix
 	 var scroll_class = 'stuck',
 		$nav = $('.content-nav'),
-		nav_ht = $nav.outerHeight(),
+		nav_ht = $nav.outerHeight()*1.5,
 		header_ht = $('.page-header').outerHeight() + $('.site-header').outerHeight(),
 		total_ht = header_ht;
   	
+
   	// (from SO link below)
   	var topMenu = $nav,
 	    topMenuHeight = topMenu.outerHeight(),
@@ -115,13 +116,14 @@ $(document).ready(function() {
 	// 1. Highlight current item
 	// 2. Slide to current section on click
 	$('.content-nav a, .top-link-bottom a').click( function() {
+
 		var hash = $(this).attr('href');
 		var $target = $(hash);
 
 		// Slide to section corresponding to clicked hash
 		$('html,body').animate({
-			scrollTop: $target.offset().top
-        }, 500);
+			scrollTop: $target.offset().top - nav_ht*1.5
+        }, 700);
 
 		return false;
 	}); // END click
@@ -134,6 +136,7 @@ $(document).ready(function() {
 
 			$nav.addClass(scroll_class);
 			$('.top-link-bottom').fadeIn(300);
+			$('.content-nav-arrow').fadeOut(300);
 
 			$('.top-link-top').css({
 				'width': '50px',
@@ -144,7 +147,8 @@ $(document).ready(function() {
 
 			$nav.removeClass(scroll_class);
 			$('.top-link-bottom').fadeOut(300);
-
+			$('.content-nav-arrow').fadeIn(300);
+			
 			$('.top-link-top').css({
 				'width': '0',
 				'opacity': '0'
@@ -160,7 +164,7 @@ $(document).ready(function() {
 
 		// Get id of current scroll item
 		var cur = scrollItems.map( function() {
-			if ( $(this).offset().top < fromTop ) {
+			if ( $(this).parent('.section-content').offset().top < fromTop ) {
 					return this;
 				}
 			});

@@ -28,11 +28,6 @@ ul, ol {
 
 
 
-//---
-// Layout
-// ---
-
-
 
 // ---
 // Typography 
@@ -145,10 +140,18 @@ nav a {
 		}
 	}
 
-	padding-bottom: $base;
+	padding-bottom: $h3;
 	@extend .clearfix;
 }
 	
+	.hero-tag-container {
+		@extend .inner;
+
+		@include bp(xl) {
+			max-width: 100%;
+		}
+	}
+
 	#headerImageLoader {
 		display: none;
 	}

@@ -179,28 +179,30 @@
     }
     
     text-align: center;
-    border-bottom: 3px solid $alert-info;
+    // border-bottom: 3px solid $alert-info;
     
     @include horizontal-list;
-    @include rotate($bkgd: $text-dark);
+    @include rotate($bkgd: $alert-info);
 
 } // .content-nav
 
     .content-nav-item {
         transition: all 0.3s ease-in-out;
-        
+
+        // Compensating for d-ib whitespace. Ew.
+        margin-left: -6px;
+    
         &:hover {
-            background-color: darken($alert-info, 20%);
+            background-color: darken($alert-info, 10%);
         }
 
         &:active {
-            background-color: darken($alert-info, 50%);
+            background-color: darken($alert-info, 20%);
         }
 
         a {
             padding: $base;
-            display: inline-block;
-
+            display: block;
             color: $text-light;
             @include meta;
             @include upperspace;
@@ -210,10 +212,10 @@
 
     .content-nav-active {
         position: relative;
-        background-color: $alert-info;
+        background-color: $text-dark;
 
         &:hover {
-            background-color: $alert-info;
+            background-color: $text-dark;
         }
 
         a {
@@ -229,7 +231,7 @@
 }
 
 .top-link-top {
-    background-color: $text-dark;
+    // background-color: $text-dark;
     // You pixel pusher, you.
 }
 
@@ -259,6 +261,27 @@
 }
 
 
+// Arrow
+
+.content-nav-arrow {
+    position: relative;
+    background: $alert-info;
+}
+
+.content-nav-arrow:after {
+    top: 100%;
+    left: 50%;
+    content: " ";
+    position: absolute;
+    pointer-events: none;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 20px 50px 0 50px;
+    border-color: $alert-info transparent transparent transparent;
+    margin-left: -50px;
+
+}
 
 
 
