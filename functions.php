@@ -48,8 +48,12 @@
 			$context['callout_tf'] = get_field('callout_tf', 'options');
 			$context['callout_bar'] = get_field('callout_bar', 'options');
 
+			$context['favicon_16_url'] = get_field('favicon_16', 'options');
+			$context['favicon_32_url'] = get_field('favicon_32', 'options');
+
 			// Site
 			$context['site'] = $this;
+			
 			return $context;
 		}
 

@@ -3,6 +3,22 @@
     "title": "Theme Settings",
     "fields": [
         {
+            "key": "field_54b57662f8b4c",
+            "label": "About",
+            "name": "",
+            "prefix": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "These options apply to elements that appear throughout the site."
+        },
+        {
             "key": "field_54b548a674aeb",
             "label": "Show Callout?",
             "name": "callout_tf",
@@ -70,6 +86,42 @@
             "maxlength": 140,
             "readonly": 0,
             "disabled": 0
+        },
+        {
+            "key": "field_54b5752652bdc",
+            "label": "Favicon (16x16)",
+            "name": "favicon_16",
+            "prefix": "",
+            "type": "image",
+            "instructions": "Upload a 16x16 png image for the site's favicon.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "full",
+            "library": "all"
+        },
+        {
+            "key": "field_54b5754952bdd",
+            "label": "Favicon (32x32)",
+            "name": "favicon_32",
+            "prefix": "",
+            "type": "image",
+            "instructions": "Upload a 32x32 png favicon image.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "full",
+            "library": "all"
         }
     ],
     "location": [
@@ -83,9 +135,9 @@
     ],
     "menu_order": 0,
     "position": "normal",
-    "style": "default",
+    "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1421166821
+    "modified": 1421178520
 }

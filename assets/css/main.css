@@ -2139,7 +2139,7 @@ nav a {
 }
 
 .hero-full-bkgd {
-  background-position: center top;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #222334;
@@ -2171,6 +2171,7 @@ nav a {
 
 .hero-wrap {
   padding-top: 33.33333%;
+  background-image: radial-gradient(ellipse at 20% center, rgba(34, 35, 52, 0) 0, #222334);
   padding-bottom: 1.2rem;
 }
 @media (min-width: 68em) {
@@ -2184,7 +2185,6 @@ nav a {
   }
 }
 .page-header .hero-wrap {
-  background-image: radial-gradient(ellipse at 20% center, rgba(34, 35, 52, 0) 0, #222334);
   padding-top: 3.6rem;
 }
 @media (min-width: 34em) {
@@ -2198,11 +2198,6 @@ nav a {
   }
   .home .page-header .hero-wrap {
     padding-top: 26.66667%;
-  }
-}
-@media (min-width: 68em) {
-  .hero-wrap {
-    background-image: radial-gradient(ellipse at 20% center, rgba(34, 35, 52, 0) 0, #222334);
   }
 }
 
