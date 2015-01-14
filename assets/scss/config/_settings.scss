@@ -42,8 +42,8 @@ $accent-light:		$yellow;
 $accent-med:		$newgreen;
 $accent-dark:		$navy;
 
-$alert-danger: 		$dred;
-$alert-warning: 	$orange;
+$alert-danger: 		lighten($dred, 40%);
+$alert-warning: 	$accent-light;
 $alert-info: 		$blue;
 $alert-success: 	$accent-med;
 

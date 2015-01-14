@@ -1,5 +1,5 @@
 .header-sub {
-
+	
 	display: none;
 
 	@include bp(med) {
@@ -25,6 +25,7 @@
 		@include make-md-column(3);
 		color: $text-light;
 		@include meta;
+		padding-top: 5px;
 	}
 
 	.header-nav-top {

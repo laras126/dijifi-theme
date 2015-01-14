@@ -98,6 +98,10 @@ nav a {
     .menu-item a {
         font-weight: 700;
         color: $text-dark;
+
+        &:hover {
+            color: $accent-light;
+        }
     }
 
     margin: $sml/2 0;
@@ -109,6 +113,14 @@ nav a {
 
 .menu-subtle {
     @extend %horiz-menu-spacing;
+
+    .menu-item {
+        margin-right: $h4;
+    }
+
+    .special {
+        color: $alert-success;
+    }
 }
 
 

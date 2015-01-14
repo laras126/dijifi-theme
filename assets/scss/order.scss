@@ -8,16 +8,31 @@
 @import 'site/footer';
 @import 'site/nav';
 
+// @import 'blocks/block-cta';
+
 @import 'utility'; // For prototyping and should not be used in production
 @import 'holding'; // Styles that need to be removed and handled differently
 
 @import 'main-new';
 
+body {
+	background-color: #f9f9f9;
+}
+
+.header-sub {
+	background-color: $alert-info;
+	background-image: none;
+	position: relative;
+}
 
 .wrapper,
 #wrapper {
 	width: 900px;
 	@include clearfix;
+	background-color: $body-bkgd;
+	padding: 0 20px;
+	margin: 20px auto;
+	box-sizing: content-box;
 }
 
 .order-page {
@@ -50,21 +65,35 @@ h1 {
 	width: 100%;
 	clear: both;
 	margin: $sml auto $sml auto;
-	background-color: $accent-vlight;
+	background-color: $table-rotate;
 	margin-bottom: $base;
 	font-family: $sans-serif;
+	font-size: 16px;
+	line-height: $line-height-base;
+}
+
+.error-quantity,
+.quantity-base {
+	font-size: 14px;
+}
+
+.error-input {
+	background-color: $alert-danger;
+	color: $text-dark;
 }
 
 .error-quantity {
-	font-size: 14px;
+	background: transparent;
+	color: $dred;
+	font-weight: 700;
+	margin: 0;
 }
 
 #questions .order-full-txt-alert2 {
 	margin-bottom: 0;
 }
 
-.required,
-.error-input {
+.required {
 	background-color: $accent-vlight;
 }
 
@@ -72,15 +101,23 @@ h1 {
 	text-align: center;
 }
 
+.qualities {
+	font-size: 13px;
+}
+
 input[type="radio"],
 input[type="checkbox"] {
 	width: 15px;
 	height: 15px;
-	margin-top: 0;
+	margin: -4px 14px 0 2px;
+}
+
+.order-table input[type=radio] {
+	margin: -4px 14px 0 8px;
 }
 
 input[type="submit"],
-.order-table input[type=submit] {
+.order-table input[type="submit"] {
 	@extend .btn-success;
 	height: auto;
 }
@@ -106,6 +143,10 @@ input[type="submit"],
 .purchase {
 	width: 100%;
 	margin-top: 14px;
+
+	input[type="text"] {
+		margin-top: 0;
+	}
 }
 
 #total {
@@ -159,6 +200,7 @@ textarea {
 	background: none;
 	border-bottom: $accent-border;
 	color: $text-dark;
+	width: 100%;
 }
 
 .section {
@@ -171,7 +213,7 @@ textarea {
 .header {
 	@include clearfix;
 	margin-bottom: $base;
-	padding: $sml;
+	// padding: 0;
 	border-bottom: 2px solid $accent-med;
 	background-color: $accent-dark;
 }
@@ -184,81 +226,6 @@ textarea {
 
 
 } // END .order-page
-
-
-
-
-
-
-
-// ----
-// Advisor
-// ----
-
-
-#resResults {
-	display: none;
-}
-
-
-
-.panel {
-	position: relative;
-	padding: 0;
-	border: 0;
-	margin-bottom: $base;
-	// background-color: $accent-vlight;
-
-	&:nth-child(2n) {
-		// background-color: lighten($accent-med, 25%);
-
-		.arrow-down {
-			border-top-color: lighten($accent-med, 25%);
-		}
-	}
-	// margin-bottom: $base;
-
-	input[type="radio"] {
-		opacity: 0;
-		width: 100%;
-		position: absolute;
-		vertical-align: middle;
-		padding: $base;
-		z-index: -1;
-	}
-
-	label {
-		cursor: pointer;
-		@extend .btn-cta;
-		font-weight: normal;
-	}
-}
-
-	.results {
-		// background-color: $body-bkgd;
-	}
-
-	.panel-title {
-		// text-align: center;
-		margin-bottom: $base;
-		// font-weight: normal;
-	}
-
-.choices-list {
-	list-style: none;
-	// text-align: center;
-
-	:checked+label {
-		background-color: $alert-success;
-	}
-
-	li {
-		display: inline-block;
-		position: relative;
-		margin: $sml;
-
-	}
-}
 
 
 // Status Page
@@ -277,31 +244,41 @@ textarea {
 		color: $text-dark;
 	}
 	
-	input[type=submit] {
+	input[type="submit"] {
 		width: auto;
 	}
 
-	input[type=text] {
-		width: 350px;
+	input[type="text"],
+	input[type="password"] {
+		width: 400px;
 		margin-left: 0;
 		height: 40px;
 	}
+
+	textarea,
+	select {
+		margin-left: 0;
+	}
 }
 
-.sum-table tr:nth-child(even) {
-	background-color: $table-rotate;
+.sum-table tr {
+	&:nth-child(even) {
+		background-color: transparent;
+	}
+	border-bottom: 1px solid $text-medlight;
 }
 
 .sum-table-right {
 	@include upperspace;
 	width: 50%;
-
+	color: $alert-info;
 }
 
 #order-summary {
+	width: 100%;
 	h1 {
 		font-size: $h3;
-		border-bottom: $accent-border;
+		// border-bottom: $accent-border;
 	}
 
 	table {
@@ -310,8 +287,8 @@ textarea {
 }
 
 #column-1 h3 {
-	font-size: $base;
-	margin-top: 0;
+	@include meta;
+	font-weight: normal;
 	margin-bottom: $h4;
 }
 
@@ -320,16 +297,20 @@ textarea {
 }
 
 th {
-	background-color: $accent-vlight;
+	background-color: transparent;
 	border-color: $text-medlight;
 	color: $text-dark;
+	text-align: left;
 }
 
 .sum-dark {
-	border-top: 3px solid $text-light;
+	border-bottom: 3px solid $accent-med;
 	@include rotate($text-light, $accent-dark);
 }
 
+.sum-total {
+	font-size: 20px;
+}
 
 .totals tr,
 .totals td,
@@ -343,4 +324,132 @@ th {
 .sum-grand {
 	width: 75%;
 	text-align: right !important;
+}
+
+.sum-table {
+	.grey,
+	.sum-total {
+		background-color: transparent;
+	}
+}
+
+
+// Login
+
+#order-status {
+	h1 {
+		margin-top: $h4;
+		margin-bottom: $h3;
+	}
+	padding-top: 0;
+}
+
+.status-table {
+	background-color: transparent;
+
+	input[type="submit"] {
+		font-size: 20px;
+	}
+
+	input[type="text"],
+	input[type="password"] {
+		width: 250px;
+		height: 40px;
+		margin-left: 0;
+	}
+
+	td {
+		padding-right: 0;
+	}
+}
+
+
+
+
+
+
+// ----
+// Advisor
+// ----
+
+
+#advResults {
+	display: none;
+}
+
+.adv-closed {
+	display: none;
+}
+
+.adv-active {
+	background-color: $accent-vlight;
+}
+
+.adv-panel {
+	position: relative;
+	padding: 0;
+	border: 0;
+	margin-bottom: $base;
+	margin-top: $base;
+	border-top: 3px solid $alert-info;
+	padding: $sml;
+
+	input[type="radio"] {
+		opacity: 0;
+		width: 100%;
+		position: absolute;
+		vertical-align: middle;
+		padding: $base;
+		z-index: -1;
+	}
+
+	label {
+		cursor: pointer;
+		@extend .btn-cta;
+		font-weight: normal;
+	}
+}
+
+	.adv-results {
+		// background-color: $body-bkgd;
+	}
+
+	.adv-panel-title {
+		// text-align: center;
+		// margin-bottom: $base;
+		// font-weight: normal;
+		text-align: center;
+		font-size: $base;
+	}
+
+.adv-choices-list {
+	list-style: none;
+	text-align: center;
+
+	:checked+label {
+		background-color: $alert-success;
+	}
+
+	li {
+		display: inline-block;
+		position: relative;
+		margin: $sml;
+
+		label {
+			@include meta;
+		}
+
+		.icon {
+			font-size: $h4;
+			display: block;
+		}
+	}
+
+}
+
+
+// Pseudogrid
+
+.half {
+	@include make-xs-column(3.5);
 }
