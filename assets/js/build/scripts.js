@@ -49,7 +49,8 @@ $(document).ready(function() {
 	// Plugins
 
 	$('.lazy').show().lazyload({
-		effect : 'fadeIn'
+		effect : 'fadeIn',
+		threshold : 200
 
 	}).css('background', 'none'); // Am I lazy for using this?
 

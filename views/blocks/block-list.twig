@@ -25,7 +25,7 @@
 			<li>
 				<div class="item-support">
 					{% if item.image %}
-						<img class="lazy" data-original="{{TimberImage(item.image).src('medium')}}" alt="{{item.post_title}}" alt="{{item.post_title}}"/>
+						<img class="lazy" data-original="{{TimberImage(item.image).src('medium')}}" src="{{site.theme.link}}/assets/img/util/loader.gif" width="300" height="auto" alt="{{item.post_title}}" alt="{{item.post_title}}"/>
 						<noscript><img src="{{TimberImage(item.image).src('medium')}}" alt="{{m.title}}" height="200" width="200"></noscript>
 					{% endif %}
 				</div>
