@@ -15,6 +15,11 @@
 		text-shadow: 2px 1px 1px $text-dark;
 	}
 
+	.page-tagline {
+		font-family: $lead-font;
+		@include font-size(h4);
+	}
+
 
 .page-body {
 	position: relative;

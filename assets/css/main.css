@@ -1250,15 +1250,6 @@ ul, ol {
   font-size: 1.56rem;
 }
 
-.page-tagline {
-  font-family: "source-sans-pro", "Helvetica", serif;
-  font-size: 1.56rem;
-}
-
-nav a {
-  font-family: "source-sans-pro", "Helvetica", serif;
-}
-
 .hero {
   position: relative;
   overflow: hidden;
@@ -1347,6 +1338,10 @@ nav a {
   position: absolute;
   top: 25%;
   left: 25%;
+}
+
+nav a {
+  font-family: "source-sans-pro", "Helvetica", serif;
 }
 
 @media (min-width: 53em) {
@@ -1798,6 +1793,11 @@ nav a {
   .page-title {
     font-size: 5.4rem;
   }
+}
+
+.page-tagline {
+  font-family: "source-sans-pro", "Helvetica", serif;
+  font-size: 1.56rem;
 }
 
 .page-body {

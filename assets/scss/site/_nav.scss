@@ -1,4 +1,8 @@
 
+nav a {
+    font-family: $nav-font;
+}
+
 %horiz-menu-spacing {
      @include bp(med) {
         text-align: right !important; // Gahh sorry.
