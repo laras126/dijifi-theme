@@ -4,7 +4,7 @@
 	{% if blck.text_format == 'caption'%}
 		<figure>			
 			<figcaption class="caption meta">{{blck.caption}}</figcaption>
-			<img wsrc="{{site.theme.link}}/assets/img/util/loader.gif" width="800" height="auto" class="lazy caption-image" data-original="{{TimberImage(blck.image).src|resize(800)}}" alt="">
+			<img src="{{site.theme.link}}/assets/img/util/loader.gif" width="800" height="auto" class="lazy caption-image" data-original="{{TimberImage(blck.image).src|resize(800)}}" alt="">
 			<noscript><img src="{{TimberImage(blck.image).src|resize(800)}}" alt="{{item.post_title}}" width="800"></noscript>
 		</figure>
 	{% elseif blck.text_format == 'paragraph'%}
