@@ -1,7 +1,51 @@
 {
     "key": "group_54b843e095d4c",
-    "title": "Homepage Services",
+    "title": "Homepage Content",
     "fields": [
+        {
+            "key": "field_54b84ee29a6c8",
+            "label": "Services Subheader",
+            "name": "services_subheader",
+            "prefix": "",
+            "type": "text",
+            "instructions": "A catchy, intro title like \"How can we help you?\".",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_54b84ef89a6c9",
+            "label": "Services Lead",
+            "name": "services_lead",
+            "prefix": "",
+            "type": "textarea",
+            "instructions": "A sentence introducing the services below:",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": "br",
+            "readonly": 0,
+            "disabled": 0
+        },
         {
             "key": "field_54b843eda5e2e",
             "label": "Homepage Services",
@@ -105,6 +149,28 @@
                     "multiple": 0
                 }
             ]
+        },
+        {
+            "key": "field_54b850154d097",
+            "label": "Questions Prompt",
+            "name": "questions_prompt",
+            "prefix": "",
+            "type": "text",
+            "instructions": "The text displaying below the \"Questions? (646) 519-2447\".",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
         }
     ],
     "location": [
@@ -137,5 +203,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1421362643
+    "modified": 1421365386
 }

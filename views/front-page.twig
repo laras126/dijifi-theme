@@ -23,10 +23,8 @@
 
 		<div class="contain">
 			<div class="inner-squish">
-				<h3>How can we help you?</h3>
-				<p class="lead">We transfer a large variety of media. Click below to see details:</p>
-				<br>
-				<br>
+				<h3>{{post.services_subheader}}</h3>
+				<p class="lead">{{post.services_lead}}</p>
 			</div>
 
 			<ul class="list list-major list-home list-{{service_list|length}}">
@@ -42,57 +40,22 @@
 						<h5 class="item-title">{{service.service_name}}</h5>
 						<p>{{service.service_description}}</p>
 					</div>
-					</a>
+						</a>
 				</li>
 			{% endfor %}
 				
 		</ul> <!-- /.list-home -->
-			
-			{# <div class="row text-center">
-				<div class="fourth">
-					<img src="http://dfi.local/wp_main/wp-content/uploads/2015/01/photo-montage.jpg" alt="">
 
-					<h5>Photo</h5>
-					<br>
-					<p class="meta">Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper.</p>
-					<div class="link-more">Read more</div>
-
-				</div>
-				<div class="fourth">
-					<img src="http://dfi.local/wp_main/wp-content/uploads/2015/01/video.png" alt="">
-
-					<h5>Video</h5>
-					<br>
-					<p class="meta">Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper.</p>
-					<div class="link-more">Read more</div>
-
-				</div>
-				<div class="fourth">
-					<img src="http://dfi.local/wp_main/wp-content/uploads/2015/01/film.png" alt="">
-					<h5>Film</h5>
-					<br>
-					<p class="meta">Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper.</p>
-					<div class="link-more">Read more</div>
-
-				</div>
-				<div class="fourth">
-					<img src="http://dfi.local/wp_main/wp-content/uploads/2015/01/tape-hand.png" alt="">
-					<h5>Audio</h5>
-					<br>
-					<p class="meta">From standard vinyl and casettes to rare things, we've got your audio trasfer needs covered.</p>
-					<div class="link-more">Read more</div>
-				</div>
-			</div>
-		</div> #}
 	</div>
-		{% include 'partials/simple_content-logic.twig' %}
+	
+	{% include 'partials/simple_content-logic.twig' %}
 		
-		{# <div class="block block-cta text-center rotate-dark">
-			<br>
-			<h1>Questions? <span class="special">(123) 111-2222</span></h1>
-			<p class="lead lead-cta">We are happy to chat. Call anytime between 10-6 Mon-Fri.</p>
-			<br>
-			<br>
-		</div> #}
+	<div class="block block-cta text-center section-content">
+		<br>
+		<h1>Questions? <span class="special">(123) 111-2222</span></h1>
+		<p class="lead lead-cta">{{post.questions_prompt}}</p>
+		<br>
+		<br>
+	</div>
 
 {% endblock %}
