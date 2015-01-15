@@ -449,7 +449,7 @@ input[type="tel"] {
   font-family: "source-sans-pro", "Helvetica", serif;
 }
 
-@media (min-width: 68em) {
+@media (min-width: 1088px) {
   .hide-after-lg {
     display: none;
   }
@@ -564,12 +564,12 @@ input[type="tel"] {
     width: 100%;
   }
 }
-@media (min-width: 68em) {
+@media (min-width: 1088px) {
   .inner, .hero-tag-container, .list-minor {
     width: 71.42857%;
   }
 }
-@media (min-width: 68em) {
+@media (min-width: 1088px) {
   .inner, .hero-tag-container, .list-minor {
     margin-left: 14.28571%;
   }
@@ -591,12 +591,12 @@ input[type="tel"] {
     margin-left: 7.14286%;
   }
 }
-@media (min-width: 68em) {
+@media (min-width: 1088px) {
   .inner-squish {
     width: 57.14286%;
   }
 }
-@media (min-width: 68em) {
+@media (min-width: 1088px) {
   .inner-squish {
     margin-left: 21.42857%;
   }
@@ -1095,7 +1095,7 @@ th:last-child {
   right: calc(50% - 20px);
   z-index: 4;
 }
-@media (min-width: 68em) {
+@media (min-width: 1088px) {
   .spinner {
     display: block;
   }
@@ -1278,7 +1278,7 @@ ul, ol {
   min-width: 100%;
   min-height: 100%;
 }
-@media (min-width: 68em) {
+@media (min-width: 1088px) {
   .hero-video video {
     display: block;
   }
@@ -1292,7 +1292,7 @@ ul, ol {
 .hero-video-placeholder {
   opacity: 0;
 }
-@media (min-width: 68em) {
+@media (min-width: 1088px) {
   .hero-video-placeholder {
     opacity: 1;
   }
@@ -1308,7 +1308,7 @@ ul, ol {
   background-image: radial-gradient(ellipse at 20% center, rgba(34, 35, 52, 0) 0, #222334);
   padding-bottom: 2.4rem;
 }
-@media (min-width: 68em) {
+@media (min-width: 1088px) {
   .hero-wrap {
     padding-top: 50%;
   }
@@ -1375,7 +1375,7 @@ nav a {
     border-bottom: none;
   }
 }
-@media (min-width: 68em) {
+@media (min-width: 1088px) {
   .menu-main .menu-item, .menu-subtle .menu-item {
     margin-right: 2.4rem;
   }
@@ -1627,7 +1627,7 @@ nav a {
   display: block;
   margin: 0 auto;
 }
-@media (min-width: 68em) {
+@media (min-width: 1088px) {
   .top-link-bottom {
     opacity: 0;
   }
@@ -2111,17 +2111,17 @@ figure {
   padding-top: 0.72rem;
   padding-bottom: 0.9rem;
 }
-@media (min-width: 68em) {
+@media (min-width: 1088px) {
   .caption {
     text-align: left;
   }
 }
-@media (min-width: 68em) {
+@media (min-width: 1088px) {
   .caption {
     width: 21.42857%;
   }
 }
-@media (min-width: 68em) {
+@media (min-width: 1088px) {
   .caption {
     float: left;
     border-bottom: none;
@@ -2134,7 +2134,7 @@ img.caption-image {
   position: relative;
   border-top: 1px solid #80C25D;
 }
-@media (min-width: 68em) {
+@media (min-width: 1088px) {
   img.caption-image {
     width: 78.57143%;
   }
@@ -2161,7 +2161,7 @@ img.caption-image {
     margin-left: -14.28571%;
   }
 }
-@media (min-width: 68em) {
+@media (min-width: 1088px) {
   .textimage-image {
     margin-left: -28.57143%;
   }
