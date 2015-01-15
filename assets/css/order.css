@@ -1782,6 +1782,7 @@ nav a {
 }
 .content-nav {
   text-align: center;
+  margin-top: -5px;
   background-color: #3C7AAA;
   color: #ffffff;
 }
@@ -1885,7 +1886,7 @@ nav a {
   height: 0px;
   border-style: solid;
   border-width: 20px 50px 0 50px;
-  border-color: #3C7AAA transparent transparent transparent;
+  border-color: #2f5f84 transparent transparent transparent;
   margin-left: -50px;
 }
 

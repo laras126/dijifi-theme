@@ -7,16 +7,16 @@
 
 	<body class="{{body_class}} wf-loading" data-template="base.twig" id="pageTop">
 
-		{% if callout_tf == true %}
-			<aside class="site-cta">
-				<div class="contain">
-					<p>{{callout_bar}}</p>
-					<a class="site-cta-close icon-cancel" href="#"></a>
-				</div>
-			</aside>
-		{% endif %}
-
 		<header class="site-header" role="banner">
+			{% if callout_tf == true %}
+				<div class="site-cta">
+					<div class="contain">
+						<p>{{callout_bar}}</p>
+						<a class="site-cta-close icon-cancel" href="#"></a>
+					</div>
+				</div>
+			{% endif %}
+
 			{% block header %}
 				{% include 'headers/site_header.twig' %}
 				{% include 'headers/site_header_sub.twig' %}

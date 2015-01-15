@@ -77,24 +77,26 @@ $(document).ready(function() {
 	
 
 
-	// Fade in video header when loaded
+	// If there are videos, load them nicely
     // Thx: http://atomicrobotdesign.com/blog/web-development/check-when-an-html5-video-has-loaded/
-    window.addEventListener('load', function() {
-        var video = document.querySelector('.hero-video video');
-        var preloader = document.querySelector('.spinner');
 
-        function checkLoad() {
-            if (video.readyState === 4) {
-                console.log('loaded');
-                $('.spinner').fadeOut(300);
-                $('.hero-video video').fadeIn(300);
-            } else {
-                setTimeout(checkLoad, 100);
-            }
-        }
+    if( $('video').length ) {
+	    window.addEventListener('load', function() {
+	        var video = document.querySelector('.hero-video video');
+	        var preloader = document.querySelector('.spinner');
 
-        checkLoad();
-    }, false);
+	        function checkLoad() {
+	            if (video.readyState === 4) {
+	                console.log('loaded');
+	                $('.spinner').fadeOut(300);
+	                $('.hero-video video').fadeIn(300);
+	            } else {
+	                setTimeout(checkLoad, 100);
+	            }
+	        }
+	        checkLoad();
+	    }, false);
+    }
 
 
 
@@ -190,6 +192,9 @@ $(document).ready(function() {
 			.end().filter("[href=#"+id+"]").parent().addClass('content-nav-active');
 	
 	}); // END scroll
+
+
+
 
 
 

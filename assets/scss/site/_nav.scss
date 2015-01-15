@@ -195,7 +195,7 @@ nav a {
     }
     
     text-align: center;
-    // border-bottom: 3px solid $alert-info;
+    margin-top: -5px;
     
     @include horizontal-list;
     @include rotate($bkgd: $alert-info);
@@ -294,7 +294,7 @@ nav a {
     height: 0px;
     border-style: solid;
     border-width: 20px 50px 0 50px;
-    border-color: $alert-info transparent transparent transparent;
+    border-color: darken($alert-info, 10%) transparent transparent transparent;
     margin-left: -50px;
 
 }
