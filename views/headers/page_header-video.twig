@@ -2,10 +2,13 @@
 
 {% block content %}
 
-<div class="hero hero-video">
+<div class="hero hero-video hero-video-placeholder hero-full-bkgd">
+
+	<img id="headerImageLoader" src="{{TimberImage(post.video_placeholder).src}}" alt="Header Image">
+
 	{% include 'partials/spinner.twig' %}
 	
-	<video preload="auto" autoplay="true" loop class="hero-full-bkgd">
+	<video preload="auto" autoplay="true" loop>
 		<source src="{{post.video}}" media="screen and (min-width: 830px)" type="video/mp4">
 	</video>
 
@@ -16,5 +19,7 @@
 	</div> <!-- /.hero-wrap -->
 
 </div> <!-- /.hero-video -->
+
+
 
 {% endblock %}

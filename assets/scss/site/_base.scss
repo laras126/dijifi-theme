@@ -72,23 +72,29 @@ ul, ol {
 	.hero-video {
 		video {
 			display: none;
+			opacity: 0;
 			top: 0;
 			left: 0;
 			position: absolute;
 			min-width: 100%;
 			min-height: 100%;
+
+			@include bp(large) {
+				display: block;
+			}
 		}
 	}
 
 	.hero-image {
 		opacity: 0;
 		width: 100%;
+	}
 
+	.hero-video-placeholder {
+		opacity: 0;
 		@include bp(large) {
-			// background-attachment: fixed;
-			background-position: center;
+			opacity: 1;
 		}
-
 	}
 
 	.hero-text {

@@ -1,6 +1,12 @@
 // http://tobiasahlin.com/spinkit/
 
 .spinner {
+  display: none;
+  
+  @include bp(large) {
+    display: block;
+  }
+
   margin: 100px auto;
   width: 20px;
   height: 20px;
