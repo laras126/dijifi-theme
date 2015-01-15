@@ -48,7 +48,7 @@ $(document).ready(function() {
 
 	// Header image spinner (with imagesloaded)
 
-	var $hero = $('.hero-image');
+	var $hero = $('.hero-image:not(.hero-video-placeholder)');
 	
 	$hero.each( function() {
 		var $image = $(this).find('#headerImageLoader'),
@@ -60,12 +60,7 @@ $(document).ready(function() {
 			$t.fadeTo(200, 0.5, function() {
 			    
 			    // Don't add the background image for large video headers
-				if( $t.hasClass('.hero-video-placeholder')) {
-			    	$t.css('background', 'none');
-			    	console.log('hi');
-				} else {
-					$t.css('background-image', 'url(\'' + imageSrc + '\')');
-				}
+				$t.css('background-image', 'url(\'' + imageSrc + '\')');
 
 			}).fadeTo(600, 1);
 
@@ -76,19 +71,19 @@ $(document).ready(function() {
 	
 
 	$('.hero-video-placeholder').each( function() {
-		if( $(window).width() < 1088) {
+		if( $(window).width() < 1087) {
 
-			var $image = $(this).find('#headerImageLoader'),
-				$t = $(this),
-				imageSrc = $image.attr('src');
+			var $v_image = $(this).find('#headerImageLoader'),
+				$v_t = $(this),
+				v_imageSrc = $v_image.attr('src');
 		
-			$t.imagesLoaded( function() {
+			$v_t.imagesLoaded( function() {
 
-				$t.fadeTo(200, 0.5, function() {
-					$t.css('background-image', 'url(\'' + imageSrc + '\')');
+				$v_t.fadeTo(200, 0.5, function() {
+					$v_t.css('background-image', 'url(\'' + v_imageSrc + '\')');
 				}).fadeTo(600, 1);
 
-				$t.find('.spinner').hide();
+				$v_t.find('.spinner').hide();
 				
 			});
 
@@ -111,7 +106,7 @@ $(document).ready(function() {
 	                $('.spinner').fadeOut(300);
 	                $('.hero-video video').animate({
 	                	'opacity': 1
-	                }, 300);
+	                }, 400);
 	            } else {
 	                setTimeout(checkLoad, 100);
 	            }

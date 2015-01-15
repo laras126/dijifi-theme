@@ -8,18 +8,24 @@
 
 	{% include 'partials/spinner.twig' %}
 	
-	<video preload="auto" autoplay="true" loop>
-		<source src="{{post.video}}" media="screen and (min-width: 830px)" type="video/mp4">
+	<video preload="auto" autoplay loop>
+		<source src="{{post.video}}" type="video/mp4">
 	</video>
 
     {% include 'partials/spinner.twig' %}
 
 	<div class="hero-wrap">
-		{% include 'partials/hero-content.twig' %}
+		{# {% include 'partials/hero-content.twig' %} #}
+		<div class="contain">
+			<div class="inner">
+				<h2>Digitize once, digitize well.</h2>
+				<p class="page-tagline">The highest quality consumer and archival digitization. Do it the right way, the first time.</p>	
+				<br><br>
+				
+			</div>
+		</div>
 	</div> <!-- /.hero-wrap -->
-
+	
 </div> <!-- /.hero-video -->
-
-
 
 {% endblock %}

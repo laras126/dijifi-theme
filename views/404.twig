@@ -3,18 +3,38 @@
 
 {% block content %}
 	<header class="page-header" id="pageTop">
-		<div class="hero">
-			
-			<div class="hero-wrap">
-				<h1 class="page-title">Whoopsie.</h1>
-				<p class="page-tagline">Page not found!</p>
-			</div> <!-- /.hero-wrap -->
+		<div class="hero hero-image hero-full-bkgd" style="background-image: url(http://dfi.nlstage.co/wp_main/wp-content/uploads/2015/01/404.jpg);">
+		{% set fixed_image = true %}
 
-		</div> <!-- /.hero-image -->
+	<div class="hero hero-image hero-full-bkgd">
+		
+		{% include 'partials/spinner.twig' %}
+		
+		<img id="headerImageLoader" src="http://dfi.nlstage.co/wp_main/wp-content/uploads/2015/01/404.jpg" alt="Header Image">
+		<noscript><img src="{{TimberImage(content.fixed_image).src}}" alt="Header Image"></noscript>
+		
+		<div class="hero-wrap">
+			<h1 class="page-title">404</h1>
+			<p class="page-tagline">Page not found!</p>
+		</div> <!-- /.fixed-wrap -->
+				
+	</div> <!-- /.hero-image -->
 
 	</header>
 
 	<section class="section-content">
-		
+		<header class="section-header">
+
+			<div class="contain">
+				<div class="inner-squish">
+					
+					<h3 class="section-title">Whoops!</h3>
+					<p class="lead">What you're looking for doesn't exist.</p>
+					<p>This might be our bad, or the URL may have been entered incorrectly. In any case, feel free to <a href="{{site.url}}/contact}}">get in touch</a> and report the error!</p>
+
+				</div>
+			</div>
+
+		</header> <!-- /.section-header -->
 	</section>
 {% endblock %}

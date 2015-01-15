@@ -110,6 +110,8 @@ ul, ol {
 		rgba($text-dark, 0) 0,
 		$text-dark
     );
+    position: relative;
+    z-index: $zmid;
 
 	@include bp(large) {
 		padding-top: percentage(1.5/3);
@@ -130,7 +132,7 @@ ul, ol {
 			padding-top: percentage(0.4/3);
 
 			.home & {
-				padding-top: percentage(0.8/3);
+				padding-top: percentage(0.6/3);
 			}
 		}
 	}

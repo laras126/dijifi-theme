@@ -1,10 +1,6 @@
 {% extends 'base.twig' %}
 {% set is_home = true %}
 
-{% block header %}
-{% endblock %}
-
-
 {% block content %}
 
 	
@@ -21,9 +17,82 @@
 		</div> <!-- /.hero-wrap -->
 
 	</div> <!-- /.hero-video --> #}
-	<header class="site-header">
-		{% include 'headers/site_header.twig' %}	
-	</header>
+	{# {% include 'partials/simple_content-logic.twig' %} #}
 	
-	{% include 'partials/simple_content-logic.twig' %}
+	{% set service_list = post.get_field('homepage_services') %}
+
+		<div class="contain">
+			<div class="inner-squish">
+				<h3>How can we help you?</h3>
+				<p class="lead">We transfer a large variety of media. Click below to see details:</p>
+				<br>
+				<br>
+			</div>
+
+			<ul class="list list-major list-home list-{{service_list|length}}">
+
+			{% for service in service_list %}
+				<li>
+					<a href="{{service.linked_service.link}}" title="{{service.service_name}}">
+					<div class="item-support">
+						<img class="lazy" data-original="{{TimberImage(service.service_image).src('medium')}}" src="{{site.theme.link}}/assets/img/util/loader.gif" width="300" height="auto" alt="{{item.service_name}}" alt="{{item.post_title}}"/>
+						<noscript><img src="{{TimberImage(service.service_image).src('medium')}}" alt="{{item.service_name}}" height="300" width="300"></noscript>
+					</div>
+					<div class="item-main">
+						<h5 class="item-title">{{service.service_name}}</h5>
+						<p>{{service.service_description}}</p>
+					</div>
+					</a>
+				</li>
+			{% endfor %}
+				
+		</ul> <!-- /.list-home -->
+			
+			{# <div class="row text-center">
+				<div class="fourth">
+					<img src="http://dfi.local/wp_main/wp-content/uploads/2015/01/photo-montage.jpg" alt="">
+
+					<h5>Photo</h5>
+					<br>
+					<p class="meta">Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper.</p>
+					<div class="link-more">Read more</div>
+
+				</div>
+				<div class="fourth">
+					<img src="http://dfi.local/wp_main/wp-content/uploads/2015/01/video.png" alt="">
+
+					<h5>Video</h5>
+					<br>
+					<p class="meta">Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper.</p>
+					<div class="link-more">Read more</div>
+
+				</div>
+				<div class="fourth">
+					<img src="http://dfi.local/wp_main/wp-content/uploads/2015/01/film.png" alt="">
+					<h5>Film</h5>
+					<br>
+					<p class="meta">Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper.</p>
+					<div class="link-more">Read more</div>
+
+				</div>
+				<div class="fourth">
+					<img src="http://dfi.local/wp_main/wp-content/uploads/2015/01/tape-hand.png" alt="">
+					<h5>Audio</h5>
+					<br>
+					<p class="meta">From standard vinyl and casettes to rare things, we've got your audio trasfer needs covered.</p>
+					<div class="link-more">Read more</div>
+				</div>
+			</div>
+		</div> #}
+	</div>
+		{% include 'partials/simple_content-logic.twig' %}
+		
+		{# <div class="block block-cta text-center rotate-dark">
+			<br>
+			<h1>Questions? <span class="special">(123) 111-2222</span></h1>
+			<p class="lead lead-cta">We are happy to chat. Call anytime between 10-6 Mon-Fri.</p>
+			<br>
+			<br>
+		</div> #}
+
 {% endblock %}
