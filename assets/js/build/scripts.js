@@ -114,7 +114,7 @@ $(document).ready(function() {
 
 	// 1. Highlight current item
 	// 2. Slide to current section on click
-	$('.content-nav a, .top-link-bottom a').click( function() {
+	$('.content-nav a').not('.directional-icon').click( function() {
 
 		var hash = $(this).attr('href');
 		var $target = $(hash + ' .section-title');
@@ -126,6 +126,19 @@ $(document).ready(function() {
 
 		return false;
 	}); // END click
+
+	$('.top-link a').click( function() {
+		var hash = $('#pageTop');
+		var $target = $(hash);
+
+		// Slide to section corresponding to clicked hash
+		$('html,body').animate({
+			scrollTop: $target.offset().top
+        }, 700);
+
+        return false;
+
+	});
 
 
 
