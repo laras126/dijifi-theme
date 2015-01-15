@@ -1089,12 +1089,10 @@ th:last-child {
   width: 20px;
   height: 20px;
   position: absolute;
-  top: 30%;
-  right: 48%;
+  top: 25%;
+  right: 50%;
   right: calc(50% - 20px);
-}
-.no-js .spinner {
-  display: none;
+  z-index: 4;
 }
 
 .container1 > div, .container2 > div, .container3 > div {
@@ -1266,6 +1264,7 @@ ul, ol {
 }
 
 .hero-video video {
+  display: none;
   top: 0;
   left: 0;
   position: absolute;
