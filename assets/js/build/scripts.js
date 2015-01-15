@@ -112,26 +112,12 @@ $(document).ready(function() {
 		total_ht = header_ht;
   	
 
-  	// (from SO link below)
-  	var topMenu = $nav,
-	    topMenuHeight = topMenu.outerHeight(),
-	  
-	    // All list items
-	    menuItems = topMenu.find('a'),
-
-	    // Anchors corresponding to menu items
-	    scrollItems = menuItems.map( function() {
-			var item = $($(this).attr('href'));
-			if (item.length) { return item; }
-		});
-
-
 	// 1. Highlight current item
 	// 2. Slide to current section on click
 	$('.content-nav a, .top-link-bottom a').click( function() {
 
 		var hash = $(this).attr('href');
-		var $target = $(hash);
+		var $target = $(hash + ' .section-title');
 
 		// Slide to section corresponding to clicked hash
 		$('html,body').animate({
@@ -140,6 +126,27 @@ $(document).ready(function() {
 
 		return false;
 	}); // END click
+
+
+
+
+	// Highlight the current item according to position on the screen
+	// http://stackoverflow.com/questions/9979827/change-active-menu-item-on-page-scroll
+	// (continued below)
+	
+	// Cache selectors
+	var topMenu = $(".content-nav"),
+    topMenuHeight = topMenu.outerHeight()+40,
+    
+    // All list items
+    menuItems = topMenu.find("a"),
+    
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+		var item = $($(this).attr("href"));
+      	if (item.length) { return item; }
+    });
+
 
 
 	$(window).scroll( function() {
@@ -171,25 +178,25 @@ $(document).ready(function() {
 
 		// Highlight the current item according to position on the screen
 		// http://stackoverflow.com/questions/9979827/change-active-menu-item-on-page-scroll
-		
+	
 		// Get container scroll position
-		var fromTop = $(this).scrollTop()+topMenuHeight;
+   		
+   		var fromTop = $(this).scrollTop()+topMenuHeight;
 
-		// Get id of current scroll item
-		var cur = scrollItems.map( function() {
-			if ( $(this).parent('.section-content').offset().top < fromTop ) {
-					return this;
-				}
-			});
-	   	
-	   	// Get the id of the current element
-		cur = cur[cur.length-1];
-		var id = cur && cur.length ? cur[0].id : "";
-
-		// Set/remove active class
-		menuItems
-			.parent().removeClass('content-nav-active')
-			.end().filter("[href=#"+id+"]").parent().addClass('content-nav-active');
+   		// Get id of current scroll item
+   		var cur = scrollItems.map(function(){
+     		if ($(this).offset().top < fromTop)
+       			return this;
+   		});
+   
+   		// Get the id of the current element
+   		cur = cur[cur.length-1];
+   		var id = cur && cur.length ? cur[0].id : "";
+   		
+   		// Set/remove active class
+   		menuItems
+     		.parent().removeClass("content-nav-active")
+     		.end().filter("[href=#"+id+"]").parent().addClass("content-nav-active");
 	
 	}); // END scroll
 

@@ -11,7 +11,7 @@
     
     {% if content.acf_fc_layout == 'section' %}
         
-        <section class="section-content">
+        <section class="section-content" id="{{content.menu_item_title|replace({ (space): replace_space })}}">
             
             {% include 'headers/section_header.twig' %}
             
