@@ -174,7 +174,7 @@
 	if ( is_admin() ) { // check to make sure we aren't on the front end
 		add_filter('wpseo_pre_analysis_post_content', 'dfi_add_custom_to_yoast');
 
-		function add_custom_to_yoast( $content ) {
+		function dfi_add_custom_to_yoast( $content ) {
 			global $post;
 			$pid = $post->ID;
 			
