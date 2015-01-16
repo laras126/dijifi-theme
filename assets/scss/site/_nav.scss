@@ -248,13 +248,14 @@ nav a {
     }
 
 .top-link {
+
+}
+
+.top-link-top {
     transition: all 0.25s ease-in-out;
     width: 0;
     opacity: 0;
     padding: 0;
-}
-
-.top-link-top {
     // background-color: $text-dark;
     // You pixel pusher, you.
 }
@@ -271,11 +272,12 @@ nav a {
     padding-top: $xsml/3;
     padding-bottom: $xsml/3;
     
-    @include button($alert-info);
+    
 
     a {    
         display: block;
         margin: 0 auto;
+        @include button($alert-info);
     }
 
     @include bp(large) {
