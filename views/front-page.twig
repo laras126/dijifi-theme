@@ -3,22 +3,6 @@
 
 {% block content %}
 
-	
-{# 	<div class="hero hero-video">
-		{% include 'partials/spinner.twig' %}
-		
-		<video autoplay loop class="hero-full-bkgd">
-			<source src="{{post.video}}" media="screen and (min-width: 830px)" type="video/mp4">
-		</video>
-
-		<div class="hero-wrap">
-			{% include 'partials/hero-content.twig' %}
-			<img class="home-logo" src="{{site.theme.link}}/assets/img/content/logo.png" alt="">
-		</div> <!-- /.hero-wrap -->
-
-	</div> <!-- /.hero-video --> #}
-	{# {% include 'partials/simple_content-logic.twig' %} #}
-	
 	{% set service_list = post.get_field('homepage_services') %}
 
 		<div class="contain">
@@ -31,7 +15,7 @@
 
 			{% for service in service_list %}
 				<li>
-					<a href="{{service.linked_service.link}}" title="{{service.service_name}}">
+					<a href="{{service.linked_service}}" title="{{service.service_name}}">
 					<div class="item-support">
 						<img class="lazy" data-original="{{TimberImage(service.service_image).src('medium')}}" src="{{site.theme.link}}/assets/img/util/loader.gif" width="300" height="auto" alt="{{item.service_name}}" alt="{{item.post_title}}"/>
 						<noscript><img src="{{TimberImage(service.service_image).src('medium')}}" alt="{{item.service_name}}" height="300" width="300"></noscript>
@@ -40,7 +24,7 @@
 						<h5 class="item-title">{{service.service_name}}</h5>
 						<p>{{service.service_description}}</p>
 					</div>
-						</a>
+					</a>
 				</li>
 			{% endfor %}
 				

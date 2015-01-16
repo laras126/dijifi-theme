@@ -2971,6 +2971,23 @@ nav a {
     clear: left;
   }
 }
+.list-home > li a {
+  color: #222334;
+}
+@media (min-width: 1087px) {
+  .list-home > li {
+    transition: all 0.25s ease;
+  }
+  .list-home > li:hover {
+    transform: scale(1.15);
+  }
+  .list-home > li:hover a, .list-home > li:hover h5 {
+    color: #3C7AAA;
+  }
+  .list-home > li:active {
+    transform: scale(1);
+  }
+}
 
 .item-support {
   padding-right: 1.2rem;

@@ -65,6 +65,28 @@
 				clear: left;
 			}  
 	    }  
+
+		a {
+			color: $text-dark;
+		}
+    	
+		@include bp(med) {
+			transition: all 0.25s ease;
+
+			&:hover {
+			     transform:scale(1.15);
+
+			     // Semi CSS war here...
+			     a, h5 {
+			     	color: $alert-info;
+			     }
+			}
+
+			&:active {
+			     transform:scale(1);
+			}
+		}		
+		
 	}
 
 
