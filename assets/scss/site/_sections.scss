@@ -3,6 +3,12 @@
 	// margin-bottom: $h2;
 }
 
+	.nav-stuck {
+		@include bp(med) {
+			margin-top: 68px;
+		}
+	}
+
 .section-title {
 	margin-top: $h2;
 	position:relative; 

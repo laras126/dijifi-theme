@@ -194,6 +194,7 @@ $(document).ready(function() {
 		if( $(this).scrollTop() > total_ht ) {
 
 			$nav.addClass(scroll_class);
+			$('.section-header').addClass('nav-stuck');
 			$('.top-link-bottom').fadeIn(300);
 			$('.content-nav-arrow').fadeOut(300);
 
@@ -205,6 +206,7 @@ $(document).ready(function() {
 		} else if( $(this).scrollTop() < total_ht ) {
 
 			$nav.removeClass(scroll_class);
+			$('.section-header').removeClass('nav-stuck');
 			$('.top-link-bottom').fadeOut(300);
 			$('.content-nav-arrow').fadeIn(300);
 			

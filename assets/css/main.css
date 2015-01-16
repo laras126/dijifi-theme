@@ -2778,6 +2778,12 @@ nav a {
   background-color: #ffffff;
 }
 
+@media (min-width: 53em) {
+  .nav-stuck {
+    margin-top: 68px;
+  }
+}
+
 .section-title {
   margin-top: 2.88rem;
   position: relative;
