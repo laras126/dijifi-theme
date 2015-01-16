@@ -1,3 +1,18 @@
+/*
+
+Hello, whomever may be viewing this code!
+
+Below is what you might call a CSS war. 
+This stylesheet is a hacky way to update an existing order system to go along with the site design -
+the system needs to be redone, yes, but it's not a job for me. And it seemed like a much
+better idea to simply override the styles, however horrible they may be, instead
+of hacking around unfamiliar code that will be scrapped eventually anyways.
+
+This may be gross code, but isn't that great judgement?
+
+(Yes, Lara, it is!)
+
+*/
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -1070,11 +1085,16 @@ ul, ol {
   float: left;
   position: relative;
   display: table-row !important;
-  padding: 0.72rem 0;
+  padding: 0.72rem 0 0;
 }
 @media (min-width: 53em) {
   .header-brand {
     width: 35.71429%;
+  }
+}
+@media (min-width: 53em) {
+  .header-brand {
+    padding-bottom: 0.72rem;
   }
 }
 
@@ -1349,6 +1369,14 @@ nav a {
   color: #FFCC53;
 }
 
+.menu-item-cta {
+  margin: 0.72rem 0;
+}
+@media (min-width: 53em) {
+  .menu-item-cta {
+    margin: 0;
+  }
+}
 .menu-item-cta a {
   background: #80C25D;
   font-weight: 700;
@@ -2341,7 +2369,7 @@ a.special {
 }
 
 body {
-  background-color: #f9f9f9;
+  background-color: #ffffff;
 }
 
 .header-sub {
@@ -2379,6 +2407,7 @@ body {
 #order-page input[type="text"],
 .order-page input[type="text"] {
   font-size: 14px;
+  font-family: "source-sans-pro", "Helvetica", serif;
 }
 #order-page h1,
 .order-page h1 {
@@ -2454,8 +2483,8 @@ body {
 #order-page .error-number,
 .order-page .error-number {
   position: absolute;
-  z-index: 4;
-  top: 40px;
+  z-index: 9999;
+  top: -10px;
   font-weight: normal;
 }
 #order-page #questions .order-full-txt-alert2,
@@ -2586,6 +2615,7 @@ body {
 #order-page .section,
 .order-page .section {
   margin-bottom: 3.6rem;
+  background-color: #f9f9f9;
 }
 #order-page .header,
 .order-page .header {
@@ -2643,6 +2673,7 @@ body {
 }
 
 #order-summary {
+  font-family: "source-sans-pro", "Helvetica", serif;
   width: 100%;
 }
 #order-summary h1 {

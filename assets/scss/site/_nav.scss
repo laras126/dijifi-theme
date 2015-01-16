@@ -149,8 +149,16 @@ nav a {
     }
 }
 
-.menu-item-cta a {
-    @include button($alert-success);
+.menu-item-cta {
+    margin: $xsml 0;
+
+    @include bp(med) {
+        margin: 0;
+    }
+
+    a {
+        @include button($alert-success);
+    }
 }
 
     .header-nav li.has-subnav > a:after {

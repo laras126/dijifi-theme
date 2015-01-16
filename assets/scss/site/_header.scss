@@ -81,7 +81,11 @@
 	@include make-xs-column(6.5, false);
 	@include make-md-column(2.5, false);
 	display: table-row !important;
-	padding: $xsml 0;
+	padding: $xsml 0 0;
+
+	@include bp(med) {
+		padding-bottom: $xsml;
+	}
 }
 
 .header-tag {

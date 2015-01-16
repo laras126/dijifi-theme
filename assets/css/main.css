@@ -1518,6 +1518,14 @@ nav a {
   color: #FFCC53;
 }
 
+.menu-item-cta {
+  margin: 0.72rem 0;
+}
+@media (min-width: 53em) {
+  .menu-item-cta {
+    margin: 0;
+  }
+}
 .menu-item-cta a {
   background: #80C25D;
   font-weight: 700;
@@ -1821,11 +1829,16 @@ nav a {
   float: left;
   position: relative;
   display: table-row !important;
-  padding: 0.72rem 0;
+  padding: 0.72rem 0 0;
 }
 @media (min-width: 53em) {
   .header-brand {
     width: 35.71429%;
+  }
+}
+@media (min-width: 53em) {
+  .header-brand {
+    padding-bottom: 0.72rem;
   }
 }
 
