@@ -1,6 +1,11 @@
 
-.home .page-title {
-	display: none;
+.home {
+	.page-title {
+		font-size: $h2;
+	}
+	.page-tagline {
+		padding-bottom: $h3;
+	}
 }
 
 

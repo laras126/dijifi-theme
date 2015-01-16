@@ -3321,7 +3321,10 @@ a.special {
 }
 
 .home .page-title {
-  display: none;
+  font-size: 2.88rem;
+}
+.home .page-tagline {
+  padding-bottom: 2.4rem;
 }
 
 .fourth {
