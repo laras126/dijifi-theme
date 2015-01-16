@@ -109,7 +109,6 @@ $(document).ready(function() {
 
 	        function checkLoad() {
 	            if (video.readyState === 4) {
-	                console.log('loaded');
 	                $('.spinner').fadeOut(300);
 	                $('.hero-video video').animate({
 	                	'opacity': 1
