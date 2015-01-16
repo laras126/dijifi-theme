@@ -2595,6 +2595,13 @@ body {
 .order-page textarea:focus {
   border: 1px solid #222334;
 }
+#order-page .order-table textarea#message_to_dijifi_status,
+.order-page .order-table textarea#message_to_dijifi_status {
+  font-family: "source-sans-pro", "Helvetica", serif;
+  font-weight: normal;
+  line-height: 1.3;
+  height: 200px;
+}
 #order-page .section-title,
 #order-page .service,
 #order-page .section-title-long,

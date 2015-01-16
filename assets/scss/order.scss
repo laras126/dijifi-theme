@@ -245,6 +245,12 @@ textarea {
 	}
 }
 
+.order-table textarea#message_to_dijifi_status {
+	font-family: $sans-serif;
+	font-weight: normal;
+	line-height: $line-height-base;
+	height: 200px;
+}
 
 .section-title,
 .service,
