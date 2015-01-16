@@ -12,9 +12,7 @@ $(document).ready(function() {
 	
 	$('body').addClass('js');
 
-	console.log('Check it: https://github.com/laras126/dijifi-theme')
-
-	$('.site-cta').slideDown(300);
+	console.log('Check it: https://github.com/laras126/dijifi-theme');
 
 	$('.site-cta-close').click(function() {
 		$('.site-cta').slideUp(300);

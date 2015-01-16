@@ -1,6 +1,8 @@
 
 @import 'config/all'; // Mixins, variables, and tools that do not output code
-@import 'elements/all'; // Roots elements
+// @import 'elements/all'; // Roots elements
+@import 'elements/btns-links'; // Roots elements
+@import 'elements/typography'; // Roots elements
 
 @import 'site/base'; // Main site components
 @import 'site/page'; // Main site components
@@ -8,7 +10,7 @@
 @import 'site/footer';
 @import 'site/nav';
 
-// @import 'blocks/block-cta';
+@import 'blocks/block-cta';
 
 @import 'utility'; // For prototyping and should not be used in production
 @import 'holding'; // Styles that need to be removed and handled differently
@@ -25,6 +27,18 @@ body {
 	position: relative;
 }
 
+#order-form {
+	position:relative;
+
+	* {
+		box-sizing: content-box;
+	}
+
+	// textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"] {
+	// 	padding: 0;
+	// }
+}
+
 .wrapper,
 #wrapper {
 	width: 900px;
@@ -35,7 +49,12 @@ body {
 	box-sizing: content-box;
 }
 
+#order-page,
 .order-page {
+
+input[type="text"] {
+	font-size: 14px;
+}
 
 h1 {
 	font-size: $h2;
@@ -70,6 +89,11 @@ h1 {
 	font-family: $sans-serif;
 	font-size: 16px;
 	line-height: $line-height-base;
+	box-sizing: border-box !important;
+}
+
+#total * {
+	box-sizing: border-box !important;
 }
 
 .error-quantity,
@@ -82,11 +106,26 @@ h1 {
 	color: $text-dark;
 }
 
-.error-quantity {
+.product,
+.section {
+	position: relative;
+}
+
+.error-quantity,
+.error-number {
 	background: transparent;
 	color: $dred;
 	font-weight: 700;
 	margin: 0;
+	font-size: 14px;
+}
+
+// TOTAL SUPER HACK to get around a strange overflow: hidden inline style showing up on the error.
+.error-number {
+	position: absolute;
+	z-index: $ztop;
+	top: 40px;
+	font-weight: normal;
 }
 
 #questions .order-full-txt-alert2 {
@@ -114,6 +153,10 @@ input[type="checkbox"] {
 
 .order-table input[type=radio] {
 	margin: -4px 14px 0 8px;
+}
+
+#ftp-check {
+	margin-top: 8px;	
 }
 
 input[type="submit"],
@@ -220,8 +263,8 @@ textarea {
 
 .product {
 	border-bottom: 1px solid $accent-vlight;
-	padding-top: $sml;
-	padding-bottom: $sml;
+	// margin-top: $sml;
+	padding-bottom: 10px;
 }
 
 
@@ -269,9 +312,11 @@ textarea {
 }
 
 .sum-table-right {
-	@include upperspace;
-	width: 50%;
-	color: $alert-info;
+	// @include upperspace;
+	// width: 50%;
+	// color: $alert-info;
+	// font-weight: 700;
+	// color: $text-med;
 }
 
 #order-summary {
@@ -304,8 +349,13 @@ th {
 }
 
 .sum-dark {
-	border-bottom: 3px solid $accent-med;
+	border-top: 3px solid $accent-med;
 	@include rotate($text-light, $accent-dark);
+
+	#order-summary & {
+		@include rotate($text-dark, $text-light);	
+		background-color: $accent-vlight;	
+	}
 }
 
 .sum-total {
@@ -364,7 +414,68 @@ th {
 }
 
 
+// Section collapse arrows
 
+.section-title,
+.sub-section-title {
+	position: relative;
+	transition: all 0.25s ease;
+}
+
+.section-title:hover {
+	// background-color: lighten($accent-dark, 20%);
+}
+
+.sub-section-title:hover {
+	transition: all 0.25s ease;
+	background-color: lighten($text-medlight, 15%);	
+}
+
+div.section-title.open {
+	
+	&:before {
+		font-family: 'dijifi';
+		content: 'g';
+		color: $text-light;	
+		position: absolute;
+		left: 10px;
+	}
+	
+	// background-image:url('http://dijifi.com/order/images/arrow-down.png');
+}
+div.section-title.closed {
+
+	&:before {
+		font-family: 'dijifi';
+		content: 'h';
+		color: $text-light;	
+		position: absolute;
+		left: 10px;
+	}
+	// background-image:url('http://dijifi.com/order/images/arrow-right.png');
+}
+
+
+div.sub-section-title.open {
+	// background-image:url('/images/arrow-down-small.png');
+	&:before {
+		font-family: 'dijifi';
+		content: 'g';
+		color: $text-med;	
+		position: absolute;
+		left: 5px;
+	}
+}
+div.sub-section-title.closed {
+	&:before {
+		font-family: 'dijifi';
+		content: 'h';
+		color: $text-med;	
+		position: absolute;
+		left: 5px;
+	}
+	// background-image:url('/images/arrow-right-small.png');
+}
 
 
 
@@ -378,7 +489,7 @@ th {
 }
 
 .adv-closed {
-	display: none;
+	// display: none;
 }
 
 .adv-active {
@@ -391,7 +502,7 @@ th {
 	border: 0;
 	margin-bottom: $base;
 	margin-top: $base;
-	border-top: 3px solid $alert-info;
+	border-top: 1px solid $alert-info;
 	padding: $sml;
 
 	input[type="radio"] {

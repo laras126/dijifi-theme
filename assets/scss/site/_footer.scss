@@ -43,6 +43,14 @@
 		text-align: right;
 	}
 
+	.watermark {
+		@include clearfix;
+		img {
+			float:right;
+			opacity:0.4;	
+		}	
+	}
+
 
 .widget {
 	@include change-text-align(center, med, left);
