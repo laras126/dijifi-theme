@@ -2885,6 +2885,20 @@ nav a {
   margin-bottom: 0.45rem;
 }
 
+.links-social {
+  text-align: center;
+  font-size: 2.4rem;
+}
+.links-social span {
+  padding: 0.72rem;
+}
+.links-social .icon-gplus {
+  color: #D14A29;
+}
+.links-social .icon-facebook-squared {
+  color: #3C7AAA;
+}
+
 .block {
   margin: 2.88rem 0;
 }
@@ -2974,7 +2988,7 @@ nav a {
 .list-home > li a {
   color: #222334;
 }
-@media (min-width: 1087px) {
+@media (min-width: 53em) {
   .list-home > li {
     transition: all 0.25s ease;
   }

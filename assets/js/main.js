@@ -124,7 +124,7 @@ $(document).ready(function() {
 	// This jumps...will need to fix
 	 var scroll_class = 'stuck',
 		$nav = $('.content-nav'),
-		nav_ht = $nav.outerHeight()*1.5,
+		nav_ht = $nav.outerHeight(),
 		header_ht = $('.page-header').outerHeight() + $('.site-header').outerHeight(),
 		total_ht = header_ht;
   	

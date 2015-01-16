@@ -14,7 +14,6 @@
 	.block {
 		@include rotate($text-light, $alert-success);
 		padding: $base 0 $h3;
-//		margin-top: $h1;
 		text-align: center;
 	}
 }
@@ -66,9 +65,19 @@
 		}
 	}
 
-	.list-social {
-		.meta {
-			
+	.links-social {
+		text-align: center;
+		font-size: $h3;
+
+		span {
+			padding: $xsml;
+		}
+		
+		.icon-gplus {
+			color: $dred;
+		}
+		.icon-facebook-squared {
+			color: $alert-info;
 		}
 	}
 
