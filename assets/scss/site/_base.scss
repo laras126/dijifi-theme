@@ -104,12 +104,23 @@ ul, ol {
 
 .hero-wrap {
 	padding-top: percentage(1/3);
+
 	background-image:
     radial-gradient(
-		ellipse at 20% center,
-		rgba($text-dark, 0) 0,
+		ellipse at 40% center,
+		rgba($text-dark, 0.3) 0,
 		$text-dark
     );
+
+	@include bp(med) {
+		background-image:
+	    radial-gradient(
+			ellipse at 20% center,
+			rgba($text-dark, 0) 0,
+			$text-dark
+	    );	
+	}
+	
     position: relative;
     z-index: $zmid;
 

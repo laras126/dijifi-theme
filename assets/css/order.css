@@ -1030,10 +1030,15 @@ ul, ol {
 
 .hero-wrap {
   padding-top: 33.33333%;
-  background-image: radial-gradient(ellipse at 20% center, rgba(34, 35, 52, 0) 0, #222334);
+  background-image: radial-gradient(ellipse at 40% center, rgba(34, 35, 52, 0.3) 0, #222334);
   position: relative;
   z-index: 3;
   padding-bottom: 2.4rem;
+}
+@media (min-width: 56em) {
+  .hero-wrap {
+    background-image: radial-gradient(ellipse at 20% center, rgba(34, 35, 52, 0) 0, #222334);
+  }
 }
 @media (min-width: 1087px) {
   .hero-wrap {
@@ -1658,8 +1663,7 @@ nav a {
   padding-bottom: 0.24rem;
 }
 .top-link-bottom a {
-  display: block;
-  margin: 0 auto;
+  text-align: center;
   background: #3C7AAA;
   font-weight: 700;
   border-radius: 2px;

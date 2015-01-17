@@ -141,7 +141,7 @@ $(document).ready(function() {
 		return false;
 	}); // END click
 
-	$('.top-link a').click( function() {
+	$('.top-link a').on( 'click', function() {
 		var hash = $('#pageTop');
 		var $target = $(hash);
 

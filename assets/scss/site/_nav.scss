@@ -256,8 +256,6 @@ nav a {
     width: 0;
     opacity: 0;
     padding: 0;
-    // background-color: $text-dark;
-    // You pixel pusher, you.
 }
 
 .top-link-bottom {
@@ -275,8 +273,7 @@ nav a {
     
 
     a {    
-        display: block;
-        margin: 0 auto;
+        text-align: center;
         @include button($alert-info);
     }
 
