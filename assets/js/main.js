@@ -241,7 +241,7 @@ $(document).ready(function() {
 	// Hack to keep out widows
 	// http://css-tricks.com/preventing-widows-in-post-titles/
    
-	$('.item-title, .section-title, .main p').each( function() {
+	$('.item-title, .section-title, .main p, .lead').each( function() {
 		var wordArray = $(this).text().split(" ");
 		if (wordArray.length > 3) {
 			wordArray[wordArray.length-2] += "&nbsp;" + wordArray[wordArray.length-1];
