@@ -2728,15 +2728,19 @@ body {
 }
 #order-page input[type="text"],
 #order-page textarea,
+#order-page input[type="password"],
 .order-page input[type="text"],
-.order-page textarea {
+.order-page textarea,
+.order-page input[type="password"] {
   border-radius: 3px;
   border: 1px solid #80C25D;
 }
 #order-page input[type="text"]:focus,
 #order-page textarea:focus,
+#order-page input[type="password"]:focus,
 .order-page input[type="text"]:focus,
-.order-page textarea:focus {
+.order-page textarea:focus,
+.order-page input[type="password"]:focus {
   border: 1px solid #222334;
 }
 #order-page .order-table textarea#message_to_dijifi_status,
