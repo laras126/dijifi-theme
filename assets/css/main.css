@@ -1958,8 +1958,10 @@ nav a {
   background-color: #faf3db;
   color: #222334;
 }
-.site-footer li {
-  font-size: 0.9rem;
+@media (min-width: 34em) {
+  .site-footer li {
+    font-size: 0.9rem;
+  }
 }
 .site-footer .block {
   background-color: #80C25D;
@@ -2011,8 +2013,15 @@ nav a {
   clear: both;
 }
 .watermark img {
-  float: right;
   opacity: 0.4;
+  margin: 0 auto;
+  display: block;
+}
+@media (min-width: 34em) {
+  .watermark img {
+    float: right;
+    display: inline-block;
+  }
 }
 
 .widget {
