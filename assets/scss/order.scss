@@ -43,6 +43,20 @@ body {
 	background-color: $alert-info;
 	background-image: none;
 	position: relative;
+
+	.special {
+		color: $accent-light;
+		&:hover {
+			color: darken($accent-light, 20%);
+		}
+	}
+}
+
+
+// Static top text
+
+.adv-desc {
+	font-family: $serif;
 }
 
 #order-form {
@@ -76,6 +90,10 @@ h1 {
 	text-align: center;
 }
 
+	.dfi-form-title {
+		margin-bottom: $base;
+	}
+
 #orderpage {
 	padding: 0;
 	width: 100%;
@@ -106,6 +124,10 @@ h1 {
 	line-height: $line-height-base;
 	box-sizing: border-box !important;
 }
+
+	.order-full-txt-alert3 {
+		text-align: left;
+	}
 
 #total * {
 	box-sizing: border-box !important;
@@ -170,7 +192,7 @@ input[type="checkbox"] {
 	margin: -4px 14px 0 8px;
 }
 
-#ftp-check {
+input[type="checkbox"] {
 	margin-top: 8px;	
 }
 
@@ -277,14 +299,14 @@ textarea {
 
 .header {
 	@include clearfix;
-	margin-bottom: $base;
+	// margin-bottom: $base;
 	// padding: 0;
 	border-bottom: 2px solid $accent-med;
 	background-color: $accent-dark;
 }
 
 .product {
-	border-bottom: 1px solid $accent-vlight;
+	border-bottom: 1px solid lighten($text-medlight, 10%);
 	// margin-top: $sml;
 	padding-bottom: 10px;
 }

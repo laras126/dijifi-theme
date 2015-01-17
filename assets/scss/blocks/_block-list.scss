@@ -100,11 +100,19 @@
 	img {	
 		@include center-block;
 	}
+
+	.list-minor & {
+		img {
+			padding: $base 25%; 
+
+			@include bp(small) {
+				padding: 0;
+			}
+		}
+	}
 	
 	padding-right: $gutter/2;
-
-	@include make-xs-column(4, false);
-	@include make-xs-column-push(1.5);
+	width: 100%;
 
 	@include make-sm-column(1.5, false);
 	@include make-sm-column-push(0);	
@@ -112,9 +120,6 @@
 	.list-major & {
 		@include make-md-column(5);
 		@include make-md-column-push(1);	
-		// background-color: $white;
-		// border: 3px solid $tan;
-		// padding: $sml; 	
 	}
 
 	

@@ -2169,16 +2169,21 @@ nav a {
 
 .item-support {
   padding-right: 1.2rem;
-  float: left;
-  position: relative;
-  width: 57.14286%;
-  left: 21.42857%;
+  width: 100%;
   float: left;
   position: relative;
 }
 .item-support img {
   margin: 0 auto;
   display: block;
+}
+.list-minor .item-support img {
+  padding: 1.2rem 25%;
+}
+@media (min-width: 34em) {
+  .list-minor .item-support img {
+    padding: 0;
+  }
 }
 @media (min-width: 34em) {
   .item-support {
