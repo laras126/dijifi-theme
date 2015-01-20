@@ -221,6 +221,22 @@
 		<script>
   			<?php if (WP_ENV === 'production') : ?>
     			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    			
+					adroll_adv_id = "QGYAC3QUWRCUPCRIPJANQU";
+					adroll_pix_id = "ASQ6YZXEI5GONMCPBOD3IL";
+					(function () {
+					var oldonload = window.onload;
+					window.onload = function(){
+					   __adroll_loaded=true;
+					   var scr = document.createElement("script");
+					   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+					   scr.setAttribute('async', 'true');
+					   scr.type = "text/javascript";
+					   scr.src = host + "/j/roundtrip.js";
+					   ((document.getElementsByTagName('head') || [null])[0] ||
+					    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+					   if(oldonload){oldonload()}};
+					}());
   			<?php else : ?>
     			function ga() {
       				console.log('GoogleAnalytics: ' + [].slice.call(arguments));
