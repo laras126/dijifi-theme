@@ -2965,6 +2965,10 @@ div.sub-section-title.closed:before {
   display: none;
 }
 
+.adv-closed {
+  display: none;
+}
+
 .adv-active {
   background-color: #faf3db;
 }
