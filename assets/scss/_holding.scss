@@ -1,22 +1,22 @@
 
 .home {
 	.page-title {
-		font-size: $h2;
+		line-height: 1.2;
 	}
+
 	.page-tagline {
 		padding-bottom: $h3;
 	}
+}
+
+.site-header .contain {
+	max-width: $screen-xl;
 }
 
 
 .fourth {
 	@include make-sm-column(7/2);
 	@include make-md-column(7/4);
-
-	span {
-		// font-size: $h1*2;
-		// color: $text-light;
-	}
 }
 
 

@@ -1049,7 +1049,7 @@ ul, ol {
     padding-top: 50%;
   }
 }
-@media (min-width: 78em) {
+@media (min-width: 74em) {
   .hero-wrap {
     padding-top: 33.33333%;
   }
@@ -1071,7 +1071,7 @@ ul, ol {
   }
 }
 
-@media (min-width: 78em) {
+@media (min-width: 74em) {
   .hero-tag-container {
     max-width: 100%;
   }
@@ -1795,10 +1795,14 @@ a.special {
 }
 
 .home .page-title {
-  font-size: 2.88rem;
+  line-height: 1.2;
 }
 .home .page-tagline {
   padding-bottom: 2.4rem;
+}
+
+.site-header .contain {
+  max-width: 74em;
 }
 
 .fourth {

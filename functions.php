@@ -90,6 +90,8 @@
 
 		// Add our JS
 		wp_enqueue_script( 'js', get_template_directory_uri() . '/assets/js/build/scripts.min.js', array('jquery'), '1.2.0', true );
+
+		// Add stylesheet, minified for production and non-min for dev.
 	}
 	add_action( 'wp_enqueue_scripts', 'dfi_scripts' );
 
