@@ -519,7 +519,7 @@ exclusively.
   margin-right: auto;
   margin-left: auto;
   width: 90%;
-  max-width: 120em;
+  max-width: 78em;
 }
 
 .contain:before, .contain:after {
@@ -528,6 +528,10 @@ exclusively.
 }
 .contain:after {
   clear: both;
+}
+
+.inner, .hero-tag-container {
+  max-width: 78em;
 }
 
 .row {

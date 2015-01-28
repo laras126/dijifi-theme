@@ -1,20 +1,22 @@
 {# This is soupy.. #}
 <div class="header-sub">
 	<div class="contain">
-		<div class="row">
-		
-			<p class="header-sub-tag">{{site_tagline}}</p>
-			<nav class="header-nav-top" role="navigation">
-				<ul class="menu menu-subtle clearfix">
-					{% for item in header_nav.items %}
-						<li class="{{item.classes | join(' ')}}">
-							<a class="meta" href="{{item.link}}">{{item.title}}</a>
-						</li>
-					{% endfor %}
-					<li class="menu-item"><a href="{{site.url}}/order/status" class="special"><strong>Order Status</strong></a></li>
-				</ul>
-			</nav>
-		
-		</div>
+	<div class="row">
+	<div class="inner">
+	
+		<p class="header-sub-tag">{{site_tagline}}</p>
+		<nav class="header-nav-top" role="navigation">
+			<ul class="menu menu-subtle clearfix">
+				{% for item in header_nav.items %}
+					<li class="{{item.classes | join(' ')}}">
+						<a class="meta" href="{{item.link}}">{{item.title}}</a>
+					</li>
+				{% endfor %}
+				<li class="menu-item"><a href="{{site.url}}/order/status" class="special"><strong>Order Status</strong></a></li>
+			</ul>
+		</nav>
+	
 	</div>
-</div> <!-- /.header-sub -->
+	</div>
+	</div>
+</div> <!-- /.header-sub, it's soupy.. -->
