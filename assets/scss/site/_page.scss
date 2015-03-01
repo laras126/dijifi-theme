@@ -7,6 +7,10 @@
 
 	.page-title {
 		position: relative;
+		font-size: $h2;
+		@include bp(sml) {
+			font-size: $h1;
+		}
 		@include bp(med) {
 			font-size: $h1*1.5;	
 		}

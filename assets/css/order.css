@@ -1095,6 +1095,7 @@ ul, ol {
 
 .page-title {
   position: relative;
+  font-size: 2.88rem;
   text-shadow: 2px 1px 1px #222334;
 }
 @media (min-width: 56em) {
