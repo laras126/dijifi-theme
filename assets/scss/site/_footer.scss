@@ -62,9 +62,9 @@
 	@include change-text-align(center, med, left);
 
 	@include make-xs-column(7);
-	@include make-md-column((7/4));
+	@include make-md-column((7/5));
 
-	padding-bottom: $h3;
+	// padding-bottom: $h3;
 }
 
 	.widget-title {

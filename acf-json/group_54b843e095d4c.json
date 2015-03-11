@@ -103,7 +103,14 @@
                     },
                     "return_format": "array",
                     "preview_size": "thumbnail",
-                    "library": "all"
+                    "library": "all",
+                    "min_width": 0,
+                    "min_height": 0,
+                    "min_size": 0,
+                    "max_width": 0,
+                    "max_height": 0,
+                    "max_size": 0,
+                    "mime_types": ""
                 },
                 {
                     "key": "field_54b84493a5e31",
@@ -203,5 +210,6 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1421365386
+    "modified": 1426028116,
+    "local": "json"
 }

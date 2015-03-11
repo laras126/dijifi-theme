@@ -1359,7 +1359,6 @@ ul, ol {
   width: 100%;
   float: left;
   position: relative;
-  padding-bottom: 2.4rem;
 }
 @media (min-width: 56em) {
   .widget {
@@ -1370,7 +1369,7 @@ ul, ol {
   .widget {
     padding-left: 1.2rem;
     padding-right: 1.2rem;
-    width: 25%;
+    width: 20%;
   }
 }
 
