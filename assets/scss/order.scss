@@ -485,8 +485,10 @@ th {
 div.section-title.open {
 	
 	&:before {
-		font-family: 'dijifi';
-		content: 'g';
+		// font-family: 'dijifi';
+		// content: 'g';
+		content: '\25bc';
+		font-size: 16px;
 		color: $text-light;	
 		position: absolute;
 		left: 10px;
@@ -497,11 +499,13 @@ div.section-title.open {
 div.section-title.closed {
 
 	&:before {
-		font-family: 'dijifi';
-		content: 'h';
+		// font-family: 'dijifi';
+		// content: 'h';
+		content: '\25b6';
 		color: $text-light;	
 		position: absolute;
 		left: 10px;
+		font-size: 16px;
 	}
 	// background-image:url('http://dijifi.com/order/images/arrow-right.png');
 }
@@ -510,20 +514,25 @@ div.section-title.closed {
 div.sub-section-title.open {
 	// background-image:url('/images/arrow-down-small.png');
 	&:before {
-		font-family: 'dijifi';
-		content: 'g';
+		// font-family: 'dijifi';
+		// content: 'g';
+		content: '\25bc';
 		color: $text-med;	
 		position: absolute;
 		left: 5px;
+		font-size: 16px;
 	}
 }
 div.sub-section-title.closed {
 	&:before {
-		font-family: 'dijifi';
-		content: 'h';
+		// font-family: 'dijifi';
+		// content: 'h';
+		content: '\25b6';
 		color: $text-med;	
 		position: absolute;
 		left: 5px;
+		font-size: 16px;
+
 	}
 }
 

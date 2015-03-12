@@ -2939,35 +2939,35 @@ th {
 }
 
 div.section-title.open:before {
-  font-family: 'dijifi';
-  content: 'g';
+  content: '\25bc';
+  font-size: 16px;
   color: #ffffff;
   position: absolute;
   left: 10px;
 }
 
 div.section-title.closed:before {
-  font-family: 'dijifi';
-  content: 'h';
+  content: '\25b6';
   color: #ffffff;
   position: absolute;
   left: 10px;
+  font-size: 16px;
 }
 
 div.sub-section-title.open:before {
-  font-family: 'dijifi';
-  content: 'g';
+  content: '\25bc';
   color: #999;
   position: absolute;
   left: 5px;
+  font-size: 16px;
 }
 
 div.sub-section-title.closed:before {
-  font-family: 'dijifi';
-  content: 'h';
+  content: '\25b6';
   color: #999;
   position: absolute;
   left: 5px;
+  font-size: 16px;
 }
 
 #advResults,
