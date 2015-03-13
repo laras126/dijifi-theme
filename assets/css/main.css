@@ -446,7 +446,7 @@ input[type="url"],
 input[type="search"],
 input[type="tel"] {
   padding: 0.3rem 0.45rem;
-  font-family: "source-sans-pro", "Helvetica", serif;
+  font-family: "source-sans-pro", Helvetica, serif;
 }
 
 @media (min-width: 1087px) {
@@ -474,20 +474,20 @@ input[type="tel"] {
 .gfield_description,
 .gfield_checkbox label {
   font-size: 0.9rem;
-  font-family: "source-sans-pro", "Helvetica", serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   margin: 0;
 }
 
 .ginput_complex label {
   font-size: 0.9rem;
-  font-family: "source-sans-pro", "Helvetica", serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   margin: 0;
   color: #999;
 }
 
 .decor {
   font-size: 0.9rem;
-  font-family: "source-sans-pro", "Helvetica", serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   margin: 0;
   border-bottom: 1px solid #80C25D;
   position: relative;
@@ -773,7 +773,7 @@ html {
 }
 
 body {
-  font-family: "chaparral-pro", "Georgia", serif;
+  font-family: "chaparral-pro", Georgia, serif;
   font-size: 1.2rem;
   color: #222334;
 }
@@ -790,7 +790,7 @@ a:link {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "source-sans-pro", "Helvetica", serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   margin-bottom: 0;
 }
 
@@ -874,7 +874,7 @@ blockquote:before {
 label {
   margin-top: 1.56rem;
   margin-bottom: 0.45rem;
-  font-family: "source-sans-pro", "Helvetica", serif;
+  font-family: "source-sans-pro", Helvetica, serif;
 }
 
 input[type="search"] {
@@ -965,7 +965,7 @@ fieldset {
 
 .gfield_label {
   font-size: 0.9rem;
-  font-family: "source-sans-pro", "Helvetica", serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1041,7 +1041,7 @@ button,
   border: none;
   padding: 0.45rem 0.9rem;
   display: inline-block;
-  font-family: "source-sans-pro", "Helvetica", serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   background: #80C25D;
   font-weight: 700;
   border-radius: 2px;
@@ -1117,7 +1117,7 @@ button:active,
 .link-edit,
 .link-more {
   font-size: 0.9rem;
-  font-family: "source-sans-pro", "Helvetica", serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   margin: 0;
   text-align: center;
   margin-top: 0.9rem;
@@ -1126,7 +1126,7 @@ button:active,
 
 table {
   width: 100%;
-  font-family: "source-sans-pro", "Helvetica", serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   margin-bottom: 1.5em;
 }
 table caption {
@@ -1428,7 +1428,7 @@ ul, ol {
 }
 
 nav a {
-  font-family: "source-sans-pro", "Helvetica", serif;
+  font-family: "source-sans-pro", Helvetica, serif;
 }
 
 @media (min-width: 56em) {
@@ -1659,7 +1659,7 @@ nav a {
   display: block;
   color: #ffffff;
   font-size: 0.9rem;
-  font-family: "source-sans-pro", "Helvetica", serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1739,7 +1739,7 @@ nav a {
   .menu-footer .menu-items a {
     padding: 0;
     font-size: 0.9rem;
-    font-family: "source-sans-pro", "Helvetica", serif;
+    font-family: "source-sans-pro", Helvetica, serif;
     margin: 0;
   }
 }
@@ -1769,7 +1769,7 @@ nav a {
   position: relative;
   color: #ffffff;
   font-size: 0.9rem;
-  font-family: "source-sans-pro", "Helvetica", serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   margin: 0;
   padding-top: 5px;
 }
@@ -1800,7 +1800,7 @@ nav a {
     font-weight: normal;
     padding-top: 0;
     font-size: 0.9rem;
-    font-family: "source-sans-pro", "Helvetica", serif;
+    font-family: "source-sans-pro", Helvetica, serif;
     margin: 0;
   }
 }
@@ -1814,7 +1814,7 @@ nav a {
 }
 .site-cta p {
   font-size: 0.9rem;
-  font-family: "source-sans-pro", "Helvetica", serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   margin: 0;
 }
 
@@ -1852,7 +1852,7 @@ nav a {
 
 .header-tag {
   font-size: 0.9rem;
-  font-family: "source-sans-pro", "Helvetica", serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   margin: 0;
   padding-left: 1.2rem;
   padding-top: 0.45rem;
@@ -1926,7 +1926,7 @@ nav a {
 }
 
 .page-tagline {
-  font-family: "source-sans-pro", "Helvetica", serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   font-size: 1.56rem;
 }
 
@@ -1963,7 +1963,7 @@ nav a {
 }
 
 .site-footer {
-  font-family: "source-sans-pro", "Helvetica", serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   background-color: #faf3db;
   color: #222334;
 }
@@ -2026,12 +2026,6 @@ nav a {
   margin: 0 auto;
   display: block;
 }
-@media (min-width: 34em) {
-  .watermark img {
-    float: right;
-    display: inline-block;
-  }
-}
 
 .widget {
   text-align: center;
@@ -2058,7 +2052,7 @@ nav a {
 
 .widget-title {
   font-size: 0.9rem;
-  font-family: "source-sans-pro", "Helvetica", serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -2120,7 +2114,7 @@ nav a {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.9rem;
-  font-family: "source-sans-pro", "Helvetica", serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   margin: 0;
 }
 
@@ -2270,7 +2264,7 @@ nav a {
   margin-top: 0.72rem;
 }
 .item-main p, .item-main li {
-  font-family: "source-sans-pro", "Helvetica", serif;
+  font-family: "source-sans-pro", Helvetica, serif;
 }
 @media (min-width: 34em) {
   .item-main p, .item-main li {
@@ -2373,7 +2367,7 @@ img.caption-image {
 }
 
 .param-options-list {
-  font-family: "source-sans-pro", "Helvetica", serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   margin-bottom: 0.9rem;
 }
 .param-options-list:before, .param-options-list:after {
@@ -2440,7 +2434,7 @@ img.caption-image {
 }
 
 .lead-cta {
-  font-family: "source-sans-pro", "Helvetica", serif;
+  font-family: "source-sans-pro", Helvetica, serif;
   margin-bottom: 1.2rem;
 }
 

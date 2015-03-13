@@ -19,7 +19,7 @@ This may be gross code, but isn't that great judgement?
 @import 'config/all'; // Mixins, variables, and tools that do not output code
 // @import 'elements/all'; // Roots elements
 @import 'elements/btns-links'; // Roots elements
-@import 'elements/icons'; // Roots elements
+// @import 'elements/icons'; // Roots elements
 @import 'elements/typography'; // Roots elements
 
 @import 'site/base'; // Main site components
@@ -584,8 +584,23 @@ div.sub-section-title.closed {
 		cursor: pointer;
 		@extend .btn-cta;
 		font-weight: normal;
+
+		img {
+			// width: 100%;
+			padding-bottom: $sml/2;
+		}
 	}
 }
+
+	#q0_media label {
+		height: 60px;	
+	}
+		
+	// Huge hack to nudge down weird offset video icon
+	.nudge-down {
+		position: relative;
+		top: 4px;
+	}
 
 	// .adv-results {
 	// 	// background-color: $body-bkgd;

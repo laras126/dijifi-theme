@@ -50,10 +50,6 @@
 		img {
 			opacity:0.4;	
 			@include center-block;
-			@include bp(small) {
-				float:right;
-				display: inline-block;
-			}
 		}	
 	}
 
