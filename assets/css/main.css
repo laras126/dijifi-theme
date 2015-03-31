@@ -2036,6 +2036,7 @@ nav a {
   width: 100%;
   float: left;
   position: relative;
+  padding-bottom: 2.4rem;
 }
 @media (min-width: 56em) {
   .widget {
