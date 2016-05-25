@@ -1,51 +1,52 @@
 /
 
-/photo-scanning/
-
+/photo-scanning/<br>
 /photo-scanning/process
 
-/video-transfer/
+--
 
-/video-transfer/process
+/video-transfer/<br>
+/video-transfer/process<br>
+/audio-transfer/<br>
+/audio-transfer/process<br>
 
-/audio-transfer/
+--
 
-/audio-transfer/process
-
-/film-transfer/
-
+/film-transfer/<br>
 /film-transfer/process
 
+--
 
-/about/
+/about/<br>
+/about/history<br>
+/about/team<br>
+/about/faq<br>
+/about/location<br>
 
-/about/history
+--
 
-/about/team
+/case-studies/<br>
+/case-studies/archival/<br>
+/case-studies/individual/<br>
+/case-studies/case-detail<br>
 
-/about/faq
+--
 
-/about/location
-
-
-/case-studies/
-/case-studies/archival/
-/case-studies/individual/
-/case-studies/case-detail
-
-/contact/
+/contact/<br>
 /contact/location
 
-/order/
-/privacy-policy
-/404
+--
 
+/order/<br>
+/privacy-policy<br>
+/404<br>
 
----- Not included in sitemap, but relevant to data structure/for DiJipedia ---
+--
 
-/formats/
-/formats/format-detail
+There are not included in sitemap, but relevant to data structure
 
-/equipment/
-/equipment/equipment-detail
+/formats/<br>
+/formats/format-detail<br>
+/equipment/<br>
+/equipment/equipment-detail<br>
 
