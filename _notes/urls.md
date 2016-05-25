@@ -1,22 +1,32 @@
 /
 
 /photo-scanning/
+
 /photo-scanning/process
 
 /video-transfer/
+
 /video-transfer/process
 
 /audio-transfer/
+
 /audio-transfer/process
 
 /film-transfer/
+
 /film-transfer/process
 
+
 /about/
+
 /about/history
+
 /about/team
+
 /about/faq
+
 /about/location
+
 
 /case-studies/
 /case-studies/archival/
